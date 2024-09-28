@@ -250,4 +250,8 @@ def test_coser_picture_folders_rename():
 
 
 if __name__ == '__main__':
-    test_list_files_in_directory()
+    # test_list_files_in_directory()
+    vip_links = []
+    for i in range(1, 2423):
+        vip_links.append(f"https://t.me/zh_vip/{i}")
+    FileUtils.write_file(r"C:\Users\Administrator\Desktop\vip_links.txt", vip_links)

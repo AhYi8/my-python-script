@@ -1,68 +1,91 @@
-import requests, os
+import requests, os, time
 from bs4 import BeautifulSoup
+from typing import List
 
-# 文件名，用于保存结果
-output_file = r"C:\Users\Administrator\Desktop\links.txt"
+class FileUtils:
+    @staticmethod
+    def read_file(path: str, is_strip: bool = False, mode: str = 'r', encoding: str = 'u8'):
+        if path is not None and len(path.strip()) != 0 and os.path.exists(path):
+            try:
+                with open(path, mode=mode, encoding=encoding) as rf:
+                    data_list = rf.readlines()
+                if is_strip:
+                    data_list = [data.strip() for data in data_list]
+                return data_list
+            except BaseException as e:
+                print(f"FileUtils.read_file(): {e}")
+                return None
+        else:
+            return None
 
-# 发送请求的基础URL
-base_url = "http://rss.21zys.com/api/query.php"
-user = "root"
-t = "4P8iZqrjkZbpJgHxosruQF"
-nb = 1000  # 每页记录数
+    @staticmethod
+    def write_file(path: str, data_list: List[str], mode: str = 'w', encoding: str = 'u8'):
+        if path is not None and len(path.strip()) != 0:
+            parent_path = os.path.split(path)[0]
+            if not os.path.exists(parent_path):
+                os.makedirs(parent_path)
+            try:
+                write_list = []
+                for data in data_list:
+                    if not data.endswith("\n"):
+                        data = data + '\n'
+                    write_list.append(data)
 
-# 初始化一个集合保存链接
-tg_links = set()
+                with open(path, mode=mode, encoding=encoding) as wf:
+                    wf.writelines(write_list)
+            except BaseException as e:
+                print(f"FileUtils.read_file(): {e}")
 
 
-def fetch_links(offset):
-    # 构造请求参数
-    params = {
-        'user': user,
-        't': t,
-        'f': 'html',
-        'nb': nb,
-        'offset': offset
+class Rss21zysArticleUtils:
+    base_url = "http://rss.21zys.com/api/query.php"
+    user = "root"
+    t = "4P8iZqrjkZbpJgHxosruQF"
+    t = {
+        "VIP资源共享": "6GzJ8wNOX3brl010Mk7uPU"
     }
+    nb = 1000  # 每页记录数
 
-    # 发送HTTP请求
-    response = requests.get(base_url, params=params)
-    if response.status_code == 200:
-        # 解析HTML
-        soup = BeautifulSoup(response.content, 'html.parser')
+    @staticmethod
+    def fetch_url(base_url: str, params: map, retries: int = 5, delay: int = 2):
+        """获取页面内容，并在失败时进行重试，最多重试 `retries` 次，每次重试间隔 `delay` 秒"""
+        for attempt in range(1, retries + 1):
+            try:
+                response = requests.get(base_url, params=params)
+                response.raise_for_status()  # 如果响应状态码不是200，抛出异常
+                return response.content
+            except requests.RequestException as e:
+                if attempt < retries:
+                    time.sleep(delay)  # 等待几秒钟再重试
+                else:
+                    return None
 
-        # 找到所有class='flux'的div
-        flux_divs = soup.find_all('div', class_='flux')
-
-        # 遍历div中的a标签
-        for div in flux_divs:
-            for a_tag in div.find_all('a', href=True):
-                href = a_tag['href']
-                # 如果链接包含tg.me，则保存到集合中
-                # if "https://t.me" in href:
-                tg_links.add(href)
-    else:
-        print(f"请求失败，状态码: {response.status_code}")
-
-
-def save_links_to_file():
-    # 将集合中的链接写入文件
-    with open(output_file, "w") as file:
-        for link in tg_links:
-            file.write(link + "\n")
-
-
-def main():
-    offset = 0
-    while True:
-        fetch_links(offset)
-        # 如果获取到的结果少于页面大小nb，表示已经到最后一页，退出循环
-        if len(tg_links) < (offset + nb):
-            break
-        offset += nb
-
-    # 保存结果到文件
-    save_links_to_file()
-    print(f"链接已保存到 {output_file} 文件中")
+    @staticmethod
+    def output_articles(output_file: str = r"C:\Users\Administrator\Desktop\links.txt"):
+        params = {
+            'user': Rss21zysArticleUtils.user,
+            't': Rss21zysArticleUtils.t['VIP资源共享'],
+            'f': 'html',
+            'nb': Rss21zysArticleUtils.nb,
+            'offset': 0
+        }
+        tg_links = set()
+        while(True):
+            html_content = Rss21zysArticleUtils.fetch_url(Rss21zysArticleUtils.base_url, params)
+            soup = BeautifulSoup(html_content, 'html.parser')
+            # 找到所有class='flux'的div
+            flux_divs = soup.find_all('div', class_='flux')
+            if len(flux_divs) == 0:
+                break
+            # 遍历div中的a标签
+            for div in flux_divs:
+                for a_tag in div.find_all('a', href=True):
+                    href = a_tag['href']
+                    # 如果链接包含tg.me，则保存到集合中
+                    # if "https://t.me" in href:
+                    tg_links.add(href)
+            params['offset'] += Rss21zysArticleUtils.nb
+        FileUtils.write_file(output_file, tg_links)
 
 
 def enable_proxy():
@@ -72,4 +95,4 @@ def enable_proxy():
 
 if __name__ == "__main__":
     enable_proxy()
-    main()
+    Rss21zysArticleUtils.output_articles()

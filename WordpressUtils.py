@@ -14,109 +14,151 @@ from io import BytesIO
 from datetime import datetime
 
 collections.Iterable = collections.abc.Iterable
-
 class RedisUtils:
     # Redis 连接属性，用户提供
     host = "152.32.175.149"
     port = 6379
     db = 0
     password = 'Mh359687..'
-
     res_21zys_com_titles_key = 'res.21zys.com_titles'
+    # 私有构造函数
+    _redis_client = None
 
-    # 饿汉式初始化 Redis 客户端，确保客户端只初始化一次
-    _redis_client = redis.StrictRedis(
-        host=host,
-        port=port,
-        db=db,
-        password=password,
-        decode_responses=True
-    )
+    @classmethod
+    def _initialize_client(cls):
+        if cls._redis_client is None:
+            cls._redis_client = redis.StrictRedis(
+                host=cls.host,
+                port=cls.port,
+                db=cls.db,
+                password=cls.password,
+                decode_responses=True
+            )
 
     # ------------------ String 类型操作 ------------------
-    @staticmethod
-    def set_string(key: str, value: str):
-        return RedisUtils._redis_client.set(key, value)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def set_string(cls, key: str, value: str):
+        cls._initialize_client()
+        return cls._redis_client.set(key, value)
 
-    @staticmethod
-    def get_string(key: str):
-        return RedisUtils._redis_client.get(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_string(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.get(key)
 
-    @staticmethod
-    def del_key(key: str):
-        return RedisUtils._redis_client.delete(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def del_key(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.delete(key)
 
-    @staticmethod
-    def update_string(key: str, value: str):
-        return RedisUtils._redis_client.set(key, value)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def update_string(cls, key: str, value: str):
+        cls._initialize_client()
+        return cls._redis_client.set(key, value)
 
     # ------------------ List 类型操作 ------------------
-    @staticmethod
-    def push_list(key: str, *values):
-        return RedisUtils._redis_client.rpush(key, *values)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def push_list(cls, key: str, *values):
+        cls._initialize_client()
+        return cls._redis_client.rpush(key, *values)
 
-    @staticmethod
-    def get_list(key: str, start: int = 0, end: int = -1):
-        return RedisUtils._redis_client.lrange(key, start, end)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_list(cls, key: str, start: int = 0, end: int = -1):
+        cls._initialize_client()
+        return cls._redis_client.lrange(key, start, end)
 
-    @staticmethod
-    def pop_list(key: str):
-        return RedisUtils._redis_client.lpop(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def pop_list(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.lpop(key)
 
-    @staticmethod
-    def list_length(key: str):
-        return RedisUtils._redis_client.llen(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def list_length(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.llen(key)
 
     # ------------------ Set 类型操作 ------------------
-    @staticmethod
-    def add_set(key: str, *values):
-        return RedisUtils._redis_client.sadd(key, *values)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def add_set(cls, key: str, *values):
+        cls._initialize_client()
+        return cls._redis_client.sadd(key, *values)
 
-    @staticmethod
-    def get_set(key: str):
-        return RedisUtils._redis_client.smembers(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_set(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.smembers(key)
 
-    @staticmethod
-    def rem_set(key: str, *values):
-        return RedisUtils._redis_client.srem(key, *values)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def rem_set(cls, key: str, *values):
+        cls._initialize_client()
+        return cls._redis_client.srem(key, *values)
 
-    @staticmethod
-    def set_length(key: str):
-        return RedisUtils._redis_client.scard(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def set_length(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.scard(key)
 
     # ------------------ Hash 类型操作 ------------------
-    @staticmethod
-    def set_hash(key: str, field: str, value: str):
-        return RedisUtils._redis_client.hset(key, field, value)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def set_hash(cls, key: str, field: str, value: str):
+        cls._initialize_client()
+        return cls._redis_client.hset(key, field, value)
 
-    @staticmethod
-    def get_hash(key: str, field: str):
-        return RedisUtils._redis_client.hget(key, field)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_hash(cls, key: str, field: str):
+        cls._initialize_client()
+        return cls._redis_client.hget(key, field)
 
-    @staticmethod
-    def get_all_hash(key: str):
-        return RedisUtils._redis_client.hgetall(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_all_hash(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.hgetall(key)
 
-    @staticmethod
-    def del_hash(key: str, field: str):
-        return RedisUtils._redis_client.hdel(key, field)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def del_hash(cls, key: str, field: str):
+        cls._initialize_client()
+        return cls._redis_client.hdel(key, field)
 
     # ------------------ Zset 类型操作 ------------------
-    @staticmethod
-    def add_zset(key: str, score: float, value: str):
-        return RedisUtils._redis_client.zadd(key, {value: score})
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def add_zset(cls, key: str, score: float, value: str):
+        cls._initialize_client()
+        return cls._redis_client.zadd(key, {value: score})
 
-    @staticmethod
-    def get_zset(key: str, start: int = 0, end: int = -1, withscores: bool = False):
-        return RedisUtils._redis_client.zrange(key, start, end, withscores=withscores)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_zset(cls, key: str, start: int = 0, end: int = -1, withscores: bool = False):
+        cls._initialize_client()
+        return cls._redis_client.zrange(key, start, end, withscores=withscores)
 
-    @staticmethod
-    def rem_zset(key: str, *values):
-        return RedisUtils._redis_client.zrem(key, *values)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def rem_zset(cls, key: str, *values):
+        cls._initialize_client()
+        return cls._redis_client.zrem(key, *values)
 
-    @staticmethod
-    def zset_length(key: str):
-        return RedisUtils._redis_client.zcard(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def zset_length(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.zcard(key)
 
 
 class Article:
@@ -216,6 +258,8 @@ class ArticleMeta:
         if self.pwd:
             return self.pwd
         return ''
+
+
 class WordpressUtils:
     wp = Client(
         r'http://res.21zys.com/xmlrpc_Mh359687...php',
@@ -438,6 +482,7 @@ class WordpressUtils:
                         DataUtils.output_data_to_xlsx(('title', 'categories', 'url'),
                                                       (title, ','.join(categories), url),
                                                       r'C:\Users\MAC\Desktop\wordpress_articles_output.xlsx')
+
 
 class ImageUtils:
     smms_token: str = 'tbVH1tVAwadESF2NdCXrr27UuqmGtNCq'
@@ -820,6 +865,7 @@ class DataUtils:
             return obj.decode('utf-8')
         else:
             return obj
+
 
 class FileUtils:
 

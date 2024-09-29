@@ -1,9 +1,11 @@
 import requests, re, os, time, string, redis
+from retrying import retry
 from bs4 import BeautifulSoup
 from openpyxl import Workbook, load_workbook
 from PIL import Image
 from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import List
 
 
 class RedisUtils:
@@ -12,106 +14,145 @@ class RedisUtils:
     port = 6379
     db = 0
     password = 'Mh359687..'
-    _redis_client = None
     res_21zys_com_titles_key = 'res.21zys.com_titles'
+    # 私有构造函数
+    _redis_client = None
 
-    # 饿汉式初始化 Redis 客户端，确保客户端只初始化一次
-    while (not _redis_client):
-        try:
-            _redis_client = redis.StrictRedis(
-                host=host,
-                port=port,
-                db=db,
-                password=password,
+    @classmethod
+    def _initialize_client(cls):
+        if cls._redis_client is None:
+            cls._redis_client = redis.StrictRedis(
+                host=cls.host,
+                port=cls.port,
+                db=cls.db,
+                password=cls.password,
                 decode_responses=True
             )
-        except Exception as e:
-            print('Redis 链接超时，正在尝试重连！！！')
 
     # ------------------ String 类型操作 ------------------
-    @staticmethod
-    def set_string(key: str, value: str):
-        return RedisUtils._redis_client.set(key, value)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def set_string(cls, key: str, value: str):
+        cls._initialize_client()
+        return cls._redis_client.set(key, value)
 
-    @staticmethod
-    def get_string(key: str):
-        return RedisUtils._redis_client.get(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_string(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.get(key)
 
-    @staticmethod
-    def del_key(key: str):
-        return RedisUtils._redis_client.delete(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def del_key(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.delete(key)
 
-    @staticmethod
-    def update_string(key: str, value: str):
-        return RedisUtils._redis_client.set(key, value)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def update_string(cls, key: str, value: str):
+        cls._initialize_client()
+        return cls._redis_client.set(key, value)
 
     # ------------------ List 类型操作 ------------------
-    @staticmethod
-    def push_list(key: str, *values):
-        return RedisUtils._redis_client.rpush(key, *values)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def push_list(cls, key: str, *values):
+        cls._initialize_client()
+        return cls._redis_client.rpush(key, *values)
 
-    @staticmethod
-    def get_list(key: str, start: int = 0, end: int = -1):
-        return RedisUtils._redis_client.lrange(key, start, end)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_list(cls, key: str, start: int = 0, end: int = -1):
+        cls._initialize_client()
+        return cls._redis_client.lrange(key, start, end)
 
-    @staticmethod
-    def pop_list(key: str):
-        return RedisUtils._redis_client.lpop(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def pop_list(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.lpop(key)
 
-    @staticmethod
-    def list_length(key: str):
-        return RedisUtils._redis_client.llen(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def list_length(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.llen(key)
 
     # ------------------ Set 类型操作 ------------------
-    @staticmethod
-    def add_set(key: str, *values):
-        return RedisUtils._redis_client.sadd(key, *values)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def add_set(cls, key: str, *values):
+        cls._initialize_client()
+        return cls._redis_client.sadd(key, *values)
 
-    @staticmethod
-    def get_set(key: str):
-        return RedisUtils._redis_client.smembers(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_set(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.smembers(key)
 
-    @staticmethod
-    def rem_set(key: str, *values):
-        return RedisUtils._redis_client.srem(key, *values)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def rem_set(cls, key: str, *values):
+        cls._initialize_client()
+        return cls._redis_client.srem(key, *values)
 
-    @staticmethod
-    def set_length(key: str):
-        return RedisUtils._redis_client.scard(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def set_length(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.scard(key)
 
     # ------------------ Hash 类型操作 ------------------
-    @staticmethod
-    def set_hash(key: str, field: str, value: str):
-        return RedisUtils._redis_client.hset(key, field, value)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def set_hash(cls, key: str, field: str, value: str):
+        cls._initialize_client()
+        return cls._redis_client.hset(key, field, value)
 
-    @staticmethod
-    def get_hash(key: str, field: str):
-        return RedisUtils._redis_client.hget(key, field)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_hash(cls, key: str, field: str):
+        cls._initialize_client()
+        return cls._redis_client.hget(key, field)
 
-    @staticmethod
-    def get_all_hash(key: str):
-        return RedisUtils._redis_client.hgetall(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_all_hash(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.hgetall(key)
 
-    @staticmethod
-    def del_hash(key: str, field: str):
-        return RedisUtils._redis_client.hdel(key, field)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def del_hash(cls, key: str, field: str):
+        cls._initialize_client()
+        return cls._redis_client.hdel(key, field)
 
     # ------------------ Zset 类型操作 ------------------
-    @staticmethod
-    def add_zset(key: str, score: float, value: str):
-        return RedisUtils._redis_client.zadd(key, {value: score})
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def add_zset(cls, key: str, score: float, value: str):
+        cls._initialize_client()
+        return cls._redis_client.zadd(key, {value: score})
 
-    @staticmethod
-    def get_zset(key: str, start: int = 0, end: int = -1, withscores: bool = False):
-        return RedisUtils._redis_client.zrange(key, start, end, withscores=withscores)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def get_zset(cls, key: str, start: int = 0, end: int = -1, withscores: bool = False):
+        cls._initialize_client()
+        return cls._redis_client.zrange(key, start, end, withscores=withscores)
 
-    @staticmethod
-    def rem_zset(key: str, *values):
-        return RedisUtils._redis_client.zrem(key, *values)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def rem_zset(cls, key: str, *values):
+        cls._initialize_client()
+        return cls._redis_client.zrem(key, *values)
 
-    @staticmethod
-    def zset_length(key: str):
-        return RedisUtils._redis_client.zcard(key)
+    @classmethod
+    @retry(stop_max_attempt_number=5, wait_fixed=2000)
+    def zset_length(cls, key: str):
+        cls._initialize_client()
+        return cls._redis_client.zcard(key)
 
 
 class ImageUtils:
@@ -140,18 +181,17 @@ class ParseTgArticleUtils:
         link_match = re.search(r'https://pan.quark.cn/s/[a-z0-9]{12}', params)
         link = link_match.group(0) if link_match else ''
         soup = BeautifulSoup(params, 'html.parser')
-        soup.find()
         for br in soup.find_all('br'):
             br.replace_with('\n')
         html_text = soup.get_text(separator='\n', strip=True)
-        html_text_match = re.search(r"^(.*)\n(.*)[\s\S]*\n(((#\S+) ?)*)$", html_text)
+        html_text_match = re.search(r"^(.*)\n(.*)[\s\S]*\n(标签：)?(((#\S+) *)*)$", html_text)
         if html_text_match:
             title = TgArticleUtils.sanitize_filename(TgArticleUtils.clean_title(html_text_match.group(1)))
             title_match = re.search(r'^[\[【](.*)[】\]]$', title)
             title = title_match.group(1) if title_match else title
             title = re.sub(r'\s*(\d+)\s*', r'\1', title)
             description = html_text_match.group(2)
-            tags = html_text_match.group(3).split('#')
+            tags = html_text_match.group(4).split('#')
             tags = [tag.strip() for tag in tags if tag.strip() not in TgArticleUtils.tag_remove_keys]
             tag = ','.join(tags).strip(',').replace(',,', ',')
             return title, description, link, "N", tag
@@ -186,12 +226,54 @@ class ParseTgArticleUtils:
         return title, description, link, size, tag
 
 
+class FileUtils:
+
+    @staticmethod
+    def read_file(path: str, is_strip: bool = False, mode: str = 'r', encoding: str = 'u8'):
+        if path is not None and len(path.strip()) != 0 and os.path.exists(path):
+            try:
+                with open(path, mode=mode, encoding=encoding) as rf:
+                    data_list = rf.readlines()
+                if is_strip:
+                    data_list = [data.strip() for data in data_list]
+                return data_list
+            except BaseException as e:
+                print(f"FileUtils.read_file(): {e}")
+                return None
+        else:
+            return None
+
+    @staticmethod
+    def write_file(path: str, data_list, mode: str = 'w', encoding: str = 'u8'):
+        if path is not None and len(path.strip()) != 0:
+            parent_path = os.path.split(path)[0]
+            if not os.path.exists(parent_path):
+                os.makedirs(parent_path)
+            try:
+                write_list = []
+                for data in data_list:
+                    if not data.endswith("\n"):
+                        data = data + '\n'
+                    write_list.append(data)
+
+                with open(path, mode=mode, encoding=encoding) as wf:
+                    wf.writelines(write_list)
+            except BaseException as e:
+                print(f"FileUtils.read_file(): {e}")
+
+    @staticmethod
+    def remove_duplicate_logs(log_path: str = os.path.join(os.getcwd(), 'file', 'logs.txt')):
+        logs: set = {log for log in FileUtils.read_file(log_path, is_strip=True) if '跳过采集' not in log and '文章不存在' not in log}
+        FileUtils.write_file(log_path, logs)
+
+
 class TgArticleUtils:
     get_tg_article_map = {
         'VIP资源共享': ParseTgArticleUtils.get_zh_vip_article,
         'other': ParseTgArticleUtils.get_other_tg_quark_article
     }
     invalid_chars = r'\/:*?"<>|'
+    ads_articles = {'TG必备的搜索引擎，极搜帮你精准找到，想要的群组、频道、音乐 、视频'}
     tag_remove_keys = ['中国', '课程', '中国', '教程', '夸克', '夸克网盘', 'quark', '资源', '知识', '学习']
     exists_titles = RedisUtils.get_set(RedisUtils.res_21zys_com_titles_key)
 
@@ -229,18 +311,25 @@ class TgArticleUtils:
         :param html_content:
         :return: author, image_url, html_content
         """
-        soup = BeautifulSoup(html_content, 'html.parser')
+        author = image_url = content = ''
+        try:
+            soup = BeautifulSoup(html_content, 'html.parser')
+            error = soup.find('div', class_="tgme_widget_message_error")
+            if error:
+                return '', '', 'Post not found'
+            # 3. 获取作者信息
+            author = soup.find('div', class_='tgme_widget_message_author').get_text(strip=True)
 
-        # 3. 获取作者信息
-        author = soup.find('div', class_='tgme_widget_message_author').get_text(strip=True)
-
-        # 4. 获取图片链接
-        image_url = soup.find('a', class_='tgme_widget_message_photo_wrap')['style']
-        image_url = image_url.split('url(')[-1].split(')')[0].strip('"').strip("'")
-
-        # 5. 获取 HTML 内容
-        html_content = soup.find('div', class_='tgme_widget_message_text').decode_contents()
-        return author, image_url, html_content
+            # 4. 获取图片链接
+            image_url = soup.find('a', class_='tgme_widget_message_photo_wrap')['style']
+            image_url = image_url.split('url(')[-1].split(')')[0].strip('"').strip("'")
+            
+            # 5. 获取 HTML 内容
+            content = soup.find('div', class_='tgme_widget_message_text').decode_contents()
+        except Exception as e:
+            pass
+        
+        return author, image_url, content
 
     @staticmethod
     def get_tg_article(author: str, html_content: str):
@@ -253,42 +342,67 @@ class TgArticleUtils:
         author = author if author in TgArticleUtils.get_tg_article_map.keys() else 'other'
         return TgArticleUtils.get_tg_article_map[author](html_content)
 
+    
     @staticmethod
-    def process_url(base_url: str, image_save_path: str, excel_file: str):
+    def process_url(base_url: str, image_save_path: str, excel_file: str, retries: int = 3, delay: int = 2):
+        cwd = os.getcwd()
         url = f"{base_url}?embed=1&mode=tme"
-        author = success_str = title = renamed_image = content = link = size = tag = ''
-        try:
-            # 1. Fetch the page content
-            html_content = TgArticleUtils.fetch_page(url)
-            if html_content is None:
-                raise Exception('f"无法获取页面内容: {url}"')
+        author = title = renamed_image = content = link = size = tag = ''
+        success_str = '失败'
+        logs_path = os.path.join(cwd, 'file', 'logs.txt')
+            
+        for attempt in range(1, retries + 1):
+            try:
+                # 1. Fetch the page content
+                html_content = TgArticleUtils.fetch_page(url)
+                if html_content is None:
+                    FileUtils.write_file(logs_path, [f"TgArticleUtils_无法获取页面内容: {url}"], 'a')
+                    raise Exception(f"无法获取页面内容: {url}")
 
-            # 2. Parse meta tags (image and description)
-            author, image_url, html_content = TgArticleUtils.get_tg_article_content(html_content)
-            if not image_url or not html_content:
-                raise Exception(f"无法解析页面内容: {url}")
+                # 2. Parse meta tags (image and description)
+                author, image_url, html_content = TgArticleUtils.get_tg_article_content(html_content)
+                if html_content == 'Post not found':
+                    FileUtils.write_file(logs_path, [f"TgArticleUtils_文章不存在: {url}"], 'a')
+                    return None
+                if not image_url or not html_content:
+                    FileUtils.write_file(logs_path, [f"TgArticleUtils_无法解析页面内容: {url}"], 'a')
+                    raise Exception(f"无法解析页面内容: {url}")
+                    
+                for ads in TgArticleUtils.ads_articles:
+                    if ads in html_content:
+                        FileUtils.write_file(logs_path, [f"TgArticleUtils_广告文章，跳过采集: {url}"], 'a')
+                        return None
 
-            # 3. Apply regex to extract information
-            result = TgArticleUtils.get_tg_article(author, html_content)
-            if not result:
-                raise Exception(f"正则解析失败: {url}")
-            title, content, link, size, tag = result
-            if not title or not link:
-                raise Exception(f"正则解析失败: {url}")
+                # 3. Apply regex to extract information
+                result = TgArticleUtils.get_tg_article(author, html_content)
+                if not result:
+                    FileUtils.write_file(logs_path, [f"TgArticleUtils_正则解析失败: {url}"], 'a')
+                    return base_url, author, success_str, title, renamed_image, content, link, size, tag
+                    
+                title, content, link, size, tag = result
+                if not title or not link:
+                    FileUtils.write_file(logs_path, [f"TgArticleUtils_正则解析失败: {url}"], 'a')
+                    return base_url, author, success_str, title, renamed_image, content, link, size, tag
 
-            # 4. Download the image
-            success, renamed_image = ImageUtils.download_image(image_url, title, image_save_path)
-            if not success:
-                raise Exception(f"图片下载失败: {url}")
+                # 4. Download the image
+                success, renamed_image = ImageUtils.download_image(image_url, title, image_save_path)
+                if not success:
+                    FileUtils.write_file(logs_path, [f"TgArticleUtils_图片下载失败: {url}"], 'a')
+                    raise Exception(f"图片下载失败: {url}")
 
-            success_str = "成功" if success else "失败"
-            if TgArticleUtils.exists_titles and title in TgArticleUtils.exists_titles:
-                raise Exception(f"文章已发布：{title}，跳过采集。")
-            # 5. Return all data for appending to Excel
-            return base_url, author, success_str, title, renamed_image, content, link, size, tag
-        except Exception as e:
-            print(f"处理 URL {base_url} 时发生错误: {e}")
-            return base_url, author, success_str, title, renamed_image, content, link, size, tag
+                success_str = "成功" if success else "失败"
+                if TgArticleUtils.exists_titles and title in TgArticleUtils.exists_titles:
+                    FileUtils.write_file(logs_path, [f"TgArticleUtils_文章已发布：{title}，跳过采集：{url}"], 'a')
+                    return None
+                # 5. Return all data for appending to Excel
+                return base_url, author, success_str, title, renamed_image, content, link, size, tag
+            except Exception as e:
+                print(f"处理 URL {base_url} 时发生错误: {e}")
+                if attempt == retries:
+                    return None
+                else:
+                    time.sleep(delay)
+                
 
     @staticmethod
     def append_to_excel(file_name: str, data: tuple):
@@ -303,25 +417,18 @@ class TgArticleUtils:
         ws = wb.active
         ws.append(data)
         wb.save(file_name)
-
-    @staticmethod
-    def read_urls_from_txt(file_path: str) -> list:
-        try:
-            with open(file_path, 'r') as f:
-                urls = [line.strip() for line in f if line.strip()]
-            return urls
-        except Exception as e:
-            print(f"读取文件 {file_path} 时出错: {e}")
-            return []
+        
 
 
-def main(concurrency: int = None):
-    image_save_path = r'C:\Users\Administrator\Desktop\image'
+def test_tg_article_output(concurrency: int = None):
+    cwd = os.getcwd()
+    image_save_path = os.path.join(cwd, 'image')
     if not os.path.exists(image_save_path):
         os.makedirs(image_save_path)
-
-    excel_file = r'C:\Users\Administrator\Desktop\tg_articles.xlsx'
-    urls = TgArticleUtils.read_urls_from_txt(r'C:\Users\Administrator\Desktop\un_publish_articles.txt')
+    excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
+    if os.path.exists(excel_file):
+        os.remove(excel_file)
+    urls = FileUtils.read_file(os.path.join(cwd, 'file', 'un_publish_articles.txt'), is_strip=True)
 
     if not urls:
         print("未找到有效的 URL，检查 urls.txt 文件")
@@ -348,7 +455,11 @@ def main(concurrency: int = None):
                 url = future_to_url[future]
                 print(f"{str(index).zfill(zfill_size)}/{total}-->处理完成: {url}")
             index += 1
+    FileUtils.remove_duplicate_logs()
     input('\n\n回车结束程序（enter）')
+
+
+
 
 
 def enable_proxy():
@@ -359,6 +470,7 @@ def enable_proxy():
 
 if __name__ == "__main__":
     # 开启全局代理
-    # enable_proxy()
+    enable_proxy()
     # 如果不传递并发度，会自动检测CPU并设置并发数
-    main()
+    #test_tg_article_output()
+    FileUtils.remove_duplicate_logs()

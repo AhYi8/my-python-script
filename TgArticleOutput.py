@@ -2,6 +2,7 @@ import requests, re, os, time, string, redis
 from retrying import retry
 from bs4 import BeautifulSoup
 from openpyxl import Workbook, load_workbook
+from openpyxl.worksheet.datavalidation import DataValidation
 from PIL import Image
 from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -395,7 +396,8 @@ class TgArticleUtils:
                     FileUtils.write_file(logs_path, [f"TgArticleUtils_文章已发布：{title}，跳过采集：{url}"], 'a')
                     return None
                 # 5. Return all data for appending to Excel
-                return base_url, author, success_str, title, renamed_image, content, link, size, tag
+                # URL, Author, Success, Title, Image, Description, Status, Tags, Categories, Price, Link, Size
+                return base_url, author, success_str, title, None, content, '', tag, None, 0, link, size
             except Exception as e:
                 print(f"处理 URL {base_url} 时发生错误: {e}")
                 if attempt == retries:
@@ -409,54 +411,55 @@ class TgArticleUtils:
         if not os.path.exists(file_name):
             wb = Workbook()
             ws = wb.active
-            ws.title = "Scraped Data"
-            ws.append(['URL', 'Author', 'Success', 'Title', 'Image', 'Description', 'Link', 'Size', 'Tag'])
+            ws.title = "TgArticle"
+            ws.append(['URL', 'Author', 'Success', 'Title', 'Image', 'Description', 'Status', 'Tags', 'Categories', 'Price', 'Link', 'Size'])
             wb.save(file_name)
-
+            
         wb = load_workbook(file_name)
         ws = wb.active
         ws.append(data)
         wb.save(file_name)
         
+    @staticmethod
+    def tg_article_output(concurrency: int = None):
+        cwd = os.getcwd()
+        image_save_path = os.path.join(cwd, 'image')
+        if not os.path.exists(image_save_path):
+            os.makedirs(image_save_path)
+        excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
+        if os.path.exists(excel_file):
+            os.remove(excel_file)
+        urls = FileUtils.read_file(os.path.join(cwd, 'file', 'un_publish_articles.txt'), is_strip=True)
 
+        if not urls:
+            print("未找到有效的 URL，检查 urls.txt 文件")
+            return
 
-def test_tg_article_output(concurrency: int = None):
-    cwd = os.getcwd()
-    image_save_path = os.path.join(cwd, 'image')
-    if not os.path.exists(image_save_path):
-        os.makedirs(image_save_path)
-    excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
-    if os.path.exists(excel_file):
-        os.remove(excel_file)
-    urls = FileUtils.read_file(os.path.join(cwd, 'file', 'un_publish_articles.txt'), is_strip=True)
+        # 自动检测 CPU 核心数，若用户未指定并发度则自动设置为 CPU 核心数的 2 倍
+        if concurrency is None:
+            cpu_count = os.cpu_count()
+            concurrency = cpu_count * 2 if cpu_count else 4  # 保障至少有 4 个并发线程
 
-    if not urls:
-        print("未找到有效的 URL，检查 urls.txt 文件")
-        return
+        print(f"使用 {concurrency} 个并发线程进行处理")
 
-    # 自动检测 CPU 核心数，若用户未指定并发度则自动设置为 CPU 核心数的 2 倍
-    if concurrency is None:
-        cpu_count = os.cpu_count()
-        concurrency = cpu_count * 2 if cpu_count else 4  # 保障至少有 4 个并发线程
+        with ThreadPoolExecutor(max_workers=concurrency) as executor:
+            future_to_url = {executor.submit(TgArticleUtils.process_url, url, image_save_path, excel_file): url for url in
+                             urls}
+            total = len(urls)
+            zfill_size = len(str(total))
+            index = 1
 
-    print(f"使用 {concurrency} 个并发线程进行处理")
+            for future in as_completed(future_to_url):
+                result = future.result()
+                if result:
+                    TgArticleUtils.append_to_excel(excel_file, result)
+                    url = future_to_url[future]
+                    print(f"{str(index).zfill(zfill_size)}/{total}-->处理完成: {url}")
+                index += 1
+        FileUtils.remove_duplicate_logs()
+        input('\n\n回车结束程序（enter）')
+    
 
-    with ThreadPoolExecutor(max_workers=concurrency) as executor:
-        future_to_url = {executor.submit(TgArticleUtils.process_url, url, image_save_path, excel_file): url for url in
-                         urls}
-        total = len(urls)
-        zfill_size = len(str(total))
-        index = 1
-
-        for future in as_completed(future_to_url):
-            result = future.result()
-            if result:
-                TgArticleUtils.append_to_excel(excel_file, result)
-                url = future_to_url[future]
-                print(f"{str(index).zfill(zfill_size)}/{total}-->处理完成: {url}")
-            index += 1
-    FileUtils.remove_duplicate_logs()
-    input('\n\n回车结束程序（enter）')
 
 
 
@@ -472,5 +475,5 @@ if __name__ == "__main__":
     # 开启全局代理
     enable_proxy()
     # 如果不传递并发度，会自动检测CPU并设置并发数
-    #test_tg_article_output()
-    FileUtils.remove_duplicate_logs()
+    TgArticleUtils.tg_article_output()
+    #FileUtils.remove_duplicate_logs()

@@ -12,6 +12,7 @@ import phpserialize, collections.abc, requests, hashlib, uuid, random, string, t
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 from datetime import datetime
+from retrying import retry
 
 collections.Iterable = collections.abc.Iterable
 class RedisUtils:
@@ -481,7 +482,7 @@ class WordpressUtils:
                         password = name_url_password['pwd']
                         DataUtils.output_data_to_xlsx(('title', 'categories', 'url'),
                                                       (title, ','.join(categories), url),
-                                                      r'C:\Users\MAC\Desktop\wordpress_articles_output.xlsx')
+                                                      os.path.join(os.getcwd(), 'file', 'wordpress_articles_output.xlsx'))
 
 
 class ImageUtils:
@@ -916,8 +917,9 @@ class FileUtils:
 
 # 主程序
 def import_aticle():
-    base_image_path = r'C:\Users\Administrator\Desktop\image'
-    file_path = r'C:\Users\Administrator\Desktop\wordpress_articles.xlsx'
+    cwd = os.getcwd()
+    base_image_path = os.path.join(cwd, 'image')
+    file_path = os.path.join(cwd, 'file', 'wordpress_articles.xlsx')
     field_mapping = {
         '标题': 'title',
         '封面': 'image',

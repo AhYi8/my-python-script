@@ -61,7 +61,7 @@ class Rss21zysArticleUtils:
                     return None
 
     @staticmethod
-    def output_articles(output_file: str = r"C:\Users\Administrator\Desktop\links.txt"):
+    def output_articles(output_file: str = os.path.join(os.getcwd(), 'file', 'rss_21zys_com_output.txt')):
         params = {
             'user': Rss21zysArticleUtils.user,
             't': Rss21zysArticleUtils.t['VIP资源共享'],

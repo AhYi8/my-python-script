@@ -1,155 +1,55 @@
-import redis
+import requests, re, os, time, string, redis
 from retrying import retry
+from bs4 import BeautifulSoup
+from openpyxl import Workbook, load_workbook
+from openpyxl.worksheet.datavalidation import DataValidation
+from PIL import Image
+from io import BytesIO
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import List
 
-class RedisUtils:
-    # Redis 连接属性，用户提供
-    host = "152.32.175.149"
-    port = 6379
-    db = 0
-    password = 'Mh359687..'
+class FileUtils:
 
-    # 私有构造函数
-    _redis_client = None
+    @staticmethod
+    def read_file(path: str, is_strip: bool = False, mode: str = 'r', encoding: str = 'u8'):
+        if path is not None and len(path.strip()) != 0 and os.path.exists(path):
+            try:
+                with open(path, mode=mode, encoding=encoding) as rf:
+                    data_list = rf.readlines()
+                if is_strip:
+                    data_list = [data.strip() for data in data_list]
+                return data_list
+            except BaseException as e:
+                print(f"FileUtils.read_file(): {e}")
+                return None
+        else:
+            return None
 
-    @classmethod
-    def _initialize_client(cls):
-        if cls._redis_client is None:
-            cls._redis_client = redis.StrictRedis(
-                host=cls.host,
-                port=cls.port,
-                db=cls.db,
-                password=cls.password,
-                decode_responses=True
-            )
+    @staticmethod
+    def write_file(path: str, data_list, mode: str = 'w', encoding: str = 'u8'):
+        if path is not None and len(path.strip()) != 0:
+            parent_path = os.path.split(path)[0]
+            if not os.path.exists(parent_path):
+                os.makedirs(parent_path)
+            try:
+                write_list = []
+                for data in data_list:
+                    if not data.endswith("\n"):
+                        data = data + '\n'
+                    write_list.append(data)
 
-    # ------------------ String 类型操作 ------------------
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def set_string(cls, key: str, value: str):
-        cls._initialize_client()
-        return cls._redis_client.set(key, value)
+                with open(path, mode=mode, encoding=encoding) as wf:
+                    wf.writelines(write_list)
+            except BaseException as e:
+                print(f"FileUtils.read_file(): {e}")
 
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def get_string(cls, key: str):
-        cls._initialize_client()
-        return cls._redis_client.get(key)
+    @staticmethod
+    def remove_duplicate_logs(log_path: str = os.path.join(os.getcwd(), 'file', 'logs.txt')):
+        logs: set = {log for log in FileUtils.read_file(log_path, is_strip=True) if '跳过采集' not in log and '文章不存在' not in log}
+        FileUtils.write_file(log_path, logs)
+        
 
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def del_key(cls, key: str):
-        cls._initialize_client()
-        return cls._redis_client.delete(key)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def update_string(cls, key: str, value: str):
-        cls._initialize_client()
-        return cls._redis_client.set(key, value)
-
-    # ------------------ List 类型操作 ------------------
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def push_list(cls, key: str, *values):
-        cls._initialize_client()
-        return cls._redis_client.rpush(key, *values)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def get_list(cls, key: str, start: int = 0, end: int = -1):
-        cls._initialize_client()
-        return cls._redis_client.lrange(key, start, end)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def pop_list(cls, key: str):
-        cls._initialize_client()
-        return cls._redis_client.lpop(key)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def list_length(cls, key: str):
-        cls._initialize_client()
-        return cls._redis_client.llen(key)
-
-    # ------------------ Set 类型操作 ------------------
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def add_set(cls, key: str, *values):
-        cls._initialize_client()
-        return cls._redis_client.sadd(key, *values)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def get_set(cls, key: str):
-        cls._initialize_client()
-        return cls._redis_client.smembers(key)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def rem_set(cls, key: str, *values):
-        cls._initialize_client()
-        return cls._redis_client.srem(key, *values)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def set_length(cls, key: str):
-        cls._initialize_client()
-        return cls._redis_client.scard(key)
-
-    # ------------------ Hash 类型操作 ------------------
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def set_hash(cls, key: str, field: str, value: str):
-        cls._initialize_client()
-        return cls._redis_client.hset(key, field, value)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def get_hash(cls, key: str, field: str):
-        cls._initialize_client()
-        return cls._redis_client.hget(key, field)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def get_all_hash(cls, key: str):
-        cls._initialize_client()
-        return cls._redis_client.hgetall(key)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def del_hash(cls, key: str, field: str):
-        cls._initialize_client()
-        return cls._redis_client.hdel(key, field)
-
-    # ------------------ Zset 类型操作 ------------------
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def add_zset(cls, key: str, score: float, value: str):
-        cls._initialize_client()
-        return cls._redis_client.zadd(key, {value: score})
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def get_zset(cls, key: str, start: int = 0, end: int = -1, withscores: bool = False):
-        cls._initialize_client()
-        return cls._redis_client.zrange(key, start, end, withscores=withscores)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def rem_zset(cls, key: str, *values):
-        cls._initialize_client()
-        return cls._redis_client.zrem(key, *values)
-
-    @classmethod
-    @retry(stop_max_attempt_number=5, wait_fixed=2000)
-    def zset_length(cls, key: str):
-        cls._initialize_client()
-        return cls._redis_client.zcard(key)
-
-# 使用示例
-if __name__ == "__main__":
-    # Example usage
-    print(RedisUtils.set_string("my_key", "Hello, Redis!"))
-    print(RedisUtils.get_string("my_key"))
-    RedisUtils.del_key("my_key")
+links = []
+for i in range(9, 2432):
+    links.append(f"https://t.me/yunpanshare/{i}")
+FileUtils.write_file(os.path.join(os.getcwd(), 'file', 'test.txt'), links)

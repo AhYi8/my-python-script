@@ -226,12 +226,12 @@ class ArticleMeta:
 
     def get_tags(self):
         if self.tags != '':
-            return self.tags.replace('，', ',').split(',')
+            return str(self.tags).replace('，', ',').replace(',,', ',').strip(',').split(',')
         return []
 
     def get_category(self):
         if self.category != '':
-            return self.category.replace('，', ',').split(',')
+            return self.category.replace('，', ',').replace(',,', ',').strip(',').split(',')
         return []
 
     def get_cao_is_bossvip(self):
@@ -369,7 +369,7 @@ class WordpressUtils:
             while not imgurl and article_meta.get_status() == 'publish':
                 try:
                     if article_meta.image and article_meta.image != '无':
-                        if 'loli.net' in article_meta.image or 's3.bmp.ovh' in article_meta.image or 's3.uuu.ovh' in article_meta.image:
+                        if 'cdn.sa.net' in article_meta.image or 'loli.net' in article_meta.image or 's3.bmp.ovh' in article_meta.image or 's3.uuu.ovh' in article_meta.image:
                             imgurl = article_meta.image
                         else:
                             filename, imgurl, _ = ImageUtils.upload_to_smms_by_image_url(article_meta.image, article_meta.title)

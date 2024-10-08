@@ -185,7 +185,7 @@ class ParseTgArticleUtils:
         for br in soup.find_all('br'):
             br.replace_with('\n')
         html_text = soup.get_text(separator='\n', strip=True)
-        html_text_match = re.search(r"^(.*)\n(.*)[\s\S]*\n(标签：)?(((#\S+) *)*)$", html_text)
+        html_text_match = re.search(r"^(.*)\n(.*)[\s\S]*\n(标签[:：])?(((#\S+) *)*)$", html_text)
         if html_text_match:
             title = TgArticleUtils.sanitize_filename(TgArticleUtils.clean_title(html_text_match.group(1)))
             title_match = re.search(r'^[\[【](.*)[】\]]$', title)
@@ -195,15 +195,16 @@ class ParseTgArticleUtils:
             tags = html_text_match.group(4).split('#')
             tags = [tag.strip() for tag in tags if tag.strip() not in TgArticleUtils.tag_remove_keys]
             tag = ','.join(tags).strip(',').replace(',,', ',')
+            description = description.strip().replace('下载链接[:：]', '')
             return title, description, link, "N", tag
         return None
 
     @staticmethod
-    def get_other_tg_quark_article(params):
-        title_regex = r'(名称|资源标题)：(.+)'
-        description_regex = r'(描述|资源描述)：([\s\S]*)(链接：)'
-        size_regex = r'大小：(.+)'
-        tag_regex = r'标签：(.+)'
+    def get_other_tg_quark_article(params: str):
+        title_regex = r'(名称|资源标题|资源名称)[:：](.+)'
+        description_regex = r'(简介|描述|资源描述)[:：]([\s\S]*)(链接[:：])'
+        size_regex = r'大小[:：](.+)'
+        tag_regex = r'标签[:：](.+)'
 
         link_match = re.search(r'https://pan.quark.cn/s/[a-z0-9]{12}', params)
         link = link_match.group(0) if link_match else ''
@@ -264,7 +265,8 @@ class FileUtils:
 
     @staticmethod
     def remove_duplicate_logs(log_path: str = os.path.join(os.getcwd(), 'file', 'logs.txt')):
-        logs: set = {log for log in FileUtils.read_file(log_path, is_strip=True) if '跳过采集' not in log and '文章不存在' not in log}
+        logs: set = {log for log in FileUtils.read_file(log_path, is_strip=True) if
+                     '跳过采集' not in log and '文章不存在' not in log}
         FileUtils.write_file(log_path, logs)
 
 
@@ -312,25 +314,28 @@ class TgArticleUtils:
         :param html_content:
         :return: author, image_url, html_content
         """
-        author = image_url = content = ''
+        publish_time = author = image_url = content = ''
         try:
             soup = BeautifulSoup(html_content, 'html.parser')
             error = soup.find('div', class_="tgme_widget_message_error")
             if error:
-                return '', '', 'Post not found'
+                return '', '', 'Post not found', 'None'
             # 3. 获取作者信息
             author = soup.find('div', class_='tgme_widget_message_author').get_text(strip=True)
 
             # 4. 获取图片链接
             image_url = soup.find('a', class_='tgme_widget_message_photo_wrap')['style']
             image_url = image_url.split('url(')[-1].split(')')[0].strip('"').strip("'")
-            
+
             # 5. 获取 HTML 内容
             content = soup.find('div', class_='tgme_widget_message_text').decode_contents()
+            publish_time = soup.find('time', datetime=True)
+            if publish_time:
+                publish_time = publish_time.get('datetime')
         except Exception as e:
             pass
-        
-        return author, image_url, content
+
+        return author, image_url, content, publish_time
 
     @staticmethod
     def get_tg_article(author: str, html_content: str):
@@ -340,18 +345,18 @@ class TgArticleUtils:
         :param html_content: html
         :return: (title, content, link, size, tag)
         """
+        html_content = re.sub(r'</?b>', '', html_content)
         author = author if author in TgArticleUtils.get_tg_article_map.keys() else 'other'
         return TgArticleUtils.get_tg_article_map[author](html_content)
 
-    
     @staticmethod
-    def process_url(base_url: str, image_save_path: str, excel_file: str, retries: int = 3, delay: int = 2):
+    def process_url(base_url: str, image_save_path: str, ignore_tags: tuple = None, retries: int = 3, delay: int = 2):
         cwd = os.getcwd()
         url = f"{base_url}?embed=1&mode=tme"
         author = title = renamed_image = content = link = size = tag = ''
         success_str = '失败'
         logs_path = os.path.join(cwd, 'file', 'logs.txt')
-            
+
         for attempt in range(1, retries + 1):
             try:
                 # 1. Fetch the page content
@@ -361,14 +366,14 @@ class TgArticleUtils:
                     raise Exception(f"无法获取页面内容: {url}")
 
                 # 2. Parse meta tags (image and description)
-                author, image_url, html_content = TgArticleUtils.get_tg_article_content(html_content)
+                author, image_url, html_content, publish_time = TgArticleUtils.get_tg_article_content(html_content)
                 if html_content == 'Post not found':
                     FileUtils.write_file(logs_path, [f"TgArticleUtils_文章不存在: {url}"], 'a')
                     return None
                 if not image_url or not html_content:
                     FileUtils.write_file(logs_path, [f"TgArticleUtils_无法解析页面内容: {url}"], 'a')
                     raise Exception(f"无法解析页面内容: {url}")
-                    
+
                 for ads in TgArticleUtils.ads_articles:
                     if ads in html_content:
                         FileUtils.write_file(logs_path, [f"TgArticleUtils_广告文章，跳过采集: {url}"], 'a')
@@ -379,8 +384,14 @@ class TgArticleUtils:
                 if not result:
                     FileUtils.write_file(logs_path, [f"TgArticleUtils_正则解析失败: {url}"], 'a')
                     return base_url, author, success_str, title, renamed_image, content, link, size, tag
-                    
+
                 title, content, link, size, tag = result
+                # 过滤指定标签的文章
+                if ignore_tags:
+                    for ignore_tag in ignore_tags:
+                        if ignore_tag in tag:
+                            return None
+
                 if not title or not link:
                     FileUtils.write_file(logs_path, [f"TgArticleUtils_正则解析失败: {url}"], 'a')
                     return base_url, author, success_str, title, renamed_image, content, link, size, tag
@@ -397,14 +408,15 @@ class TgArticleUtils:
                     return None
                 # 5. Return all data for appending to Excel
                 # URL, Author, Success, Title, Image, Description, Status, Tags, Categories, Price, Link, Size
-                return base_url, author, success_str, title, None, content, '', tag, None, 0, link, size
+                if not content:
+                    content = title
+                return base_url, author, success_str, title, None, content, '', tag, None, 0, link, size, publish_time
             except Exception as e:
                 print(f"处理 URL {base_url} 时发生错误: {e}")
                 if attempt == retries:
                     return None
                 else:
                     time.sleep(delay)
-                
 
     @staticmethod
     def append_to_excel(file_name: str, data: tuple):
@@ -412,24 +424,32 @@ class TgArticleUtils:
             wb = Workbook()
             ws = wb.active
             ws.title = "TgArticle"
-            ws.append(['URL', 'Author', 'Success', 'Title', 'Image', 'Description', 'Status', 'Tags', 'Categories', 'Price', 'Link', 'Size'])
+            ws.append(
+                ['URL', 'Author', 'Success', 'Title', 'Image', 'Description', 'Status', 'Tags', 'Categories', 'Price',
+                 'Link', 'Size', 'publish_time'])
             wb.save(file_name)
-            
+
         wb = load_workbook(file_name)
         ws = wb.active
         ws.append(data)
         wb.save(file_name)
-        
+
     @staticmethod
-    def tg_article_output(concurrency: int = None):
+    def tg_article_output(ignore_tags: tuple = None, urls_file: str = None, excel_file: str = None,
+                          image_save_path: str = None, concurrency: int = None):
         cwd = os.getcwd()
-        image_save_path = os.path.join(cwd, 'image')
+        if not image_save_path:
+            # image_save_path = os.path.join(cwd, 'image')
+            image_save_path = os.path.join(cwd, 'image')
         if not os.path.exists(image_save_path):
             os.makedirs(image_save_path)
-        excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
+        if not excel_file:
+            excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
         if os.path.exists(excel_file):
             os.remove(excel_file)
-        urls = FileUtils.read_file(os.path.join(cwd, 'file', 'un_publish_articles.txt'), is_strip=True)
+        if not urls_file:
+            urls_file = os.path.join(cwd, 'file', 'un_publish_articles.txt')
+        urls = FileUtils.read_file(urls_file, is_strip=True)
 
         if not urls:
             print("未找到有效的 URL，检查 urls.txt 文件")
@@ -443,7 +463,8 @@ class TgArticleUtils:
         print(f"使用 {concurrency} 个并发线程进行处理")
 
         with ThreadPoolExecutor(max_workers=concurrency) as executor:
-            future_to_url = {executor.submit(TgArticleUtils.process_url, url, image_save_path, excel_file): url for url in
+            future_to_url = {executor.submit(TgArticleUtils.process_url, url, image_save_path, ignore_tags): url for url
+                             in
                              urls}
             total = len(urls)
             zfill_size = len(str(total))
@@ -458,11 +479,6 @@ class TgArticleUtils:
                 index += 1
         FileUtils.remove_duplicate_logs()
         input('\n\n回车结束程序（enter）')
-    
-
-
-
-
 
 
 def enable_proxy():
@@ -472,8 +488,14 @@ def enable_proxy():
 
 
 if __name__ == "__main__":
+    cwd = os.getcwd()
+    ignore_tags = ('剧集', '国产剧', '端游', '真人秀', '剧情', '动画', '动漫', '国漫', '短剧', '蓝光原盘')
+    urls_file = os.path.join(cwd, 'file', 'un_publish_articles.txt')
+    excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
+    image_save_path = os.path.join(cwd, 'image')
+    concurrency = None
     # 开启全局代理
     enable_proxy()
     # 如果不传递并发度，会自动检测CPU并设置并发数
-    TgArticleUtils.tg_article_output()
-    #FileUtils.remove_duplicate_logs()
+    TgArticleUtils.tg_article_output(ignore_tags, urls_file, excel_file, image_save_path, concurrency)
+    # FileUtils.remove_duplicate_logs()

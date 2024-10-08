@@ -50,6 +50,6 @@ class FileUtils:
         
 
 links = []
-for i in range(9, 2432):
-    links.append(f"https://t.me/yunpanshare/{i}")
+for i in range(5, 92618):
+    links.append(f"https://t.me/kuakeyun/{i}")
 FileUtils.write_file(os.path.join(os.getcwd(), 'file', 'test.txt'), links)

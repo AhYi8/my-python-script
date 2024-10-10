@@ -208,8 +208,7 @@ class ParseTgArticleUtils:
 
         link_match = re.search(r'https://pan.quark.cn/s/[a-z0-9]{12}', params)
         link = link_match.group(0) if link_match else ''
-        soup = BeautifulSoup(params, 'html.parser')
-        html_text = soup.get_text(separator='\n', strip=True)
+        html_text = BeautifulSoup(params, "html.parser").get_text(strip=False)
         title_match = re.search(title_regex, html_text)
         description_match = re.search(description_regex, html_text)
         size_match = re.search(size_regex, html_text)
@@ -345,7 +344,7 @@ class TgArticleUtils:
         :param html_content: html
         :return: (title, content, link, size, tag)
         """
-        html_content = re.sub(r'</?b>', '', html_content)
+        html_content = re.sub(r'</?br/?>', '\n', html_content)
         author = author if author in TgArticleUtils.get_tg_article_map.keys() else 'other'
         return TgArticleUtils.get_tg_article_map[author](html_content)
 

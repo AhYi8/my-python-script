@@ -426,6 +426,48 @@ class WordpressUtils:
             index += 1
         return articles
 
+
+    @staticmethod
+    def jxck_meta_to_articles(article_metas: List[ArticleMeta]):
+        articles: List[Article] = []
+        tag_names = WordpressUtils.get_all_tag_name()
+        post_titles = RedisUtils.get_set(RedisUtils.res_21zys_com_titles_key)
+        if not post_titles:
+            post_titles = {post.title for post in WordpressUtils.get_all_post()}
+            RedisUtils.add_set(RedisUtils.res_21zys_com_titles_key, *post_titles)
+        total = len(article_metas)
+        zfill_size = len(str(total))
+        index = 1
+        for article_meta in article_metas:
+            pass
+        return articles
+
+    @staticmethod
+    def import_aticle():
+        cwd = os.getcwd()
+        base_image_path = os.path.join(cwd, 'image')
+        file_path = os.path.join(cwd, 'file', 'wordpress_articles.xlsx')
+        field_mapping = {
+            '标题': 'title',
+            '封面': 'image',
+            '内容': 'content',
+            '发布状态': 'status',
+            '标签': 'tags',
+            '分类': 'category',
+            '价格': 'cao_price',
+            '资源链接': 'source_url',
+            '提取码': 'pwd'
+        }
+        # 读取 xlsx 文件，映射到 article_meta
+        article_metas: List[ArticleMeta] = WordpressUtils.read_xlsx_to_article_metas(file_path, field_mapping)
+        # 将 article_meta 映射到 article，将上传成功的imgURL填充到 image 中
+        articles: List[Article] = WordpressUtils.article_metas_to_articles(base_image_path, article_metas)
+        # 发布文章
+        WordpressUtils.post_articles(articles)
+        # 清空 image 文件夹
+        # FileUtils.clear_directory(base_image_path)
+        input('\n\n回车结束程序（enter）')
+
     @staticmethod
     def outport_article(number=100, offset=0, limit=0):
         posts = WordpressUtils.get_all_post(number, offset, limit)
@@ -916,30 +958,7 @@ class FileUtils:
                 print(f"FileUtils.read_file(): {e}")
 
 # 主程序
-def import_aticle():
-    cwd = os.getcwd()
-    base_image_path = os.path.join(cwd, 'image')
-    file_path = os.path.join(cwd, 'file', 'wordpress_articles.xlsx')
-    field_mapping = {
-        '标题': 'title',
-        '封面': 'image',
-        '内容': 'content',
-        '发布状态': 'status',
-        '标签': 'tags',
-        '分类': 'category',
-        '价格': 'cao_price',
-        '资源链接': 'source_url',
-        '提取码': 'pwd'
-    }
-    # 读取 xlsx 文件，映射到 article_meta
-    article_metas: List[ArticleMeta] = WordpressUtils.read_xlsx_to_article_metas(file_path, field_mapping)
-    # 将 article_meta 映射到 article，将上传成功的imgURL填充到 image 中
-    articles: List[Article] = WordpressUtils.article_metas_to_articles(base_image_path, article_metas)
-    # 发布文章
-    WordpressUtils.post_articles(articles)
-    # 清空 image 文件夹
-    # FileUtils.clear_directory(base_image_path)
-    input('\n\n回车结束程序（enter）')
+
 
 
 def enable_proxy():
@@ -950,4 +969,4 @@ def enable_proxy():
 
 if __name__ == "__main__":
     enable_proxy()
-    import_aticle()
+    WordpressUtils.import_aticle()

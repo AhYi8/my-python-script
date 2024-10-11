@@ -195,14 +195,14 @@ class ParseTgArticleUtils:
             tags = html_text_match.group(4).split('#')
             tags = [tag.strip() for tag in tags if tag.strip() not in TgArticleUtils.tag_remove_keys]
             tag = ','.join(tags).strip(',').replace(',,', ',')
-            description = description.strip().replace('下载链接[:：]', '')
+            description = re.sub(r'下载链接[:：]', '', description.strip())
             return title, description, link, "N", tag
         return None
 
     @staticmethod
     def get_other_tg_quark_article(params: str):
-        title_regex = r'(名称|资源标题|资源名称)[:：](.+)'
-        description_regex = r'(简介|描述|资源描述)[:：]([\s\S]*)(链接[:：])'
+        title_regex = r'(名称|资源标题|标题|资源名称)[:：]\n*(.+)'
+        description_regex = r'(简介|描述|资源描述)[:：]\n*([\s\S]*)(链接[:：])'
         size_regex = r'大小[:：](.+)'
         tag_regex = r'标签[:：](.+)'
 
@@ -264,8 +264,7 @@ class FileUtils:
 
     @staticmethod
     def remove_duplicate_logs(log_path: str = os.path.join(os.getcwd(), 'file', 'logs.txt')):
-        logs: set = {log for log in FileUtils.read_file(log_path, is_strip=True) if
-                     '跳过采集' not in log and '文章不存在' not in log}
+        logs: set = {log for log in FileUtils.read_file(log_path, is_strip=True) if '文章不存在' not in log}
         FileUtils.write_file(log_path, logs)
 
 

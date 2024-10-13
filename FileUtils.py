@@ -1,4 +1,4 @@
-import os, shutil, win32com.client, re
+import os, shutil, re
 from typing import List
 
 class FileUtils:
@@ -97,38 +97,6 @@ class FileUtils:
                     # 重命名文件
                     os.rename(old_image_path, new_image_path)
                     print(f"Renamed: {old_image_path} -> {new_image_path}")
-
-    # @staticmethod
-    # def modify_all_files_properties_in_directory(directory: str, title: str, subject: str, tags: str, comments: str):
-    #     try:
-    #         # 使用DsoFile的COM对象
-    #         dso = win32com.client.Dispatch("DSOFile.OleDocumentProperties")
-    #
-    #         for root, _, files in os.walk(directory):
-    #             for file in files:
-    #                 file_path = os.path.join(root, file)
-    #
-    #                 try:
-    #                     # 打开文件以修改其属性
-    #                     dso.Open(file_path)
-    #
-    #                     # 修改文件的摘要属性：标题、主题、标记、备注
-    #                     dso.SummaryProperties.Title = title
-    #                     dso.SummaryProperties.Subject = subject
-    #                     dso.SummaryProperties.Keywords = tags
-    #                     dso.SummaryProperties.Comments = comments
-    #
-    #                     # 保存修改
-    #                     dso.Save()
-    #                     print(f"已修改文件属性: {file_path}")
-    #
-    #                 except Exception as e:
-    #                     print(f"修改文件属性时出错: {file_path}, 错误: {e}")
-    #
-    #         dso.Close()
-    #
-    #     except Exception as e:
-    #         print(f"发生错误: {e}")
 
     @staticmethod
     def coser_picture_folders_rename(main_folder):

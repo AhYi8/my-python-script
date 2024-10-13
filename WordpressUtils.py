@@ -8,11 +8,32 @@ from wordpress_xmlrpc.compat import xmlrpc_client
 from openpyxl import Workbook
 import pandas as pd
 from typing import List
-import phpserialize, collections.abc, requests, hashlib, uuid, random, string, time, os, re, openpyxl, shutil, redis
+import phpserialize, collections.abc, requests, hashlib, uuid, random, string, time, os, re, openpyxl, shutil, redis, logging
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 from datetime import datetime
 from retrying import retry
+from bs4 import BeautifulSoup
+
+# 创建日志目录
+log_dir = os.path.join(os.getcwd(), 'file')
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+
+# 创建一个 FileHandler，并设置编码为 'utf-8'
+log_file = os.path.join(log_dir, 'log.txt')
+file_handler = logging.FileHandler(log_file, encoding='utf-8')
+
+# 创建一个日志格式器
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+# 将格式器应用于文件处理器
+file_handler.setFormatter(formatter)
+
+# 获取根日志记录器并配置
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)  # 设置日志级别
+logger.addHandler(file_handler)  # 添加处理器
 
 collections.Iterable = collections.abc.Iterable
 class RedisUtils:
@@ -22,6 +43,7 @@ class RedisUtils:
     db = 0
     password = 'Mh359687..'
     res_21zys_com_titles_key = 'res.21zys.com_titles'
+    vip_91_article_links = 'vip_91_article_links'
     # 私有构造函数
     _redis_client = None
 
@@ -287,15 +309,15 @@ class WordpressUtils:
                     break
                 offset += number  # 更新 offset，以便获取下一部分文章
             except ServerConnectionError as e:
-                print(f"Connection error: {e}")
+                logging.error(f"Connection error: {e}")
                 break
             except Exception as e:
-                print(f"An error occurred: {e}")
+                logging.error(f"An error occurred: {e}")
                 break
         return all_posts
 
     @staticmethod
-    def post_article(article: Article):
+    def post_article(article: Article, is_duplicate: True):
         try:
             post = WordPressPost()
             post.title = article.title
@@ -305,11 +327,11 @@ class WordpressUtils:
             post.custom_fields = article.custom_fields
             post.comment_status = 'open'
             post.id = WordpressUtils.wp.call(NewPost(post))
-            if article.post_status == 'publish':
+            if is_duplicate and article.post_status == 'publish':
                 RedisUtils.add_set(RedisUtils.res_21zys_com_titles_key, article.title)
             return post.id
         except Exception as e:
-            print(f"发布文章失败：{e}")
+            logging.error(f"发布文章失败：{e}")
 
 
     @staticmethod
@@ -318,6 +340,7 @@ class WordpressUtils:
         zfill_size = len(str(total))
         index = 1
         for article in articles:
+            logging.info(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
             print(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
             index += 1
             WordpressUtils.post_article(article)
@@ -349,6 +372,26 @@ class WordpressUtils:
         return article_metas
 
     @staticmethod
+    def read_vip_91_chuangye_xlsx(file_path: str):
+        # 读取Excel文件，指定引擎为openpyxl
+        df = pd.read_excel(file_path, engine='openpyxl')
+
+        # 定义字段映射
+        column_mapping = {
+            "文章网址": "article_link",
+            "标题": "title",
+            "内容": "content",
+            "分类": "category"
+        }
+
+        # 使用字段映射重命名列
+        df = df.rename(columns=column_mapping)
+
+        # 将DataFrame转换为列表
+        data_list = df.to_dict(orient='records')
+        return data_list
+
+    @staticmethod
     def article_metas_to_articles(base_image_path: str, article_metas: List[ArticleMeta]):
         articles: List[Article] = []
         tag_names = WordpressUtils.get_all_tag_name()
@@ -361,6 +404,7 @@ class WordpressUtils:
         index = 1
         for article_meta in article_metas:
             if article_meta.title in post_titles or article_meta.get_status() == 'undo':
+                logging.info(f'{str(index).zfill(zfill_size)}/{total}-->已存在同名文章或未发布文章，跳过发布，请手动处理：{article_meta.title}')
                 print(f'{str(index).zfill(zfill_size)}/{total}-->已存在同名文章或未发布文章，跳过发布，请手动处理：{article_meta.title}')
                 index += 1
                 continue
@@ -379,12 +423,15 @@ class WordpressUtils:
                             _, imgurl, deleteUrl = ImageUtils.upload_to_smms_image(image_path)
                             # _, imgurl = ImageUtils.upload_to_imgurl_image(image_path)
                         else:
+                            logging.info(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
                             print(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
                             index += 1
                             continue
                 except Exception as e:
-                    # print(f'{str(index).zfill(zfill_size)}/{total}-->上传图片失败，正在重试...')
+                    # logging.info(f'{str(index).zfill(zfill_size)}/{total}-->上传图片失败，正在重试...')
+                    logging.info(f'上传图片失败：{e}')
                     print(f'上传图片失败：{e}')
+            logging.info(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
             print(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
             article.title = article_meta.title
             post_titles.add(article.title)
@@ -525,6 +572,93 @@ class WordpressUtils:
                         DataUtils.output_data_to_xlsx(('title', 'categories', 'url'),
                                                       (title, ','.join(categories), url),
                                                       os.path.join(os.getcwd(), 'file', 'wordpress_articles_output.xlsx'))
+
+    @staticmethod
+    def publish_vip_91_article():
+        vip_91_article_meta_list = WordpressUtils.read_vip_91_chuangye_xlsx(r"C:\Users\Administrator\Desktop\91创业网-实战VIP项目-文章内容采集.xlsx")
+        # articles: List[Article] = []
+        tag_names = WordpressUtils.get_all_tag_name()
+        vip_91_article_links = RedisUtils.get_set(RedisUtils.vip_91_article_links)
+        total = len(vip_91_article_meta_list)
+        zfill_size = len(str(total))
+        index = 1
+
+        for vip_91_article_meta in vip_91_article_meta_list:
+            link = vip_91_article_meta["article_link"]
+            source_name = title = vip_91_article_meta['title']
+            content = vip_91_article_meta['content']
+
+            def handle_content(title, content: str):
+                # 匹配百度网盘链接
+                baidu_pattern1 = r'(?:https?://)?\b(e?yun|pan)\.baidu\.com/[sj]/([\w\-]{5,})(?!\.)'
+                baidu_pattern2 = r'(?:https?://)?\b(e?yun|pan)\.baidu\.com/(?:share|wap)/init\?surl=([\w\-]{5,})(?!\.)'
+                baidu_pattern3 = r'http://pan\.baidu\.com/share/link\?shareid=[0-9]*&amp;uk=[0-9]*'
+                url = None
+                article_content = None
+                try:
+                    article_content = re.search(r"""([\s\S]*)<div class="ripay-content""", content).group(1).replace(""" decoding=\"async\"""", "")
+                except Exception as e:
+                    logging.error(f"{title}：{e}")
+                # 检查百度网盘链接
+                match = re.search(f"{baidu_pattern1}|{baidu_pattern2}|{baidu_pattern3}", content, re.IGNORECASE)
+                if match:
+                    # 百度网盘链接检测
+                    url = match.group(0)
+
+                pwd_match = re.search("\?pwd=(.{4})|提取码[:：](.{4})", content)
+                pwd = pwd_match.group(1) if pwd_match else ""
+                return url, pwd, article_content
+
+            source_url, source_pwd, content = handle_content(title, content)
+            category = vip_91_article_meta['category'].split("\n")
+            if not source_url or not content:
+                logging.error(f'{str(index).zfill(zfill_size)}/{total}-->资源链接异常，请手动处理：{title}')
+                index += 1
+                continue
+
+            if link in vip_91_article_links:
+                logging.error(f'{str(index).zfill(zfill_size)}/{total}-->已存在同名文章或未发布文章，跳过发布，请手动处理：{title}')
+                index += 1
+                continue
+            article = Article()
+
+            article.title = title
+            article.content = content
+            article.post_status = "publish"
+            tags = {tag_name for tag_name in tag_names if tag_name in article.content or tag_name in title}
+            terms_names = {'post_tag': list(tags), 'category': category}
+            article.terms_names = terms_names
+
+            cao_downurl_new = [{'name': source_name, 'url': source_url, 'pwd': source_pwd}]
+            keywords = []
+            keywords.extend(list(tags))
+            keywords.extend(category)
+            custom_fields = [
+                {'key': 'cao_price', 'value': "99.9"},
+                {'key': 'cao_vip_rate', 'value': "0.6"},
+                {'key': 'cao_is_boosvip', 'value': "1"},
+                {'key': 'cao_close_novip_pay', 'value': 0},
+                {'key': 'cao_paynum', 'value': "0"},
+                {'key': 'cao_status', 'value': "1"},
+                {'key': 'cao_downurl_new', 'value': cao_downurl_new},
+                {'key': 'cao_info', 'value': ""},
+                {'key': 'cao_demourl', 'value': ""},
+                {'key': 'cao_diy_btn', 'value': ""},
+                {'key': 'cao_video', 'value': ""},
+                {'key': 'cao_is_video_free', 'value': ""},
+                {'key': 'video_url_new', 'value': ""},
+                {'key': 'post_titie', 'value': ""},
+                {'key': 'keywords', 'value': ','.join(keywords)},
+                {'key': 'description', 'value': BeautifulSoup(content, "html.parser").get_text(strip=True)},
+                {'key': 'views', 'value': str(random.randint(300, 500))}
+            ]
+            article.custom_fields = custom_fields
+            # 发布文章
+            logging.info(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
+            WordpressUtils.post_article(article, False)
+            RedisUtils.add_set(RedisUtils.vip_91_article_links, link)
+            index += 1
+
 
 
 class ImageUtils:
@@ -853,7 +987,7 @@ class ImageUtils:
                         success_results[original_filename] = imgURL  # 将结果存储到字典中
                     except Exception as e:
                         failed_results.append((original_filename, file_path))
-                        print(f'图片上传失败：{original_filename}---->{file_path}---->{e}')
+                        logging.info(f'图片上传失败：{original_filename}---->{file_path}---->{e}')
         return (success_results, failed_results)
 
     @staticmethod
@@ -875,7 +1009,7 @@ class ImageUtils:
                         success_results[original_filename] = imgURL  # 将结果存储到字典中
                     except Exception as e:
                         failed_results.append((original_filename, file_path))
-                        print(f'图片上传失败：{original_filename}---->{file_path}---->{e}')
+                        logging.info(f'图片上传失败：{original_filename}---->{file_path}---->{e}')
 
         return (success_results, failed_results)
 
@@ -920,9 +1054,9 @@ class FileUtils:
             shutil.rmtree(directory_path)
             # 重新创建空目录
             os.makedirs(directory_path)
-            print(f"目录 {directory_path} 已清空")
+            logging.info(f"目录 {directory_path} 已清空")
         else:
-            print(f"目录 {directory_path} 不存在")
+            logging.info(f"目录 {directory_path} 不存在")
 
     @staticmethod
     def read_file(path: str, is_strip: bool = False, mode: str = 'r', encoding: str = 'u8'):
@@ -934,7 +1068,7 @@ class FileUtils:
                     data_list = [data.strip() for data in data_list]
                 return data_list
             except BaseException as e:
-                print(f"FileUtils.read_file(): {e}")
+                logging.info(f"FileUtils.read_file(): {e}")
                 return None
         else:
             return None
@@ -955,7 +1089,7 @@ class FileUtils:
                 with open(path, mode=mode, encoding=encoding) as wf:
                     wf.writelines(write_list)
             except BaseException as e:
-                print(f"FileUtils.read_file(): {e}")
+                logging.info(f"FileUtils.read_file(): {e}")
 
 # 主程序
 
@@ -964,9 +1098,10 @@ class FileUtils:
 def enable_proxy():
     os.environ['http_proxy'] = 'http://localhost:10809'
     os.environ['https_proxy'] = 'http://localhost:10809'
-    print("全局代理已开启")
+    logging.info("全局代理已开启")
 
 
 if __name__ == "__main__":
     enable_proxy()
-    WordpressUtils.import_aticle()
+    # WordpressUtils.import_aticle()
+    WordpressUtils.publish_vip_91_article()

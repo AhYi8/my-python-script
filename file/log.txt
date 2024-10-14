@@ -1,366 +1,566 @@
-2024-10-14 16:39:38,919 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 16:39:42,043 - INFO - Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Link: https://vip.91chuangye.cn/2024/10/14/130132/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,043 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,043 - INFO - Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Link: https://vip.91chuangye.cn/2024/10/14/130129/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,043 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,043 - INFO - Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Link: https://vip.91chuangye.cn/2024/10/14/130126/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,043 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,043 - INFO - Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Link: https://vip.91chuangye.cn/2024/10/14/130123/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,043 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,043 - INFO - Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Link: https://vip.91chuangye.cn/2024/10/14/130120/, Category: ���ڵ���,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,043 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,043 - INFO - Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Link: https://vip.91chuangye.cn/2024/10/14/130117/, Category: �˹�����,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Link: https://vip.91chuangye.cn/2024/10/14/130114/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Link: https://vip.91chuangye.cn/2024/10/14/130111/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Link: https://vip.91chuangye.cn/2024/10/13/130105/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Link: https://vip.91chuangye.cn/2024/10/13/130108/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Link: https://vip.91chuangye.cn/2024/10/13/130100/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Link: https://vip.91chuangye.cn/2024/10/13/130094/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Link: https://vip.91chuangye.cn/2024/10/13/130091/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Link: https://vip.91chuangye.cn/2024/10/13/130086/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Link: https://vip.91chuangye.cn/2024/10/13/130080/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Link: https://vip.91chuangye.cn/2024/10/13/130083/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Link: https://vip.91chuangye.cn/2024/10/13/130077/, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Link: https://vip.91chuangye.cn/2024/10/13/130074/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Link: https://vip.91chuangye.cn/2024/10/13/130071/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Link: https://vip.91chuangye.cn/2024/10/13/130065/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Link: https://vip.91chuangye.cn/2024/10/13/130068/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - INFO - Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Link: https://vip.91chuangye.cn/2024/10/13/130062/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:39:42,059 - ERROR - Error processing article: name 'results' is not defined
-2024-10-14 16:40:20,074 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 16:40:23,075 - INFO - Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Link: https://vip.91chuangye.cn/2024/10/14/130132/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,075 - INFO - Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Link: https://vip.91chuangye.cn/2024/10/14/130129/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,075 - INFO - Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Link: https://vip.91chuangye.cn/2024/10/14/130126/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,075 - INFO - Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Link: https://vip.91chuangye.cn/2024/10/14/130123/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,075 - INFO - Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Link: https://vip.91chuangye.cn/2024/10/14/130120/, Category: ���ڵ���,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,075 - INFO - Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Link: https://vip.91chuangye.cn/2024/10/14/130117/, Category: �˹�����,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,075 - INFO - Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Link: https://vip.91chuangye.cn/2024/10/14/130114/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,075 - INFO - Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Link: https://vip.91chuangye.cn/2024/10/14/130111/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,075 - INFO - Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Link: https://vip.91chuangye.cn/2024/10/13/130105/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Link: https://vip.91chuangye.cn/2024/10/13/130108/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Link: https://vip.91chuangye.cn/2024/10/13/130100/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Link: https://vip.91chuangye.cn/2024/10/13/130094/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Link: https://vip.91chuangye.cn/2024/10/13/130091/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Link: https://vip.91chuangye.cn/2024/10/13/130086/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Link: https://vip.91chuangye.cn/2024/10/13/130080/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Link: https://vip.91chuangye.cn/2024/10/13/130083/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Link: https://vip.91chuangye.cn/2024/10/13/130077/, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Link: https://vip.91chuangye.cn/2024/10/13/130074/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Link: https://vip.91chuangye.cn/2024/10/13/130071/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Link: https://vip.91chuangye.cn/2024/10/13/130065/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Link: https://vip.91chuangye.cn/2024/10/13/130068/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,091 - INFO - Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Link: https://vip.91chuangye.cn/2024/10/13/130062/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:40:23,137 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:40:23,199 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:41:26,700 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 16:41:29,731 - INFO - Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Link: https://vip.91chuangye.cn/2024/10/14/130132/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Link: https://vip.91chuangye.cn/2024/10/14/130129/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Link: https://vip.91chuangye.cn/2024/10/14/130126/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Link: https://vip.91chuangye.cn/2024/10/14/130123/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Link: https://vip.91chuangye.cn/2024/10/14/130120/, Category: ���ڵ���,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Link: https://vip.91chuangye.cn/2024/10/14/130117/, Category: �˹�����,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Link: https://vip.91chuangye.cn/2024/10/14/130114/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Link: https://vip.91chuangye.cn/2024/10/14/130111/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Link: https://vip.91chuangye.cn/2024/10/13/130105/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Link: https://vip.91chuangye.cn/2024/10/13/130108/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Link: https://vip.91chuangye.cn/2024/10/13/130100/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Link: https://vip.91chuangye.cn/2024/10/13/130094/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Link: https://vip.91chuangye.cn/2024/10/13/130091/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Link: https://vip.91chuangye.cn/2024/10/13/130086/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Link: https://vip.91chuangye.cn/2024/10/13/130080/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Link: https://vip.91chuangye.cn/2024/10/13/130083/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Link: https://vip.91chuangye.cn/2024/10/13/130077/, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Link: https://vip.91chuangye.cn/2024/10/13/130074/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Link: https://vip.91chuangye.cn/2024/10/13/130071/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Link: https://vip.91chuangye.cn/2024/10/13/130065/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Link: https://vip.91chuangye.cn/2024/10/13/130068/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,731 - INFO - Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Link: https://vip.91chuangye.cn/2024/10/13/130062/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:41:29,756 - INFO - Created new file and saved to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:41:29,778 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:41:29,809 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:46:08,934 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 16:46:13,258 - INFO - Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Link: https://vip.91chuangye.cn/2024/10/14/130132/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Link: https://vip.91chuangye.cn/2024/10/14/130129/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Link: https://vip.91chuangye.cn/2024/10/14/130126/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Link: https://vip.91chuangye.cn/2024/10/14/130123/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Link: https://vip.91chuangye.cn/2024/10/14/130120/, Category: ���ڵ���,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Link: https://vip.91chuangye.cn/2024/10/14/130117/, Category: �˹�����,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Link: https://vip.91chuangye.cn/2024/10/14/130114/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Link: https://vip.91chuangye.cn/2024/10/14/130111/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Link: https://vip.91chuangye.cn/2024/10/13/130105/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Link: https://vip.91chuangye.cn/2024/10/13/130108/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Link: https://vip.91chuangye.cn/2024/10/13/130100/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Link: https://vip.91chuangye.cn/2024/10/13/130094/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Link: https://vip.91chuangye.cn/2024/10/13/130091/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Link: https://vip.91chuangye.cn/2024/10/13/130086/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Link: https://vip.91chuangye.cn/2024/10/13/130080/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Link: https://vip.91chuangye.cn/2024/10/13/130083/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Link: https://vip.91chuangye.cn/2024/10/13/130077/, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Link: https://vip.91chuangye.cn/2024/10/13/130074/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Link: https://vip.91chuangye.cn/2024/10/13/130071/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Link: https://vip.91chuangye.cn/2024/10/13/130065/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Link: https://vip.91chuangye.cn/2024/10/13/130068/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,258 - INFO - Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Link: https://vip.91chuangye.cn/2024/10/13/130062/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:46:13,356 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:46:13,402 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:47:47,652 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 16:47:50,636 - INFO - Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Link: https://vip.91chuangye.cn/2024/10/14/130132/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Link: https://vip.91chuangye.cn/2024/10/14/130129/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Link: https://vip.91chuangye.cn/2024/10/14/130126/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Link: https://vip.91chuangye.cn/2024/10/14/130123/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Link: https://vip.91chuangye.cn/2024/10/14/130120/, Category: ���ڵ���,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Link: https://vip.91chuangye.cn/2024/10/14/130117/, Category: �˹�����,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Link: https://vip.91chuangye.cn/2024/10/14/130114/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Link: https://vip.91chuangye.cn/2024/10/14/130111/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Link: https://vip.91chuangye.cn/2024/10/13/130105/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Link: https://vip.91chuangye.cn/2024/10/13/130108/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Link: https://vip.91chuangye.cn/2024/10/13/130100/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Link: https://vip.91chuangye.cn/2024/10/13/130094/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Link: https://vip.91chuangye.cn/2024/10/13/130091/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Link: https://vip.91chuangye.cn/2024/10/13/130086/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Link: https://vip.91chuangye.cn/2024/10/13/130080/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Link: https://vip.91chuangye.cn/2024/10/13/130083/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Link: https://vip.91chuangye.cn/2024/10/13/130077/, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Link: https://vip.91chuangye.cn/2024/10/13/130074/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Link: https://vip.91chuangye.cn/2024/10/13/130071/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Link: https://vip.91chuangye.cn/2024/10/13/130065/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Link: https://vip.91chuangye.cn/2024/10/13/130068/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,636 - INFO - Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Link: https://vip.91chuangye.cn/2024/10/13/130062/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2023/09/444.png
-2024-10-14 16:47:50,651 - INFO - Created new file and saved to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:47:50,691 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:47:50,715 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:49:41,841 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 16:49:44,848 - INFO - Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Link: https://vip.91chuangye.cn/2024/10/14/130132/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Link: https://vip.91chuangye.cn/2024/10/14/130129/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png
-2024-10-14 16:49:44,848 - INFO - Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Link: https://vip.91chuangye.cn/2024/10/14/130126/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Link: https://vip.91chuangye.cn/2024/10/14/130123/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Link: https://vip.91chuangye.cn/2024/10/14/130120/, Category: ���ڵ���,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Link: https://vip.91chuangye.cn/2024/10/14/130117/, Category: �˹�����,ʵսVIP��Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Link: https://vip.91chuangye.cn/2024/10/14/130114/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Link: https://vip.91chuangye.cn/2024/10/14/130111/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Link: https://vip.91chuangye.cn/2024/10/13/130105/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png
-2024-10-14 16:49:44,848 - INFO - Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Link: https://vip.91chuangye.cn/2024/10/13/130108/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png
-2024-10-14 16:49:44,848 - INFO - Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Link: https://vip.91chuangye.cn/2024/10/13/130100/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Link: https://vip.91chuangye.cn/2024/10/13/130094/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Link: https://vip.91chuangye.cn/2024/10/13/130091/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Link: https://vip.91chuangye.cn/2024/10/13/130086/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Link: https://vip.91chuangye.cn/2024/10/13/130080/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Link: https://vip.91chuangye.cn/2024/10/13/130083/, Category: ʵսVIP��Ŀ,������Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Link: https://vip.91chuangye.cn/2024/10/13/130077/, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png
-2024-10-14 16:49:44,848 - INFO - Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Link: https://vip.91chuangye.cn/2024/10/13/130074/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Link: https://vip.91chuangye.cn/2024/10/13/130071/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Link: https://vip.91chuangye.cn/2024/10/13/130065/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Link: https://vip.91chuangye.cn/2024/10/13/130068/, Category: ʵսVIP��Ŀ,С����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg
-2024-10-14 16:49:44,848 - INFO - Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Link: https://vip.91chuangye.cn/2024/10/13/130062/, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg
-2024-10-14 16:49:44,915 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 16:49:44,982 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:14:22,262 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 17:14:25,535 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-14
-2024-10-14 17:14:25,551 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14
-2024-10-14 17:14:25,551 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14
-2024-10-14 17:14:25,551 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14
-2024-10-14 17:14:25,551 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: ���ڵ���,ʵսVIP��Ŀ, Publish_date: 2024-10-14
-2024-10-14 17:14:25,551 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: �˹�����,ʵսVIP��Ŀ, Publish_date: 2024-10-14
-2024-10-14 17:14:25,566 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14
-2024-10-14 17:14:25,566 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14
-2024-10-14 17:14:25,566 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,566 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,567 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,567 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,567 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,567 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,568 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,568 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,568 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,568 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,569 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,569 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13
-2024-10-14 17:14:25,569 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13
-2024-10-14 17:14:25,569 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13
-2024-10-14 17:14:25,699 - INFO - Created new file and saved to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:14:25,824 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:14:26,020 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:19:16,637 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,743 - ERROR - Error processing article: module 'datetime' has no attribute 'strptime'
-2024-10-14 17:19:19,759 - INFO - Created new file and saved to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:19:19,774 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:19:19,790 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:21:35,514 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 17:21:38,636 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-14
-2024-10-14 17:21:38,636 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14
-2024-10-14 17:21:38,636 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14
-2024-10-14 17:21:38,636 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14
-2024-10-14 17:21:38,636 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: ���ڵ���,ʵսVIP��Ŀ, Publish_date: 2024-10-14
-2024-10-14 17:21:38,636 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: �˹�����,ʵսVIP��Ŀ, Publish_date: 2024-10-14
-2024-10-14 17:21:38,636 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14
-2024-10-14 17:21:38,636 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14
-2024-10-14 17:21:38,636 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13
-2024-10-14 17:21:38,652 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13
-2024-10-14 17:21:38,699 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:21:38,731 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:24:15,840 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-14 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: ���ڵ���,ʵսVIP��Ŀ, Publish_date: 2024-10-14 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: �˹�����,ʵսVIP��Ŀ, Publish_date: 2024-10-14 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,933 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13 00:00:00
-2024-10-14 17:24:18,951 - INFO - Created new file and saved to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:24:18,981 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:24:18,997 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:30:04,825 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:07,857 - ERROR - Error processing article: Parser must be a string or character stream, not Tag
-2024-10-14 17:30:08,152 - INFO - Created new file and saved to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:30:08,199 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:30:08,215 - INFO - Appended data to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:31:45,871 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 17:31:48,914 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-14 13:25:00+08:00
-2024-10-14 17:31:48,914 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14 13:10:00+08:00
-2024-10-14 17:31:48,914 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14 11:48:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14 11:03:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: ���ڵ���,ʵսVIP��Ŀ, Publish_date: 2024-10-14 10:58:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: �˹�����,ʵսVIP��Ŀ, Publish_date: 2024-10-14 10:51:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14 10:36:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14 09:55:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 20:29:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 20:13:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 19:40:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 18:09:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 14:38:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 14:17:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 14:14:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 14:13:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Publish_date: 2024-10-13 11:36:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13 11:06:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13 10:56:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13 10:45:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13 10:40:00+08:00
-2024-10-14 17:31:48,930 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13 10:36:00+08:00
-2024-10-14 17:31:48,945 - ERROR - Error processing article: Excel does not support timezones in datetimes. The tzinfo in the datetime/time object must be set to None.
-2024-10-14 17:31:48,945 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
-2024-10-14 17:31:48,945 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
-2024-10-14 17:31:48,945 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
-2024-10-14 17:31:48,945 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
-2024-10-14 17:31:48,945 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
-2024-10-14 17:32:13,527 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: ��12962�ڣ�С������Ӫ�γ���⣺��Ų߻�����ַ��������챬������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-14 13:25:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: ��12961�ڣ�ͷ�������淨��ȫ�Զ��һ��Ķ���С���������֣��ֻ����Ծ��ɣ��������롭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14 13:10:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: ��12960�ڣ�����Ƶ���������γ̣��ӻ������ܵ����ַ�ʽ�����ɴ��챬�����Ƶ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14 11:48:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: ��12960�ڣ�������һ����ж���Ƶ��ߣ����Ƶ�Ŵ����߷ֳ� �����������֣�ѧ�ᡭ, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14 11:03:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: ��12959�ڣ��Ա�&��è��Ӫʵս�γ̣��������������ؼ�����ٲ����淨�����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: ���ڵ���,ʵսVIP��Ŀ, Publish_date: 2024-10-14 10:58:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: ��12958�ڣ���Ƶ��������AI�ڲ�������������˳������⣬��Ч����������Ƶ��������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: �˹�����,ʵսVIP��Ŀ, Publish_date: 2024-10-14 10:51:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: ��12957�ڣ����ֶ���Ƶ������Ŀ�������淨 ����С���������֣������ǧ�ܼ�, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-14 10:36:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: ��12956�ڣ����Լ���׬Ǯ����Ŀ���������ģ��������Ҵ���ԭ��������ÿ��500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-14 09:55:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: ��12955�ڣ�����AI������׬�������ٱ��� ʵ�ٵ���2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 20:29:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: ��12954�ڣ���ˮ�����˹һ���Ŀ�ղ���ǧ֧�ֵ����ڲ��������������ϣ���Ŀ�������硭, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 20:13:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: ��12953�ڣ�������ˢ��𣬵���ѧ�ᣬ��������棬��������300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 19:40:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: ��12952�ڣ�����ͷ������9.0�淨�����ɾ�������3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 18:09:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: ��12951�ڣ����ּ��ٰ�ȫ�Զ�ߣ�𿴹�桢ˢ��Ƶ ��������50+ ������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 14:38:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: ��12950�ڣ�2024��𱬵���Ŀ�̾��ƹ�ʵ�ٿ� һ����Ƶ����5��+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 14:17:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: ��12949�ڣ��������С�׼����Բ������µ�������һǧ+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 14:14:00+08:00
-2024-10-14 17:32:16,603 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: ��12948�ڣ�������ߣ�����淨��������������������������1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: ʵսVIP��Ŀ,������Ŀ, Publish_date: 2024-10-13 14:13:00+08:00
-2024-10-14 17:32:16,619 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: ��12947�ڣ������ۻ�����ע��Ŀ�������԰�ש��ҵ������100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: ʵսVIP��Ŀ,���Ÿ�����Ŀ, Publish_date: 2024-10-13 11:36:00+08:00
-2024-10-14 17:32:16,619 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: ��12946�ڣ�ʵս����Ƶ&�����Σ�����¶����ֱ���������������㣬����ǧ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13 11:06:00+08:00
-2024-10-14 17:32:16,619 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: ��12945�ڣ�����ͬ�����������̳̣�ʵ���ŵ�������ö���Ƶ��ֱ����������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13 10:56:00+08:00
-2024-10-14 17:32:16,619 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: ��12944�ڣ�С������ҵ�ž��������Σ�������Ӫ��ѡƷ���İ�������������������, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13 10:45:00+08:00
-2024-10-14 17:32:16,619 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: ��12943�ڣ�С����רҵ�ž��������Σ�������������������׼��ͼ���ȫ����, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: ʵսVIP��Ŀ,С����, Publish_date: 2024-10-13 10:40:00+08:00
-2024-10-14 17:32:16,619 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: ��12942�ڣ�ֱ�������º��� ���٣�������Ͷ�Ź��ԣ�����ŵ����ݷ����������Ż�Ͷ��, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: ʵսVIP��Ŀ,����Ƶ��Ӫ, Publish_date: 2024-10-13 10:36:00+08:00
-2024-10-14 17:32:16,619 - INFO - Created new file and saved to C:\Users\MAC\Desktop\my-python-script\file\vip_91chuangye_com.xlsx
-2024-10-14 17:32:16,650 - ERROR - Error processing article: Excel does not support timezones in datetimes. The tzinfo in the datetime/time object must be set to None.
-2024-10-14 17:32:16,650 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
-2024-10-14 17:32:16,650 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
-2024-10-14 17:32:16,650 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
-2024-10-14 17:32:16,650 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
-2024-10-14 17:32:16,650 - ERROR - Error processing article: "There is no item named '[Content_Types].xml' in the archive"
+2024-10-14 18:08:15,437 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 18:08:18,494 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130135/, Title: （12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014100026-670cebba3f01c-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 15:40:00+08:00
+2024-10-14 18:08:18,494 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: （12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-14 13:25:00+08:00
+2024-10-14 18:08:18,495 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: （12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 13:10:00+08:00
+2024-10-14 18:08:18,495 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: （12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:48:00+08:00
+2024-10-14 18:08:18,495 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: （12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:03:00+08:00
+2024-10-14 18:08:18,496 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: （12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: 国内电商,实战VIP项目, Publish_date: 2024-10-14 10:58:00+08:00
+2024-10-14 18:08:18,496 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: （12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: 人工智能,实战VIP项目, Publish_date: 2024-10-14 10:51:00+08:00
+2024-10-14 18:08:18,496 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: （12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 10:36:00+08:00
+2024-10-14 18:08:18,497 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: （12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 09:55:00+08:00
+2024-10-14 18:08:18,497 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: （12955期）运用AI工具玩赚流量快速变现 实操单月2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:29:00+08:00
+2024-10-14 18:08:18,497 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: （12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:13:00+08:00
+2024-10-14 18:08:18,498 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: （12953期）语聊自刷掘金，当天学会，当天见收益，轻松日入300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 19:40:00+08:00
+2024-10-14 18:08:18,498 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: （12952期）今日头条最新9.0玩法，轻松矩阵日入3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 18:09:00+08:00
+2024-10-14 18:08:18,498 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: （12951期）快手极速版全自动撸金看广告、刷视频 单号收益50+ 可批量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:38:00+08:00
+2024-10-14 18:08:18,499 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: （12950期）2024最火爆的项目短剧推广实操课 一条视频变现5万+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:17:00+08:00
+2024-10-14 18:08:18,499 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: （12949期）黑神话悟空小白简单无脑操作拉新单天收益一千+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:14:00+08:00
+2024-10-14 18:08:18,500 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: （12948期）最新自撸拉新玩法，无限制批量操作，轻松日入1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:13:00+08:00
+2024-10-14 18:08:18,500 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: （12947期）无人售货机标注项目，简单无脑搬砖副业，日入100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: 实战VIP项目,热门给力项目, Publish_date: 2024-10-13 11:36:00+08:00
+2024-10-14 18:08:18,500 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: （12946期）实战短视频&带货课，无需露脸和直播，甚至无需拍摄，日销千单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 11:06:00+08:00
+2024-10-14 18:08:18,501 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: （12945期）抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:56:00+08:00
+2024-10-14 18:08:18,501 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: （12944期）小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:45:00+08:00
+2024-10-14 18:08:18,501 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: （12943期）小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:40:00+08:00
+2024-10-14 18:08:18,502 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: （12942期）直播带货新号破 流速：随心推投放攻略，从起号到数据分析，独立优化投放, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:36:00+08:00
+2024-10-14 18:08:18,512 - INFO - Created new file and saved to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-14 18:08:18,524 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-14 18:08:18,537 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-14 19:36:54,454 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 19:37:21,320 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 19:38:30,569 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 19:38:36,328 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130135/
+2024-10-14 19:51:53,624 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 19:51:55,113 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130135/
+2024-10-14 20:30:43,027 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130135/, Title: （12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014100026-670cebba3f01c-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 15:40:00+08:00
+2024-10-14 20:30:43,028 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130132/
+2024-10-14 20:30:43,862 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: （12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-14 13:25:00+08:00
+2024-10-14 20:30:43,863 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130129/
+2024-10-14 20:30:44,373 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: （12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 13:10:00+08:00
+2024-10-14 20:30:44,373 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130126/
+2024-10-14 20:30:45,182 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: （12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:48:00+08:00
+2024-10-14 20:30:45,183 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130123/
+2024-10-14 20:30:45,826 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: （12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:03:00+08:00
+2024-10-14 20:30:45,826 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130120/
+2024-10-14 20:30:46,458 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: （12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: 国内电商,实战VIP项目, Publish_date: 2024-10-14 10:58:00+08:00
+2024-10-14 20:30:46,458 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130117/
+2024-10-14 20:30:47,020 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: （12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: 人工智能,实战VIP项目, Publish_date: 2024-10-14 10:51:00+08:00
+2024-10-14 20:30:47,020 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130114/
+2024-10-14 20:30:47,772 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: （12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 10:36:00+08:00
+2024-10-14 20:30:47,773 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130111/
+2024-10-14 20:30:48,367 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: （12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 09:55:00+08:00
+2024-10-14 20:30:48,367 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130105/
+2024-10-14 20:30:49,096 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: （12955期）运用AI工具玩赚流量快速变现 实操单月2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:29:00+08:00
+2024-10-14 20:30:49,097 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130108/
+2024-10-14 20:30:49,816 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: （12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:13:00+08:00
+2024-10-14 20:30:49,817 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130100/
+2024-10-14 20:32:06,835 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 20:32:11,589 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 20:36:04,685 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 20:36:06,018 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 20:36:45,277 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 20:36:46,716 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 20:38:36,883 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 20:38:38,477 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 20:40:44,347 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 20:40:45,658 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 20:43:12,660 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 20:43:13,861 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 20:43:45,162 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 20:43:46,426 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 21:12:43,389 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:12:44,929 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130141/
+2024-10-14 21:13:42,048 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:14:21,980 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130141/
+2024-10-14 21:16:31,585 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:16:32,710 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130144/
+2024-10-14 21:17:24,859 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:17:25,820 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130144/
+2024-10-14 21:20:33,735 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:20:34,989 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130144/
+2024-10-14 21:20:47,213 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130144/, Title: （12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014131551-670d198790a1c-300x200.jpg, Category: 实战VIP项目,引流-涨粉-软件, Publish_date: 2024-10-14 21:05:00
+2024-10-14 21:20:47,214 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130141/
+2024-10-14 21:20:47,769 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130141/, Title: （12965期）突破销售瓶颈，掌握销冠三火轮，实现业绩持续增长的销售技能课, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014125638-670d150647457-300x200.jpg, Category: 实战VIP项目,营销-成交, Publish_date: 2024-10-14 20:55:00
+2024-10-14 21:20:47,770 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 21:20:48,923 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130138/, Title: （12964期）今日头条最新10.0玩法，轻松矩阵日入2000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014122420-670d0d74e81a6-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 20:23:00
+2024-10-14 21:20:48,924 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130135/
+2024-10-14 21:20:49,607 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130135/, Title: （12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014100026-670cebba3f01c-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 15:40:00
+2024-10-14 21:20:49,607 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130132/
+2024-10-14 21:20:50,272 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: （12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-14 13:25:00
+2024-10-14 21:20:50,272 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130129/
+2024-10-14 21:20:50,860 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: （12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 13:10:00
+2024-10-14 21:20:50,860 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130126/
+2024-10-14 21:20:51,511 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: （12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:48:00
+2024-10-14 21:20:51,512 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130123/
+2024-10-14 21:20:52,018 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: （12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:03:00
+2024-10-14 21:20:52,019 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130120/
+2024-10-14 21:20:52,999 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: （12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: 国内电商,实战VIP项目, Publish_date: 2024-10-14 10:58:00
+2024-10-14 21:20:53,000 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130117/
+2024-10-14 21:20:53,834 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: （12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: 人工智能,实战VIP项目, Publish_date: 2024-10-14 10:51:00
+2024-10-14 21:20:53,834 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130114/
+2024-10-14 21:20:54,576 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: （12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 10:36:00
+2024-10-14 21:20:54,577 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130111/
+2024-10-14 21:20:55,297 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: （12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 09:55:00
+2024-10-14 21:20:55,298 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130105/
+2024-10-14 21:20:56,092 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: （12955期）运用AI工具玩赚流量快速变现 实操单月2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:29:00
+2024-10-14 21:20:56,092 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130108/
+2024-10-14 21:20:56,823 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: （12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:13:00
+2024-10-14 21:20:56,824 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130100/
+2024-10-14 21:20:57,457 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: （12953期）语聊自刷掘金，当天学会，当天见收益，轻松日入300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 19:40:00
+2024-10-14 21:20:57,457 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130094/
+2024-10-14 21:20:58,037 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: （12952期）今日头条最新9.0玩法，轻松矩阵日入3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 18:09:00
+2024-10-14 21:20:58,038 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130091/
+2024-10-14 21:20:58,497 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: （12951期）快手极速版全自动撸金看广告、刷视频 单号收益50+ 可批量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:38:00
+2024-10-14 21:20:58,498 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130086/
+2024-10-14 21:20:59,172 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: （12950期）2024最火爆的项目短剧推广实操课 一条视频变现5万+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:17:00
+2024-10-14 21:20:59,172 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130080/
+2024-10-14 21:20:59,732 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: （12949期）黑神话悟空小白简单无脑操作拉新单天收益一千+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:14:00
+2024-10-14 21:20:59,733 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130083/
+2024-10-14 21:21:00,301 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: （12948期）最新自撸拉新玩法，无限制批量操作，轻松日入1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:13:00
+2024-10-14 21:21:00,303 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130077/
+2024-10-14 21:21:00,890 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: （12947期）无人售货机标注项目，简单无脑搬砖副业，日入100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: 实战VIP项目,热门给力项目, Publish_date: 2024-10-13 11:36:00
+2024-10-14 21:21:00,891 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130074/
+2024-10-14 21:21:01,598 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: （12946期）实战短视频&带货课，无需露脸和直播，甚至无需拍摄，日销千单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 11:06:00
+2024-10-14 21:21:01,599 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130071/
+2024-10-14 21:21:02,464 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: （12945期）抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:56:00
+2024-10-14 21:21:02,465 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130065/
+2024-10-14 21:21:03,079 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: （12944期）小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:45:00
+2024-10-14 21:21:03,080 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130068/
+2024-10-14 21:21:03,692 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: （12943期）小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:40:00
+2024-10-14 21:21:03,692 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130062/
+2024-10-14 21:21:04,202 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: （12942期）直播带货新号破 流速：随心推投放攻略，从起号到数据分析，独立优化投放, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:36:00
+2024-10-14 21:21:04,203 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/2
+2024-10-14 21:21:05,416 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/3
+2024-10-14 21:21:06,641 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/4
+2024-10-14 21:21:08,173 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/5
+2024-10-14 21:21:09,232 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/6
+2024-10-14 21:21:10,371 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/7
+2024-10-14 21:21:11,471 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/8
+2024-10-14 21:21:12,700 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/9
+2024-10-14 21:21:13,669 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/10
+2024-10-14 21:21:14,938 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/11
+2024-10-14 21:21:16,730 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/12
+2024-10-14 21:21:17,936 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/13
+2024-10-14 21:21:19,317 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/14
+2024-10-14 21:21:20,517 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/15
+2024-10-14 21:21:21,579 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/09/13/128754/
+2024-10-14 21:21:22,324 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-14 21:21:22,336 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130144/-->（12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局
+2024-10-14 21:32:06,837 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:32:08,084 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130144/
+2024-10-14 21:32:08,860 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130144/, Title: （12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014131551-670d198790a1c-300x200.jpg, Category: 实战VIP项目,引流-涨粉-软件, Publish_date: 2024-10-14 21:05:00
+2024-10-14 21:32:08,861 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130141/
+2024-10-14 21:32:09,469 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130141/, Title: （12965期）突破销售瓶颈，掌握销冠三火轮，实现业绩持续增长的销售技能课, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014125638-670d150647457-300x200.jpg, Category: 实战VIP项目,营销-成交, Publish_date: 2024-10-14 20:55:00
+2024-10-14 21:32:09,469 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 21:32:10,013 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130138/, Title: （12964期）今日头条最新10.0玩法，轻松矩阵日入2000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014122420-670d0d74e81a6-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 20:23:00
+2024-10-14 21:32:10,014 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130135/
+2024-10-14 21:32:10,594 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130135/, Title: （12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014100026-670cebba3f01c-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 15:40:00
+2024-10-14 21:32:10,595 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130132/
+2024-10-14 21:32:11,298 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: （12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-14 13:25:00
+2024-10-14 21:32:11,298 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130129/
+2024-10-14 21:32:11,999 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: （12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 13:10:00
+2024-10-14 21:32:11,999 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130126/
+2024-10-14 21:32:12,695 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: （12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:48:00
+2024-10-14 21:32:12,696 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130123/
+2024-10-14 21:32:13,263 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: （12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:03:00
+2024-10-14 21:32:13,264 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130120/
+2024-10-14 21:32:14,100 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: （12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: 国内电商,实战VIP项目, Publish_date: 2024-10-14 10:58:00
+2024-10-14 21:32:14,101 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130117/
+2024-10-14 21:32:14,724 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: （12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: 人工智能,实战VIP项目, Publish_date: 2024-10-14 10:51:00
+2024-10-14 21:32:14,725 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130114/
+2024-10-14 21:32:15,272 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: （12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 10:36:00
+2024-10-14 21:32:15,273 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130111/
+2024-10-14 21:32:15,873 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: （12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 09:55:00
+2024-10-14 21:32:15,874 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130105/
+2024-10-14 21:32:16,559 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: （12955期）运用AI工具玩赚流量快速变现 实操单月2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:29:00
+2024-10-14 21:32:16,559 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130108/
+2024-10-14 21:32:17,312 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: （12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:13:00
+2024-10-14 21:32:17,313 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130100/
+2024-10-14 21:32:18,096 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: （12953期）语聊自刷掘金，当天学会，当天见收益，轻松日入300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 19:40:00
+2024-10-14 21:32:18,097 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130094/
+2024-10-14 21:32:18,812 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: （12952期）今日头条最新9.0玩法，轻松矩阵日入3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 18:09:00
+2024-10-14 21:32:18,813 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130091/
+2024-10-14 21:32:19,332 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: （12951期）快手极速版全自动撸金看广告、刷视频 单号收益50+ 可批量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:38:00
+2024-10-14 21:32:19,333 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130086/
+2024-10-14 21:32:19,888 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: （12950期）2024最火爆的项目短剧推广实操课 一条视频变现5万+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:17:00
+2024-10-14 21:32:19,888 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130080/
+2024-10-14 21:32:20,765 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: （12949期）黑神话悟空小白简单无脑操作拉新单天收益一千+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:14:00
+2024-10-14 21:32:20,766 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130083/
+2024-10-14 21:32:21,311 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: （12948期）最新自撸拉新玩法，无限制批量操作，轻松日入1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:13:00
+2024-10-14 21:32:21,311 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130077/
+2024-10-14 21:32:21,900 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: （12947期）无人售货机标注项目，简单无脑搬砖副业，日入100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: 实战VIP项目,热门给力项目, Publish_date: 2024-10-13 11:36:00
+2024-10-14 21:32:21,900 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130074/
+2024-10-14 21:32:22,521 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: （12946期）实战短视频&带货课，无需露脸和直播，甚至无需拍摄，日销千单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 11:06:00
+2024-10-14 21:32:22,521 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130071/
+2024-10-14 21:32:23,147 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: （12945期）抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:56:00
+2024-10-14 21:32:23,147 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130065/
+2024-10-14 21:32:24,283 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: （12944期）小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:45:00
+2024-10-14 21:32:24,284 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130068/
+2024-10-14 21:32:25,830 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: （12943期）小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:40:00
+2024-10-14 21:32:25,831 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130062/
+2024-10-14 21:32:26,437 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: （12942期）直播带货新号破 流速：随心推投放攻略，从起号到数据分析，独立优化投放, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:36:00
+2024-10-14 21:34:08,740 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:34:09,967 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130144/
+2024-10-14 21:34:11,584 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130144/, Title: （12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014131551-670d198790a1c-300x200.jpg, Category: 实战VIP项目,引流-涨粉-软件, Publish_date: 2024-10-14 21:05:00
+2024-10-14 21:34:11,584 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130141/
+2024-10-14 21:34:12,490 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130141/, Title: （12965期）突破销售瓶颈，掌握销冠三火轮，实现业绩持续增长的销售技能课, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014125638-670d150647457-300x200.jpg, Category: 实战VIP项目,营销-成交, Publish_date: 2024-10-14 20:55:00
+2024-10-14 21:34:12,490 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 21:34:13,282 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130138/, Title: （12964期）今日头条最新10.0玩法，轻松矩阵日入2000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014122420-670d0d74e81a6-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 20:23:00
+2024-10-14 21:34:13,282 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130135/
+2024-10-14 21:34:13,943 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130135/, Title: （12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014100026-670cebba3f01c-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 15:40:00
+2024-10-14 21:34:13,944 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130132/
+2024-10-14 21:34:14,669 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: （12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-14 13:25:00
+2024-10-14 21:34:14,669 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130129/
+2024-10-14 21:34:15,281 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: （12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 13:10:00
+2024-10-14 21:34:15,281 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130126/
+2024-10-14 21:34:16,008 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: （12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:48:00
+2024-10-14 21:34:16,008 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130123/
+2024-10-14 21:34:16,735 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: （12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:03:00
+2024-10-14 21:34:16,736 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130120/
+2024-10-14 21:34:17,628 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: （12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: 国内电商,实战VIP项目, Publish_date: 2024-10-14 10:58:00
+2024-10-14 21:34:17,629 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130117/
+2024-10-14 21:34:18,374 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: （12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: 人工智能,实战VIP项目, Publish_date: 2024-10-14 10:51:00
+2024-10-14 21:34:18,374 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130114/
+2024-10-14 21:34:19,174 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: （12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 10:36:00
+2024-10-14 21:34:19,175 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130111/
+2024-10-14 21:34:19,842 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: （12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 09:55:00
+2024-10-14 21:34:19,842 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130105/
+2024-10-14 21:34:20,440 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: （12955期）运用AI工具玩赚流量快速变现 实操单月2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:29:00
+2024-10-14 21:34:20,440 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130108/
+2024-10-14 21:34:21,039 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: （12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:13:00
+2024-10-14 21:34:21,039 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130100/
+2024-10-14 21:34:21,874 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: （12953期）语聊自刷掘金，当天学会，当天见收益，轻松日入300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 19:40:00
+2024-10-14 21:34:21,874 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130094/
+2024-10-14 21:34:22,890 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: （12952期）今日头条最新9.0玩法，轻松矩阵日入3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 18:09:00
+2024-10-14 21:34:22,891 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130091/
+2024-10-14 21:34:23,705 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: （12951期）快手极速版全自动撸金看广告、刷视频 单号收益50+ 可批量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:38:00
+2024-10-14 21:34:23,705 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130086/
+2024-10-14 21:34:24,500 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: （12950期）2024最火爆的项目短剧推广实操课 一条视频变现5万+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:17:00
+2024-10-14 21:34:24,501 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130080/
+2024-10-14 21:34:25,268 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: （12949期）黑神话悟空小白简单无脑操作拉新单天收益一千+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:14:00
+2024-10-14 21:34:25,268 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130083/
+2024-10-14 21:34:26,019 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: （12948期）最新自撸拉新玩法，无限制批量操作，轻松日入1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:13:00
+2024-10-14 21:34:26,020 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130077/
+2024-10-14 21:34:26,628 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: （12947期）无人售货机标注项目，简单无脑搬砖副业，日入100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: 实战VIP项目,热门给力项目, Publish_date: 2024-10-13 11:36:00
+2024-10-14 21:34:26,629 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130074/
+2024-10-14 21:34:27,186 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: （12946期）实战短视频&带货课，无需露脸和直播，甚至无需拍摄，日销千单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 11:06:00
+2024-10-14 21:34:27,187 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130071/
+2024-10-14 21:34:27,910 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: （12945期）抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:56:00
+2024-10-14 21:34:27,910 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130065/
+2024-10-14 21:34:28,645 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: （12944期）小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:45:00
+2024-10-14 21:34:28,646 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130068/
+2024-10-14 21:34:29,383 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: （12943期）小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:40:00
+2024-10-14 21:34:29,385 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130062/
+2024-10-14 21:34:30,044 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: （12942期）直播带货新号破 流速：随心推投放攻略，从起号到数据分析，独立优化投放, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:36:00
+2024-10-14 21:34:30,045 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/2
+2024-10-14 21:34:31,327 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/3
+2024-10-14 21:34:32,498 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/4
+2024-10-14 21:34:33,892 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/5
+2024-10-14 21:34:35,258 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/6
+2024-10-14 21:34:36,756 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/7
+2024-10-14 21:34:38,068 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/8
+2024-10-14 21:34:39,400 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/9
+2024-10-14 21:34:40,687 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/10
+2024-10-14 21:34:41,976 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/11
+2024-10-14 21:34:43,108 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/12
+2024-10-14 21:34:44,411 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/13
+2024-10-14 21:34:45,966 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/14
+2024-10-14 21:34:47,028 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/15
+2024-10-14 21:34:48,343 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/09/13/128754/
+2024-10-14 21:34:56,951 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-14 21:34:56,962 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130144/-->（12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局
+2024-10-14 21:40:32,829 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:40:33,961 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130144/
+2024-10-14 21:40:34,752 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130144/, Title: （12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014131551-670d198790a1c-300x200.jpg, Category: 实战VIP项目,引流-涨粉-软件, Publish_date: 2024-10-14 21:05:00
+2024-10-14 21:40:34,752 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130141/
+2024-10-14 21:40:35,370 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130141/, Title: （12965期）突破销售瓶颈，掌握销冠三火轮，实现业绩持续增长的销售技能课, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014125638-670d150647457-300x200.jpg, Category: 实战VIP项目,营销-成交, Publish_date: 2024-10-14 20:55:00
+2024-10-14 21:40:35,370 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 21:40:35,990 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130138/, Title: （12964期）今日头条最新10.0玩法，轻松矩阵日入2000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014122420-670d0d74e81a6-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 20:23:00
+2024-10-14 21:40:35,991 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130135/
+2024-10-14 21:40:37,594 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130135/, Title: （12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014100026-670cebba3f01c-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 15:40:00
+2024-10-14 21:40:37,595 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130132/
+2024-10-14 21:40:38,303 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: （12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-14 13:25:00
+2024-10-14 21:40:38,304 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130129/
+2024-10-14 21:40:38,935 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: （12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 13:10:00
+2024-10-14 21:40:38,935 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130126/
+2024-10-14 21:40:39,721 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: （12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:48:00
+2024-10-14 21:40:39,722 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130123/
+2024-10-14 21:40:41,361 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: （12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:03:00
+2024-10-14 21:40:41,362 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130120/
+2024-10-14 21:40:42,243 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: （12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: 国内电商,实战VIP项目, Publish_date: 2024-10-14 10:58:00
+2024-10-14 21:40:42,244 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130117/
+2024-10-14 21:40:42,948 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: （12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: 人工智能,实战VIP项目, Publish_date: 2024-10-14 10:51:00
+2024-10-14 21:40:42,948 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130114/
+2024-10-14 21:40:43,559 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: （12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 10:36:00
+2024-10-14 21:40:43,560 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130111/
+2024-10-14 21:40:44,400 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: （12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 09:55:00
+2024-10-14 21:40:44,400 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130105/
+2024-10-14 21:40:45,031 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: （12955期）运用AI工具玩赚流量快速变现 实操单月2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:29:00
+2024-10-14 21:40:45,032 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130108/
+2024-10-14 21:40:45,750 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: （12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:13:00
+2024-10-14 21:40:45,750 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130100/
+2024-10-14 21:40:48,302 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: （12953期）语聊自刷掘金，当天学会，当天见收益，轻松日入300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 19:40:00
+2024-10-14 21:40:48,303 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130094/
+2024-10-14 21:40:48,841 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: （12952期）今日头条最新9.0玩法，轻松矩阵日入3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 18:09:00
+2024-10-14 21:40:48,841 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130091/
+2024-10-14 21:40:49,735 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: （12951期）快手极速版全自动撸金看广告、刷视频 单号收益50+ 可批量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:38:00
+2024-10-14 21:40:49,738 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130086/
+2024-10-14 21:40:50,359 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: （12950期）2024最火爆的项目短剧推广实操课 一条视频变现5万+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:17:00
+2024-10-14 21:40:50,361 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130080/
+2024-10-14 21:40:50,965 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: （12949期）黑神话悟空小白简单无脑操作拉新单天收益一千+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:14:00
+2024-10-14 21:40:50,966 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130083/
+2024-10-14 21:40:51,491 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: （12948期）最新自撸拉新玩法，无限制批量操作，轻松日入1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:13:00
+2024-10-14 21:40:51,492 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130077/
+2024-10-14 21:40:52,135 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: （12947期）无人售货机标注项目，简单无脑搬砖副业，日入100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: 实战VIP项目,热门给力项目, Publish_date: 2024-10-13 11:36:00
+2024-10-14 21:40:52,136 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130074/
+2024-10-14 21:40:52,726 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: （12946期）实战短视频&带货课，无需露脸和直播，甚至无需拍摄，日销千单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 11:06:00
+2024-10-14 21:40:52,727 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130071/
+2024-10-14 21:40:53,357 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: （12945期）抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:56:00
+2024-10-14 21:40:53,358 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130065/
+2024-10-14 21:40:53,893 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: （12944期）小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:45:00
+2024-10-14 21:40:53,894 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130068/
+2024-10-14 21:40:54,512 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: （12943期）小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:40:00
+2024-10-14 21:40:54,513 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130062/
+2024-10-14 21:40:54,984 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: （12942期）直播带货新号破 流速：随心推投放攻略，从起号到数据分析，独立优化投放, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:36:00
+2024-10-14 21:40:54,986 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/2
+2024-10-14 21:40:56,007 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/3
+2024-10-14 21:40:57,024 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/4
+2024-10-14 21:40:58,193 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/5
+2024-10-14 21:40:59,307 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/6
+2024-10-14 21:41:00,390 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/7
+2024-10-14 21:41:01,429 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/8
+2024-10-14 21:41:02,509 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/9
+2024-10-14 21:41:04,920 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/10
+2024-10-14 21:41:06,241 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/11
+2024-10-14 21:41:07,363 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/12
+2024-10-14 21:41:08,405 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/13
+2024-10-14 21:41:09,659 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/14
+2024-10-14 21:41:10,673 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/15
+2024-10-14 21:41:11,690 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/09/13/128754/
+2024-10-14 21:41:12,480 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-14 21:41:12,490 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130144/-->（12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局
+2024-10-14 21:41:36,465 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130141/-->（12965期）突破销售瓶颈，掌握销冠三火轮，实现业绩持续增长的销售技能课
+2024-10-14 21:41:39,158 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130138/-->（12964期）今日头条最新10.0玩法，轻松矩阵日入2000+
+2024-10-14 21:41:41,694 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130135/-->（12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信
+2024-10-14 21:41:44,290 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130132/-->（12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容
+2024-10-14 21:41:47,746 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130129/-->（12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…
+2024-10-14 21:49:21,411 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:49:22,547 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130144/
+2024-10-14 21:49:23,427 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130144/, Title: （12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014131551-670d198790a1c-300x200.jpg, Category: 实战VIP项目,引流-涨粉-软件, Publish_date: 2024-10-14 21:05:00
+2024-10-14 21:49:23,428 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130141/
+2024-10-14 21:49:23,916 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130141/, Title: （12965期）突破销售瓶颈，掌握销冠三火轮，实现业绩持续增长的销售技能课, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014125638-670d150647457-300x200.jpg, Category: 实战VIP项目,营销-成交, Publish_date: 2024-10-14 20:55:00
+2024-10-14 21:49:23,916 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 21:49:24,481 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130138/, Title: （12964期）今日头条最新10.0玩法，轻松矩阵日入2000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014122420-670d0d74e81a6-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 20:23:00
+2024-10-14 21:49:24,481 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130135/
+2024-10-14 21:49:25,014 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130135/, Title: （12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014100026-670cebba3f01c-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 15:40:00
+2024-10-14 21:49:25,014 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130132/
+2024-10-14 21:49:25,838 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: （12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-14 13:25:00
+2024-10-14 21:49:25,839 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130129/
+2024-10-14 21:49:26,504 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: （12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 13:10:00
+2024-10-14 21:49:26,505 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130126/
+2024-10-14 21:49:27,161 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: （12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:48:00
+2024-10-14 21:49:27,163 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130123/
+2024-10-14 21:49:27,842 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: （12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:03:00
+2024-10-14 21:49:27,843 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130120/
+2024-10-14 21:49:28,667 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: （12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: 国内电商,实战VIP项目, Publish_date: 2024-10-14 10:58:00
+2024-10-14 21:49:28,668 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130117/
+2024-10-14 21:49:29,382 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: （12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: 人工智能,实战VIP项目, Publish_date: 2024-10-14 10:51:00
+2024-10-14 21:49:29,382 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130114/
+2024-10-14 21:49:30,022 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: （12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 10:36:00
+2024-10-14 21:49:30,022 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130111/
+2024-10-14 21:49:30,811 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: （12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 09:55:00
+2024-10-14 21:49:30,811 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130105/
+2024-10-14 21:49:31,431 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: （12955期）运用AI工具玩赚流量快速变现 实操单月2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:29:00
+2024-10-14 21:49:31,432 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130108/
+2024-10-14 21:49:32,064 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: （12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:13:00
+2024-10-14 21:49:32,064 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130100/
+2024-10-14 21:49:32,687 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: （12953期）语聊自刷掘金，当天学会，当天见收益，轻松日入300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 19:40:00
+2024-10-14 21:49:32,688 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130094/
+2024-10-14 21:49:33,404 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: （12952期）今日头条最新9.0玩法，轻松矩阵日入3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 18:09:00
+2024-10-14 21:49:33,405 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130091/
+2024-10-14 21:49:34,016 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: （12951期）快手极速版全自动撸金看广告、刷视频 单号收益50+ 可批量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:38:00
+2024-10-14 21:49:34,016 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130086/
+2024-10-14 21:49:34,580 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: （12950期）2024最火爆的项目短剧推广实操课 一条视频变现5万+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:17:00
+2024-10-14 21:49:34,581 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130080/
+2024-10-14 21:49:35,155 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: （12949期）黑神话悟空小白简单无脑操作拉新单天收益一千+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:14:00
+2024-10-14 21:49:35,155 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130083/
+2024-10-14 21:49:35,757 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: （12948期）最新自撸拉新玩法，无限制批量操作，轻松日入1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:13:00
+2024-10-14 21:49:35,757 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130077/
+2024-10-14 21:49:36,594 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: （12947期）无人售货机标注项目，简单无脑搬砖副业，日入100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: 实战VIP项目,热门给力项目, Publish_date: 2024-10-13 11:36:00
+2024-10-14 21:49:36,595 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130074/
+2024-10-14 21:49:37,108 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: （12946期）实战短视频&带货课，无需露脸和直播，甚至无需拍摄，日销千单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 11:06:00
+2024-10-14 21:49:37,109 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130071/
+2024-10-14 21:49:37,927 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: （12945期）抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:56:00
+2024-10-14 21:49:37,928 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130065/
+2024-10-14 21:49:38,574 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: （12944期）小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:45:00
+2024-10-14 21:49:38,576 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130068/
+2024-10-14 21:49:39,265 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: （12943期）小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:40:00
+2024-10-14 21:49:39,265 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130062/
+2024-10-14 21:49:39,897 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: （12942期）直播带货新号破 流速：随心推投放攻略，从起号到数据分析，独立优化投放, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:36:00
+2024-10-14 21:50:40,364 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:50:41,592 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130144/
+2024-10-14 21:50:42,246 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130144/, Title: （12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014131551-670d198790a1c-300x200.jpg, Category: 实战VIP项目,引流-涨粉-软件, Publish_date: 2024-10-14 21:05:00
+2024-10-14 21:50:42,246 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130141/
+2024-10-14 21:50:42,884 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130141/, Title: （12965期）突破销售瓶颈，掌握销冠三火轮，实现业绩持续增长的销售技能课, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014125638-670d150647457-300x200.jpg, Category: 实战VIP项目,营销-成交, Publish_date: 2024-10-14 20:55:00
+2024-10-14 21:50:42,885 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 21:50:43,562 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130138/, Title: （12964期）今日头条最新10.0玩法，轻松矩阵日入2000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014122420-670d0d74e81a6-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 20:23:00
+2024-10-14 21:50:43,563 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130135/
+2024-10-14 21:50:44,219 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130135/, Title: （12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014100026-670cebba3f01c-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 15:40:00
+2024-10-14 21:50:44,220 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130132/
+2024-10-14 21:50:44,894 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: （12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-14 13:25:00
+2024-10-14 21:50:44,894 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130129/
+2024-10-14 21:50:45,499 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: （12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 13:10:00
+2024-10-14 21:50:45,501 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130126/
+2024-10-14 21:50:46,475 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: （12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:48:00
+2024-10-14 21:50:46,476 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130123/
+2024-10-14 21:50:47,086 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: （12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:03:00
+2024-10-14 21:50:47,087 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130120/
+2024-10-14 21:50:47,675 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: （12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: 国内电商,实战VIP项目, Publish_date: 2024-10-14 10:58:00
+2024-10-14 21:50:47,676 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130117/
+2024-10-14 21:50:48,643 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: （12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: 人工智能,实战VIP项目, Publish_date: 2024-10-14 10:51:00
+2024-10-14 21:50:48,644 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130114/
+2024-10-14 21:50:49,282 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: （12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 10:36:00
+2024-10-14 21:50:49,284 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130111/
+2024-10-14 21:50:49,942 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: （12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 09:55:00
+2024-10-14 21:50:49,942 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130105/
+2024-10-14 21:50:50,684 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: （12955期）运用AI工具玩赚流量快速变现 实操单月2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:29:00
+2024-10-14 21:50:50,684 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130108/
+2024-10-14 21:50:51,434 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: （12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:13:00
+2024-10-14 21:50:51,435 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130100/
+2024-10-14 21:50:52,041 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: （12953期）语聊自刷掘金，当天学会，当天见收益，轻松日入300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 19:40:00
+2024-10-14 21:50:52,042 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130094/
+2024-10-14 21:50:52,564 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: （12952期）今日头条最新9.0玩法，轻松矩阵日入3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 18:09:00
+2024-10-14 21:50:52,564 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130091/
+2024-10-14 21:50:53,020 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: （12951期）快手极速版全自动撸金看广告、刷视频 单号收益50+ 可批量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:38:00
+2024-10-14 21:50:53,022 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130086/
+2024-10-14 21:50:54,349 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: （12950期）2024最火爆的项目短剧推广实操课 一条视频变现5万+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:17:00
+2024-10-14 21:50:54,349 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130080/
+2024-10-14 21:50:54,937 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: （12949期）黑神话悟空小白简单无脑操作拉新单天收益一千+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:14:00
+2024-10-14 21:50:54,937 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130083/
+2024-10-14 21:50:55,425 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: （12948期）最新自撸拉新玩法，无限制批量操作，轻松日入1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:13:00
+2024-10-14 21:50:55,425 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130077/
+2024-10-14 21:50:56,078 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: （12947期）无人售货机标注项目，简单无脑搬砖副业，日入100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: 实战VIP项目,热门给力项目, Publish_date: 2024-10-13 11:36:00
+2024-10-14 21:50:56,078 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130074/
+2024-10-14 21:50:56,762 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: （12946期）实战短视频&带货课，无需露脸和直播，甚至无需拍摄，日销千单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 11:06:00
+2024-10-14 21:50:56,762 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130071/
+2024-10-14 21:50:57,520 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: （12945期）抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:56:00
+2024-10-14 21:50:57,521 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130065/
+2024-10-14 21:50:58,177 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: （12944期）小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:45:00
+2024-10-14 21:50:58,177 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130068/
+2024-10-14 21:50:58,771 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: （12943期）小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:40:00
+2024-10-14 21:50:58,772 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130062/
+2024-10-14 21:50:59,444 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: （12942期）直播带货新号破 流速：随心推投放攻略，从起号到数据分析，独立优化投放, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:36:00
+2024-10-14 21:52:33,505 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 21:52:34,866 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130144/
+2024-10-14 21:53:01,373 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130144/, Title: （12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014131551-670d198790a1c-300x200.jpg, Category: 实战VIP项目,引流-涨粉-软件, Publish_date: 2024-10-14 21:05:00
+2024-10-14 21:53:12,379 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130141/
+2024-10-14 21:53:13,087 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130141/, Title: （12965期）突破销售瓶颈，掌握销冠三火轮，实现业绩持续增长的销售技能课, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014125638-670d150647457-300x200.jpg, Category: 实战VIP项目,营销-成交, Publish_date: 2024-10-14 20:55:00
+2024-10-14 21:53:13,087 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130138/
+2024-10-14 21:53:13,642 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130138/, Title: （12964期）今日头条最新10.0玩法，轻松矩阵日入2000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014122420-670d0d74e81a6-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 20:23:00
+2024-10-14 21:53:13,643 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130135/
+2024-10-14 21:53:14,205 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130135/, Title: （12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014100026-670cebba3f01c-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 15:40:00
+2024-10-14 21:53:14,206 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130132/
+2024-10-14 21:53:14,890 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130132/, Title: （12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052836-670cac0464e77-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-14 13:25:00
+2024-10-14 21:53:14,890 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130129/
+2024-10-14 21:53:15,585 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130129/, Title: （12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014052012-670caa0cc3f5f-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 13:10:00
+2024-10-14 21:53:15,587 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130126/
+2024-10-14 21:53:16,276 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130126/, Title: （12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014035216-670c95705606a-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:48:00
+2024-10-14 21:53:16,277 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130123/
+2024-10-14 21:53:16,922 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130123/, Title: （12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014032014-670c8deecb7c7-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 11:03:00
+2024-10-14 21:53:16,923 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130120/
+2024-10-14 21:53:17,725 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130120/, Title: （12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014030420-670c8a3489914-300x200.jpg, Category: 国内电商,实战VIP项目, Publish_date: 2024-10-14 10:58:00
+2024-10-14 21:53:17,726 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130117/
+2024-10-14 21:53:18,589 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130117/, Title: （12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014025619-670c88531cf26-300x200.jpg, Category: 人工智能,实战VIP项目, Publish_date: 2024-10-14 10:51:00
+2024-10-14 21:53:18,590 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130114/
+2024-10-14 21:53:19,201 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130114/, Title: （12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014024022-670c8496b1945-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-14 10:36:00
+2024-10-14 21:53:19,201 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130111/
+2024-10-14 21:53:19,739 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130111/, Title: （12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014022415-670c80cf9bde2-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-14 09:55:00
+2024-10-14 21:53:19,741 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130105/
+2024-10-14 21:53:20,428 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130105/, Title: （12955期）运用AI工具玩赚流量快速变现 实操单月2w+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123218-670bbdd20e18e-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:29:00
+2024-10-14 21:53:20,429 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130108/
+2024-10-14 21:53:21,126 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130108/, Title: （12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013123229-670bbddd734f3-300x200.png, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 20:13:00
+2024-10-14 21:53:21,127 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130100/
+2024-10-14 21:53:21,763 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130100/, Title: （12953期）语聊自刷掘金，当天学会，当天见收益，轻松日入300+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013115220-670bb474bd6da-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 19:40:00
+2024-10-14 21:53:21,764 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130094/
+2024-10-14 21:53:22,443 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130094/, Title: （12952期）今日头条最新9.0玩法，轻松矩阵日入3000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013101617-670b9df18eda5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 18:09:00
+2024-10-14 21:53:22,444 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130091/
+2024-10-14 21:53:23,081 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130091/, Title: （12951期）快手极速版全自动撸金看广告、刷视频 单号收益50+ 可批量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013064822-670b6d368a170-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:38:00
+2024-10-14 21:53:23,082 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130086/
+2024-10-14 21:53:23,746 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130086/, Title: （12950期）2024最火爆的项目短剧推广实操课 一条视频变现5万+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013062416-670b6790b520a-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:17:00
+2024-10-14 21:53:23,748 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130080/
+2024-10-14 21:53:24,460 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130080/, Title: （12949期）黑神话悟空小白简单无脑操作拉新单天收益一千+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061620-670b65b4ea6ea-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:14:00
+2024-10-14 21:53:24,461 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130083/
+2024-10-14 21:53:24,966 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130083/, Title: （12948期）最新自撸拉新玩法，无限制批量操作，轻松日入1000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013061635-670b65c3c11b5-300x200.jpg, Category: 实战VIP项目,虚拟项目, Publish_date: 2024-10-13 14:13:00
+2024-10-14 21:53:24,967 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130077/
+2024-10-14 21:53:25,674 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130077/, Title: （12947期）无人售货机标注项目，简单无脑搬砖副业，日入100-200+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013034416-670b4210003dc-300x200.png, Category: 实战VIP项目,热门给力项目, Publish_date: 2024-10-13 11:36:00
+2024-10-14 21:53:25,674 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130074/
+2024-10-14 21:53:26,320 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130074/, Title: （12946期）实战短视频&带货课，无需露脸和直播，甚至无需拍摄，日销千单, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013031341-670b3ae53d045-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 11:06:00
+2024-10-14 21:53:26,321 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130071/
+2024-10-14 21:53:27,022 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130071/, Title: （12945期）抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013030553-670b3911afaff-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:56:00
+2024-10-14 21:53:27,022 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130065/
+2024-10-14 21:53:27,658 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130065/, Title: （12944期）小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024926-670b353679ecb-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:45:00
+2024-10-14 21:53:27,660 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130068/
+2024-10-14 21:53:28,363 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130068/, Title: （12943期）小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013025010-670b356284fa6-300x200.jpg, Category: 实战VIP项目,小红书, Publish_date: 2024-10-13 10:40:00
+2024-10-14 21:53:28,363 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/13/130062/
+2024-10-14 21:53:28,971 - INFO - Link: https://vip.91chuangye.cn/2024/10/13/130062/, Title: （12942期）直播带货新号破 流速：随心推投放攻略，从起号到数据分析，独立优化投放, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241013024029-670b331db3349-300x200.jpg, Category: 实战VIP项目,短视频运营, Publish_date: 2024-10-13 10:36:00
+2024-10-14 21:53:28,972 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/2
+2024-10-14 21:53:30,198 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/3
+2024-10-14 21:53:31,294 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/4
+2024-10-14 21:53:32,463 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/5
+2024-10-14 21:53:33,842 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/6
+2024-10-14 21:53:34,989 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/7
+2024-10-14 21:53:36,927 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/8
+2024-10-14 21:53:38,104 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/9
+2024-10-14 21:53:41,118 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/10
+2024-10-14 21:53:42,235 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/11
+2024-10-14 21:53:43,432 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/12
+2024-10-14 21:53:44,542 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/13
+2024-10-14 21:53:45,689 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/14
+2024-10-14 21:53:46,805 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/15
+2024-10-14 21:53:47,849 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/09/13/128754/
+2024-10-14 21:53:54,482 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-14 21:54:12,432 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130144/-->（12966期）企业实体线上获客全攻略：短视频制作、直播运营与矩阵布局
+2024-10-14 21:54:19,146 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130141/-->（12965期）突破销售瓶颈，掌握销冠三火轮，实现业绩持续增长的销售技能课
+2024-10-14 21:54:21,379 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130138/-->（12964期）今日头条最新10.0玩法，轻松矩阵日入2000+
+2024-10-14 21:54:23,492 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130135/-->（12963期）AI数字人疯狂引流吸粉，简单高效，日引300+创业粉 ，操作容易，加爆微信
+2024-10-14 21:54:26,565 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130132/-->（12962期）小红书运营课程详解：起号策划与变现方法，打造爆款内容
+2024-10-14 21:54:29,856 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130129/-->（12961期）头条最新玩法，全自动挂机阅读，小白轻松入手，手机电脑均可，单机日入…
+2024-10-14 21:54:32,322 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130126/-->（12960期）短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频
+2024-10-14 21:54:35,522 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130123/-->（12960期）三分钟一个情感短视频，撸爆视频号创作者分成 操作简单易上手，学会…
+2024-10-14 21:54:38,481 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130120/-->（12959期）淘宝&天猫运营实战课程，传授流量提升秘籍，大促操作玩法助你销量飙升
+2024-10-14 21:54:41,125 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130117/-->（12958期）视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现
+2024-10-14 21:54:45,076 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130114/-->（12957期）快手短视频带货项目，最新玩法 新手小白轻松上手，日入过千很简单
+2024-10-14 21:54:47,816 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130111/-->（12956期）我自己在赚钱的项目，软件自聊，不存在幸存者原则，做就有每天500+
+2024-10-14 21:54:50,306 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130105/-->（12955期）运用AI工具玩赚流量快速变现 实操单月2w+
+2024-10-14 21:54:52,773 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130108/-->（12954期）汽水音乐人挂机项目日产过千支持单窗口测试满意在批量上，项目红利期早…
+2024-10-14 21:54:55,073 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130100/-->（12953期）语聊自刷掘金，当天学会，当天见收益，轻松日入300+
+2024-10-14 21:54:57,607 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130094/-->（12952期）今日头条最新9.0玩法，轻松矩阵日入3000+
+2024-10-14 21:55:00,255 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130091/-->（12951期）快手极速版全自动撸金看广告、刷视频 单号收益50+ 可批量
+2024-10-14 21:55:03,054 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130086/-->（12950期）2024最火爆的项目短剧推广实操课 一条视频变现5万+
+2024-10-14 21:55:06,142 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130080/-->（12949期）黑神话悟空小白简单无脑操作拉新单天收益一千+
+2024-10-14 21:55:08,489 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130083/-->（12948期）最新自撸拉新玩法，无限制批量操作，轻松日入1000+
+2024-10-14 21:55:10,970 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130077/-->（12947期）无人售货机标注项目，简单无脑搬砖副业，日入100-200+
+2024-10-14 21:55:13,691 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130074/-->（12946期）实战短视频&带货课，无需露脸和直播，甚至无需拍摄，日销千单
+2024-10-14 21:55:16,360 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130071/-->（12945期）抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量
+2024-10-14 21:55:19,860 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130065/-->（12944期）小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧
+2024-10-14 21:55:23,352 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130068/-->（12943期）小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘
+2024-10-14 21:55:26,456 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/13/130062/-->（12942期）直播带货新号破 流速：随心推投放攻略，从起号到数据分析，独立优化投放
+2024-10-14 22:18:31,307 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-14 22:18:32,949 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/10/14/130148/
+2024-10-14 22:18:33,725 - INFO - Link: https://vip.91chuangye.cn/2024/10/14/130148/, Title: （12967期）最新淘宝无人卖货7.0，简单无脑，小白易操作，日躺赚2000+, Cover: https://vip.91chuangye.cn/wp-content/uploads/2024/10/20241014140031-670d23ff54db4-300x200.png, Category: 实战VIP项目,直播玩法, Publish_date: 2024-10-14 21:45:00
+2024-10-14 22:18:33,732 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/2
+2024-10-14 22:18:34,687 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/3
+2024-10-14 22:18:35,999 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/4
+2024-10-14 22:18:37,291 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/5
+2024-10-14 22:18:38,401 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/6
+2024-10-14 22:18:40,639 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/7
+2024-10-14 22:18:41,890 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/8
+2024-10-14 22:18:43,085 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/9
+2024-10-14 22:18:44,252 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/10
+2024-10-14 22:18:45,341 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/11
+2024-10-14 22:18:46,631 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/12
+2024-10-14 22:18:47,709 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/13
+2024-10-14 22:18:48,858 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/14
+2024-10-14 22:18:50,066 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/15
+2024-10-14 22:18:51,303 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/09/13/128754/
+2024-10-14 22:19:05,872 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-14 22:19:10,715 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130148/-->（12967期）最新淘宝无人卖货7.0，简单无脑，小白易操作，日躺赚2000+

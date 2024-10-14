@@ -1,9 +1,117 @@
-import os, logging, requests, redis
+import os, logging, requests, redis, pytz, re, random, collections.abc
 from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
 from dateutil import parser
 from retrying import retry
 from bs4 import BeautifulSoup
 from openpyxl import Workbook, load_workbook
+from wordpress_xmlrpc import Client, WordPressPost, ServerConnectionError
+from wordpress_xmlrpc.methods.posts import GetPosts, NewPost, EditPost, DeletePost, GetPost
+from wordpress_xmlrpc.methods.users import GetUserInfo
+from wordpress_xmlrpc.methods import media, posts
+from wordpress_xmlrpc.methods import taxonomies
+from wordpress_xmlrpc import WordPressTerm
+from wordpress_xmlrpc.compat import xmlrpc_client
+from openpyxl import Workbook
+import pandas as pd
+from typing import List
+
+collections.Iterable = collections.abc.Iterable
+
+# 创建日志目录
+log_dir = os.path.join(os.getcwd(), 'file')
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+
+# 创建一个 FileHandler，并设置编码为 'utf-8'
+log_file = os.path.join(log_dir, 'log.txt')
+file_handler = logging.FileHandler(log_file, encoding='utf-8')
+
+# 创建一个日志格式器
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+# 将格式器应用于文件处理器
+file_handler.setFormatter(formatter)
+
+# 获取根日志记录器并配置
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)  # 设置日志级别
+logger.addHandler(file_handler)  # 添加处理器
+
+class Article:
+    title: str
+    content: str
+    date: datetime
+    post_status: str
+    terms_names: {}
+    custom_fields: []
+
+    def __init__(self):
+        super()
+
+class WordpressUtils:
+    wp = Client(
+        r'http://res.21zys.com/xmlrpc_Mh359687...php',
+        '21zys',
+        'Mh359687..'
+    )
+
+
+    @staticmethod
+    def get_all_tag_name():
+        return {tag.name for tag in WordpressUtils.wp.call(taxonomies.GetTerms('post_tag'))}
+
+    @staticmethod
+    def get_all_post(number=100, offset=0, limit=0):
+        all_posts = []
+        while True:
+            try:
+                # 获取一部分文章，使用 offset 和 number 控制
+                posts = WordpressUtils.wp.call(GetPosts({'number': number, 'offset': offset}))
+                if not posts:
+                    break  # 如果没有返回文章，说明已经获取完毕
+                all_posts.extend(posts)
+                if limit != 0 and len(all_posts) >= limit:
+                    break
+                offset += number  # 更新 offset，以便获取下一部分文章
+            except ServerConnectionError as e:
+                logging.error(f"Connection error: {e}")
+                break
+            except Exception as e:
+                logging.error(f"An error occurred: {e}")
+                break
+        return all_posts
+
+    @staticmethod
+    def post_article(article: Article):
+        try:
+            post = WordPressPost()
+            post.title = article.title
+            if article.date:
+                post.date = article.date
+                post.date_modified = article.date
+            post.content = article.content
+            post.post_status = article.post_status
+            post.terms_names = article.terms_names
+            post.custom_fields = article.custom_fields
+            post.comment_status = 'open'
+            post.id = WordpressUtils.wp.call(NewPost(post))
+            return post.id
+        except Exception as e:
+            logging.error(f"发布文章失败：{e}")
+            return None
+
+    @staticmethod
+    def post_articles(articles: List[Article]):
+        total = len(articles)
+        zfill_size = len(str(total))
+        index = 1
+        for article in articles:
+            logging.info(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
+            print(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
+            index += 1
+            WordpressUtils.post_article(article)
+
 
 class DateUtils:
     @staticmethod
@@ -29,6 +137,10 @@ class DateUtils:
     @staticmethod
     def date_to_str(date: datetime.date, fmt: str = "%Y-%m-%d") -> str:
         """将日期转换为字符串"""
+        return date.strftime(fmt)
+
+    @staticmethod
+    def datetime_to_str(date: datetime, fmt: str = "%Y-%m-%d %H:%M:%S"):
         return date.strftime(fmt)
         
     @staticmethod
@@ -90,6 +202,28 @@ class DateUtils:
         """返回指定时区的当前时间"""
         tz = pytz.timezone(timezone_str)
         return datetime.now(tz)
+
+    @staticmethod
+    def is_before(date1: datetime, date2: datetime) -> bool:
+        """判断 date1 是否在 date2 之前"""
+        return date1 < date2
+
+    @staticmethod
+    def is_after(date1: datetime, date2: datetime) -> bool:
+        """判断 date1 是否在 date2 之后"""
+        return date1 > date2
+
+    @staticmethod
+    def is_same(date1: datetime, date2: datetime) -> bool:
+        """判断 date1 和 date2 是否相同"""
+        return date1 == date2
+
+    @staticmethod
+    def to_naive(datetime_obj: datetime) -> datetime:
+        """将带时区的 datetime 转换为 naive datetime（移除时区信息）"""
+        if datetime_obj.tzinfo is not None:
+            return datetime_obj.replace(tzinfo=None)
+        return datetime_obj
 
 class RedisUtils:
     # Redis 连接属性，用户提供
@@ -239,14 +373,8 @@ class RedisUtils:
 
 # 配置日志
 class Vip91ChuangYeUtils:
-    cookie: str = r"PHPSESSID=6eus0ie5ct64agdoh4nn9g77al; wordpress_logged_in_af89e27944e71791976296dfc34e93be=21zys%7C1730004426%7C4FtkE05uoiJ9pDUxEGreweZlj0WMZU5ocjnVG60Sgct%7C452da74eac58527be8392363a37416b8cc2fa9b67aa9b12a6e1e18868d8baf0b"
-    log_file_path = os.path.join(os.getcwd(), "file", "log.txt")
-
-    # 初始化日志系统
-    logging.basicConfig(filename=log_file_path,
-                        level=logging.INFO,
-                        format='%(asctime)s - %(levelname)s - %(message)s')
-
+    cookie: str = r'wordpress_test_cookie=WP%20Cookie%20check; PHPSESSID=1622mfuk602mh0ffcuk4scar64; Hm_lvt_ef6451eccfe96478ed5790d42dc4f1be=1728728301,1728900656; HMACCOUNT=573DE47D60EEFA01; wordpress_logged_in_af89e27944e71791976296dfc34e93be=21zys%7C1730110378%7CTpxUQij1wMMXT2kUkQteoGIuh68LK5ZfIeOBI9KKSgJ%7C962c1fcb505d29e890faf72a5840770c0f2c4a42c83f64cdf56e1cce2b044b81; Hm_lpvt_ef6451eccfe96478ed5790d42dc4f1be=1728900784'
+    tag_names = WordpressUtils.get_all_tag_name()
     @staticmethod
     def convert_cookie_to_dict(cookie_str):
         """
@@ -266,13 +394,16 @@ class Vip91ChuangYeUtils:
         return cookies
 
     @staticmethod
-    def fetch_url(url: str, retries=1):
+    def fetch_url(url: str, headers: dict = None, retries=1):
         """发送HTTP请求，默认重试1次"""
         logging.info(f"Fetching URL: {url}")
         attempt = 0
         while attempt <= retries:
             try:
-                response = requests.get(url)
+                if headers:
+                    response = requests.get(url, headers=headers)
+                else:
+                    response = requests.get(url)
                 response.raise_for_status()
                 return response.text
             except requests.RequestException as e:
@@ -281,14 +412,27 @@ class Vip91ChuangYeUtils:
                     return None  # 超过最大重试次数，返回None
                 attempt += 1
             
+    @staticmethod
+    def publish_vip_91_chuangye_article():
+        article_metas = Vip91ChuangYeUtils.get_vip_practical_project_meta()
+        for article_meta in article_metas:
+            link, title, cover, category, content, source_url, source_pwd, publish_date = article_meta
+            article: Article = Vip91ChuangYeUtils.article_meta_article(title, content, category, source_url, source_pwd, publish_date)
+            logging.info(f"正在采集发布：{link}-->{title}")
+            post_id = WordpressUtils.post_article(article)
+            if post_id:
+                RedisUtils.add_set(RedisUtils.vip_91_article_links, link)
 
     @staticmethod
-    def get_vip_practical_project_links(base_url: str = "https://vip.91chuangye.cn/scxm",
-                                  is_ouput_xlsx: bool = False,
-                                  xlsx_file_path: str = os.path.join(os.getcwd(), "file", "vip_91chuangye_com.xlsx")):
+    def get_vip_practical_project_meta(base_url: str = "https://vip.91chuangye.cn/scxm",
+                                       is_append_xlsx: bool = True,
+                                       xlsx_file_path: str = os.path.join(os.getcwd(), "file", "vip_91chuangye_com.xlsx")):
         page = 1
         published_article_links = RedisUtils.get_set(RedisUtils.vip_91_article_links)
         flag = True
+        last_week_date = DateUtils.date_to_datetime(DateUtils.add_days(DateUtils.get_current_date(), -7))
+        article_metas = []
+        results = []
         while flag:
             if page != 1:
                 url = f"{base_url}/page/{page}"
@@ -304,7 +448,7 @@ class Vip91ChuangYeUtils:
             post_wrapper = soup.find('div', class_='row posts-wrapper scroll')
             
             item_list = post_wrapper.find_all('div', recursive=False) if post_wrapper else []
-            results = []
+
             for item in item_list:
                 try:
                 
@@ -315,11 +459,10 @@ class Vip91ChuangYeUtils:
                     link = title_tag['href']
 
                     if published_article_links and link in published_article_links:
-                        Vip91ChuangYeUtils.append_to_xlsx(xlsx_file_path, results)
-                        results = []
-                        flag = False
-                        break
-                    
+                        continue
+
+                    source_url, source_pwd, article_content = Vip91ChuangYeUtils.get_vip_practical_project_content(link, title)
+
                     # 提取cover
                     cover_tag = item.find('div', class_='entry-media').find('img')
                     cover = cover_tag['data-src'] if cover_tag else None
@@ -329,19 +472,120 @@ class Vip91ChuangYeUtils:
                     category = ",".join(a.text.strip() for a in category_tags)
                     
                     publish_date_tags = entry_wrapper.find('span', class_='meta-date').find('time')
-                    publish_date = DateUtils.iso_str_to_datetime(publish_date_tags['datetime']) if publish_date_tags else DateUtils.get_current_datetime()
-                    
+                    publish_date = DateUtils.to_naive(DateUtils.iso_str_to_datetime(publish_date_tags['datetime'])) if publish_date_tags else DateUtils.get_current_datetime()
+
+                    if DateUtils.is_before(publish_date, last_week_date):
+                        flag = False
+                        break
+
                     logging.info(f"Link: {link}, Title: {title}, Cover: {cover}, Category: {category}, Publish_date: {publish_date}")
-                    results.append([link, title, cover, category, publish_date])
+                    results.append([link, title, cover, category, article_content, source_url, source_pwd, DateUtils.datetime_to_str(publish_date)])
+                    article_metas.append([link, title, cover, category, article_content, source_url, source_pwd, publish_date])
                 except Exception as e:
                     logging.error(f"Error processing article: {e}")
                     continue
 
-            # 将结果追加到xlsx文件中
-            Vip91ChuangYeUtils.append_to_xlsx(xlsx_file_path, results)
-
             # 下一页
             page += 1
+        if is_append_xlsx:
+            # 将结果追加到xlsx文件中
+            Vip91ChuangYeUtils.append_to_xlsx(xlsx_file_path, results)
+        return article_metas
+
+
+
+    @staticmethod
+    def get_vip_practical_project_content(url: str, title: str):
+        # 自定义请求头
+        headers = {
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'Accept-Encoding': 'gzip, deflate, br, zstd',
+            'Accept-Language': 'zh-CN,zh;q=0.9',
+            'Cache-Control': 'max-age=0',
+            'Connection': 'keep-alive',
+            'Cookie': Vip91ChuangYeUtils.cookie,
+            'Host': 'vip.91chuangye.cn',
+            'Referer': 'https://vip.91chuangye.cn/',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'same-origin',
+            'Sec-Fetch-User': '?1',
+            'Upgrade-Insecure-Requests': '1',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+            'sec-ch-ua': '"Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"'
+        }
+
+        html_content = Vip91ChuangYeUtils.fetch_url(url, headers)
+        soup = BeautifulSoup(html_content, 'html.parser')
+        try:
+            content = soup.find('div', class_='entry-content u-text-format u-clearfix').decode_contents()
+            return Vip91ChuangYeUtils.handle_content(title, content)
+        except Exception as e:
+            logging.error(f"Error processing article: {e}")
+        return None
+
+    @staticmethod
+    def handle_content(title, content: str):
+        # 匹配百度网盘链接
+        baidu_pattern1 = r'(?:https?://)?\b(e?yun|pan)\.baidu\.com/[sj]/([\w\-]{5,})(?!\.)'
+        baidu_pattern2 = r'(?:https?://)?\b(e?yun|pan)\.baidu\.com/(?:share|wap)/init\?surl=([\w\-]{5,})(?!\.)'
+        baidu_pattern3 = r'http://pan\.baidu\.com/share/link\?shareid=[0-9]*&amp;uk=[0-9]*'
+        url = None
+        article_content = None
+        try:
+            article_content = re.search(r"""([\s\S]*)<div class="ripay-content""", content).group(1).replace(
+                """ decoding=\"async\"""", "")
+        except Exception as e:
+            logging.error(f"{title}：{e}")
+        # 检查百度网盘链接
+        match = re.search(f"{baidu_pattern1}|{baidu_pattern2}|{baidu_pattern3}", content, re.IGNORECASE)
+        if match:
+            # 百度网盘链接检测
+            url = match.group(0)
+
+        pwd_match = re.search(r"\?pwd=(.{4})|提取码[:：](.{4})", content)
+        pwd = pwd_match.group(1) if pwd_match else ""
+        return url, pwd, article_content
+
+
+    @staticmethod
+    def article_meta_article(title, content, category, source_url, source_pwd, publish_date):
+        article = Article()
+        article.title = title
+        article.content = content.replace(r"<img", r"<img class='aligncenter'")
+        article.date = publish_date
+        article.post_status = "publish"
+        tags = {tag_name for tag_name in Vip91ChuangYeUtils.tag_names if tag_name in article.content or tag_name in title}
+        terms_names = {'post_tag': list(tags), 'category': category.split(",")}
+        article.terms_names = terms_names
+
+        cao_downurl_new = [{'name': title, 'url': source_url, 'pwd': source_pwd}]
+        keywords = []
+        keywords.extend(list(tags))
+        keywords.extend(category)
+        custom_fields = [
+            {'key': 'cao_price', 'value': "99.9"},
+            {'key': 'cao_vip_rate', 'value': "0.6"},
+            {'key': 'cao_is_boosvip', 'value': "1"},
+            {'key': 'cao_close_novip_pay', 'value': 0},
+            {'key': 'cao_paynum', 'value': "0"},
+            {'key': 'cao_status', 'value': "1"},
+            {'key': 'cao_downurl_new', 'value': cao_downurl_new},
+            {'key': 'cao_info', 'value': ""},
+            {'key': 'cao_demourl', 'value': ""},
+            {'key': 'cao_diy_btn', 'value': ""},
+            {'key': 'cao_video', 'value': ""},
+            {'key': 'cao_is_video_free', 'value': ""},
+            {'key': 'video_url_new', 'value': ""},
+            {'key': 'post_titie', 'value': ""},
+            {'key': 'keywords', 'value': ','.join(keywords)},
+            {'key': 'description', 'value': BeautifulSoup(content, "html.parser").get_text(strip=True)},
+            {'key': 'views', 'value': str(random.randint(300, 500))}
+        ]
+        article.custom_fields = custom_fields
+        return article
 
 
     @staticmethod
@@ -352,7 +596,7 @@ class Vip91ChuangYeUtils:
             wb = Workbook()
             ws = wb.active
             ws.title = "Results"
-            ws.append(["Link", "Title", "Cover", "Category", "Publis_date"])  # 添加表头
+            ws.append(["Link", "Title", "Cover", "Category", "Content", "Publish_date"])  # 添加表头
             wb.save(file_path)
             logging.info(f"Created new file and saved to {file_path}")
 
@@ -373,4 +617,4 @@ def enable_proxy():
 if __name__ == "__main__":
     enable_proxy()
     # 调用静态方法执行操作
-    Vip91ChuangYeUtils.get_vip_practical_project_links()
+    Vip91ChuangYeUtils.publish_vip_91_chuangye_article()

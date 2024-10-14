@@ -317,7 +317,7 @@ class WordpressUtils:
         return all_posts
 
     @staticmethod
-    def post_article(article: Article, is_duplicate: True):
+    def post_article(article: Article, is_duplicate: bool = True):
         try:
             post = WordPressPost()
             post.title = article.title
@@ -335,7 +335,7 @@ class WordpressUtils:
 
 
     @staticmethod
-    def post_articles(articles: List[Article]):
+    def post_articles(articles: List[Article], is_duplicate: bool = True):
         total = len(articles)
         zfill_size = len(str(total))
         index = 1
@@ -343,7 +343,7 @@ class WordpressUtils:
             logging.info(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
             print(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
             index += 1
-            WordpressUtils.post_article(article)
+            WordpressUtils.post_article(article, is_duplicate)
 
     @staticmethod
     def read_xlsx_to_article_metas(file_path, field_mapping):
@@ -605,7 +605,7 @@ class WordpressUtils:
                     # 百度网盘链接检测
                     url = match.group(0)
 
-                pwd_match = re.search("\?pwd=(.{4})|提取码[:：](.{4})", content)
+                pwd_match = re.search(r"\?pwd=(.{4})|提取码[:：](.{4})", content)
                 pwd = pwd_match.group(1) if pwd_match else ""
                 return url, pwd, article_content
 
@@ -1103,5 +1103,5 @@ def enable_proxy():
 
 if __name__ == "__main__":
     enable_proxy()
-    # WordpressUtils.import_aticle()
-    WordpressUtils.publish_vip_91_article()
+    WordpressUtils.import_aticle()
+    # WordpressUtils.publish_vip_91_article()

@@ -1,7 +1,95 @@
 import os, logging, requests, redis
+from datetime import datetime, timedelta
+from dateutil import parser
 from retrying import retry
 from bs4 import BeautifulSoup
 from openpyxl import Workbook, load_workbook
+
+class DateUtils:
+    @staticmethod
+    def get_current_date():
+        """获取当前日期"""
+        return datetime.now().date()
+
+    @staticmethod
+    def get_current_datetime():
+        """获取当前日期时间"""
+        return datetime.now()
+
+    @staticmethod
+    def get_current_datetime_str(fmt: str = "%Y-%m-%d %H:%M:%S") -> str:
+        """返回当前日期时间字符串，格式: 2024-09-08 01:32:08"""
+        return datetime.now().strftime(fmt)
+
+    @staticmethod
+    def str_to_date(date_str: str, fmt: str = "%Y-%m-%d") -> datetime.date:
+        """将字符串转换为日期"""
+        return datetime.strptime(date_str, fmt).date()
+
+    @staticmethod
+    def date_to_str(date: datetime.date, fmt: str = "%Y-%m-%d") -> str:
+        """将日期转换为字符串"""
+        return date.strftime(fmt)
+        
+    @staticmethod
+    def iso_str_to_datetime(iso_str: str) -> datetime:
+        """将带时区的 ISO 8601 格式时间字符串转换为 datetime 对象"""
+        return parser.parse(iso_str)
+
+    @staticmethod
+    def add_days(date: datetime.date, days: int) -> datetime.date:
+        """在指定日期基础上增加或减少天数"""
+        return date + timedelta(days=days)
+
+    @staticmethod
+    def add_months(date: datetime.date, months: int) -> datetime.date:
+        """在指定日期基础上增加或减少月份"""
+        return date + relativedelta(months=months)
+
+    @staticmethod
+    def days_between(date1: datetime.date, date2: datetime.date) -> int:
+        """计算两个日期之间的天数差"""
+        return (date2 - date1).days
+
+    @staticmethod
+    def date_to_datetime(date_obj: datetime.date) -> datetime:
+        """将 date 对象转换为 datetime 对象"""
+        return datetime.combine(date_obj, datetime.min.time())
+
+    @staticmethod
+    def datetime_to_date(datetime_obj: datetime) -> datetime.date:
+        """将 datetime 对象转换为 date 对象"""
+        return datetime_obj.date()
+
+    @staticmethod
+    def is_valid_date(date_str: str, fmt: str = "%Y-%m-%d") -> bool:
+        """判断字符串是否为合法的日期格式"""
+        try:
+            datetime.strptime(date_str, fmt)
+            return True
+        except ValueError:
+            return False
+
+    @staticmethod
+    def get_current_year():
+        """获取当前年份"""
+        return datetime.now().year
+
+    @staticmethod
+    def get_current_month():
+        """获取当前月份"""
+        return datetime.now().month
+
+    @staticmethod
+    def get_current_day():
+        """获取当前日期中的日"""
+        return datetime.now().day
+
+    @staticmethod
+    def get_timezone_aware_datetime(timezone_str: str = 'UTC'):
+        """返回指定时区的当前时间"""
+        tz = pytz.timezone(timezone_str)
+        return datetime.now(tz)
 
 class RedisUtils:
     # Redis 连接属性，用户提供
@@ -9,7 +97,7 @@ class RedisUtils:
     port = 6379
     db = 0
     password = 'Mh359687..'
-    vip_91_chuangye = "vip_91_chuangye_article_links"
+    vip_91_article_links = 'vip_91_article_links'
     # 私有构造函数
     _redis_client = None
 
@@ -192,16 +280,18 @@ class Vip91ChuangYeUtils:
                 if attempt == retries:
                     return None  # 超过最大重试次数，返回None
                 attempt += 1
+            
 
     @staticmethod
-    def get_vip_practical_project(base_url: str = "https://vip.91chuangye.cn/scxm",
-                                  xlsx_file_path: str = os.path.join(os.getcwd(), "file", "results.xlsx")):
+    def get_vip_practical_project_links(base_url: str = "https://vip.91chuangye.cn/scxm",
+                                  is_ouput_xlsx: bool = False,
+                                  xlsx_file_path: str = os.path.join(os.getcwd(), "file", "vip_91chuangye_com.xlsx")):
         page = 1
-        published_article_links = RedisUtils.get_set(RedisUtils.vip_91_chuangye)
+        published_article_links = RedisUtils.get_set(RedisUtils.vip_91_article_links)
         flag = True
         while flag:
             if page != 1:
-                url = f"base_url/page/{page}"
+                url = f"{base_url}/page/{page}"
             else:
                 url = base_url
             html_content = Vip91ChuangYeUtils.fetch_url(url)
@@ -210,42 +300,39 @@ class Vip91ChuangYeUtils:
                 break  # 如果请求失败，退出循环
 
             soup = BeautifulSoup(html_content, 'html.parser')
-            main_div = soup.find(id="main")
-
-            # 查找目标内容
-            article_div_list = main_div.select("div.archive.container div.row div.content-area div.row.posts-wrapper.scroll div")
-            if not article_div_list:
-                logging.info(f"No articles found on page {page}. Terminating.")
-                break
-
+            
+            post_wrapper = soup.find('div', class_='row posts-wrapper scroll')
+            
+            item_list = post_wrapper.find_all('div', recursive=False) if post_wrapper else []
             results = []
-
-            # 遍历并提取所需信息
-            for article_div in article_div_list:
+            for item in item_list:
                 try:
-                    # 获取链接和标题
-                    a_tag = article_div.select_one("article div.entry-wrapper header.entry-header a")
-                    link = a_tag['href']
-                    title = a_tag.get_text(strip=True)
+                
+                    # 提取title和link
+                    entry_wrapper = item.find('div', class_='entry-wrapper')
+                    title_tag = entry_wrapper.find('h2', class_='entry-title').find('a')
+                    title = title_tag.text.strip()
+                    link = title_tag['href']
 
                     if published_article_links and link in published_article_links:
                         Vip91ChuangYeUtils.append_to_xlsx(xlsx_file_path, results)
+                        results = []
                         flag = False
                         break
+                    
+                    # 提取cover
+                    cover_tag = item.find('div', class_='entry-media').find('img')
+                    cover = cover_tag['data-src'] if cover_tag else None
 
-                    Vip91ChuangYeUtils.get_article(link)
-
-                    # 获取类别
-                    category_a_list = article_div.select("article div.entry-wrapper span.meta-category-dot a")
-                    category = ",".join([a.get_text(strip=True) for a in category_a_list])
-
-                    # 获取封面图片链接
-                    img_tag = article_div.select_one("article div.entry-media div img")
-                    cover = img_tag['data-src'] if img_tag else None
-
-                    logging.info(f"Title: {title}, Link: {link}, Category: {category}, Cover: {cover}")
-                    results.append([title, link, category, cover])
-
+                    # 提取category
+                    category_tags = entry_wrapper.find('span', class_='meta-category-dot').find_all('a')
+                    category = ",".join(a.text.strip() for a in category_tags)
+                    
+                    publish_date_tags = entry_wrapper.find('span', class_='meta-date').find('time')
+                    publish_date = DateUtils.iso_str_to_datetime(publish_date_tags['datetime']) if publish_date_tags else DateUtils.get_current_datetime()
+                    
+                    logging.info(f"Link: {link}, Title: {title}, Cover: {cover}, Category: {category}, Publish_date: {publish_date}")
+                    results.append([link, title, cover, category, publish_date])
                 except Exception as e:
                     logging.error(f"Error processing article: {e}")
                     continue
@@ -265,7 +352,7 @@ class Vip91ChuangYeUtils:
             wb = Workbook()
             ws = wb.active
             ws.title = "Results"
-            ws.append(["Title", "Link", "Category", "Cover"])  # 添加表头
+            ws.append(["Link", "Title", "Cover", "Category", "Publis_date"])  # 添加表头
             wb.save(file_path)
             logging.info(f"Created new file and saved to {file_path}")
 
@@ -286,4 +373,4 @@ def enable_proxy():
 if __name__ == "__main__":
     enable_proxy()
     # 调用静态方法执行操作
-    Vip91ChuangYeUtils.get_vip_practical_project()
+    Vip91ChuangYeUtils.get_vip_practical_project_links()

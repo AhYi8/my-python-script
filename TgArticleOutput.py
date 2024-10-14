@@ -192,10 +192,10 @@ class ParseTgArticleUtils:
             title = title_match.group(1) if title_match else title
             title = re.sub(r'\s*(\d+)\s*', r'\1', title)
             description = html_text_match.group(2)
-            tags = html_text_match.group(4).split('#')
-            tags = [tag.strip() for tag in tags if tag.strip() not in TgArticleUtils.tag_remove_keys]
-            tag = ','.join(tags).strip(',').replace(',,', ',')
             description = re.sub(r'下载链接[:：]', '', description.strip())
+            tags = html_text_match.group(4).split('#')
+            tags = [tag.strip() for tag in tags if tag.strip() not in TgArticleUtils.tag_remove_keys and tag.strip() not in title and tag.strip() not in description]
+            tag = ','.join(tags).strip(',').replace(',,', ',')
             return title, description, link, "N", tag
         return None
 
@@ -222,7 +222,7 @@ class ParseTgArticleUtils:
         description = description_match.group(2).strip() if description_match else ''
         size = size_match.group(1) if size_match else ''
         tags = tag_match.group(1).replace(' ', '').strip('#').split('#') if tag_match else []
-        tags = [tag.strip() for tag in tags if tag.strip() not in TgArticleUtils.tag_remove_keys]
+        tags = [tag.strip() for tag in tags if tag.strip() not in TgArticleUtils.tag_remove_keys and tag.strip() not in title and tag.strip() not in description]
         tag = ','.join(tags).strip(',').replace(',,', ',')
         return title, description, link, size, tag
 

@@ -564,3 +564,184 @@
 2024-10-14 22:18:51,303 - INFO - Fetching URL: https://vip.91chuangye.cn/2024/09/13/128754/
 2024-10-14 22:19:05,872 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
 2024-10-14 22:19:10,715 - INFO - 正在采集发布：https://vip.91chuangye.cn/2024/10/14/130148/-->（12967期）最新淘宝无人卖货7.0，简单无脑，小白易操作，日躺赚2000+
+2024-10-15 13:25:52,175 - INFO - Fetching URL: https://bbs.abab9.cn/fy
+2024-10-15 13:25:53,187 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/15/267834/
+2024-10-15 13:25:53,435 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/15/267834/
+2024-10-15 13:25:53,730 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/15/267834/
+2024-10-15 13:25:53,731 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:53,731 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267752/
+2024-10-15 13:25:54,019 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267752/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267752/
+2024-10-15 13:25:54,339 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267752/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267752/
+2024-10-15 13:25:54,341 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:54,341 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267750/
+2024-10-15 13:25:54,656 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267750/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267750/
+2024-10-15 13:25:55,056 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267750/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267750/
+2024-10-15 13:25:55,057 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:55,057 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267719/
+2024-10-15 13:25:55,351 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267719/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267719/
+2024-10-15 13:25:55,664 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267719/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267719/
+2024-10-15 13:25:55,664 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:55,665 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267713/
+2024-10-15 13:25:55,970 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267713/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267713/
+2024-10-15 13:25:56,254 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267713/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267713/
+2024-10-15 13:25:56,254 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:56,255 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267687/
+2024-10-15 13:25:56,595 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267687/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267687/
+2024-10-15 13:25:56,896 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267687/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267687/
+2024-10-15 13:25:56,897 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:56,897 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267689/
+2024-10-15 13:25:57,214 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267689/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267689/
+2024-10-15 13:25:57,512 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267689/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267689/
+2024-10-15 13:25:57,512 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:57,513 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267691/
+2024-10-15 13:25:57,718 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267691/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267691/
+2024-10-15 13:25:57,942 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267691/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267691/
+2024-10-15 13:25:57,942 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:57,943 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267685/
+2024-10-15 13:25:58,181 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267685/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267685/
+2024-10-15 13:25:58,557 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267685/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267685/
+2024-10-15 13:25:58,557 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:58,557 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267683/
+2024-10-15 13:25:58,847 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267683/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267683/
+2024-10-15 13:25:59,158 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267683/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/14/267683/
+2024-10-15 13:25:59,158 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:59,159 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267639/
+2024-10-15 13:25:59,402 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/13/267639/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/13/267639/
+2024-10-15 13:25:59,670 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/13/267639/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/13/267639/
+2024-10-15 13:25:59,671 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:25:59,671 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267637/
+2024-10-15 13:25:59,952 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/13/267637/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/13/267637/
+2024-10-15 13:26:00,307 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/13/267637/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/13/267637/
+2024-10-15 13:26:00,308 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:26:00,308 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267635/
+2024-10-15 13:26:00,603 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/13/267635/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/13/267635/
+2024-10-15 13:26:00,870 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/13/267635/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/13/267635/
+2024-10-15 13:26:00,870 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:26:00,871 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267627/
+2024-10-15 13:26:01,134 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/13/267627/, attempt 1, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/13/267627/
+2024-10-15 13:26:01,418 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/13/267627/, attempt 2, Error: 404 Client Error: Not Found for url: https://bbs.abab9.cn/2024/10/13/267627/
+2024-10-15 13:26:01,419 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:26:01,419 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267621/
+2024-10-15 13:43:28,718 - INFO - Fetching URL: https://bbs.abab9.cn/fy
+2024-10-15 13:43:33,709 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/15/267834/
+2024-10-15 13:43:33,711 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 1, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:43:33,714 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 2, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:44:43,303 - INFO - Fetching URL: https://bbs.abab9.cn/fy
+2024-10-15 13:44:44,349 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/15/267834/
+2024-10-15 13:44:44,350 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 1, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:44:44,352 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 2, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:45:36,718 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:45:36,719 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267752/
+2024-10-15 13:45:36,721 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267752/, attempt 1, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:45:36,722 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267752/, attempt 2, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:45:37,686 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:45:37,687 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267750/
+2024-10-15 13:45:37,688 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267750/, attempt 1, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:45:37,690 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267750/, attempt 2, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:45:38,478 - ERROR - Error processing article: object of type 'NoneType' has no len()
+2024-10-15 13:45:38,479 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267719/
+2024-10-15 13:45:38,479 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267719/, attempt 1, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:45:38,480 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/14/267719/, attempt 2, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:49:38,591 - INFO - Fetching URL: https://bbs.abab9.cn/fy
+2024-10-15 13:49:40,014 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/15/267834/
+2024-10-15 13:49:40,016 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 1, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:49:40,018 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 2, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:50:56,874 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-15 13:50:58,338 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:50:58,338 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/2
+2024-10-15 13:50:59,723 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:50:59,723 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/3
+2024-10-15 13:51:01,117 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:51:01,118 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/4
+2024-10-15 13:51:02,423 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:51:02,423 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/5
+2024-10-15 13:51:03,974 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:51:03,975 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/6
+2024-10-15 13:51:05,314 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:51:05,314 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/7
+2024-10-15 13:51:06,565 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:51:06,566 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/8
+2024-10-15 13:51:08,081 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:51:08,082 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/9
+2024-10-15 13:51:11,059 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:51:11,059 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/10
+2024-10-15 13:51:12,400 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:51:12,400 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/11
+2024-10-15 13:51:14,030 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:51:14,030 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/12
+2024-10-15 13:52:00,549 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm
+2024-10-15 13:52:01,908 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:52:01,908 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/2
+2024-10-15 13:52:03,177 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:52:03,177 - INFO - Fetching URL: https://vip.91chuangye.cn/scxm/page/3
+2024-10-15 13:52:26,888 - INFO - Fetching URL: https://bbs.abab9.cn/fy
+2024-10-15 13:52:28,374 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/15/267834/
+2024-10-15 13:52:28,376 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 1, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:52:28,377 - ERROR - Error fetching URL: https://bbs.abab9.cn/2024/10/15/267834/, attempt 2, Error: Invalid leading whitespace, reserved character(s), or return character(s) in header name: ':authority'
+2024-10-15 13:55:01,130 - INFO - Fetching URL: https://bbs.abab9.cn/fy
+2024-10-15 13:55:02,354 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/15/267834/
+2024-10-15 13:55:09,635 - INFO - Link: https://bbs.abab9.cn/2024/10/15/267834/, Title: 小红书经典台词变现项目，零撸玩法 快速上手 日产100+, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241015043047-670deff78962e-300x200.jpeg, Category: 福缘缘, Publish_date: 2024-10-15 12:22:07
+2024-10-15 13:55:09,635 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267752/
+2024-10-15 13:55:22,949 - INFO - Link: https://bbs.abab9.cn/2024/10/14/267752/, Title: 小红书运营课程详解：起号策划与变现方法，打造爆款内容, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241014092147-670ce2abd5bb9-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-14 17:13:02
+2024-10-15 13:55:22,950 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267750/
+2024-10-15 13:55:23,744 - INFO - Link: https://bbs.abab9.cn/2024/10/14/267750/, Title: 短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241014091055-670ce01f40bea-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-14 16:54:54
+2024-10-15 13:55:23,745 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267719/
+2024-10-15 13:55:24,561 - INFO - Link: https://bbs.abab9.cn/2024/10/14/267719/, Title: ai微头条项目，Ai图文变现最新玩法，一天生产上千条文章每篇过原创的玩法, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241014040043-670c976b6831d-300x200.png, Category: 福缘缘, Publish_date: 2024-10-14 11:50:42
+2024-10-15 13:55:24,562 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267713/
+2024-10-15 13:55:25,665 - INFO - Link: https://bbs.abab9.cn/2024/10/14/267713/, Title: 视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241014034037-670c92b50f103-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-14 11:31:01
+2024-10-15 13:55:25,666 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267687/
+2024-10-15 13:55:26,478 - INFO - Link: https://bbs.abab9.cn/2024/10/14/267687/, Title: AI热门项目  动物打工视频搬砖   一键生成轻松爆热门 专撩温柔多金小姐姐 私域变先1W+, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013165106-670bfa7a84479-300x200.png, Category: 福缘缘, Publish_date: 2024-10-14 00:38:00
+2024-10-15 13:55:26,478 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267689/
+2024-10-15 13:55:27,135 - INFO - Link: https://bbs.abab9.cn/2024/10/14/267689/, Title: 闲鱼虚拟，日入300-1000+实操落地项目, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013165116-670bfa84b16da-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-14 00:37:00
+2024-10-15 13:55:27,135 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267691/
+2024-10-15 13:55:28,015 - INFO - Link: https://bbs.abab9.cn/2024/10/14/267691/, Title: 视频号天选之人掘金术，当天起号，小白闭眼干，月变现3w+！！, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013165127-670bfa8fae8e0-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-14 00:36:00
+2024-10-15 13:55:28,016 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267685/
+2024-10-15 13:55:28,713 - INFO - Link: https://bbs.abab9.cn/2024/10/14/267685/, Title: 得物自媒体搬砖，月入5000+，收益稳定可复制性强，对新手比较友好, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013164049-670bf81131d73-300x200.png, Category: 福缘缘, Publish_date: 2024-10-14 00:35:00
+2024-10-15 13:55:28,714 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/14/267683/
+2024-10-15 13:55:29,510 - INFO - Link: https://bbs.abab9.cn/2024/10/14/267683/, Title: 快手俄罗斯 数字人带货：流量获取与选品策略 文案制作与账号运营指南, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013164040-670bf808d45dd-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-14 00:31:34
+2024-10-15 13:55:29,512 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267639/
+2024-10-15 13:55:30,286 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267639/, Title: 抖音同城流量引爆教程：实体门店如何运用短视频和直播提升销量, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013082142-670b8316efe48-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-13 16:10:49
+2024-10-15 13:55:30,286 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267637/
+2024-10-15 13:55:31,034 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267637/, Title: 最新技术引流方式，中间商赚取高额差价，8天获利2.9个w, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013075043-670b7bd37e302-300x200.png, Category: 福缘缘, Publish_date: 2024-10-13 15:47:14
+2024-10-15 13:55:31,035 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267635/
+2024-10-15 13:55:32,021 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267635/, Title: 拼夕夕搬砖零撸新手小白可做，三重获利稳稳变现，无脑操作日入几十几百元, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013071050-670b727a80392-300x200.jpeg, Category: 福缘缘, Publish_date: 2024-10-13 14:54:05
+2024-10-15 13:55:32,022 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267627/
+2024-10-15 13:55:32,697 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267627/, Title: 直播带货新号破流速：随心推投放攻略，从起号到数据分析，独立优化投放, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013064115-670b6b8b113eb-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-13 14:31:06
+2024-10-15 13:55:32,699 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267621/
+2024-10-15 13:55:33,544 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267621/, Title: 普通人如何通过知识付费“卖项目”年入“百万”，IP合伙人精品课程，黑科技暴力引流, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013062241-670b6731c0adc-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-13 14:13:00
+2024-10-15 13:55:33,544 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267619/
+2024-10-15 13:55:34,328 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267619/, Title: 实战短视频带货课，无需露脸和直播，甚至无需拍摄，日销千单, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013062215-670b6717e5b65-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-13 14:10:13
+2024-10-15 13:55:34,329 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267607/
+2024-10-15 13:55:35,106 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267607/, Title: 小红书企业号矩阵引流课，涵盖运营、选品、文案，快速掌握卖货技巧, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013042109-670b4ab5f12d7-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-13 12:08:33
+2024-10-15 13:55:35,107 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267609/
+2024-10-15 13:55:35,863 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267609/, Title: 小红书专业号矩阵引流课，月销百万案例解析，精准获客技巧全揭秘, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241013042139-670b4ad3b66b7-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-13 12:06:35
+2024-10-15 13:55:35,864 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267557/
+2024-10-15 13:55:36,596 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267557/, Title: 抖音小店精细化运营：类目、完善店铺基础设置、选品、营销活动、维护店铺体验分等, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012182046-670abdfe61d7d-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-13 02:16:16
+2024-10-15 13:55:36,597 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/13/267560/
+2024-10-15 13:55:37,404 - INFO - Link: https://bbs.abab9.cn/2024/10/13/267560/, Title: 淘系对账实操课程详解：从订单处理到绩效工资核算，全面掌握电商财务管理, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012182111-670abe17e9584-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-13 02:13:40
+2024-10-15 13:55:37,405 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/12/267554/
+2024-10-15 13:55:38,183 - INFO - Link: https://bbs.abab9.cn/2024/10/12/267554/, Title: AI动画制作套路对话，高收益高热度暴力涨粉，玩法丰富，绝对原创, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012131050-670a755a3289d-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-12 20:43:09
+2024-10-15 13:55:38,184 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/12/267542/
+2024-10-15 13:55:38,964 - INFO - Link: https://bbs.abab9.cn/2024/10/12/267542/, Title: 电商财务实操课程：详解京东对账流程，从交易流程到利润核算全面覆盖, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012120046-670a64ee082b2-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-12 19:49:15
+2024-10-15 13:55:38,965 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/12/267539/
+2024-10-15 13:55:39,683 - INFO - Link: https://bbs.abab9.cn/2024/10/12/267539/, Title: 小鱼小红书0成本赚差价项目，利润空间非常大，尽早入手，多赚钱。, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012102048-670a4d80354ae-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-12 18:05:57
+2024-10-15 13:55:39,683 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/12/267479/
+2024-10-15 13:55:40,382 - INFO - Link: https://bbs.abab9.cn/2024/10/12/267479/, Title: 视频号无人直播不死号流玩法8.0，挂机直播不违规，单机日入500+, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012052037-670a07252c11c-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-12 13:14:00
+2024-10-15 13:55:40,382 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/12/267481/
+2024-10-15 13:55:41,269 - INFO - Link: https://bbs.abab9.cn/2024/10/12/267481/, Title: 小红书运营引流全攻略：资料课程入门+笔记构成，轻松掌握引流技巧, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012052103-670a073f84b98-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-12 13:13:04
+2024-10-15 13:55:41,269 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/12/267472/
+2024-10-15 13:55:42,109 - INFO - Link: https://bbs.abab9.cn/2024/10/12/267472/, Title: 2024抖音同城引流实战课：揭秘实体店千城万店盈利模式，打造流量爆款, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012042112-6709f93864d34-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-12 12:07:27
+2024-10-15 13:55:42,111 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/12/267474/
+2024-10-15 13:55:42,841 - INFO - Link: https://bbs.abab9.cn/2024/10/12/267474/, Title: AI百度文库项目，零门槛，被动管道月入10000+, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012042122-6709f942ad933-300x200.jpg, Category: 福缘缘, Publish_date: 2024-10-12 12:05:00
+2024-10-15 13:55:42,842 - INFO - Fetching URL: https://bbs.abab9.cn/2024/10/12/267470/
+2024-10-15 13:55:43,891 - INFO - Link: https://bbs.abab9.cn/2024/10/12/267470/, Title: 携程搬砖项目，百分百原创，可实操变现，新手小白月入1000+, Cover: https://bbs.abab9.cn/wp-content/uploads/2024/10/20241012041056-6709f6d034433-300x200.png, Category: 福缘缘, Publish_date: 2024-10-12 12:01:00
+2024-10-15 13:55:44,064 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 13:55:44,067 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/15/267834/-->小红书经典台词变现项目，零撸玩法 快速上手 日产100+
+2024-10-15 14:02:06,256 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267752/-->小红书运营课程详解：起号策划与变现方法，打造爆款内容
+2024-10-15 14:02:10,649 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267750/-->短视频抖店蓝海课程：从基础功能到变现方式，轻松打造爆款短视频
+2024-10-15 14:02:15,147 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267719/-->ai微头条项目，Ai图文变现最新玩法，一天生产上千条文章每篇过原创的玩法
+2024-10-15 14:02:18,190 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267713/-->视频号数字人AI口播带货，解决素人出镜难题，高效产出爆款视频引流变现
+2024-10-15 14:02:21,565 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267687/-->AI热门项目  动物打工视频搬砖   一键生成轻松爆热门 专撩温柔多金小姐姐 私域变先1W+
+2024-10-15 14:02:24,168 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267689/-->闲鱼虚拟，日入300-1000+实操落地项目
+2024-10-15 14:02:26,598 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267691/-->视频号天选之人掘金术，当天起号，小白闭眼干，月变现3w+！！
+2024-10-15 14:02:29,141 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267685/-->得物自媒体搬砖，月入5000+，收益稳定可复制性强，对新手比较友好

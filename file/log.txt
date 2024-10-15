@@ -745,3 +745,16 @@
 2024-10-15 14:02:24,168 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267689/-->闲鱼虚拟，日入300-1000+实操落地项目
 2024-10-15 14:02:26,598 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267691/-->视频号天选之人掘金术，当天起号，小白闭眼干，月变现3w+！！
 2024-10-15 14:02:29,141 - INFO - 正在采集发布：https://bbs.abab9.cn/2024/10/14/267685/-->得物自媒体搬砖，月入5000+，收益稳定可复制性强，对新手比较友好
+2024-10-15 20:55:54,630 - INFO - 正在采集页面：https://vip.91chuangye.cn/scxm
+2024-10-15 20:58:05,941 - INFO - 正在采集页面：https://vip.91chuangye.cn/scxm
+2024-10-15 20:58:07,282 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 20:58:07,282 - INFO - 正在采集页面：https://vip.91chuangye.cn/scxm/page/2
+2024-10-15 20:58:08,437 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 20:58:08,437 - INFO - 正在采集页面：https://vip.91chuangye.cn/scxm/page/3
+2024-10-15 20:58:09,866 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 20:58:09,866 - INFO - 正在采集页面：https://vip.91chuangye.cn/scxm/page/4
+2024-10-15 20:58:11,297 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 20:58:11,297 - INFO - 正在采集页面：https://vip.91chuangye.cn/scxm/page/5
+2024-10-15 20:58:12,793 - INFO - Appended data to D:\ProgramFiles\Code\python\study\my-python-script\file\vip_91chuangye_com.xlsx
+2024-10-15 20:58:12,793 - INFO - 正在采集页面：https://vip.91chuangye.cn/scxm/page/6
+2024-10-15 20:58:56,399 - INFO - 正在采集页面：https://vip.91chuangye.cn/scxm

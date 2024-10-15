@@ -391,6 +391,7 @@ class FileUtils:
         else:
             return None
 
+
 # 配置日志
 class Vip91ChuangYeUtils:
     tag_names = WordpressUtils.get_all_tag_name()
@@ -414,23 +415,42 @@ class Vip91ChuangYeUtils:
         return cookies
 
     @staticmethod
-    def fetch_url(url: str, headers: dict = None, retries=1):
-        """发送HTTP请求，默认重试1次"""
-        # logging.info(f"Fetching URL: {url}")
+    def fetch_url(url: str, headers: dict = None, retries: int = 5, timeout: int = 10, delay: int = 3):
+        """
+        发送HTTP请求，默认重试1次，设置超时为5秒，重试间隔默认1秒。
+
+        :param url: 要请求的URL
+        :param headers: 请求头信息
+        :param retries: 最大重试次数
+        :param timeout: 每次请求的超时时间（秒）
+        :param delay: 重试之间的延迟时间（秒）
+        :return: 请求成功返回响应内容，否则返回None
+        """
         attempt = 0
         while attempt <= retries:
             try:
+                # 发送HTTP请求，带有超时处理
                 if headers:
-                    response = requests.get(url, headers=headers)
+                    response = requests.get(url, headers=headers, timeout=timeout)
                 else:
-                    response = requests.get(url)
+                    response = requests.get(url, timeout=timeout)
+
+                # 检查响应状态码是否为2xx，抛出异常则重试
                 response.raise_for_status()
                 return response.text
+
+            except requests.Timeout:
+                logging.error(f"Timeout fetching URL: {url}, attempt {attempt + 1}")
             except requests.RequestException as e:
                 logging.error(f"Error fetching URL: {url}, attempt {attempt + 1}, Error: {e}")
-                if attempt == retries:
-                    return None  # 超过最大重试次数，返回None
-                attempt += 1
+
+            # 如果重试次数已用完，返回None
+            if attempt == retries:
+                return None
+
+            attempt += 1
+            # 每次重试之间等待一段时间
+            time.sleep(delay)
 
     @staticmethod
     def publish_vip_91_chuangye_article(base_url,
@@ -452,6 +472,7 @@ class Vip91ChuangYeUtils:
                 url = f"{base_url}/page/{page}"
             else:
                 url = base_url
+            logging.info(f"正在采集页面：{url}")
             html_content = Vip91ChuangYeUtils.fetch_url(url)
 
             if not html_content:
@@ -472,11 +493,6 @@ class Vip91ChuangYeUtils:
                     title = title_tag.text.strip()
                     link = title_tag['href']
 
-                    if published_article_links and link in published_article_links:
-                        continue
-
-                    source_url, source_pwd, article_content = Vip91ChuangYeUtils.get_vip_practical_project_content(link, title, cookies)
-
                     # 提取cover
                     cover_tag = item.find('div', class_='entry-media').find('img')
                     cover = cover_tag['data-src'] if cover_tag else None
@@ -489,12 +505,16 @@ class Vip91ChuangYeUtils:
                     publish_date = DateUtils.to_naive(DateUtils.iso_str_to_datetime(
                         publish_date_tags['datetime'])) if publish_date_tags else DateUtils.get_current_datetime()
 
-                    # if DateUtils.is_before(publish_date, stop_date):
-                    #     flag = False
-                    #     break
+                    if DateUtils.is_before(publish_date, stop_date):
+                        flag = False
+                        break
 
-                    # logging.info(f"Link: {link}, Title: {title}, Cover: {cover}, Category: {category}, Publish_date: {publish_date}")
-                    results.append([link, title, cover, category, article_content, source_url, source_pwd,DateUtils.datetime_to_str(publish_date)])
+                    if published_article_links and link in published_article_links:
+                        continue
+
+                    source_url, source_pwd, article_content = Vip91ChuangYeUtils.get_vip_practical_project_content(link, title, cookies)
+
+                    results.append([link, title, cover, category, article_content, source_url, source_pwd, DateUtils.datetime_to_str(publish_date)])
                     article_metas.append([link, title, cover, category, article_content, source_url, source_pwd, publish_date])
                 except Exception as e:
                     logging.error(f"Error processing article: {e}")
@@ -508,6 +528,9 @@ class Vip91ChuangYeUtils:
             if article_metas:
                 for article_meta in article_metas:
                     link, title, cover, category, content, source_url, source_pwd, publish_date = article_meta
+                    if content is None:
+                        logging.error(f"{link}-->{title} 内容异常，跳过发布，请手动处理。")
+                        continue
                     article: Article = Vip91ChuangYeUtils.article_meta_article(title, content, category, source_url, source_pwd, publish_date)
                     logging.info(f"正在采集发布：{link}-->{title}")
                     post_id = WordpressUtils.post_article(article)
@@ -538,10 +561,6 @@ class Vip91ChuangYeUtils:
                 'sec-ch-ua-platform': '"Windows"'
             }
         elif 'bbs.abab9' in url:
-            # 使用urlparse解析URL
-            parsed_url = urlparse(url)
-            path = parsed_url.path  # 获取URL的路径
-
             # 定义请求头
             headers = {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -577,7 +596,6 @@ class Vip91ChuangYeUtils:
                 'Sec-Ch-Ua-Platform': '"Windows"'
             }
 
-
         html_content = Vip91ChuangYeUtils.fetch_url(url, headers)
         soup = BeautifulSoup(html_content, 'html.parser')
         try:
@@ -596,17 +614,15 @@ class Vip91ChuangYeUtils:
         url = None
         article_content = None
         try:
-            article_content = re.search(r"""([\s\S]*)<div class="ripay-content""", content).group(1).replace(
-                """ decoding=\"async\"""", "")
+            article_content = re.search(r"""([\s\S]*)<div class="ripay-content""", content).group(1).replace(""" decoding=\"async\"""", "")
         except Exception as e:
             logging.error(f"{title}：{e}")
         # 检查百度网盘链接
         match = re.search(f"{baidu_pattern1}|{baidu_pattern2}|{baidu_pattern3}", content, re.IGNORECASE)
         if match:
-            # 百度网盘链接检测
             url = match.group(0)
 
-        pwd_match = re.search(r"\?pwd=(.{4})|提取码[:：](.{4})", content)
+        pwd_match = re.search(r"\?pwd=(.{4})|提取码.(.{4})", content)
         pwd = pwd_match.group(1) if pwd_match else ""
         return url, pwd, article_content
 
@@ -680,7 +696,6 @@ def schedule_publish_task():
     url_cookies = [(item.split(": ")[0].strip(), item.split(": ")[1].strip()) for item in FileUtils.read_file(os.path.join(os.getcwd(), "file", "cookies.txt"), is_strip=True) if not item.startswith("#")]
     for url, cookies in url_cookies:
         Vip91ChuangYeUtils.publish_vip_91_chuangye_article(url, cookies)
-
 
 
 if __name__ == "__main__":

@@ -415,7 +415,15 @@ class Vip91ChuangYeUtils:
         return cookies
 
     @staticmethod
-    def fetch_url(url: str, headers: dict = None, retries: int = 5, timeout: int = 10, delay: int = 3):
+    def get_proxy():
+        return requests.get("http://152.32.175.149:5010/get/").json()
+
+    @staticmethod
+    def delete_proxy(proxy):
+        requests.get("http://152.32.175.149:5010/delete/?proxy={}".format(proxy))
+
+    @staticmethod
+    def fetch_url(url: str, headers: dict = None, retries: int = 30, timeout: int = 10, delay: int = 3):
         """
         发送HTTP请求，默认重试1次，设置超时为5秒，重试间隔默认1秒。
 
@@ -426,14 +434,19 @@ class Vip91ChuangYeUtils:
         :param delay: 重试之间的延迟时间（秒）
         :return: 请求成功返回响应内容，否则返回None
         """
+        proxy = Vip91ChuangYeUtils.get_proxy().get("proxy")
+        proxies = {
+            "http": f"http://{proxy}"
+        }
+
         attempt = 0
         while attempt <= retries:
             try:
                 # 发送HTTP请求，带有超时处理
                 if headers:
-                    response = requests.get(url, headers=headers, timeout=timeout)
+                    response = requests.get(url, proxies=proxies, headers=headers, timeout=timeout)
                 else:
-                    response = requests.get(url, timeout=timeout)
+                    response = requests.get(url, proxies=proxies, timeout=timeout)
 
                 # 检查响应状态码是否为2xx，抛出异常则重试
                 response.raise_for_status()
@@ -446,9 +459,16 @@ class Vip91ChuangYeUtils:
 
             # 如果重试次数已用完，返回None
             if attempt == retries:
+                Vip91ChuangYeUtils.delete_proxy(proxy)
                 return None
 
             attempt += 1
+            if attempt % 3 == 0:
+                old_proxy = proxy
+                Vip91ChuangYeUtils.delete_proxy(proxy)
+                proxy = Vip91ChuangYeUtils.get_proxy().get("proxy")
+                logging.info(f"当前代理重试 3 次失败，切换代理继续尝试: {old_proxy}-->{proxy}")
+                proxies['http'] = f"http://{proxy}"
             # 每次重试之间等待一段时间
             time.sleep(delay)
 
@@ -456,14 +476,15 @@ class Vip91ChuangYeUtils:
     def publish_vip_91_chuangye_article(base_url,
                                         cookies,
                                         is_append_xlsx: bool = True,
-                                        xlsx_file_path: str = os.path.join(os.getcwd(), "file", "vip_91chuangye_com.xlsx")):
+                                        xlsx_file_path: str = os.path.join(os.getcwd(), "file",
+                                                                           "vip_91chuangye_com.xlsx")):
         if base_url.endswith("/"):
             base_url = base_url[:-1]
 
         page = 1
         published_article_links = RedisUtils.get_set(RedisUtils.vip_91_article_links)
         flag = True
-        stop_date = DateUtils.date_to_datetime(DateUtils.add_days(DateUtils.get_current_date(), -3))
+        stop_date = DateUtils.date_to_datetime(DateUtils.add_days(DateUtils.get_current_date(), -2))
 
         while flag:
             article_metas = []
@@ -512,10 +533,14 @@ class Vip91ChuangYeUtils:
                     if published_article_links and link in published_article_links:
                         continue
 
-                    source_url, source_pwd, article_content = Vip91ChuangYeUtils.get_vip_practical_project_content(link, title, cookies)
+                    source_url, source_pwd, article_content = Vip91ChuangYeUtils.get_vip_practical_project_content(link,
+                                                                                                                   title,
+                                                                                                                   cookies)
 
-                    results.append([link, title, cover, category, article_content, source_url, source_pwd, DateUtils.datetime_to_str(publish_date)])
-                    article_metas.append([link, title, cover, category, article_content, source_url, source_pwd, publish_date])
+                    results.append([link, title, cover, category, article_content, source_url, source_pwd,
+                                    DateUtils.datetime_to_str(publish_date)])
+                    article_metas.append(
+                        [link, title, cover, category, article_content, source_url, source_pwd, publish_date])
                 except Exception as e:
                     logging.error(f"Error processing article: {e}")
                     continue
@@ -531,7 +556,8 @@ class Vip91ChuangYeUtils:
                     if content is None:
                         logging.error(f"{link}-->{title} 内容异常，跳过发布，请手动处理。")
                         continue
-                    article: Article = Vip91ChuangYeUtils.article_meta_article(title, content, category, source_url, source_pwd, publish_date)
+                    article: Article = Vip91ChuangYeUtils.article_meta_article(title, content, category, source_url,
+                                                                               source_pwd, publish_date)
                     logging.info(f"正在采集发布：{link}-->{title}")
                     post_id = WordpressUtils.post_article(article)
                     if post_id:
@@ -614,7 +640,8 @@ class Vip91ChuangYeUtils:
         url = None
         article_content = None
         try:
-            article_content = re.search(r"""([\s\S]*)<div class="ripay-content""", content).group(1).replace(""" decoding=\"async\"""", "")
+            article_content = re.search(r"""([\s\S]*)<div class="ripay-content""", content).group(1).replace(
+                """ decoding=\"async\"""", "")
         except Exception as e:
             logging.error(f"{title}：{e}")
         # 检查百度网盘链接
@@ -691,9 +718,11 @@ def enable_proxy():
     print("全局代理已开启")
 
 def schedule_publish_task():
-    enable_proxy()
+    # enable_proxy()
     item: str
-    url_cookies = [(item.split(": ")[0].strip(), item.split(": ")[1].strip()) for item in FileUtils.read_file(os.path.join(os.getcwd(), "file", "cookies.txt"), is_strip=True) if not item.startswith("#")]
+    url_cookies = [(item.split(": ")[0].strip(), item.split(": ")[1].strip()) for item in
+                   FileUtils.read_file(os.path.join(os.getcwd(), "file", "cookies.txt"), is_strip=True) if
+                   not item.startswith("#")]
     for url, cookies in url_cookies:
         Vip91ChuangYeUtils.publish_vip_91_chuangye_article(url, cookies)
 
@@ -704,9 +733,9 @@ if __name__ == "__main__":
     schedule_publish_task()
 
     # 定义每天定时执行的任务
-    schedule.every(1).day.at("08:00").do(schedule_publish_task)  # 设置为每天08:00执行
+    schedule.every().hour.do(schedule_publish_task)  # 设置为每天08:00执行
     while True:
         detect_interval = 60 * 60
         schedule.run_pending()  # 检查是否有任务需要执行
         logging.info(f"等待 {detect_interval} 秒，检测数据。")
-        time.sleep(detect_interval)  # 暂停60秒
+        time.sleep(detect_interval)  # 暂停n秒

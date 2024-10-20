@@ -1,0 +1,16 @@
+python-wordpress-xmlrpc
+pandas
+phpserialize
+requests
+redis
+openpyxl
+Pillow
+beautifulsoup4
+retrying
+mysql
+piexif
+mysql-connector-python
+boto3
+pytz
+python-dateutil
+schedule

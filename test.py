@@ -1,22 +1,9 @@
-import requests, os
+import requests, os, logging
 from bs4 import BeautifulSoup
-
-class FileUtils:
-    @staticmethod
-    def read_file(path: str, is_strip: bool = False, mode: str = 'r', encoding: str = 'u8'):
-        if path is not None and len(path.strip()) != 0 and os.path.exists(path):
-            try:
-                with open(path, mode=mode, encoding=encoding) as rf:
-                    data_list = rf.readlines()
-                if is_strip:
-                    data_list = [data.strip() for data in data_list]
-                return data_list
-            except BaseException as e:
-                print(f"FileUtils.read_file(): {e}")
-                return None
-        else:
-            return None
-
+from utils.FileUtils import  FileUtils
+from utils.ImageUtils import ImageUtils
+from utils.TgArticleOutput import TgArticleUtils
+from utils.WordpressUtils import WordpressUtils
 
 class Vipc9Utils:
 
@@ -26,6 +13,12 @@ class Vipc9Utils:
         response = requests.get(url)
         response.raise_for_status()  # 确保请求成功
         return response.content
+
+    @staticmethod
+    def process_src(src):
+        """自定义方法处理src属性值"""
+        # 示例处理逻辑，可以根据需要替换为实际逻辑
+        return src.replace("example", "processed")
 
     @staticmethod
     def get_article_meta(url):
@@ -55,6 +48,39 @@ class Vipc9Utils:
                 figure.replace_with(new_img_tag)  # 替换figure标签
 
         # 获取div标签内部的所有内容（不包含div标签本身）
-        content = ''.join([str(tag) for tag in content_div.contents])
+        content = content_div.decode_contents()
 
-        return title, upload_time, content
+        # 遍历content中的所有img标签并处理src属性
+        soup_content = BeautifulSoup(content, 'html.parser')
+        for img_tag in soup_content.find_all('img'):
+            if img_tag.has_attr('src'):
+                original_src = img_tag['src']
+                upload_name, processed_src, delete_url = ImageUtils.upload_to_smms_by_image_url(original_src, title)
+                img_tag['src'] = processed_src
+
+        # 返回处理后的内容
+        processed_content = soup_content.decode_contents()
+
+        return title, upload_time, processed_content
+
+
+def enable_proxy():
+    os.environ['http_proxy'] = 'http://localhost:10809'
+    os.environ['https_proxy'] = 'http://localhost:10809'
+    print("全局代理已开启")
+
+
+def test_tg_article_output():
+    cwd = os.getcwd()
+    ignore_tags = ('剧集', '国产剧', '端游', '真人秀', '剧情', '动画', '动漫', '国漫', '短剧', '蓝光原盘')
+    urls_file = os.path.join(cwd, 'file', 'un_publish_articles.txt')
+    excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
+    image_save_path = os.path.join(cwd, 'image')
+    concurrency = None
+    # 如果不传递并发度，会自动检测CPU并设置并发数
+    TgArticleUtils.tg_article_output(ignore_tags, urls_file, excel_file, image_save_path, concurrency)
+
+if __name__ == "__main__":
+    # 开启全局代理
+    enable_proxy()
+    WordpressUtils.import_article()

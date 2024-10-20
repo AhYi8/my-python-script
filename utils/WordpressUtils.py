@@ -3,39 +3,12 @@ from wordpress_xmlrpc.methods.posts import GetPosts, NewPost
 from wordpress_xmlrpc.methods import taxonomies
 import pandas as pd
 from typing import List, Union
-import phpserialize, collections.abc, random, os, logging
-from utils.RedisUtils import RedisUtils
-from utils.ImageUtils import ImageUtils
-from utils.FileUtils import FileUtils
-from utils.DataUtils import DataUtils
-
-# 创建日志目录
-log_dir = os.path.join(os.getcwd(), 'file')
-if not os.path.exists(log_dir):
-    os.makedirs(log_dir)
-
-# 创建一个 FileHandler，并设置编码为 'utf-8'
-log_file = os.path.join(log_dir, 'log.txt')
-file_handler = logging.FileHandler(log_file, encoding='utf-8')
-
-# 创建一个日志格式器
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-
-# 将格式器应用于文件处理器
-file_handler.setFormatter(formatter)
-
-# 创建一个 StreamHandler 用于输出到控制台
-console_handler = logging.StreamHandler()
-console_handler.setFormatter(formatter)
-
-# 获取根日志记录器并配置
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)  # 设置日志级别
-logger.addHandler(file_handler)  # 添加文件处理器
-logger.addHandler(console_handler)  # 添加控制台处理器
-
-collections.Iterable = collections.abc.Iterable
-
+import phpserialize, random, os
+from .RedisUtils import RedisUtils
+from .ImageUtils import ImageUtils
+from .FileUtils import FileUtils
+from .DataUtils import DataUtils
+from .LogUtils import LoggingUtils
 
 class Article:
     title: str
@@ -179,10 +152,10 @@ class WordpressUtils:
                     break
                 offset += number  # 更新 offset，以便获取下一部分文章
             except ServerConnectionError as e:
-                logging.error(f"Connection error: {e}")
+                LoggingUtils.error(f"Connection error: {e}")
                 break
             except Exception as e:
-                logging.error(f"An error occurred: {e}")
+                LoggingUtils.error(f"An error occurred: {e}")
                 break
         return all_posts
 
@@ -208,7 +181,7 @@ class WordpressUtils:
                 RedisUtils.add_set(RedisUtils.res_21zys_com_titles, article.title)
             return post.id
         except Exception as e:
-            logging.error(f"发布文章失败：{e}")
+            LoggingUtils.error(f"发布文章失败：{e}")
         return None
 
 
@@ -226,7 +199,7 @@ class WordpressUtils:
         index = 1
         post_ids = []
         for article in articles:
-            logging.info(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
+            LoggingUtils.info(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
             print(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
             index += 1
             post_id = cls.post_article(article, is_duplicate)
@@ -280,8 +253,7 @@ class WordpressUtils:
         index = 1
         for article_meta in article_metas:
             if article_meta.title in post_titles or article_meta.get_status() == 'undo':
-                logging.info(f'{str(index).zfill(zfill_size)}/{total}-->已存在同名文章或未发布文章，跳过发布，请手动处理：{article_meta.title}')
-                print(f'{str(index).zfill(zfill_size)}/{total}-->已存在同名文章或未发布文章，跳过发布，请手动处理：{article_meta.title}')
+                LoggingUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->已存在同名文章或未发布文章，跳过发布，请手动处理：{article_meta.title}')
                 index += 1
                 continue
             article = Article()
@@ -299,15 +271,15 @@ class WordpressUtils:
                             _, imgurl, deleteUrl = ImageUtils.upload_to_smms_image(image_path)
                             # _, imgurl = ImageUtils.upload_to_imgurl_image(image_path)
                         else:
-                            logging.info(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
+                            LoggingUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
                             print(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
                             index += 1
                             continue
                 except Exception as e:
-                    # logging.info(f'{str(index).zfill(zfill_size)}/{total}-->上传图片失败，正在重试...')
-                    logging.info(f'上传图片失败：{e}')
+                    # Logging.info(f'{str(index).zfill(zfill_size)}/{total}-->上传图片失败，正在重试...')
+                    LoggingUtils.info(f'上传图片失败：{e}')
                     print(f'上传图片失败：{e}')
-            logging.info(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
+            LoggingUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
             print(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
             article.title = article_meta.title
             post_titles.add(article.title)
@@ -450,7 +422,7 @@ class WordpressUtils:
 def enable_proxy():
     os.environ['http_proxy'] = 'http://localhost:10809'
     os.environ['https_proxy'] = 'http://localhost:10809'
-    logging.info("全局代理已开启")
+    LoggingUtils.info("全局代理已开启")
 
 
 if __name__ == "__main__":

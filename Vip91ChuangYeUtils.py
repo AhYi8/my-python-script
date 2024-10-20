@@ -10,7 +10,6 @@ from wordpress_xmlrpc.methods.posts import GetPosts, NewPost
 from wordpress_xmlrpc.methods import taxonomies
 from openpyxl import Workbook
 from typing import List
-from urllib.parse import urlparse
 
 collections.Iterable = collections.abc.Iterable
 
@@ -54,7 +53,7 @@ class Article:
 
 class WordpressUtils:
     wp = Client(
-        r'http://res.21zys.com/xmlrpc_Mh359687...php',
+        r'https://res.21zys.com/xmlrpc_Mh359687...php',
         '21zys',
         'Mh359687..'
     )

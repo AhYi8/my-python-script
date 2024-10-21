@@ -1,8 +1,9 @@
 import os, shutil
-from typing import List, Dict, Union
+from typing import List, Dict, Union, Tuple
 import pandas as pd
 from openpyxl import Workbook, load_workbook
-from .LogUtils import LoggingUtils
+from .LogUtils import LogUtils
+
 
 class FileUtils:
 
@@ -20,9 +21,9 @@ class FileUtils:
             shutil.rmtree(directory_path)
             # 重新创建空目录
             os.makedirs(directory_path)
-            LoggingUtils.info(f"目录 {directory_path} 已清空")
+            LogUtils.info(f"目录 {directory_path} 已清空")
         else:
-            LoggingUtils.info(f"目录 {directory_path} 不存在")
+            LogUtils.info(f"目录 {directory_path} 不存在")
 
     @staticmethod
     def copy_files_to_all_subdirs(files_to_copy: List[str], target_dir: str) -> None:
@@ -46,7 +47,7 @@ class FileUtils:
                     shutil.copy(file_path, target_path)
                     logger.info(f"复制文件 {file_name} 到 {target_path}")
                 except Exception as e:
-                    LoggingUtils.error(f"复制文件失败 {file_name}: {e}")
+                    LogUtils.error(f"复制文件失败 {file_name}: {e}")
 
     @staticmethod
     def list_files_in_directory(directory_path) -> list:
@@ -64,7 +65,7 @@ class FileUtils:
             files.sort()
             return files
         except Exception as e:
-            LoggingUtils.error(f"An error occurred: {e}")
+            LogUtils.error(f"An error occurred: {e}")
             return []
 
     @staticmethod
@@ -83,7 +84,7 @@ class FileUtils:
 
             return dirs
         except Exception as e:
-            LoggingUtils.error(f"An error occurred: {e}")
+            LogUtils.error(f"An error occurred: {e}")
             return []
 
     @staticmethod
@@ -100,9 +101,9 @@ class FileUtils:
                     file_path = os.path.join(root, file)
                     try:
                         os.remove(file_path)
-                        LoggingUtils.info(f"Deleted file: {file_path}")
+                        LogUtils.info(f"Deleted file: {file_path}")
                     except OSError as e:
-                        LoggingUtils.error(f"Error deleting file {file_path}: {e}")
+                        LogUtils.error(f"Error deleting file {file_path}: {e}")
 
     @staticmethod
     def rename_images_in_subfolders(folder_path: str) -> None:
@@ -135,7 +136,7 @@ class FileUtils:
 
                     # 重命名文件
                     os.rename(old_image_path, new_image_path)
-                    LoggingUtils.info(f"Renamed: {old_image_path} -> {new_image_path}")
+                    LogUtils.info(f"Renamed: {old_image_path} -> {new_image_path}")
 
     @staticmethod
     def read_file(path: str, is_strip: bool = False, mode: str = 'r', encoding: str = 'u8') -> Union[List[str], None]:
@@ -212,26 +213,33 @@ class FileUtils:
         return data_list
 
     @classmethod
-    def append_to_excel(cls, file_name: str, data: tuple, headers: tuple = None) -> None:
+    def append_to_excel(cls, file_path: str, data: Union[list, tuple], headers: tuple = None) -> None:
         """
         将数据写入指定 xlsx 文件中。
-        :param file_name: 文件路径
+        规范数据传入，如果插入多行则 data: List[tuple]，单行则 data: tupe
+
+        :param file_path: 文件路径
         :param data: 数据列表
         :param headers: 自定义表头
-        :return:
+        :return: None
         """
-        if not os.path.exists(file_name):
+        if not os.path.exists(file_path):
             wb = Workbook()
             ws = wb.active
             ws.title = "TgArticle"
             if headers is not None:
                 ws.append(headers)
-            wb.save(file_name)
+            wb.save(file_path)
 
-        wb = load_workbook(file_name)
+        wb = load_workbook(file_path)
         ws = wb.active
-        ws.append(data)
-        wb.save(file_name)
+        if isinstance(data, list) or isinstance(data, List):
+            for item in data:
+                ws.append(item)
+        elif isinstance(data, tuple) or isinstance(data, Tuple):
+            ws.append(data)
+        wb.save(file_path)
+
 
 if __name__ == '__main__':
     # test_list_files_in_directory()

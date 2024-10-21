@@ -2,7 +2,7 @@
 import os, boto3, time
 from botocore.exceptions import ClientError
 from .FileUtils import FileUtils
-from .LogUtils import LoggingUtils
+from .LogUtils import LogUtils
 
 
 
@@ -63,7 +63,7 @@ class CloudflareR2Utils:
                 try:
                     return func(*args, **kwargs)
                 except ClientError as e:
-                    LoggingUtils.error(f"Attempt {attempt + 1} failed: {e}")
+                    LogUtils.error(f"Attempt {attempt + 1} failed: {e}")
                     if attempt < cls.retry_limit - 1:
                         time.sleep(2 ** attempt)  # Exponential backoff
                     else:
@@ -86,10 +86,10 @@ class CloudflareR2Utils:
                 client.upload_fileobj(file_data, cls.bucket_name, file_key)
 
             file_url = f"{cls.custom_domain}/{file_key}"
-            LoggingUtils.info(f"Successfully uploaded {file_key} to R2.")
+            LogUtils.info(f"Successfully uploaded {file_key} to R2.")
             return file_url
         except ClientError as e:
-            LoggingUtils.error(f"Failed to upload {file_path} to R2: {e}")
+            LogUtils.error(f"Failed to upload {file_path} to R2: {e}")
             raise
 
     @classmethod
@@ -103,9 +103,9 @@ class CloudflareR2Utils:
 
         try:
             client.delete_object(Bucket=cls.bucket_name, Key=file_key)
-            LoggingUtils.info(f"Successfully deleted {file_key} from R2.")
+            LogUtils.info(f"Successfully deleted {file_key} from R2.")
         except ClientError as e:
-            LoggingUtils.error(f"Failed to delete {file_key} from R2: {e}")
+            LogUtils.error(f"Failed to delete {file_key} from R2: {e}")
             raise
 
     @classmethod
@@ -122,7 +122,7 @@ class CloudflareR2Utils:
                 file_url = cls.upload_to_r2(file_path, file_key)
                 image_list.append((file_path, file_key, file_url))
             except Exception as e:
-                LoggingUtils.error(f"Batch upload failed for {file_key}: {e}")
+                LogUtils.error(f"Batch upload failed for {file_key}: {e}")
         return image_list
 
     @classmethod
@@ -141,11 +141,11 @@ class CloudflareR2Utils:
             errors = response.get('Errors', [])
 
             for obj in deleted:
-                LoggingUtils.info(f"Successfully deleted {obj['Key']} from R2.")
+                LogUtils.info(f"Successfully deleted {obj['Key']} from R2.")
             for error in errors:
-                LoggingUtils.error(f"Failed to delete {error['Key']} from R2: {error['Message']}")
+                LogUtils.error(f"Failed to delete {error['Key']} from R2: {error['Message']}")
         except ClientError as e:
-            LoggingUtils.error(f"Batch delete failed: {e}")
+            LogUtils.error(f"Batch delete failed: {e}")
             raise
 
     @classmethod

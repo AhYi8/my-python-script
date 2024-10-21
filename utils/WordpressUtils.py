@@ -2,17 +2,19 @@ from wordpress_xmlrpc import Client, WordPressPost, ServerConnectionError
 from wordpress_xmlrpc.methods.posts import GetPosts, NewPost
 from wordpress_xmlrpc.methods import taxonomies
 import pandas as pd
-from typing import List, Union
+from typing import List, Union, Set, Dict
 import phpserialize, random, os
 from .RedisUtils import RedisUtils
 from .ImageUtils import ImageUtils
 from .FileUtils import FileUtils
 from .DataUtils import DataUtils
-from .LogUtils import LoggingUtils
+from .LogUtils import LogUtils
+from datetime import datetime
 
 class Article:
     title: str
     content: str
+    date: datetime
     post_status: str
     terms_names: {}
     custom_fields: []
@@ -122,7 +124,7 @@ class WordpressUtils:
             cls.wp = Client(url, username, password)
 
     @classmethod
-    def get_all_tag_name(cls) -> set[str]:
+    def get_all_tag_name(cls) -> Set[str]:
         """
         获取 wordpress 中所有的标签
 
@@ -131,7 +133,7 @@ class WordpressUtils:
         return {tag.name for tag in cls.wp.call(taxonomies.GetTerms('post_tag'))}
 
     @classmethod
-    def get_all_post(cls, number=100, offset=0, limit=0) -> list[WordPressPost]:
+    def get_all_post(cls, number=100, offset=0, limit=0) -> List[WordPressPost]:
         """
         获取 wordpress 中所有的文章
 
@@ -152,46 +154,49 @@ class WordpressUtils:
                     break
                 offset += number  # 更新 offset，以便获取下一部分文章
             except ServerConnectionError as e:
-                LoggingUtils.error(f"Connection error: {e}")
+                LogUtils.error(f"Connection error: {e}")
                 break
             except Exception as e:
-                LoggingUtils.error(f"An error occurred: {e}")
+                LogUtils.error(f"An error occurred: {e}")
                 break
         return all_posts
 
     @classmethod
-    def post_article(cls, article: Article, is_duplicate: bool = True) -> Union[int, None]:
+    def post_article(cls, article: Article, is_duplicate: bool = False) -> Union[int, None]:
         """
         发布文章
 
         :param article: Article 类型的文章
-        :param is_duplicate: 是否运行重复文章
+        :param is_duplicate: 是否允许重复文章（根据文章标题判断）
         :return: postId、None
         """
         try:
             post = WordPressPost()
             post.title = article.title
+            if article.date:
+                post.date = article.date
+                post.date_modified = article.date
             post.content = article.content
             post.post_status = article.post_status
             post.terms_names = article.terms_names
             post.custom_fields = article.custom_fields
             post.comment_status = 'open'
             post.id = cls.wp.call(NewPost(post))
-            if is_duplicate and article.post_status == 'publish':
+            if not is_duplicate and article.post_status == 'publish':
                 RedisUtils.add_set(RedisUtils.res_21zys_com_titles, article.title)
             return post.id
         except Exception as e:
-            LoggingUtils.error(f"发布文章失败：{e}")
+            LogUtils.error(f"发布文章失败：{e}")
         return None
 
 
     @classmethod
-    def post_articles(cls, articles: List[Article], is_duplicate: bool = True) -> list[int]:
+    def post_articles(cls, articles: List[Article], is_duplicate: bool = False) -> List[int]:
         """
         批量发布文章
 
         :param article: Article 类型的文章
-        :param is_duplicate: 是否运行重复文章
+        :param is_duplicate: 是否允许重复文章
         :return: postId 数组
         """
         total = len(articles)
@@ -199,7 +204,7 @@ class WordpressUtils:
         index = 1
         post_ids = []
         for article in articles:
-            LoggingUtils.info(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
+            LogUtils.info(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
             print(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
             index += 1
             post_id = cls.post_article(article, is_duplicate)
@@ -209,7 +214,7 @@ class WordpressUtils:
         return post_ids
 
     @classmethod
-    def __read_xlsx_to_article_metas(cls, file_path: str, field_mapping: dict[str, str]) -> list[ArticleMeta]:
+    def __read_xlsx_to_article_metas(cls, file_path: str, field_mapping: Dict[str, str]) -> List[ArticleMeta]:
         """
         读取指定路径的xlsx文件，将中文表头映射到对象字段上，并返回对象列表。
 
@@ -253,7 +258,7 @@ class WordpressUtils:
         index = 1
         for article_meta in article_metas:
             if article_meta.title in post_titles or article_meta.get_status() == 'undo':
-                LoggingUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->已存在同名文章或未发布文章，跳过发布，请手动处理：{article_meta.title}')
+                LogUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->已存在同名文章或未发布文章，跳过发布，请手动处理：{article_meta.title}')
                 index += 1
                 continue
             article = Article()
@@ -271,15 +276,15 @@ class WordpressUtils:
                             _, imgurl, deleteUrl = ImageUtils.upload_to_smms_image(image_path)
                             # _, imgurl = ImageUtils.upload_to_imgurl_image(image_path)
                         else:
-                            LoggingUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
+                            LogUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
                             print(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
                             index += 1
                             continue
                 except Exception as e:
                     # Logging.info(f'{str(index).zfill(zfill_size)}/{total}-->上传图片失败，正在重试...')
-                    LoggingUtils.info(f'上传图片失败：{e}')
+                    LogUtils.info(f'上传图片失败：{e}')
                     print(f'上传图片失败：{e}')
-            LoggingUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
+            LogUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
             print(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
             article.title = article_meta.title
             post_titles.add(article.title)
@@ -360,7 +365,7 @@ class WordpressUtils:
         :param limit:
         :return:
         """
-        posts: list[WordPressPost] = cls.get_all_post(number, offset, limit)
+        posts: List[WordPressPost] = cls.get_all_post(number, offset, limit)
         taxonomies = set()
         for post in posts:
             id = post.id  # 文章 id
@@ -422,7 +427,7 @@ class WordpressUtils:
 def enable_proxy():
     os.environ['http_proxy'] = 'http://localhost:10809'
     os.environ['https_proxy'] = 'http://localhost:10809'
-    LoggingUtils.info("全局代理已开启")
+    LogUtils.info("全局代理已开启")
 
 
 if __name__ == "__main__":

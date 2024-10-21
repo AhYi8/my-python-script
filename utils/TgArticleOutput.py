@@ -1,4 +1,5 @@
 import requests, re, os, time
+from typing import Union
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from .RedisUtils import RedisUtils
@@ -83,7 +84,7 @@ class TgArticleUtils:
     ads_articles = {'TG必备的搜索引擎，极搜帮你精准找到，想要的群组、频道、音乐 、视频'}
     tag_remove_keys = ['中国', '课程', '中国', '教程', '夸克', '夸克网盘', 'quark', '资源', '知识', '学习']
     res_21zys_com_titles = "res_21zys_com_titles"
-    exists_titles = RedisUtils.get_set(res_21zys_com_titles)
+    exists_titles: set = None
 
     @classmethod
     def sanitize_filename(cls, title: str) -> str:
@@ -155,7 +156,7 @@ class TgArticleUtils:
         return cls.get_tg_article_map[author](html_content)
 
     @classmethod
-    def process_url(cls, base_url: str, image_save_path: str, ignore_tags: tuple = None, retries: int = 3, delay: int = 2):
+    def process_url(cls, base_url: str, image_save_path: str, ignore_tags: tuple = None, retries: int = 3, delay: int = 2) -> Union[tuple, None]:
         """
         提取单篇 telegram 文章新到 xlsx 文件中
 
@@ -201,7 +202,7 @@ class TgArticleUtils:
                 result = cls.__get_tg_article(author, html_content)
                 if not result:
                     FileUtils.write_file(logs_path, [f"TgArticleUtils_正则解析失败: {url}"], 'a')
-                    return base_url, author, success_str, title, renamed_image, content, link, size, tag
+                    return (base_url, author, success_str, title, renamed_image, content, link, size, tag)
 
                 title, content, link, size, tag = result
                 # 过滤指定标签的文章
@@ -212,7 +213,7 @@ class TgArticleUtils:
 
                 if not title or not link:
                     FileUtils.write_file(logs_path, [f"TgArticleUtils_正则解析失败: {url}"], 'a')
-                    return base_url, author, success_str, title, renamed_image, content, link, size, tag
+                    return (base_url, author, success_str, title, renamed_image, content, link, size, tag)
 
                 # 4. Download the image
                 success = ImageUtils.download_image(image_url, title, image_save_path)
@@ -221,6 +222,8 @@ class TgArticleUtils:
                     raise Exception(f"图片下载失败: {url}")
 
                 success_str = "成功" if success else "失败"
+                if cls.exists_titles is None:
+                    cls.exists_titles = RedisUtils.get_set(cls.res_21zys_com_titles)
                 if cls.exists_titles and title in cls.exists_titles:
                     FileUtils.write_file(logs_path, [f"TgArticleUtils_文章已发布：{title}，跳过采集：{url}"], 'a')
                     return None
@@ -228,7 +231,7 @@ class TgArticleUtils:
                 # URL, Author, Success, Title, Image, Description, Status, Tags, Categories, Price, Link, Size, Publish_time
                 if not content:
                     content = title
-                return base_url, author, success_str, title, None, content, '', tag, None, 0, link, size, publish_time
+                return (base_url, author, success_str, title, None, content, '', tag, None, 0, link, size, publish_time)
             except Exception as e:
                 print(f"处理 URL {base_url} 时发生错误: {e}")
                 if attempt == retries:

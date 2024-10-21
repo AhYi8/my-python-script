@@ -26,7 +26,7 @@ logger.setLevel(logging.INFO)  # 设置日志级别
 logger.addHandler(file_handler)  # 添加文件处理器
 logger.addHandler(console_handler)  # 添加控制台处理器
 
-class LoggingUtils:
+class LogUtils:
     @classmethod
     def info(cls, msg, *args, **kwargs):
         logging.info(msg, *args, **kwargs)

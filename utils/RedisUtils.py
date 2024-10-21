@@ -11,7 +11,6 @@ class RedisUtils:
     _redis_client = None
     vip_91_article_links = 'vip_91_article_links'
     res_21zys_com_titles = "res_21zys_com_titles"
-
     @classmethod
     def _initialize_client(cls):
         if cls._redis_client is None:

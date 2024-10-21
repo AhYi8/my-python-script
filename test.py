@@ -1,6 +1,6 @@
 import requests, os, logging
 from bs4 import BeautifulSoup
-from utils.FileUtils import  FileUtils
+from utils.FileUtils import FileUtils
 from utils.ImageUtils import ImageUtils
 from utils.TgArticleOutput import TgArticleUtils
 from utils.WordpressUtils import WordpressUtils
@@ -70,6 +70,15 @@ def enable_proxy():
     print("全局代理已开启")
 
 
+def test_FileUtils_append_to_excel():
+    xlsx_file_path = os.path.join(os.getcwd(), "file", "test.xlsx")
+    data = [
+        ("test11", "test12", "test13"),
+        ("test21", "test22", "test23"),
+    ]
+    headers = ("header1", "header2", "header3")
+    FileUtils.append_to_excel(xlsx_file_path, data, headers)
+
 def test_tg_article_output():
     cwd = os.getcwd()
     ignore_tags = ('剧集', '国产剧', '端游', '真人秀', '剧情', '动画', '动漫', '国漫', '短剧', '蓝光原盘')
@@ -80,7 +89,11 @@ def test_tg_article_output():
     # 如果不传递并发度，会自动检测CPU并设置并发数
     TgArticleUtils.tg_article_output(ignore_tags, urls_file, excel_file, image_save_path, concurrency)
 
+def test_wordpress_import_article():
+    WordpressUtils.import_article()
+
+
 if __name__ == "__main__":
     # 开启全局代理
-    enable_proxy()
-    WordpressUtils.import_article()
+    # enable_proxy()
+    test_FileUtils_append_to_excel()

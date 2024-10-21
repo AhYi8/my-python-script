@@ -3,7 +3,9 @@ from .LogUtils import LogUtils
 
 
 class RequestUtils:
-    __local_proxy = 'localhost:10809'
+    __local_proxy = {
+        "proxy": r'localhost:10809'
+    }
 
     @classmethod
     def convert_cookie_to_dict(cls, cookie_str: str):
@@ -63,7 +65,7 @@ class RequestUtils:
 
                 # 检查响应状态码是否为2xx，抛出异常则重试
                 response.raise_for_status()
-                return response.text
+                return response
 
             except requests.Timeout:
                 LogUtils.error(f"Timeout fetching URL: {url}, attempt {attempt + 1}")

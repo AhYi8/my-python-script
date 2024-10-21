@@ -112,16 +112,22 @@ class ArticleMeta:
 
 
 class WordpressUtils:
-    wp = Client(
-        r'https://res.21zys.com/xmlrpc_Mh359687...php',
-        '21zys',
-        'Mh359687..'
-    )
+    __url: str = r'https://res.21zys.com/xmlrpc_Mh359687...php'
+    __username: str = '21zys'
+    __password: str = 'Mh359687..'
+    __client = None
 
     @classmethod
-    def switch_client(cls, url: str, username: str, password: str) -> None:
-        if all((url, username, password)) :
-            cls.wp = Client(url, username, password)
+    def client(cls,
+               url: str = r'https://res.21zys.com/xmlrpc_Mh359687...php',
+               username: str = '21zys',
+               password: str = 'Mh359687..') -> Client:
+        if not all((url == cls.__url, username == cls.__username, password == cls.__password)) or cls.__client is None:
+            cls.__url = url
+            cls.__username = username
+            cls.__password = password
+            cls.__client = Client(cls.__url, cls.__username, cls.__password)
+        return cls.__client
 
     @classmethod
     def get_all_tag_name(cls) -> Set[str]:
@@ -130,7 +136,7 @@ class WordpressUtils:
 
         :return: set(str)
         """
-        return {tag.name for tag in cls.wp.call(taxonomies.GetTerms('post_tag'))}
+        return {tag.name for tag in cls.client().call(taxonomies.GetTerms('post_tag'))}
 
     @classmethod
     def get_all_post(cls, number=100, offset=0, limit=0) -> List[WordPressPost]:
@@ -146,7 +152,7 @@ class WordpressUtils:
         while True:
             try:
                 # 获取一部分文章，使用 offset 和 number 控制
-                posts = cls.wp.call(GetPosts({'number': number, 'offset': offset}))
+                posts = cls.client().call(GetPosts({'number': number, 'offset': offset}))
                 if not posts:
                     break  # 如果没有返回文章，说明已经获取完毕
                 all_posts.extend(posts)
@@ -181,7 +187,7 @@ class WordpressUtils:
             post.terms_names = article.terms_names
             post.custom_fields = article.custom_fields
             post.comment_status = 'open'
-            post.id = cls.wp.call(NewPost(post))
+            post.id = cls.client().call(NewPost(post))
             if not is_duplicate and article.post_status == 'publish':
                 RedisUtils.add_set(RedisUtils.res_21zys_com_titles, article.title)
             return post.id

@@ -4,6 +4,7 @@ from io import BytesIO
 from PIL import Image, ImageDraw, ImageFont
 from PIL.ImageFile import ImageFile
 from typing import Union, Tuple
+from .RequestUtils import RequestUtils
 
 class ImageUtils:
     smms_token: str = 'tbVH1tVAwadESF2NdCXrr27UuqmGtNCq'
@@ -15,7 +16,7 @@ class ImageUtils:
     auto_increment: int = 1
 
     @staticmethod
-    def download_image(image_url: str, filename: str, save_path: str, retries: int = 5) -> bool:
+    def download_image(image_url: str, filename: str, save_path: str, retries: int = 5, open_proxy: bool = True, use_local: bool = False) -> bool:
         """
         下载 image_url 图片到 save_path 路径下
         :param image_url: 互联网图片链接
@@ -31,7 +32,7 @@ class ImageUtils:
                 filename = filename + ext
                 image_path = os.path.join(save_path, filename)
                 if not os.path.exists(image_path):
-                    response = requests.get(image_url)
+                    response = RequestUtils.fetch_url(image_url, open_proxy=open_proxy, use_local=use_local)
                     response.raise_for_status()
                     img = Image.open(BytesIO(response.content))
                     img.save(image_path)

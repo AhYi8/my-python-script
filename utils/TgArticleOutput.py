@@ -5,8 +5,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from .RedisUtils import RedisUtils
 from .FileUtils import FileUtils
 from .ImageUtils import ImageUtils
-
-
+from .RequestUtils import RequestUtils
+from .LogUtils import LogUtils
 
 class ParseTgArticleUtils:
     @staticmethod
@@ -96,24 +96,6 @@ class TgArticleUtils:
         return cleaned_title.strip()
 
     @classmethod
-    def __fetch_page(cls, url: str, retries: int = 5, delay: int = 2) -> str:
-        proxies = {
-            "http": "http://localhost:10809",
-            "https": "http://localhost:10809",
-        }
-        """获取页面内容，并在失败时进行重试，最多重试 `retries` 次，每次重试间隔 `delay` 秒"""
-        for attempt in range(1, retries + 1):
-            try:
-                response = requests.get(url, proxies=proxies)
-                response.raise_for_status()  # 如果响应状态码不是200，抛出异常
-                return response.content
-            except requests.RequestException as e:
-                if attempt < retries:
-                    time.sleep(delay)  # 等待几秒钟再重试
-                else:
-                    return None
-
-    @classmethod
     def __get_tg_article_content(cls, html_content: str):
         """
         获取 tg 的 author，首图链接，HTML 内容
@@ -179,29 +161,30 @@ class TgArticleUtils:
         for attempt in range(1, retries + 1):
             try:
                 # 1. Fetch the page content
-                html_content = cls.__fetch_page(url)
+                # html_content = cls.__fetch_page(url)
+                html_content = RequestUtils.fetch_url(url, use_local=True).text
                 if html_content is None:
-                    FileUtils.write_file(logs_path, [f"TgArticleUtils_无法获取页面内容: {url}"], 'a')
+                    LogUtils.error(f"TgArticleUtils_无法获取页面内容: {url}")
                     raise Exception(f"无法获取页面内容: {url}")
 
                 # 2. Parse meta tags (image and description)
                 author, image_url, html_content, publish_time = cls.__get_tg_article_content(html_content)
                 if html_content == 'Post not found':
-                    FileUtils.write_file(logs_path, [f"TgArticleUtils_文章不存在: {url}"], 'a')
+                    LogUtils.error(f"TgArticleUtils_文章不存在: {url}")
                     return None
                 if not image_url or not html_content:
-                    FileUtils.write_file(logs_path, [f"TgArticleUtils_无法解析页面内容: {url}"], 'a')
+                    LogUtils.error(f"TgArticleUtils_无法解析页面内容: {url}")
                     raise Exception(f"无法解析页面内容: {url}")
 
                 for ads in cls.ads_articles:
                     if ads in html_content:
-                        FileUtils.write_file(logs_path, [f"TgArticleUtils_广告文章，跳过采集: {url}"], 'a')
+                        LogUtils.error(f"TgArticleUtils_广告文章，跳过采集: {url}")
                         return None
 
                 # 3. Apply regex to extract information
                 result = cls.__get_tg_article(author, html_content)
                 if not result:
-                    FileUtils.write_file(logs_path, [f"TgArticleUtils_正则解析失败: {url}"], 'a')
+                    LogUtils.error(f"TgArticleUtils_正则解析失败: {url}")
                     return (base_url, author, success_str, title, renamed_image, content, link, size, tag)
 
                 title, content, link, size, tag = result
@@ -212,20 +195,20 @@ class TgArticleUtils:
                             return None
 
                 if not title or not link:
-                    FileUtils.write_file(logs_path, [f"TgArticleUtils_正则解析失败: {url}"], 'a')
+                    LogUtils.error(f"TgArticleUtils_正则解析失败: {url}")
                     return (base_url, author, success_str, title, renamed_image, content, link, size, tag)
 
                 # 4. Download the image
-                success = ImageUtils.download_image(image_url, title, image_save_path)
+                success = ImageUtils.download_image(image_url, title, image_save_path, use_local=True)
                 if not success:
-                    FileUtils.write_file(logs_path, [f"TgArticleUtils_图片下载失败: {url}"], 'a')
+                    LogUtils.error(f"TgArticleUtils_图片下载失败: {url}")
                     raise Exception(f"图片下载失败: {url}")
 
                 success_str = "成功" if success else "失败"
                 if cls.exists_titles is None:
                     cls.exists_titles = RedisUtils.get_set(cls.res_21zys_com_titles)
                 if cls.exists_titles and title in cls.exists_titles:
-                    FileUtils.write_file(logs_path, [f"TgArticleUtils_文章已发布：{title}，跳过采集：{url}"], 'a')
+                    LogUtils.error(f"TgArticleUtils_文章已发布：{title}，跳过采集：{url}")
                     return None
                 # 5. Return all data for appending to Excel
                 # URL, Author, Success, Title, Image, Description, Status, Tags, Categories, Price, Link, Size, Publish_time
@@ -233,7 +216,7 @@ class TgArticleUtils:
                     content = title
                 return (base_url, author, success_str, title, None, content, '', tag, None, 0, link, size, publish_time)
             except Exception as e:
-                print(f"处理 URL {base_url} 时发生错误: {e}")
+                LogUtils.error(f"处理 URL {base_url} 时发生错误: {e}")
                 if attempt == retries:
                     return None
                 else:
@@ -267,7 +250,7 @@ class TgArticleUtils:
         urls = FileUtils.read_file(urls_file, is_strip=True)
 
         if not urls:
-            print("未找到有效的 URL，检查 urls.txt 文件")
+            LogUtils.error("未找到有效的 URL，检查 urls.txt 文件")
             return
 
         # 自动检测 CPU 核心数，若用户未指定并发度则自动设置为 CPU 核心数的 2 倍
@@ -275,7 +258,7 @@ class TgArticleUtils:
             cpu_count = os.cpu_count()
             concurrency = cpu_count * 2 if cpu_count else 4  # 保障至少有 4 个并发线程
 
-        print(f"使用 {concurrency} 个并发线程进行处理")
+        LogUtils.info(f"使用 {concurrency} 个并发线程进行处理")
 
         with ThreadPoolExecutor(max_workers=concurrency) as executor:
             future_to_url = {executor.submit(cls.process_url, url, image_save_path, ignore_tags): url for url

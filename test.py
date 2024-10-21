@@ -89,6 +89,17 @@ def test_tg_article_output():
     # 如果不传递并发度，会自动检测CPU并设置并发数
     TgArticleUtils.tg_article_output(ignore_tags, urls_file, excel_file, image_save_path, concurrency)
 
+
+def test_tg_article_output():
+    cwd = os.getcwd()
+    ignore_tags = ('剧集', '国产剧', '端游', '真人秀', '剧情', '动画', '动漫', '国漫', '短剧', '蓝光原盘')
+    urls_file = os.path.join(cwd, 'file', 'un_publish_articles.txt')
+    excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
+    image_save_path = os.path.join(cwd, 'image')
+    concurrency = None
+    # 如果不传递并发度，会自动检测CPU并设置并发数，**tg默认需要开启代理**
+    TgArticleUtils.tg_article_output(ignore_tags, urls_file, excel_file, image_save_path, concurrency)
+
 def test_wordpress_import_article():
     WordpressUtils.import_article()
 
@@ -96,4 +107,4 @@ def test_wordpress_import_article():
 if __name__ == "__main__":
     # 开启全局代理
     # enable_proxy()
-    test_FileUtils_append_to_excel()
+    test_tg_article_output()

@@ -46,7 +46,7 @@ class Vip91ChuangYeUtils:
             else:
                 url = base_url
             LogUtils.info(f"正在采集页面：{url}")
-            html_content = RequestUtils.fetch_url(url)
+            html_content = RequestUtils.fetch_url(url).text
             if not html_content:
                 break  # 如果请求失败，退出循环
 
@@ -179,7 +179,7 @@ class Vip91ChuangYeUtils:
                 'Sec-Ch-Ua-Platform': '"Windows"'
             }
 
-        html_content = RequestUtils.fetch_url(url, headers)
+        html_content = RequestUtils.fetch_url(url, headers).text
         soup = BeautifulSoup(html_content, 'html.parser')
         try:
             content = soup.find('div', class_='entry-content u-text-format u-clearfix').decode_contents()

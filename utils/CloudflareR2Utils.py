@@ -7,14 +7,14 @@ from .LogUtils import LogUtils
 
 
 class CloudflareR2Utils:
-    access_key = "16a00e2327b20636fe17bdd69faa7e7e"
-    secret_key = "f239672ac8a5675e76dfbf8371b707db995ec591e848ca53d771535b934b62b2"
-    endpoint_url = "https://5c01bbb3be6e040cd6fe7b91bdc4911d.r2.cloudflarestorage.com"
-    api_token = "BD8NNBDypJVK2LUmLxk53O-qriGOS9ycf4JX5hgB"
-    bucket_name = "coser-img"
-    custom_domain = "https://coser.21zys.top"
-    client = None
-    retry_limit = 3  # Maximum number of retries
+    __access_key = "16a00e2327b20636fe17bdd69faa7e7e"
+    __secret_key = "f239672ac8a5675e76dfbf8371b707db995ec591e848ca53d771535b934b62b2"
+    __endpoint_url = "https://5c01bbb3be6e040cd6fe7b91bdc4911d.r2.cloudflarestorage.com"
+    __api_token = "BD8NNBDypJVK2LUmLxk53O-qriGOS9ycf4JX5hgB"
+    __bucket_name = "coser-img"
+    __custom_domain = "https://coser.21zys.top"
+    __client = None
+    __retry_limit = 3  # Maximum number of retries
 
     @classmethod
     def configure(cls,
@@ -32,39 +32,39 @@ class CloudflareR2Utils:
         :param custom_domain: 自定义域
         :return:
         """
-        cls.access_key = access_key
-        cls.secret_key = secret_key
-        cls.endpoint_url = endpoint_url
-        cls.bucket_name = bucket_name
-        cls.custom_domain = custom_domain
-        cls.client = cls.get_client()
+        cls.__access_key = access_key
+        cls.__secret_key = secret_key
+        cls.__endpoint_url = endpoint_url
+        cls.__bucket_name = bucket_name
+        cls.__custom_domain = custom_domain
+        cls.__client = cls.client()
 
     @classmethod
-    def get_client(cls):
+    def client(cls):
         """初始化客户端"""
-        if cls.client is None:
-            if not all([cls.access_key, cls.secret_key, cls.endpoint_url, cls.bucket_name]):
+        if cls.__client is None:
+            if not all([cls.__access_key, cls.__secret_key, cls.__endpoint_url, cls.__bucket_name]):
                 raise ValueError("Cloudflare R2 credentials and bucket name must be configured before using this utility.")
             session = boto3.Session(
-                aws_access_key_id=cls.access_key,
-                aws_secret_access_key=cls.secret_key,
+                aws_access_key_id=cls.__access_key,
+                aws_secret_access_key=cls.__secret_key,
             )
-            cls.client = session.client(
+            cls.__client = session.client(
                 's3',
-                endpoint_url=cls.endpoint_url
+                endpoint_url=cls.__endpoint_url
             )
-        return cls.client
+        return cls.__client
 
     @classmethod
     def __retry(cls, func):
         """装饰器用于在失败情况下自动重试函数。"""
         def wrapper(*args, **kwargs):
-            for attempt in range(cls.retry_limit):
+            for attempt in range(cls.__retry_limit):
                 try:
                     return func(*args, **kwargs)
                 except ClientError as e:
                     LogUtils.error(f"Attempt {attempt + 1} failed: {e}")
-                    if attempt < cls.retry_limit - 1:
+                    if attempt < cls.__retry_limit - 1:
                         time.sleep(2 ** attempt)  # Exponential backoff
                     else:
                         raise e
@@ -79,13 +79,13 @@ class CloudflareR2Utils:
         :param file_key: 用于在 R2 中存储图像的键（名称）。
         :return: 上传图像的 URL。
 """
-        client = cls.get_client()
+        client = cls.client()
 
         try:
             with open(file_path, 'rb') as file_data:
-                client.upload_fileobj(file_data, cls.bucket_name, file_key)
+                client.upload_fileobj(file_data, cls.__bucket_name, file_key)
 
-            file_url = f"{cls.custom_domain}/{file_key}"
+            file_url = f"{cls.__custom_domain}/{file_key}"
             LogUtils.info(f"Successfully uploaded {file_key} to R2.")
             return file_url
         except ClientError as e:
@@ -99,10 +99,10 @@ class CloudflareR2Utils:
         从 Cloudflare R2 存储中删除单个文件。
         :param file_key: 要从 R2 中删除的文件的键（名称）。
 """
-        client = cls.get_client()
+        client = cls.client()
 
         try:
-            client.delete_object(Bucket=cls.bucket_name, Key=file_key)
+            client.delete_object(Bucket=cls.__bucket_name, Key=file_key)
             LogUtils.info(f"Successfully deleted {file_key} from R2.")
         except ClientError as e:
             LogUtils.error(f"Failed to delete {file_key} from R2: {e}")
@@ -132,11 +132,11 @@ class CloudflareR2Utils:
         从 Cloudflare R2 存储中删除多个文件。
         :param file_keys: 要从 R2 删除的文件键（名称）列表。
         """
-        client = cls.get_client()
+        client = cls.client()
 
         try:
             objects = [{'Key': key} for key in file_keys]
-            response = client.delete_objects(Bucket=cls.bucket_name, Delete={'Objects': objects})
+            response = client.delete_objects(Bucket=cls.__bucket_name, Delete={'Objects': objects})
             deleted = response.get('Deleted', [])
             errors = response.get('Errors', [])
 

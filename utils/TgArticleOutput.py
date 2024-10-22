@@ -162,7 +162,7 @@ class TgArticleUtils:
             try:
                 # 1. Fetch the page content
                 # html_content = cls.__fetch_page(url)
-                html_content = RequestUtils.fetch_url(url, use_local=True).text
+                html_content = RequestUtils.get(url, use_local=True).text
                 if html_content is None:
                     LogUtils.error(f"TgArticleUtils_无法获取页面内容: {url}")
                     raise Exception(f"无法获取页面内容: {url}")

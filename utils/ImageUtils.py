@@ -7,13 +7,13 @@ from typing import Union, Tuple
 from .RequestUtils import RequestUtils
 
 class ImageUtils:
-    smms_token: str = 'tbVH1tVAwadESF2NdCXrr27UuqmGtNCq'
-    imgURL_uid: str = 'b77b5646d741207bc920f2fd3daa3490'
-    imgURL_token: str = '6e6c36de4eaaf95bd74b280259f18dd7'
-    imgURL_album_id: int = 413
-    water: str = 'res.21zys.com'
-    pattern: str = 'res.21zys.com-{Y}{m}{d}{h}{i}{s}'
-    auto_increment: int = 1
+    __smms_token: str = 'tbVH1tVAwadESF2NdCXrr27UuqmGtNCq'
+    __imgURL_uid: str = 'b77b5646d741207bc920f2fd3daa3490'
+    __imgURL_token: str = '6e6c36de4eaaf95bd74b280259f18dd7'
+    __imgURL_album_id: int = 413
+    __water: str = 'res.21zys.com'
+    __pattern: str = 'res.21zys.com-{Y}{m}{d}{h}{i}{s}'
+    __auto_increment: int = 1
 
     @staticmethod
     def download_image(image_url: str, filename: str, save_path: str, retries: int = 5, open_proxy: bool = True, use_local: bool = False) -> bool:
@@ -32,7 +32,7 @@ class ImageUtils:
                 filename = filename + ext
                 image_path = os.path.join(save_path, filename)
                 if not os.path.exists(image_path):
-                    response = RequestUtils.fetch_url(image_url, open_proxy=open_proxy, use_local=use_local)
+                    response = RequestUtils.get(image_url, open_proxy=open_proxy, use_local=use_local)
                     response.raise_for_status()
                     img = Image.open(BytesIO(response.content))
                     img.save(image_path)
@@ -201,37 +201,40 @@ class ImageUtils:
         return pattern + '.' + ext
 
     @classmethod
-    def upload_to_smms_image(cls, image_path: str) -> Union[Tuple[str, str, str], None]:
+    def upload_to_smms_image(cls, image_path: str, open_proxy: bool = True, use_local: bool = False) -> Union[Tuple[str, str, str], None]:
         """
         上传本地文件到 smms 图床，期间需要格式化文件名，添加水印
+        **默认使用代理池代理**
 
         :param image_path: 本地图片路径
         :return: (原文件名, imgURL, deleteURL)
         """
         # 添加水印
-        watermarked_image = cls.add_watermark(image_path, cls.water)
+        watermarked_image = cls.add_watermark(image_path, cls.__water)
 
         # 获取原文件名去掉后缀部分
         original_filename = image_path.rsplit('/', 1)[-1].rsplit('.', 1)[0]
 
-        new_filename = cls.generate_filename(image_path.rsplit('/', 1)[-1], cls.pattern,
-                                             cls.auto_increment)
+        new_filename = cls.generate_filename(image_path.rsplit('/', 1)[-1], cls.__pattern,
+                                             cls.__auto_increment)
 
         url = "https://sm.ms/api/v2/upload"
-        headers = {'Authorization': cls.smms_token}
+        headers = {'Authorization': cls.__smms_token}
         files = {'smfile': (new_filename, watermarked_image)}
 
-        response = requests.post(url, headers=headers, files=files)
+        response = RequestUtils.post(url, open_proxy=open_proxy, use_local=use_local, headers=headers, files=files)
         result = response.json()
 
         if response.status_code == 200 and result['success']:
             return original_filename, result['data']['url'], result['data']['delete']
+        elif response.status_code == 200 and result['code'] == 'image_repeated':
+            return original_filename, result['images'], None
         else:
             raise Exception(f"Upload to SMMS failed: {result.get('message', 'Unknown error')}")
         return None
 
     @classmethod
-    def upload_to_smms_by_image_url(cls, image_url: str, original_filename: str):
+    def upload_to_smms_by_image_url(cls, image_url: str, original_filename: str, open_proxy: bool = True, use_local: bool = False):
         """
         上传网络文件到 smms 图床，期间需要格式化文件名，添加水印
 
@@ -239,7 +242,7 @@ class ImageUtils:
         :return: (原文件名, imgURL, deleteURL)
         """
         # 下载图片
-        response = requests.get(image_url)
+        response = RequestUtils.get(image_url, open_proxy=open_proxy, use_local=use_local)
         if response.status_code != 200:
             raise Exception("Failed to download image.")
 
@@ -251,25 +254,27 @@ class ImageUtils:
             file_suffix = 'jpg'
 
         # 添加水印
-        watermarked_image_io = cls.add_watermark_to_image(image, cls.water)
+        watermarked_image_io = cls.add_watermark_to_image(image, cls.__water)
 
-        new_filename = cls.generate_filename(f'{original_filename}.{file_suffix}', cls.pattern,
-                                             cls.auto_increment)
+        new_filename = cls.generate_filename(f'{original_filename}.{file_suffix}', cls.__pattern,
+                                             cls.__auto_increment)
 
         url = "https://sm.ms/api/v2/upload"
-        headers = {'Authorization': cls.smms_token}
+        headers = {'Authorization': cls.__smms_token}
         files = {'smfile': (new_filename, watermarked_image_io)}
 
-        response = requests.post(url, headers=headers, files=files)
+        response = RequestUtils.post(url, headers=headers, files=files)
         result = response.json()
 
         if response.status_code == 200 and result['success']:
             return original_filename, result['data']['url'], result['data']['delete']
+        elif response.status_code == 200 and result['code'] == 'image_repeated':
+            return original_filename, result['images'], None
         else:
             raise Exception(f"Upload to SMMS failed: {result.get('message', 'Unknown error')}")
 
     @classmethod
-    def upload_to_smms(cls, image_path: str, water: str, token: str, pattern: str, auto_increment: int):
+    def upload_to_smms(cls, image_path: str, water: str, token: str, pattern: str, auto_increment: int, open_proxy: bool = True, use_local: bool = False):
         """
         上传本地文件到 smms 图床，期间需要格式化文件名，添加水印，显式指定 water、token、pattern、auto_increment
 
@@ -293,16 +298,18 @@ class ImageUtils:
         headers = {'Authorization': token}
         files = {'smfile': (new_filename, watermarked_image)}
 
-        response = requests.post(url, headers=headers, files=files)
+        response = RequestUtils.post(url, open_proxy=open_proxy, use_local=use_local, headers=headers, files=files)
         result = response.json()
 
         if response.status_code == 200 and result['success']:
             return original_filename, result['data']['url'], result['data']['delete']
+        elif response.status_code == 200 and result['code'] == 'image_repeated':
+            return original_filename, result['images'], None
         else:
             raise Exception(f"Upload to SMMS failed: {result.get('message', 'Unknown error')}")
 
     @classmethod
-    def upload_to_imgurl_image(cls, image_path: str):
+    def upload_to_imgurl_image(cls, image_path: str, open_proxy: bool = True, use_local: bool = False):
         """
         上传本地文件到 imgURL 图床，期间需要格式化文件名，添加水印
 
@@ -310,14 +317,14 @@ class ImageUtils:
         :return: (原文件名, imgURL)
         """
         # 添加水印
-        watermarked_image = cls.add_watermark(image_path, cls.water)
+        watermarked_image = cls.add_watermark(image_path, cls.__water)
         filename = image_path.rsplit('/', 1)[-1].rsplit('.', 1)[0]
 
         url = "https://www.imgurl.org/api/v2/upload"
         files = {'file': (image_path.rsplit('/', 1)[-1], watermarked_image)}
-        data = {'uid': cls.imgURL_uid, 'token': cls.imgURL_token, 'album_id': cls.imgURL_album_id}
+        data = {'uid': cls.__imgURL_uid, 'token': cls.__imgURL_token, 'album_id': cls.__imgURL_album_id}
 
-        response = requests.post(url, files=files, data=data)
+        response = RequestUtils.post(url, open_proxy=open_proxy, use_local=use_local, files=files, data=data)
         result = response.json()
 
         if response.status_code == 200 and result['code'] == 200:
@@ -326,7 +333,7 @@ class ImageUtils:
             raise Exception(f"Upload to ImgURL failed: {result.get('message', 'Unknown error')}")
 
     @classmethod
-    def upload_to_imgurl(cls, image_path, water, album_id, uid, token):
+    def upload_to_imgurl(cls, image_path, water, album_id, uid, token, open_proxy: bool = True, use_local: bool = False):
         """
         上传本地文件到 imgURL 图床，期间需要格式化文件名，添加水印
         需要显式指定 water，album_id，uid，token
@@ -346,7 +353,7 @@ class ImageUtils:
         files = {'file': (image_path.rsplit('/', 1)[-1], watermarked_image)}
         data = {'uid': uid, 'token': token, 'album_id': album_id}
 
-        response = requests.post(url, files=files, data=data)
+        response = RequestUtils.post(url, open_proxy=open_proxy, use_local=use_local, files=files, data=data)
         result = response.json()
 
         if response.status_code == 200 and result['code'] == 200:

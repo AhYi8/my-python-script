@@ -3,13 +3,16 @@ from wordpress_xmlrpc.methods.posts import GetPosts, NewPost
 from wordpress_xmlrpc.methods import taxonomies
 import pandas as pd
 from typing import List, Union, Set, Dict
-import phpserialize, random, os
+import phpserialize, random, os, collections
 from .RedisUtils import RedisUtils
 from .ImageUtils import ImageUtils
 from .FileUtils import FileUtils
 from .DataUtils import DataUtils
 from .LogUtils import LogUtils
 from datetime import datetime
+
+# 添加 Iterable 到 collections 模块
+collections.Iterable = collections.abc.Iterable
 
 class Article:
     title: str
@@ -211,7 +214,6 @@ class WordpressUtils:
         post_ids = []
         for article in articles:
             LogUtils.info(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
-            print(f"{str(index).zfill(zfill_size)}/{total}-->正在发布：{article.title}")
             index += 1
             post_id = cls.post_article(article, is_duplicate)
             if post_id:
@@ -275,23 +277,18 @@ class WordpressUtils:
                         if 'cdn.sa.net' in article_meta.image or 'loli.net' in article_meta.image or 's3.bmp.ovh' in article_meta.image or 's3.uuu.ovh' in article_meta.image:
                             imgurl = article_meta.image
                         else:
-                            filename, imgurl, _ = ImageUtils.upload_to_smms_by_image_url(article_meta.image, article_meta.title)
+                            filename, imgurl, _ = ImageUtils.upload_to_smms_by_image_url(article_meta.image, article_meta.title, use_local=True)
                     else:
                         image_path = ImageUtils.find_first_image_with_text(base_image_path, article_meta.title)
                         if image_path:
-                            _, imgurl, deleteUrl = ImageUtils.upload_to_smms_image(image_path)
-                            # _, imgurl = ImageUtils.upload_to_imgurl_image(image_path)
+                            _, imgurl, deleteUrl = ImageUtils.upload_to_smms_image(image_path, use_local=True)
                         else:
                             LogUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
-                            print(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
                             index += 1
                             continue
                 except Exception as e:
-                    # Logging.info(f'{str(index).zfill(zfill_size)}/{total}-->上传图片失败，正在重试...')
                     LogUtils.info(f'上传图片失败：{e}')
-                    print(f'上传图片失败：{e}')
             LogUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
-            print(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
             article.title = article_meta.title
             post_titles.add(article.title)
             article.content = f"<img class='aligncenter' src='{imgurl}'>\n\n{article_meta.content}"
@@ -328,6 +325,7 @@ class WordpressUtils:
                 {'key': 'views', 'value': str(random.randint(300, 500))}
             ]
             article.custom_fields = custom_fields
+            article.date = datetime.now()
             articles.append(article)
             index += 1
         return articles

@@ -107,4 +107,4 @@ def test_wordpress_import_article():
 if __name__ == "__main__":
     # 开启全局代理
     # enable_proxy()
-    test_tg_article_output()
+    test_wordpress_import_article()

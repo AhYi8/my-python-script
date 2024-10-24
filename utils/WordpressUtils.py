@@ -15,10 +15,10 @@ from datetime import datetime
 collections.Iterable = collections.abc.Iterable
 
 class Article:
-    title: str
-    content: str
-    date: datetime
-    post_status: str
+    title: str = None
+    content: str = None
+    date: datetime = None
+    post_status: str = None
     terms_names: {}
     custom_fields: []
 
@@ -325,7 +325,6 @@ class WordpressUtils:
                 {'key': 'views', 'value': str(random.randint(300, 500))}
             ]
             article.custom_fields = custom_fields
-            article.date = datetime.now()
             articles.append(article)
             index += 1
         return articles

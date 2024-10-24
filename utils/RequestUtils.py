@@ -134,12 +134,14 @@ class RequestUtils:
                 LogUtils.error(f"Error fetching URL: {url}, attempt {attempt + 1}, Error: {e}")
 
             # 如果重试次数已用完，返回None
+
             if attempt == retries:
-                cls.delete_proxy(proxy)
+                if open_proxy:
+                    cls.delete_proxy(proxy)
                 return None
 
             attempt += 1
-            if attempt % 3 == 0:
+            if open_proxy and attempt % 3 == 0:
                 old_proxy = proxy
                 cls.delete_proxy(proxy)
                 proxy = cls.get_proxy().get("proxy")

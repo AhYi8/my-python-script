@@ -816,3 +816,408 @@
 2024-10-21 22:23:54,435 - INFO - 119/121-->正在发布：幼儿早教经典儿歌合集
 2024-10-21 22:23:55,321 - INFO - 120/121-->正在发布：张朝阳的物理课[多格式]
 2024-10-21 22:23:56,541 - INFO - 121/121-->正在发布：最新2024雅思专题资料【课程 视频 文档】
+2024-10-24 15:45:58,988 - INFO - 使用 16 个并发线程进行处理
+2024-10-24 15:46:07,036 - ERROR - TgArticleUtils_文章已发布：思维的本质 [学习教育] [pdf+全格式]，跳过采集：https://t.me/yunpanshare/87481?embed=1&mode=tme
+2024-10-24 15:46:15,118 - ERROR - TgArticleUtils_无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:46:15,118 - ERROR - 处理 URL https://t.me/yunpanshare/87387 时发生错误: 无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:46:20,169 - ERROR - TgArticleUtils_文章已发布：狸清照老照片修复增强，跳过采集：https://t.me/kuakeyun/103742?embed=1&mode=tme
+2024-10-24 15:46:20,687 - ERROR - TgArticleUtils_无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:46:20,688 - ERROR - 处理 URL https://t.me/yunpanshare/87387 时发生错误: 无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:46:21,373 - ERROR - TgArticleUtils_文章已发布：小吃配方大全【详细技术教程+300个配方】，跳过采集：https://t.me/kuakeyun/103638?embed=1&mode=tme
+2024-10-24 15:46:26,287 - ERROR - TgArticleUtils_无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:46:26,287 - ERROR - 处理 URL https://t.me/yunpanshare/87387 时发生错误: 无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:46:34,625 - ERROR - TgArticleUtils_文章已发布：32个高情商公式建立自己的优势，跳过采集：https://t.me/kuakeyun/103562?embed=1&mode=tme
+2024-10-24 15:46:34,940 - ERROR - TgArticleUtils_文章已发布：三根葱《向上汇报，说领导想听的话》（完结），跳过采集：https://t.me/kuakeyun/103558?embed=1&mode=tme
+2024-10-24 15:46:54,914 - ERROR - TgArticleUtils_文章已发布：财商启蒙课10集（完结），跳过采集：https://t.me/kuakeyun/103030?embed=1&mode=tme
+2024-10-24 15:47:10,769 - ERROR - TgArticleUtils_文章已发布：140款精美荣誉证书 图片+PSD模板+CDR模板+Word模板，跳过采集：https://t.me/kuakeyun/102646?embed=1&mode=tme
+2024-10-24 15:47:13,418 - ERROR - TgArticleUtils_无法解析页面内容: https://www.h6room.com/2856.html?embed=1&mode=tme
+2024-10-24 15:47:13,418 - ERROR - 处理 URL https://www.h6room.com/2856.html 时发生错误: 无法解析页面内容: https://www.h6room.com/2856.html?embed=1&mode=tme
+2024-10-24 15:47:18,087 - ERROR - TgArticleUtils_无法解析页面内容: https://www.h6room.com/2856.html?embed=1&mode=tme
+2024-10-24 15:47:18,091 - ERROR - 处理 URL https://www.h6room.com/2856.html 时发生错误: 无法解析页面内容: https://www.h6room.com/2856.html?embed=1&mode=tme
+2024-10-24 15:47:22,714 - ERROR - TgArticleUtils_无法解析页面内容: https://www.h6room.com/2856.html?embed=1&mode=tme
+2024-10-24 15:47:22,714 - ERROR - 处理 URL https://www.h6room.com/2856.html 时发生错误: 无法解析页面内容: https://www.h6room.com/2856.html?embed=1&mode=tme
+2024-10-24 15:47:39,078 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 1, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:47:44,367 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 2, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:47:49,754 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 3, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:47:52,854 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->112.118.59.97:80
+2024-10-24 15:47:58,002 - ERROR - TgArticleUtils_文章已发布：解锁机器学习算法面试挑战，跳过采集：https://t.me/zh_vip/2553?embed=1&mode=tme
+2024-10-24 15:47:58,099 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 4, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:03,286 - ERROR - TgArticleUtils_文章已发布：斯坦福CS224n深度学习培训营，跳过采集：https://t.me/zh_vip/2549?embed=1&mode=tme
+2024-10-24 15:48:03,452 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 5, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:03,544 - ERROR - TgArticleUtils_文章已发布：神经科学视角下的心理治疗，跳过采集：https://t.me/zh_vip/2544?embed=1&mode=tme
+2024-10-24 15:48:05,217 - ERROR - TgArticleUtils_文章已发布：流行声乐必修从小白到歌手，跳过采集：https://t.me/zh_vip/2539?embed=1&mode=tme
+2024-10-24 15:48:05,479 - ERROR - TgArticleUtils_文章已发布：男性腹肌打造瘦肚子全方案，跳过采集：https://t.me/zh_vip/2537?embed=1&mode=tme
+2024-10-24 15:48:05,805 - ERROR - TgArticleUtils_文章已发布：提升自信改善沟通关系心理，跳过采集：https://t.me/zh_vip/2536?embed=1&mode=tme
+2024-10-24 15:48:07,274 - ERROR - TgArticleUtils_文章已发布：摄影学院静物美食线上大师班，跳过采集：https://t.me/zh_vip/2532?embed=1&mode=tme
+2024-10-24 15:48:07,346 - ERROR - TgArticleUtils_文章已发布：用口译技术全面提升英语能力，跳过采集：https://t.me/zh_vip/2531?embed=1&mode=tme
+2024-10-24 15:48:08,043 - ERROR - TgArticleUtils_文章已发布：小白到大神一部手机拍大片，跳过采集：https://t.me/zh_vip/2530?embed=1&mode=tme
+2024-10-24 15:48:08,583 - ERROR - TgArticleUtils_文章已发布：管教孩子的26个心理学方法，跳过采集：https://t.me/zh_vip/2528?embed=1&mode=tme
+2024-10-24 15:48:08,685 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 6, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:09,011 - ERROR - TgArticleUtils_文章已发布：埃里克：打造完美身材方案，跳过采集：https://t.me/zh_vip/2525?embed=1&mode=tme
+2024-10-24 15:48:09,044 - ERROR - TgArticleUtils_文章已发布：20节风趣幽默表达的秘籍课程，跳过采集：https://t.me/zh_vip/2524?embed=1&mode=tme
+2024-10-24 15:48:09,849 - ERROR - TgArticleUtils_文章已发布：精准表达沟通训练营第二期，跳过采集：https://t.me/zh_vip/2526?embed=1&mode=tme
+2024-10-24 15:48:10,008 - ERROR - TgArticleUtils_文章已发布：手把手教学保姆级口语纠音，跳过采集：https://t.me/zh_vip/2533?embed=1&mode=tme
+2024-10-24 15:48:10,903 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 112.118.59.97:80-->1.15.144.231:8989
+2024-10-24 15:48:16,229 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 7, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:21,434 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 8, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:26,674 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 9, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:28,712 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 1.15.144.231:8989-->111.26.177.28:9091
+2024-10-24 15:48:34,071 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 10, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:40,079 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 11, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:45,310 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 12, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:47,227 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 111.26.177.28:9091-->158.255.77.169:80
+2024-10-24 15:48:52,559 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 13, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:48:57,811 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 14, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:03,048 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 15, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:05,083 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 158.255.77.169:80-->101.37.22.207:3128
+2024-10-24 15:49:10,349 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 16, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:16,073 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 17, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:21,322 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 18, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:23,223 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 101.37.22.207:3128-->60.242.169.0:80
+2024-10-24 15:49:28,463 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 19, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:33,739 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 20, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:39,044 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 21, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:41,104 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 60.242.169.0:80-->103.49.114.195:8080
+2024-10-24 15:49:46,461 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 22, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:51,832 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 23, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:57,066 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 24, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:49:59,281 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 103.49.114.195:8080-->1.15.144.231:8989
+2024-10-24 15:50:04,676 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 25, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:10,040 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 26, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:15,296 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 27, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:17,371 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 1.15.144.231:8989-->103.118.46.174:8080
+2024-10-24 15:50:22,603 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 28, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:27,930 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 29, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:33,237 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 30, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:35,288 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 103.118.46.174:8080-->39.109.113.97:4090
+2024-10-24 15:50:40,568 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 31, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:41,536 - ERROR - 处理 URL https://www.52pojie.cn/thread-1974460-1-1.html 时发生错误: 'NoneType' object has no attribute 'text'
+2024-10-24 15:50:45,827 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 1, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:51,506 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 2, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:56,758 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 3, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:50:59,212 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->111.1.61.47:3128
+2024-10-24 15:51:04,468 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 4, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:51:09,789 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 5, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:51:15,028 - ERROR - Error fetching URL: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme, attempt 6, Error: 404 Client Error: Not Found for url: https://www.52pojie.cn/thread-1974460-1-1.html?embed=1&mode=tme
+2024-10-24 15:51:17,927 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 111.1.61.47:3128-->103.118.46.61:8080
+2024-10-24 15:52:20,857 - INFO - 使用 16 个并发线程进行处理
+2024-10-24 15:52:27,821 - ERROR - TgArticleUtils_文章已发布：思维的本质 [学习教育] [pdf+全格式]，跳过采集：https://t.me/yunpanshare/87481?embed=1&mode=tme
+2024-10-24 15:52:35,467 - ERROR - TgArticleUtils_无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:52:35,467 - ERROR - 处理 URL https://t.me/yunpanshare/87387 时发生错误: 无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:52:36,546 - ERROR - TgArticleUtils_文章已发布：狸清照老照片修复增强，跳过采集：https://t.me/kuakeyun/103742?embed=1&mode=tme
+2024-10-24 15:52:38,134 - ERROR - TgArticleUtils_文章已发布：小吃配方大全【详细技术教程+300个配方】，跳过采集：https://t.me/kuakeyun/103638?embed=1&mode=tme
+2024-10-24 15:52:41,852 - ERROR - TgArticleUtils_无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:52:41,852 - ERROR - 处理 URL https://t.me/yunpanshare/87387 时发生错误: 无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:52:45,354 - ERROR - TgArticleUtils_文章已发布：32个高情商公式建立自己的优势，跳过采集：https://t.me/kuakeyun/103562?embed=1&mode=tme
+2024-10-24 15:52:46,331 - ERROR - TgArticleUtils_文章已发布：三根葱《向上汇报，说领导想听的话》（完结），跳过采集：https://t.me/kuakeyun/103558?embed=1&mode=tme
+2024-10-24 15:52:47,463 - ERROR - TgArticleUtils_无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:52:47,463 - ERROR - 处理 URL https://t.me/yunpanshare/87387 时发生错误: 无法解析页面内容: https://t.me/yunpanshare/87387?embed=1&mode=tme
+2024-10-24 15:52:57,854 - ERROR - TgArticleUtils_文章已发布：财商启蒙课10集（完结），跳过采集：https://t.me/kuakeyun/103030?embed=1&mode=tme
+2024-10-24 15:53:05,992 - ERROR - TgArticleUtils_文章已发布：140款精美荣誉证书 图片+PSD模板+CDR模板+Word模板，跳过采集：https://t.me/kuakeyun/102646?embed=1&mode=tme
+2024-10-24 15:53:32,038 - ERROR - TgArticleUtils_文章已发布：解锁机器学习算法面试挑战，跳过采集：https://t.me/zh_vip/2553?embed=1&mode=tme
+2024-10-24 15:53:34,601 - ERROR - TgArticleUtils_文章已发布：斯坦福CS224n深度学习培训营，跳过采集：https://t.me/zh_vip/2549?embed=1&mode=tme
+2024-10-24 15:53:34,957 - ERROR - TgArticleUtils_文章已发布：神经科学视角下的心理治疗，跳过采集：https://t.me/zh_vip/2544?embed=1&mode=tme
+2024-10-24 15:53:35,227 - ERROR - TgArticleUtils_文章已发布：流行声乐必修从小白到歌手，跳过采集：https://t.me/zh_vip/2539?embed=1&mode=tme
+2024-10-24 15:53:35,660 - ERROR - TgArticleUtils_文章已发布：提升自信改善沟通关系心理，跳过采集：https://t.me/zh_vip/2536?embed=1&mode=tme
+2024-10-24 15:53:35,672 - ERROR - TgArticleUtils_文章已发布：男性腹肌打造瘦肚子全方案，跳过采集：https://t.me/zh_vip/2537?embed=1&mode=tme
+2024-10-24 15:53:36,731 - ERROR - TgArticleUtils_文章已发布：手把手教学保姆级口语纠音，跳过采集：https://t.me/zh_vip/2533?embed=1&mode=tme
+2024-10-24 15:53:36,812 - ERROR - TgArticleUtils_文章已发布：摄影学院静物美食线上大师班，跳过采集：https://t.me/zh_vip/2532?embed=1&mode=tme
+2024-10-24 15:53:37,089 - ERROR - TgArticleUtils_文章已发布：用口译技术全面提升英语能力，跳过采集：https://t.me/zh_vip/2531?embed=1&mode=tme
+2024-10-24 15:53:37,170 - ERROR - TgArticleUtils_文章已发布：小白到大神一部手机拍大片，跳过采集：https://t.me/zh_vip/2530?embed=1&mode=tme
+2024-10-24 15:53:37,582 - ERROR - TgArticleUtils_文章已发布：埃里克：打造完美身材方案，跳过采集：https://t.me/zh_vip/2525?embed=1&mode=tme
+2024-10-24 15:53:37,643 - ERROR - TgArticleUtils_文章已发布：管教孩子的26个心理学方法，跳过采集：https://t.me/zh_vip/2528?embed=1&mode=tme
+2024-10-24 15:53:38,142 - ERROR - TgArticleUtils_文章已发布：20节风趣幽默表达的秘籍课程，跳过采集：https://t.me/zh_vip/2524?embed=1&mode=tme
+2024-10-24 15:53:38,333 - ERROR - TgArticleUtils_文章已发布：精准表达沟通训练营第二期，跳过采集：https://t.me/zh_vip/2526?embed=1&mode=tme
+2024-10-24 17:14:36,086 - INFO - 001/123-->高维企业经营黄金十二法则, https://cdn.sa.net/2024/10/24/nug3kW1EKw8s6Oj.jpg
+2024-10-24 17:14:38,887 - INFO - 002/123-->价值几万的各种小吃教程, https://cdn.sa.net/2024/10/24/ySqLlZz8VKU4xce.jpg
+2024-10-24 17:14:41,925 - INFO - 003/123-->李建伟-2024公司法新规逐条精讲, https://cdn.sa.net/2024/10/24/jM6It1KPC7xLuXl.jpg
+2024-10-24 17:14:44,589 - INFO - 004/123-->企业高维战略方法论58节课程, https://cdn.sa.net/2024/10/24/QnyxMjGqZXP4TeF.jpg
+2024-10-24 17:14:47,279 - INFO - 005/123-->宁向东的管理学课, https://cdn.sa.net/2024/10/24/ubqGoSZny4ksJxP.jpg
+2024-10-24 17:14:50,092 - INFO - 006/123-->【舒老师的文案课】产品文案痛苦60讲，用户视角形成正确文案观，让你写文案突飞猛进, https://cdn.sa.net/2024/10/24/P3hWTINudq52CVU.jpg
+2024-10-24 17:14:52,789 - INFO - 007/123-->餐饮人轻松同城引流必学课, https://cdn.sa.net/2024/10/24/FwoZjcxnDdWeRf7.jpg
+2024-10-24 17:14:55,642 - INFO - 008/123-->【电商企业财务管理线上课】为电商企业规划财税, https://cdn.sa.net/2024/10/24/fSYbgptoed5XLzy.jpg
+2024-10-24 17:14:58,366 - INFO - 009/123-->【TikTok避坑指南】新手入局TikTok别再踩坑了, https://cdn.sa.net/2024/10/24/RqiPD4d1CLyQMIA.jpg
+2024-10-24 17:15:01,161 - INFO - 010/123-->TikTok新手避坑指南，入局TikTok，远离常见误区, https://cdn.sa.net/2024/10/24/bfRnPBp1TaQ8D2s.jpg
+2024-10-24 17:15:03,862 - INFO - 011/123-->财商启蒙课10集, https://cdn.sa.net/2024/10/24/3bPsW1O94BwYS2j.jpg
+2024-10-24 17:15:06,512 - INFO - 012/123-->关系高手如何实现财务自由, https://cdn.sa.net/2024/10/24/hzNEbSi1XwCUAHk.jpg
+2024-10-24 17:15:09,136 - INFO - 013/123-->静秋姐姐手把手教你做运营, https://cdn.sa.net/2024/10/24/lGWO3PEnbue1J8S.jpg
+2024-10-24 17:15:11,780 - INFO - 014/123-->九大章节环环相扣全面讲解销售, https://cdn.sa.net/2024/10/24/ZzrORADK5xIdmhB.jpg
+2024-10-24 17:15:14,605 - INFO - 015/123-->练就销售冠军的奥秘, https://cdn.sa.net/2024/10/24/3QOBoYhrslzSvjL.jpg
+2024-10-24 17:15:17,329 - INFO - 016/123-->最新网赚项目—小红书打卡，一个被忽视的暴力项目, https://cdn.sa.net/2024/10/24/aruvoGLzyJ2jU7q.jpg
+2024-10-24 17:15:20,137 - INFO - 017/123-->【AI工具全能课】一套课程学会所有主流AI工具，从AI领域的小趴菜蜕变成AI技能多面手, https://cdn.sa.net/2024/10/24/SF1eYsTnGlvdNwh.jpg
+2024-10-24 17:15:22,935 - INFO - 018/123-->台风AI自媒体+爆文变现营【14天用GPT创作提效10倍】, https://cdn.sa.net/2024/10/24/g8jG9V4dMPCcRn6.jpg
+2024-10-24 17:15:25,928 - INFO - 019/123-->网易云课堂《人工智能绘画与设计 (6期)  》, https://cdn.sa.net/2024/10/24/TjZmdp72EtP9bKn.jpg
+2024-10-24 17:15:28,597 - INFO - 020/123-->卖999的付费进群系统, https://cdn.sa.net/2024/10/24/8KaqAPkgm4D5hEN.jpg
+2024-10-24 17:15:31,408 - INFO - 021/123-->扫描王全能宝6.8.33_ 文档扫描，办公必备, https://cdn.sa.net/2024/10/24/782ozGyTqDBnmwf.jpg
+2024-10-24 17:15:34,363 - INFO - 022/123-->瞬译 v6.9.209990Instant Translate，即时翻译屏幕，解锁高级版, https://cdn.sa.net/2024/10/24/SEVrPQcwnakhfHj.jpg
+2024-10-24 17:15:37,061 - INFO - 023/123-->文案转换成语音合成工具, https://cdn.sa.net/2024/10/24/fHE4V9xtQZnbYFA.jpg
+2024-10-24 17:15:40,041 - INFO - 024/123-->脸猫超强AI换脸，一键增肌照片修复破解版, https://cdn.sa.net/2024/10/24/dtgcCJjGQrv6soz.jpg
+2024-10-24 17:15:42,961 - INFO - 025/123-->腐烂国度2_主宰巨霸版_State of Decay2_ Juggernaut Edition, https://cdn.sa.net/2024/10/24/MamPXHfF6TLAsuD.jpg
+2024-10-24 17:15:45,697 - INFO - 026/123-->34套游泳运动PPT, https://cdn.sa.net/2024/10/24/NnvLUJqcgafrtHi.jpg
+2024-10-24 17:15:48,259 - INFO - 027/123-->考研复试PPT合集【模板+预览图】【共94套】, https://cdn.sa.net/2024/10/24/7lYt5Sc3oPZMiGN.jpg
+2024-10-24 17:15:50,989 - INFO - 028/123-->《初中学霸同步笔记》2024版, https://cdn.sa.net/2024/10/24/xpHOY53BXWITeiD.jpg
+2024-10-24 17:15:53,706 - INFO - 029/123-->《小学学霸冲A卷》2023小学1~6年级上下全册, https://cdn.sa.net/2024/10/24/cq2NJXwlU613FHV.jpg
+2024-10-24 17:15:56,404 - INFO - 030/123-->2025高考数学100套高质量讲义资料, https://cdn.sa.net/2024/10/24/7XKpUwZBcx5mQAl.jpg
+2024-10-24 17:15:59,093 - INFO - 031/123-->24万维大小卷, https://cdn.sa.net/2024/10/24/RVzGOfr9pDPLyK5.jpg
+2024-10-24 17:16:04,500 - INFO - 032/123-->53科学备考《初中知识清单 ·2025版》, https://cdn.sa.net/2024/10/24/HbYhlFispS9gkWj.jpg
+2024-10-24 17:16:08,117 - INFO - 033/123-->初中化学全册思维导图, https://cdn.sa.net/2024/10/24/qX5RdkvIsPj1cYC.jpg
+2024-10-24 17:16:10,830 - INFO - 034/123-->从小学到高中全学科思维导图（可下载打印）, https://cdn.sa.net/2024/10/24/PS2cNH6pxriaEw4.jpg
+2024-10-24 17:16:14,732 - INFO - 035/123-->高中化学 学习知识大全归纳总结, https://cdn.sa.net/2024/10/24/jLiN1Iyhv7S4gZF.jpg
+2024-10-24 17:16:17,283 - INFO - 036/123-->高中理综 系统知识归纳总结, https://cdn.sa.net/2024/10/24/tZ1TrI9Oqj4y6mw.jpg
+2024-10-24 17:16:21,035 - INFO - 037/123-->高中数学必备的289个公式, https://cdn.sa.net/2024/10/24/AJ3Ok1uEoMVvc6U.jpg
+2024-10-24 17:16:23,832 - INFO - 038/123-->九年级化学下册思维导图, https://cdn.sa.net/2024/10/24/or1bivl7uFdZRNT.jpg
+2024-10-24 17:16:26,661 - INFO - 039/123-->学霸精心整理  小学到高中全学科思维导图 成绩提升, https://cdn.sa.net/2024/10/24/q9AoTQ6k7mNUn3X.jpg
+2024-10-24 17:16:29,244 - INFO - 040/123-->《风水术》开运招财 风水自助手册, https://cdn.sa.net/2024/10/24/ao7hVHT3A5kN46G.jpg
+2024-10-24 17:16:32,703 - INFO - 041/123-->《我的第一套自然拼读故事书》经典英语启蒙绘本  让孩子赢在起跑线, https://cdn.sa.net/2024/10/24/PNeWdvQ21AhtTsO.jpg
+2024-10-24 17:16:35,381 - INFO - 042/123-->《易中天中华史》[全24卷], https://cdn.sa.net/2024/10/24/6vki9IawqHlgF4O.jpg
+2024-10-24 17:16:38,276 - INFO - 043/123-->超实用：2024小米SU7Pro Max 维修手册电路图操作手册, https://cdn.sa.net/2024/10/24/DqbWa2VEFfP8NXu.jpg
+2024-10-24 17:16:40,928 - INFO - 044/123-->城的中国史 [历史传记] [pdf+全格式], https://cdn.sa.net/2024/10/24/XkACftEsxRr5NLl.jpg
+2024-10-24 17:16:43,488 - INFO - 045/123-->冲破边际 [人文社科] [pdf+全格式], https://cdn.sa.net/2024/10/24/egHZJCXR9ulLvhd.jpg
+2024-10-24 17:16:46,292 - INFO - 046/123-->处女的情人 [小说文学] [pdf+全格式], https://cdn.sa.net/2024/10/24/v76giqb4EZOxSh2.jpg
+2024-10-24 17:16:49,054 - INFO - 047/123-->伏特加政治 [历史传记] [pdf+全格式], https://cdn.sa.net/2024/10/24/65UNz2GcQmnrZ9E.jpg
+2024-10-24 17:16:51,719 - INFO - 048/123-->高难度谈判 [经济管理] [pdf+全格式], https://cdn.sa.net/2024/10/24/gHt3VvEcby1WzNi.jpg
+2024-10-24 17:16:54,343 - INFO - 049/123-->哈佛燕京图书馆藏明代史料汇编【277册】, https://cdn.sa.net/2024/10/24/89zKOgZX4PBcJSh.jpg
+2024-10-24 17:16:58,060 - INFO - 050/123-->孩子：挑战 [学习教育] [pdf+全格式], https://cdn.sa.net/2024/10/24/FRdODVbmkracS52.jpg
+2024-10-24 17:17:01,182 - INFO - 051/123-->孩子的心理问题从哪里来 [学习教育] [pdf+全格式], https://cdn.sa.net/2024/10/24/yp3e94J8ELBdCNz.jpg
+2024-10-24 17:17:05,692 - INFO - 052/123-->唤醒吧！职场多巴胺 [励志成功] [pdf+全格式], https://cdn.sa.net/2024/10/24/SFl9d6hWy1i3EBz.jpg
+2024-10-24 17:17:09,206 - INFO - 053/123-->家中有本草 健康无烦恼  餐桌上的调养方大全, https://cdn.sa.net/2024/10/24/oP8Wb7ZzOCfUawv.jpg
+2024-10-24 17:17:12,094 - INFO - 054/123-->快行动，慢思考 [励志成功] [pdf+全格式], https://cdn.sa.net/2024/10/24/Q8gaeZwloHYduIF.jpg
+2024-10-24 17:17:15,003 - INFO - 055/123-->命运：文在寅自传, https://cdn.sa.net/2024/10/24/7RYQ9SAOgTkb26x.jpg
+2024-10-24 17:17:17,883 - INFO - 056/123-->女性美容 电子书, https://cdn.sa.net/2024/10/24/xbiSAcLHGln5OrF.jpg
+2024-10-24 17:17:20,649 - INFO - 057/123-->奇点临近 [人文社科] [pdf+全格式], https://cdn.sa.net/2024/10/24/vJXoeWzSQ6nTfxp.jpg
+2024-10-24 17:17:23,567 - INFO - 058/123-->契诃夫戏剧全集：名家导赏版（共八册） [套装合集] [pdf+全格式], https://cdn.sa.net/2024/10/24/UvKNpEFdLS3ZnQk.jpg
+2024-10-24 17:17:26,534 - INFO - 059/123-->人类简史畅读系列（套装共6册） [套装合集] [pdf+全格式], https://cdn.sa.net/2024/10/24/L8Sa4EburGWFQtl.jpg
+2024-10-24 17:17:29,269 - INFO - 060/123-->认识顾客（原书第13版） [经济管理] [pdf+全格式], https://cdn.sa.net/2024/10/24/nhQziZroe972FPp.jpg
+2024-10-24 17:17:31,802 - INFO - 061/123-->肉料理原来是这么回事儿 [人文社科] [pdf+全格式], https://cdn.sa.net/2024/10/24/vFQrzyptdcaC4Lk.jpg
+2024-10-24 17:17:34,299 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:36,822 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:39,160 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:41,649 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:44,190 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:46,789 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:49,311 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:51,839 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:54,354 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:56,843 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:17:59,356 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:01,845 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:04,346 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:06,871 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:09,364 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:11,884 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:14,398 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:16,902 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:19,384 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:21,908 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:24,255 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:26,724 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:29,223 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:31,592 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:18:34,325 - INFO - 062/123-->拖延心理学 [励志成功] [pdf+全格式], https://cdn.sa.net/2024/10/24/Uw64RQvg1C87lBa.jpg
+2024-10-24 17:18:37,344 - INFO - 063/123-->瓦尔登湖光书影 [小说文学] [pdf+全格式], https://cdn.sa.net/2024/10/24/RXMgoJO2WGpCQt9.jpg
+2024-10-24 17:18:40,452 - INFO - 064/123-->王芳老师《成语故事私塾课》, https://cdn.sa.net/2024/10/24/R2TneZHsEIW9Pmw.jpg
+2024-10-24 17:18:43,020 - INFO - 065/123-->雾之旗 [小说文学] [pdf+全格式], https://cdn.sa.net/2024/10/24/LPnZ3BmKkedh15c.jpg
+2024-10-24 17:18:45,713 - INFO - 066/123-->西泠印社史研究导论 [人文社科] [pdf+全格式], https://cdn.sa.net/2024/10/24/5iwYU1WHpqEJSxA.jpg
+2024-10-24 17:18:48,402 - INFO - 067/123-->中学生数学思维方法丛书(12册), https://cdn.sa.net/2024/10/24/Q5ehCIlzmdXSEyJ.jpg
+2024-10-24 17:18:50,976 - INFO - 068/123-->诸病退散 [生活时尚] [pdf+全格式], https://cdn.sa.net/2024/10/24/Z6gsi8TLNK4jyBX.jpg
+2024-10-24 17:18:53,988 - INFO - 069/123-->著名悬疑小说家那多经典作品合集（12册合集） [套装合集] [pdf+全格式], https://cdn.sa.net/2024/10/24/ihFzKTBrPcnMJy2.jpg
+2024-10-24 17:18:56,581 - INFO - 070/123-->追时间的人 [人文社科] [pdf+全格式], https://cdn.sa.net/2024/10/24/Zwy2UiNpQcCmW8L.jpg
+2024-10-24 17:18:59,268 - INFO - 071/123-->【黑马程序员】Java架构师实战训练营V2.3- 带源码课件, https://cdn.sa.net/2024/10/24/6iJX8AmbMgsycGQ.jpg
+2024-10-24 17:19:01,836 - INFO - 072/123-->【千峰教育】Java核心技术视频教程（全套）, https://cdn.sa.net/2024/10/24/rsh4tiA1V7NJjDd.jpg
+2024-10-24 17:19:04,514 - INFO - 073/123-->【尚硅谷】2024最新版Python视频教程 - 带源码课件, https://cdn.sa.net/2024/10/24/LouKTXstbQcdeBZ.jpg
+2024-10-24 17:19:07,168 - INFO - 074/123-->Houdini进阶案例课镜头增补版, https://cdn.sa.net/2024/10/24/g8HsMzYGP9EFQwj.jpg
+2024-10-24 17:19:09,938 - INFO - 075/123-->码神模块10gozero实战-数字货币交易所, https://cdn.sa.net/2024/10/24/j5fZKNHzYrPyW93.jpg
+2024-10-24 17:19:12,519 - INFO - 076/123-->慕课网-Java开发企业级权限管理系统-视频课, https://cdn.sa.net/2024/10/24/fy7buxdHUtjBTWY.jpg
+2024-10-24 17:19:15,183 - INFO - 077/123-->实践去中心化协议DApp开发, https://cdn.sa.net/2024/10/24/8UaSLc6XjYF3m7w.jpg
+2024-10-24 17:19:18,119 - INFO - 078/123-->B站 - 欧阳春晓：30天维密普拉提居家瘦身课, https://cdn.sa.net/2024/10/24/lYT3jNZS21VzAQ6.jpg
+2024-10-24 17:19:20,640 - INFO - 079/123-->B站付费课程 费勇讲《金刚经》, https://cdn.sa.net/2024/10/24/qaKYyB1mStJvMDH.jpg
+2024-10-24 17:19:23,312 - INFO - 080/123-->让团队完成目标绩效管理机制, https://cdn.sa.net/2024/10/24/mPyCpgjT4loY3h7.jpg
+2024-10-24 17:19:26,613 - INFO - 081/123-->杨自豪高效学习课程合集, https://cdn.sa.net/2024/10/24/IEDbAmNs3fGodgQ.jpg
+2024-10-24 17:19:29,976 - INFO - 082/123-->用高情商沟通化解人际关系难题, https://cdn.sa.net/2024/10/24/9MPz8F2e6NIwYLH.jpg
+2024-10-24 17:19:33,177 - INFO - 083/123-->喻老师人生复利训练营课程, https://cdn.sa.net/2024/10/24/28VtMPX1543jaDw.jpg
+2024-10-24 17:19:36,709 - INFO - 084/123-->持久的成功 早xie治疗手册（翻译版）, https://cdn.sa.net/2024/10/24/gMJdVTohABPDNCI.jpg
+2024-10-24 17:19:41,994 - INFO - 085/123-->【慕课网】职场必备AI课：AI高效办公训练营, https://cdn.sa.net/2024/10/24/6ra9y7u2pzYwSIT.jpg
+2024-10-24 17:19:46,205 - INFO - 086/123-->老夏说面试（公考面试从小白到面霸）, https://cdn.sa.net/2024/10/24/EXAYkzK916WdCgB.jpg
+2024-10-24 17:19:48,782 - INFO - 087/123-->软考高项付费课程—信息系统项目管理师机构教程全集+笔记+资料+真题解析, https://cdn.sa.net/2024/10/24/VolNWLA56IubsnM.jpg
+2024-10-24 17:19:51,405 - INFO - 088/123-->【沪江网校】韩语入门至TOPIK高级-视频课, https://cdn.sa.net/2024/10/24/iWEM7xwOy4LBjFl.jpg
+2024-10-24 17:19:54,310 - INFO - 089/123-->【旧食课堂】自然光美食短视频系统课, https://cdn.sa.net/2024/10/24/rVdY6WoQfGblMgI.jpg
+2024-10-24 17:19:57,019 - INFO - 090/123-->Art职业篮球《15天三分完全指南》, https://cdn.sa.net/2024/10/24/39J7NDEGmsX5wgM.jpg
+2024-10-24 17:19:59,540 - INFO - 091/123-->Houdini 进阶案例课镜头增补版, https://cdn.sa.net/2024/10/24/es7W2OjbmzAXJ5k.jpg
+2024-10-24 17:20:02,848 - INFO - 092/123-->ME老师达芬奇调色课程, https://cdn.sa.net/2024/10/24/LtUpDaIgcu2XZqw.jpg
+2024-10-24 17:20:05,501 - INFO - 093/123-->Word高效工作专业班 快速提升工作效率, https://cdn.sa.net/2024/10/24/7Wi4nfGksmvdhqg.jpg
+2024-10-24 17:20:08,712 - INFO - 094/123-->白无常《PS人像精修教程》, https://cdn.sa.net/2024/10/24/8YUqr6tKQxPXugp.jpg
+2024-10-24 17:20:11,470 - INFO - 095/123-->百家讲坛【王立群读史记】, https://cdn.sa.net/2024/10/24/MRmSrovw3up5l4q.jpg
+2024-10-24 17:20:14,276 - INFO - 096/123-->百家讲坛【易中天合集】, https://cdn.sa.net/2024/10/24/P7MHwKJSB8YfCLX.jpg
+2024-10-24 17:20:16,951 - INFO - 097/123-->变态心理学20讲, https://cdn.sa.net/2024/10/24/cObezxhCfkYZMsR.jpg
+2024-10-24 17:20:19,596 - INFO - 098/123-->初学入门零基础手碟鼓打击乐器, https://cdn.sa.net/2024/10/24/32HsVqfFWdZO4R5.jpg
+2024-10-24 17:20:22,361 - INFO - 099/123-->达芬奇调色S1系统专业课程-拍片学院, https://cdn.sa.net/2024/10/24/oZy3LGm9aVHnO2N.jpg
+2024-10-24 17:20:24,995 - INFO - 100/123-->古典·职业生涯发展研修班（完结）, https://cdn.sa.net/2024/10/24/5tbfarq8eHTmuSQ.jpg
+2024-10-24 17:20:27,660 - INFO - 101/123-->唤醒老虎创伤疗愈大师班课, https://cdn.sa.net/2024/10/24/kiYpo6hz4el8bL5.jpg
+2024-10-24 17:20:30,209 - INFO - 102/123-->婚礼摄影教程-男家高级摆拍2.0, https://cdn.sa.net/2024/10/24/Jm7tcVw45RaXKsq.jpg
+2024-10-24 17:20:32,719 - INFO - 103/123-->婚礼摄影教程-女家摆拍技巧（高级篇）35种新娘家摆拍晨袍秀禾轻纱以及伴娘互动, https://cdn.sa.net/2024/10/24/YsKmVdSvyDb9Cwq.jpg
+2024-10-24 17:20:35,244 - INFO - 104/123-->可爱Q版人物与色彩团练课程, https://cdn.sa.net/2024/10/24/6XnOD4ho9b2fT3v.jpg
+2024-10-24 17:20:38,085 - INFO - 105/123-->孔晨《UI 设计师的动效入门指南》, https://cdn.sa.net/2024/10/24/FWZxuBP69z5atvi.jpg
+2024-10-24 17:20:40,724 - INFO - 106/123-->零基础婚礼拍摄课程（基础篇）, https://cdn.sa.net/2024/10/24/4P8ka2BbcHW9QuN.jpg
+2024-10-24 17:20:43,508 - INFO - 107/123-->明星切片线上训练营, https://cdn.sa.net/2024/10/24/XfYFSAwhmLPpgWv.jpg
+2024-10-24 17:20:46,016 - INFO - 108/123-->女性必备：婚、孕、养、护肤全系列课程, https://cdn.sa.net/2024/10/24/oyGrJncw8tEkfKu.jpg
+2024-10-24 17:20:48,520 - INFO - 109/123-->暑期品牌图案设计研究实践, https://cdn.sa.net/2024/10/24/icTgKm4WXlCDsyU.jpg
+2024-10-24 17:20:51,210 - INFO - 110/123-->台球专业班付费教程, https://cdn.sa.net/2024/10/24/ymwE2AWkITrZftU.jpg
+2024-10-24 17:20:53,990 - INFO - 111/123-->线上心理学特训营课程——家庭关系心理学, https://cdn.sa.net/2024/10/24/Y5fVrZFRQXG78nT.jpg
+2024-10-24 17:20:56,693 - INFO - 112/123-->1~9年级奥数精讲与测试, https://cdn.sa.net/2024/10/24/dC4aGDztNlTKmhY.jpg
+2024-10-24 17:21:00,245 - INFO - 113/123-->21天养成儿童好体态, https://cdn.sa.net/2024/10/24/yGDPRvWScUbQqXM.jpg
+2024-10-24 17:21:08,141 - INFO - 114/123-->24个绘本阅读秘籍，从小提升孩子阅读力，做高情商宝宝（完结）, https://cdn.sa.net/2024/10/24/ZA78RxODXhpdtmr.jpg
+2024-10-24 17:21:10,847 - INFO - 115/123-->常青藤爸爸大语文课《影响世界的100个名人》, https://cdn.sa.net/2024/10/24/3dYJa8NxAwqhMBy.jpg
+2024-10-24 17:21:14,919 - INFO - 116/123-->大咖亲授——核心论文写作指南   论文协作技巧教程, https://cdn.sa.net/2024/10/24/k8XZ2iN7jzEtolD.jpg
+2024-10-24 17:21:17,724 - INFO - 117/123-->高中数学新结构试题题型合集, https://cdn.sa.net/2024/10/24/Sos2tdXu6vfWCAL.jpg
+2024-10-24 17:21:20,436 - INFO - 118/123-->刘一男《零基础4000词英语逆袭计划》, https://cdn.sa.net/2024/10/24/hj84Y3wWbLvuRsr.jpg
+2024-10-24 17:21:23,285 - INFO - 119/123-->马学斌《听马老师讲 · 中考数学压轴题》, https://cdn.sa.net/2024/10/24/qlD2JVmxjozfLk7.jpg
+2024-10-24 17:21:25,930 - INFO - 120/123-->施琪嘉亲子互动30节课程, https://cdn.sa.net/2024/10/24/Mjc3CoRAOJYfzHN.jpg
+2024-10-24 17:21:28,946 - INFO - 121/123-->王芳中小学必备古文讲解课, https://cdn.sa.net/2024/10/24/Z5mjKI8RDg9TLHc.jpg
+2024-10-24 17:21:33,356 - INFO - 122/123-->王金鑫《古文观止》精讲, https://cdn.sa.net/2024/10/24/mjDTPawM8oEc9Ct.jpg
+2024-10-24 17:21:35,824 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:21:38,164 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:21:40,637 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:21:43,099 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:21:45,641 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:21:47,963 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:21:50,453 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:21:52,934 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:21:55,409 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:21:57,956 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:00,428 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:02,915 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:05,386 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:08,486 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:10,961 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:13,426 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:15,755 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:18,219 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:21,056 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:23,539 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:26,014 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:28,505 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:30,799 - INFO - 上传图片失败：Upload to SMMS failed: Upload file frequency limit.
+2024-10-24 17:22:33,470 - INFO - 123/123-->新东方考博英语通用全程班, https://cdn.sa.net/2024/10/24/bFeMG1pkQH8rWC5.jpg
+2024-10-24 17:22:33,471 - INFO - 001/123-->正在发布：高维企业经营黄金十二法则
+2024-10-24 17:22:36,591 - INFO - 002/123-->正在发布：价值几万的各种小吃教程
+2024-10-24 17:22:42,251 - INFO - 003/123-->正在发布：李建伟-2024公司法新规逐条精讲
+2024-10-24 17:22:44,999 - INFO - 004/123-->正在发布：企业高维战略方法论58节课程
+2024-10-24 17:22:47,631 - INFO - 005/123-->正在发布：宁向东的管理学课
+2024-10-24 17:22:49,833 - INFO - 006/123-->正在发布：【舒老师的文案课】产品文案痛苦60讲，用户视角形成正确文案观，让你写文案突飞猛进
+2024-10-24 17:22:51,878 - INFO - 007/123-->正在发布：餐饮人轻松同城引流必学课
+2024-10-24 17:22:54,630 - INFO - 008/123-->正在发布：【电商企业财务管理线上课】为电商企业规划财税
+2024-10-24 17:22:56,958 - INFO - 009/123-->正在发布：【TikTok避坑指南】新手入局TikTok别再踩坑了
+2024-10-24 17:22:58,771 - INFO - 010/123-->正在发布：TikTok新手避坑指南，入局TikTok，远离常见误区
+2024-10-24 17:23:01,405 - INFO - 011/123-->正在发布：财商启蒙课10集
+2024-10-24 17:23:03,771 - INFO - 012/123-->正在发布：关系高手如何实现财务自由
+2024-10-24 17:23:06,242 - INFO - 013/123-->正在发布：静秋姐姐手把手教你做运营
+2024-10-24 17:23:09,193 - INFO - 014/123-->正在发布：九大章节环环相扣全面讲解销售
+2024-10-24 17:23:11,555 - INFO - 015/123-->正在发布：练就销售冠军的奥秘
+2024-10-24 17:23:13,816 - INFO - 016/123-->正在发布：最新网赚项目—小红书打卡，一个被忽视的暴力项目
+2024-10-24 17:23:17,577 - INFO - 017/123-->正在发布：【AI工具全能课】一套课程学会所有主流AI工具，从AI领域的小趴菜蜕变成AI技能多面手
+2024-10-24 17:23:20,321 - INFO - 018/123-->正在发布：台风AI自媒体+爆文变现营【14天用GPT创作提效10倍】
+2024-10-24 17:23:22,542 - INFO - 019/123-->正在发布：网易云课堂《人工智能绘画与设计 (6期)  》
+2024-10-24 17:23:24,685 - INFO - 020/123-->正在发布：卖999的付费进群系统
+2024-10-24 17:23:26,749 - INFO - 021/123-->正在发布：扫描王全能宝6.8.33_ 文档扫描，办公必备
+2024-10-24 17:23:28,887 - INFO - 022/123-->正在发布：瞬译 v6.9.209990Instant Translate，即时翻译屏幕，解锁高级版
+2024-10-24 17:23:31,003 - INFO - 023/123-->正在发布：文案转换成语音合成工具
+2024-10-24 17:23:33,471 - INFO - 024/123-->正在发布：脸猫超强AI换脸，一键增肌照片修复破解版
+2024-10-24 17:23:35,478 - INFO - 025/123-->正在发布：腐烂国度2_主宰巨霸版_State of Decay2_ Juggernaut Edition
+2024-10-24 17:23:37,374 - INFO - 026/123-->正在发布：34套游泳运动PPT
+2024-10-24 17:23:39,927 - INFO - 027/123-->正在发布：考研复试PPT合集【模板+预览图】【共94套】
+2024-10-24 17:23:43,147 - INFO - 028/123-->正在发布：《初中学霸同步笔记》2024版
+2024-10-24 17:23:45,441 - INFO - 029/123-->正在发布：《小学学霸冲A卷》2023小学1~6年级上下全册
+2024-10-24 17:23:47,147 - INFO - 030/123-->正在发布：2025高考数学100套高质量讲义资料
+2024-10-24 17:23:51,168 - INFO - 031/123-->正在发布：24万维大小卷
+2024-10-24 17:23:53,443 - INFO - 032/123-->正在发布：53科学备考《初中知识清单 ·2025版》
+2024-10-24 17:23:55,599 - INFO - 033/123-->正在发布：初中化学全册思维导图
+2024-10-24 17:23:57,819 - INFO - 034/123-->正在发布：从小学到高中全学科思维导图（可下载打印）
+2024-10-24 17:24:16,773 - INFO - 035/123-->正在发布：高中化学 学习知识大全归纳总结
+2024-10-24 17:24:21,850 - INFO - 036/123-->正在发布：高中理综 系统知识归纳总结
+2024-10-24 17:24:23,765 - INFO - 037/123-->正在发布：高中数学必备的289个公式
+2024-10-24 17:24:31,892 - INFO - 038/123-->正在发布：九年级化学下册思维导图
+2024-10-24 17:24:37,102 - INFO - 039/123-->正在发布：学霸精心整理  小学到高中全学科思维导图 成绩提升
+2024-10-24 17:24:41,207 - INFO - 040/123-->正在发布：《风水术》开运招财 风水自助手册
+2024-10-24 17:24:44,513 - INFO - 041/123-->正在发布：《我的第一套自然拼读故事书》经典英语启蒙绘本  让孩子赢在起跑线
+2024-10-24 17:24:47,606 - INFO - 042/123-->正在发布：《易中天中华史》[全24卷]
+2024-10-24 17:24:49,202 - INFO - 043/123-->正在发布：超实用：2024小米SU7Pro Max 维修手册电路图操作手册
+2024-10-24 17:24:51,259 - INFO - 044/123-->正在发布：城的中国史 [历史传记] [pdf+全格式]
+2024-10-24 17:24:56,547 - INFO - 045/123-->正在发布：冲破边际 [人文社科] [pdf+全格式]
+2024-10-24 17:24:58,353 - INFO - 046/123-->正在发布：处女的情人 [小说文学] [pdf+全格式]
+2024-10-24 17:25:00,118 - INFO - 047/123-->正在发布：伏特加政治 [历史传记] [pdf+全格式]
+2024-10-24 17:25:01,913 - INFO - 048/123-->正在发布：高难度谈判 [经济管理] [pdf+全格式]
+2024-10-24 17:25:04,335 - INFO - 049/123-->正在发布：哈佛燕京图书馆藏明代史料汇编【277册】
+2024-10-24 17:25:06,268 - INFO - 050/123-->正在发布：孩子：挑战 [学习教育] [pdf+全格式]
+2024-10-24 17:25:08,767 - INFO - 051/123-->正在发布：孩子的心理问题从哪里来 [学习教育] [pdf+全格式]
+2024-10-24 17:25:10,841 - INFO - 052/123-->正在发布：唤醒吧！职场多巴胺 [励志成功] [pdf+全格式]
+2024-10-24 17:25:13,389 - INFO - 053/123-->正在发布：家中有本草 健康无烦恼  餐桌上的调养方大全
+2024-10-24 17:25:15,419 - INFO - 054/123-->正在发布：快行动，慢思考 [励志成功] [pdf+全格式]
+2024-10-24 17:25:27,208 - INFO - 055/123-->正在发布：命运：文在寅自传
+2024-10-24 17:25:29,333 - INFO - 056/123-->正在发布：女性美容 电子书
+2024-10-24 17:25:31,206 - INFO - 057/123-->正在发布：奇点临近 [人文社科] [pdf+全格式]
+2024-10-24 17:25:33,345 - INFO - 058/123-->正在发布：契诃夫戏剧全集：名家导赏版（共八册） [套装合集] [pdf+全格式]
+2024-10-24 17:25:35,212 - INFO - 059/123-->正在发布：人类简史畅读系列（套装共6册） [套装合集] [pdf+全格式]
+2024-10-24 17:25:37,547 - INFO - 060/123-->正在发布：认识顾客（原书第13版） [经济管理] [pdf+全格式]
+2024-10-24 17:25:39,688 - INFO - 061/123-->正在发布：肉料理原来是这么回事儿 [人文社科] [pdf+全格式]
+2024-10-24 17:25:41,579 - INFO - 062/123-->正在发布：拖延心理学 [励志成功] [pdf+全格式]
+2024-10-24 17:25:44,688 - INFO - 063/123-->正在发布：瓦尔登湖光书影 [小说文学] [pdf+全格式]
+2024-10-24 17:25:50,533 - INFO - 064/123-->正在发布：王芳老师《成语故事私塾课》
+2024-10-24 17:25:52,956 - INFO - 065/123-->正在发布：雾之旗 [小说文学] [pdf+全格式]
+2024-10-24 17:25:58,492 - INFO - 066/123-->正在发布：西泠印社史研究导论 [人文社科] [pdf+全格式]
+2024-10-24 17:26:00,559 - INFO - 067/123-->正在发布：中学生数学思维方法丛书(12册)
+2024-10-24 17:26:02,721 - INFO - 068/123-->正在发布：诸病退散 [生活时尚] [pdf+全格式]
+2024-10-24 17:26:04,948 - INFO - 069/123-->正在发布：著名悬疑小说家那多经典作品合集（12册合集） [套装合集] [pdf+全格式]
+2024-10-24 17:26:07,077 - INFO - 070/123-->正在发布：追时间的人 [人文社科] [pdf+全格式]
+2024-10-24 17:26:09,312 - INFO - 071/123-->正在发布：【黑马程序员】Java架构师实战训练营V2.3- 带源码课件
+2024-10-24 17:26:11,484 - INFO - 072/123-->正在发布：【千峰教育】Java核心技术视频教程（全套）
+2024-10-24 17:26:14,445 - INFO - 073/123-->正在发布：【尚硅谷】2024最新版Python视频教程 - 带源码课件
+2024-10-24 17:26:17,082 - INFO - 074/123-->正在发布：Houdini进阶案例课镜头增补版
+2024-10-24 17:26:20,354 - INFO - 075/123-->正在发布：码神模块10gozero实战-数字货币交易所
+2024-10-24 17:26:54,822 - INFO - 076/123-->正在发布：慕课网-Java开发企业级权限管理系统-视频课
+2024-10-24 17:26:57,445 - INFO - 077/123-->正在发布：实践去中心化协议DApp开发
+2024-10-24 17:27:01,966 - INFO - 078/123-->正在发布：B站 - 欧阳春晓：30天维密普拉提居家瘦身课
+2024-10-24 17:27:03,767 - INFO - 079/123-->正在发布：B站付费课程 费勇讲《金刚经》
+2024-10-24 17:27:06,952 - INFO - 080/123-->正在发布：让团队完成目标绩效管理机制
+2024-10-24 17:27:09,664 - INFO - 081/123-->正在发布：杨自豪高效学习课程合集
+2024-10-24 17:27:12,875 - INFO - 082/123-->正在发布：用高情商沟通化解人际关系难题
+2024-10-24 17:27:16,828 - INFO - 083/123-->正在发布：喻老师人生复利训练营课程
+2024-10-24 17:27:19,445 - INFO - 084/123-->正在发布：持久的成功 早xie治疗手册（翻译版）
+2024-10-24 17:27:21,885 - INFO - 085/123-->正在发布：【慕课网】职场必备AI课：AI高效办公训练营
+2024-10-24 17:27:24,982 - INFO - 086/123-->正在发布：老夏说面试（公考面试从小白到面霸）
+2024-10-24 17:27:28,138 - INFO - 087/123-->正在发布：软考高项付费课程—信息系统项目管理师机构教程全集+笔记+资料+真题解析
+2024-10-24 17:27:46,768 - INFO - 088/123-->正在发布：【沪江网校】韩语入门至TOPIK高级-视频课
+2024-10-24 17:27:49,863 - INFO - 089/123-->正在发布：【旧食课堂】自然光美食短视频系统课
+2024-10-24 17:27:52,249 - INFO - 090/123-->正在发布：Art职业篮球《15天三分完全指南》
+2024-10-24 17:27:55,391 - INFO - 091/123-->正在发布：Houdini 进阶案例课镜头增补版
+2024-10-24 17:27:58,005 - INFO - 092/123-->正在发布：ME老师达芬奇调色课程
+2024-10-24 17:28:01,701 - INFO - 093/123-->正在发布：Word高效工作专业班 快速提升工作效率
+2024-10-24 17:28:04,454 - INFO - 094/123-->正在发布：白无常《PS人像精修教程》
+2024-10-24 17:28:08,458 - INFO - 095/123-->正在发布：百家讲坛【王立群读史记】
+2024-10-24 17:28:14,812 - INFO - 096/123-->正在发布：百家讲坛【易中天合集】
+2024-10-24 17:28:18,154 - INFO - 097/123-->正在发布：变态心理学20讲
+2024-10-24 17:28:20,457 - INFO - 098/123-->正在发布：初学入门零基础手碟鼓打击乐器
+2024-10-24 17:28:22,656 - INFO - 099/123-->正在发布：达芬奇调色S1系统专业课程-拍片学院
+2024-10-24 17:28:28,725 - INFO - 100/123-->正在发布：古典·职业生涯发展研修班（完结）
+2024-10-24 17:28:31,425 - INFO - 101/123-->正在发布：唤醒老虎创伤疗愈大师班课
+2024-10-24 17:28:34,073 - INFO - 102/123-->正在发布：婚礼摄影教程-男家高级摆拍2.0
+2024-10-24 17:28:36,550 - INFO - 103/123-->正在发布：婚礼摄影教程-女家摆拍技巧（高级篇）35种新娘家摆拍晨袍秀禾轻纱以及伴娘互动
+2024-10-24 17:28:38,478 - INFO - 104/123-->正在发布：可爱Q版人物与色彩团练课程
+2024-10-24 17:28:41,095 - INFO - 105/123-->正在发布：孔晨《UI 设计师的动效入门指南》
+2024-10-24 17:28:43,163 - INFO - 106/123-->正在发布：零基础婚礼拍摄课程（基础篇）
+2024-10-24 17:28:45,456 - INFO - 107/123-->正在发布：明星切片线上训练营
+2024-10-24 17:28:48,503 - INFO - 108/123-->正在发布：女性必备：婚、孕、养、护肤全系列课程
+2024-10-24 17:28:51,426 - INFO - 109/123-->正在发布：暑期品牌图案设计研究实践
+2024-10-24 17:28:53,928 - INFO - 110/123-->正在发布：台球专业班付费教程
+2024-10-24 17:28:56,109 - INFO - 111/123-->正在发布：线上心理学特训营课程——家庭关系心理学
+2024-10-24 17:29:00,156 - INFO - 112/123-->正在发布：1~9年级奥数精讲与测试
+2024-10-24 17:29:02,492 - INFO - 113/123-->正在发布：21天养成儿童好体态
+2024-10-24 17:29:04,471 - INFO - 114/123-->正在发布：24个绘本阅读秘籍，从小提升孩子阅读力，做高情商宝宝（完结）
+2024-10-24 17:29:06,904 - INFO - 115/123-->正在发布：常青藤爸爸大语文课《影响世界的100个名人》
+2024-10-24 17:29:09,464 - INFO - 116/123-->正在发布：大咖亲授——核心论文写作指南   论文协作技巧教程
+2024-10-24 17:29:12,024 - INFO - 117/123-->正在发布：高中数学新结构试题题型合集
+2024-10-24 17:29:15,702 - INFO - 118/123-->正在发布：刘一男《零基础4000词英语逆袭计划》
+2024-10-24 17:29:18,602 - INFO - 119/123-->正在发布：马学斌《听马老师讲 · 中考数学压轴题》
+2024-10-24 17:29:20,745 - INFO - 120/123-->正在发布：施琪嘉亲子互动30节课程
+2024-10-24 17:29:23,067 - INFO - 121/123-->正在发布：王芳中小学必备古文讲解课
+2024-10-24 17:29:26,336 - INFO - 122/123-->正在发布：王金鑫《古文观止》精讲
+2024-10-24 17:29:28,581 - INFO - 123/123-->正在发布：新东方考博英语通用全程班

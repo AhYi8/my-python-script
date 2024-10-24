@@ -1,10 +1,12 @@
 import os, requests, hashlib, uuid, random, string
+import time
 from datetime import datetime
 from io import BytesIO
 from PIL import Image, ImageDraw, ImageFont
 from PIL.ImageFile import ImageFile
 from typing import Union, Tuple
 from .RequestUtils import RequestUtils
+from .LogUtils import LogUtils
 
 class ImageUtils:
     __smms_token: str = 'tbVH1tVAwadESF2NdCXrr27UuqmGtNCq'
@@ -201,12 +203,15 @@ class ImageUtils:
         return pattern + '.' + ext
 
     @classmethod
-    def upload_to_smms_image(cls, image_path: str, open_proxy: bool = True, use_local: bool = False) -> Union[Tuple[str, str, str], None]:
+    def upload_to_smms_image(cls, image_path: str, open_proxy: bool = True, use_local: bool = False, delay: int = 10) -> Union[Tuple[str, str, str], None]:
         """
         上传本地文件到 smms 图床，期间需要格式化文件名，添加水印
         **默认使用代理池代理**
 
         :param image_path: 本地图片路径
+        :param open_proxy: 是否使用代理
+        :param use_local: 是否使用本地代理
+        :param delay: 图片上传频控，等待秒数
         :return: (原文件名, imgURL, deleteURL)
         """
         # 添加水印
@@ -229,6 +234,9 @@ class ImageUtils:
             return original_filename, result['data']['url'], result['data']['delete']
         elif response.status_code == 200 and result['code'] == 'image_repeated':
             return original_filename, result['images'], None
+        elif "frequency" in result.get('message', ""):
+            LogUtils.error(f"图片上传频控，等待{delay}秒，继续...")
+            time.sleep(delay)
         else:
             raise Exception(f"Upload to SMMS failed: {result.get('message', 'Unknown error')}")
         return None

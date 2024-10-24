@@ -4,6 +4,8 @@ from utils.FileUtils import FileUtils
 from utils.ImageUtils import ImageUtils
 from utils.TgArticleOutput import TgArticleUtils
 from utils.WordpressUtils import WordpressUtils
+from utils.Rss21zysComUtils import Rss21zysComUtils
+
 
 class Vipc9Utils:
 
@@ -103,8 +105,11 @@ def test_tg_article_output():
 def test_wordpress_import_article():
     WordpressUtils.import_article()
 
+def test_telegram_source_link_output():
+    Rss21zysComUtils.telegram_source_link_output()
+
 
 if __name__ == "__main__":
-    # 开启全局代理
-    # enable_proxy()
+    # test_telegram_source_link_output()
+    # test_tg_article_output()
     test_wordpress_import_article()

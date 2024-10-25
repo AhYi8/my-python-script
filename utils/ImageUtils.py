@@ -242,7 +242,7 @@ class ImageUtils:
         return None
 
     @classmethod
-    def upload_to_smms_by_image_url(cls, image_url: str, original_filename: str, open_proxy: bool = True, use_local: bool = False):
+    def upload_to_smms_by_image_url(cls, image_url: str, original_filename: str, open_proxy: bool = True, use_local: bool = False, delay: int = 10) -> Union[Tuple[str, str, str], None]:
         """
         上传网络文件到 smms 图床，期间需要格式化文件名，添加水印
 
@@ -266,20 +266,25 @@ class ImageUtils:
 
         new_filename = cls.generate_filename(f'{original_filename}.{file_suffix}', cls.__pattern,
                                              cls.__auto_increment)
+        # 上传已处理好的图片
+        while True:
+            url = "https://sm.ms/api/v2/upload"
+            headers = {'Authorization': cls.__smms_token}
+            files = {'smfile': (new_filename, watermarked_image_io)}
 
-        url = "https://sm.ms/api/v2/upload"
-        headers = {'Authorization': cls.__smms_token}
-        files = {'smfile': (new_filename, watermarked_image_io)}
+            response = RequestUtils.post(url, headers=headers, files=files, use_local=True)
+            result = response.json()
 
-        response = RequestUtils.post(url, headers=headers, files=files)
-        result = response.json()
-
-        if response.status_code == 200 and result['success']:
-            return original_filename, result['data']['url'], result['data']['delete']
-        elif response.status_code == 200 and result['code'] == 'image_repeated':
-            return original_filename, result['images'], None
-        else:
-            raise Exception(f"Upload to SMMS failed: {result.get('message', 'Unknown error')}")
+            if response.status_code == 200 and result['success']:
+                return original_filename, result['data']['url'], result['data']['delete']
+            elif response.status_code == 200 and result['code'] == 'image_repeated':
+                return original_filename, result['images'], None
+            elif "frequency" in result.get('message', ""):
+                LogUtils.error(f"图片上传频控，等待{delay}秒，继续...")
+                time.sleep(delay)
+            else:
+                raise Exception(f"Upload to SMMS failed: {result.get('message', 'Unknown error')}")
+            return None
 
     @classmethod
     def upload_to_smms(cls, image_path: str, water: str, token: str, pattern: str, auto_increment: int, open_proxy: bool = True, use_local: bool = False):

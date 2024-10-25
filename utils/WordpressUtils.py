@@ -248,7 +248,7 @@ class WordpressUtils:
         return article_metas
 
     @classmethod
-    def article_metas_to_articles(cls, base_image_path: str, article_metas: List[ArticleMeta]):
+    def article_metas_to_articles(cls, base_image_path: str, article_metas: List[ArticleMeta], has_cover: bool = True):
         """
         将 wordpress xlsx文件模版转为 List[Article]
         :param base_image_path: 本地图片文件路径
@@ -271,7 +271,7 @@ class WordpressUtils:
                 continue
             article = Article()
             imgurl = ''
-            while not imgurl and article_meta.get_status() == 'publish':
+            while not imgurl and article_meta.get_status() == 'publish' and has_cover:
                 try:
                     if article_meta.image and article_meta.image != '无':
                         if 'cdn.sa.net' in article_meta.image or 'loli.net' in article_meta.image or 's3.bmp.ovh' in article_meta.image or 's3.uuu.ovh' in article_meta.image:
@@ -285,13 +285,16 @@ class WordpressUtils:
                         else:
                             LogUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->图片上传失败，请手动处理：{article_meta.title}')
                             index += 1
-                            continue
+                            break
                 except Exception as e:
                     LogUtils.info(f'上传图片失败：{e}')
             LogUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
             article.title = article_meta.title
             post_titles.add(article.title)
-            article.content = f"<img class='aligncenter' src='{imgurl}'>\n\n{article_meta.content}"
+            if has_cover:
+                article.content = f"<img class='aligncenter' src='{imgurl}'>\n\n{article_meta.content}"
+            else:
+                article.content = article_meta.content
             article.post_status = article_meta.get_status()
             # 自动添加标签
             tag_names.update(article_meta.get_tags())
@@ -330,7 +333,7 @@ class WordpressUtils:
         return articles
 
     @classmethod
-    def import_article(cls) -> None:
+    def import_article(cls, has_cover: bool = True) -> None:
         """
         读取 wordpress_articles.xlsx 文件，发布到 wordpress
         :return: None
@@ -352,7 +355,7 @@ class WordpressUtils:
         # 读取 xlsx 文件，映射到 article_meta
         article_metas: List[ArticleMeta] = cls.__read_xlsx_to_article_metas(file_path, field_mapping)
         # 将 article_meta 映射到 article，将上传成功的imgURL填充到 image 中
-        articles: List[Article] = cls.article_metas_to_articles(base_image_path, article_metas)
+        articles: List[Article] = cls.article_metas_to_articles(base_image_path, article_metas, has_cover=has_cover)
         # 发布文章
         cls.post_articles(articles)
         # 清空 image 文件夹

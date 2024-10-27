@@ -384,13 +384,13 @@ def test_output_category_links():
         url = str(phpserialize.loads(bytes(data['meta_value'], encoding='UTF-8'))[0][b'url'], 'UTF-8')
         if 'pan.quark.cn' in url and url not in replaced_links:
             urls.append(url)
-    FileUtils.write_file(r"C:\Users\Administrator\Desktop\old_urls.csv", urls)
+    FileUtils.write_lines(r"C:\Users\Administrator\Desktop\old_urls.csv", urls)
 
 
 def test_replace_new_links():
     replaced_links = RedisUtils.get_set(RedisUtils.res_21zys_com_new_links)
     new_urls = {}
-    for url_map_list in FileUtils.read_file(r"C:\Users\Administrator\Desktop\new_urls.txt", is_strip=True):
+    for url_map_list in FileUtils.read_lines(r"C:\Users\Administrator\Desktop\new_urls.txt", is_strip=True):
         new_urls[url_map_list.split(',')[0]] = url_map_list.split(',')[1]
 
     category = '文档书籍'

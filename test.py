@@ -40,11 +40,11 @@ def test_telegram_source_link_output():
     Rss21zysComUtils.telegram_source_link_output()
 
 
-def test_vipc9_article_collect():
-    Vipc9ArticleUtils.vipc9_article_collect()
+def test_vipc9_article_collect(open_proxy: bool = True, use_local: bool = False):
+    Vipc9ArticleUtils.vipc9_article_collect(open_proxy=open_proxy, use_local=use_local)
 
 if __name__ == "__main__":
     # test_telegram_source_link_output()
     # test_tg_article_output()
     test_wordpress_import_article(has_cover=False)
-    # test_vipc9_article_collect()
+    # test_vipc9_article_collect(use_local=True)

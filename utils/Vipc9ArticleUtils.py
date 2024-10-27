@@ -11,8 +11,10 @@ class Vipc9ArticleUtils:
     @classmethod
     def vipc9_article_collect(cls,
                               link_file_path: str = os.path.join(os.getcwd(), 'file', 'un_publish_articles.txt'),
-                              xlsx_file_path: str = os.path.join(os.getcwd(), 'file', 'vipc9_article_collect.xlsx')) -> List[tuple]:
-        links = FileUtils.read_file(link_file_path, True)
+                              xlsx_file_path: str = os.path.join(os.getcwd(), 'file', 'vipc9_article_collect.xlsx'),
+                              open_proxy: bool = True,
+                              use_local: bool = False) -> List[tuple]:
+        links = FileUtils.read_lines(link_file_path, True)
         result: List[tuple] = []
         index = 0
         total = len(links)
@@ -20,7 +22,7 @@ class Vipc9ArticleUtils:
         for link in links:
             index += 1
             # 请求页面内容
-            html_content = RequestUtils.get(link, use_local=True)
+            html_content = RequestUtils.get(link, open_proxy=open_proxy, use_local=use_local)
 
             # 解析HTML
             soup = BeautifulSoup(html_content.text, 'html.parser')
@@ -30,7 +32,7 @@ class Vipc9ArticleUtils:
             LogUtils.info(f"正在处理{str(index).zfill(zfill_len)}/{total}-->URL: {link}-->Title: {title}")
             # 获取上传时间
             upload_time = soup.select_one('header.article-header div.article-meta span').get_text(strip=True)
-            tags = soup.select_one("div.article-meta").find_all("span")[3].get_text(strip=True).replace('&', ',')
+            tags = soup.select_one("div.article-meta").find_all("span")[2].get_text(strip=True).replace('&', ',')
             # 获取文章内容的div标签
             content_div = soup.select_one('main.site-main div.entry-wrapper > div')
 
@@ -51,7 +53,7 @@ class Vipc9ArticleUtils:
             for img_tag in soup_content.find_all('img'):
                 if img_tag.has_attr('src'):
                     original_src = img_tag['src']
-                    upload_name, processed_src, delete_url = ImageUtils.upload_to_smms_by_image_url(original_src, title, use_local=True)
+                    upload_name, processed_src, delete_url = ImageUtils.upload_to_smms_by_image_url(original_src, title, open_proxy=open_proxy, use_local=use_local)
                     img_tag['src'] = processed_src
 
             # 返回处理后的内容

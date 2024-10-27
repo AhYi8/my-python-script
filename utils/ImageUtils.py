@@ -227,19 +227,19 @@ class ImageUtils:
         headers = {'Authorization': cls.__smms_token}
         files = {'smfile': (new_filename, watermarked_image)}
 
-        response = RequestUtils.post(url, open_proxy=open_proxy, use_local=use_local, headers=headers, files=files)
-        result = response.json()
+        while True:
+            response = RequestUtils.post(url, open_proxy=open_proxy, use_local=use_local, headers=headers, files=files)
+            result = response.json()
 
-        if response.status_code == 200 and result['success']:
-            return original_filename, result['data']['url'], result['data']['delete']
-        elif response.status_code == 200 and result['code'] == 'image_repeated':
-            return original_filename, result['images'], None
-        elif "frequency" in result.get('message', ""):
-            LogUtils.error(f"图片上传频控，等待{delay}秒，继续...")
-            time.sleep(delay)
-        else:
-            raise Exception(f"Upload to SMMS failed: {result.get('message', 'Unknown error')}")
-        return None
+            if response.status_code == 200 and result['success']:
+                return original_filename, result['data']['url'], result['data']['delete']
+            elif response.status_code == 200 and result['code'] == 'image_repeated':
+                return original_filename, result['images'], None
+            elif "frequency" in result.get('message', ""):
+                LogUtils.error(f"图片上传频控，等待{delay}秒，继续...")
+                time.sleep(delay)
+            else:
+                raise Exception(f"Upload to SMMS failed: {result.get('message', 'Unknown error')}")
 
     @classmethod
     def upload_to_smms_by_image_url(cls, image_url: str, original_filename: str, open_proxy: bool = True, use_local: bool = False, delay: int = 10) -> Union[Tuple[str, str, str], None]:

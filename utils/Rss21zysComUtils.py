@@ -49,7 +49,7 @@ class Rss21zysComUtils:
                 link = article_div.find("h1", class_="title").a["href"]
                 if "t.me" in link:
                     result.append(link)
-                    FileUtils.write_file(file_path, [link], 'a')
+                    FileUtils.write_lines(file_path, [link], 'a')
 
             offset += cls.__limit
 

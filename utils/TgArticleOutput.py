@@ -247,7 +247,7 @@ class TgArticleUtils:
             os.remove(excel_file)
         if not urls_file:
             urls_file = os.path.join(cwd, 'file', 'un_publish_articles.txt')
-        urls = FileUtils.read_file(urls_file, is_strip=True)
+        urls = FileUtils.read_lines(urls_file, is_strip=True)
 
         if not urls:
             LogUtils.error("未找到有效的 URL，检查 urls.txt 文件")

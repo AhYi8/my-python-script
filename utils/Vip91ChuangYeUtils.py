@@ -18,7 +18,11 @@ class Vip91ChuangYeUtils:
                                         base_url,
                                         cookies,
                                         is_append_xlsx: bool = True,
-                                        xlsx_file_path: str = os.path.join(os.getcwd(), "../file", "vip_91chuangye_cn.xlsx")) -> None:
+                                        xlsx_file_path: str = os.path.join(os.getcwd(), "file", "vip_91chuangye_cn.xlsx"),
+                                        open_proxy: bool = True,
+                                        use_local: bool = False,
+                                        https: bool = False,
+                                        region: str = None) -> None:
         """
         采集并发布 vip.91chuangye.cn 资源
 
@@ -26,6 +30,10 @@ class Vip91ChuangYeUtils:
         :param cookies: 当前网站的 cookies
         :param is_append_xlsx: 采集的文章信息，是否追加到 xlsx 文件中
         :param xlsx_file_path: xlsx 文件路径（默认是 ./file/vip_91chuangye_cn.xlsx）
+        :param open_proxy: 是否开启代理
+        :param use_local: 是否使用本地代理
+        :param https: 是否优先使用支持 https 的代理
+        :param region: 是否优先选择指定国家代理
         :return: None
         """
         if base_url.endswith("/"):
@@ -44,9 +52,9 @@ class Vip91ChuangYeUtils:
             if page != 1:
                 url = f"{base_url}/page/{page}"
             else:
-                url = base_url
+                url = f"{base_url}/"
             LogUtils.info(f"正在采集页面：{url}")
-            html_content = RequestUtils.get(url).text
+            html_content = RequestUtils.get(url, open_proxy=open_proxy, use_local=use_local, https=https, region=region).text
             if not html_content:
                 break  # 如果请求失败，退出循环
 
@@ -85,7 +93,7 @@ class Vip91ChuangYeUtils:
                     if published_article_links and link in published_article_links:
                         continue
 
-                    source_url, source_pwd, article_content = cls.get_vip_91chuangye_content(link, title, cookies)
+                    source_url, source_pwd, article_content = cls.get_vip_91chuangye_content(link, title, cookies, open_proxy=open_proxy, use_local=use_local, https=https, region=region)
 
                     results.append((link, title, cover, category, article_content, source_url, source_pwd, DateUtils.datetime_to_str(publish_date)))
                     article_metas.append([link, title, cover, category, article_content, source_url, source_pwd, publish_date])
@@ -114,34 +122,46 @@ class Vip91ChuangYeUtils:
                         RedisUtils.add_set(RedisUtils.vip_91_article_links, link)
 
     @classmethod
-    def get_vip_91chuangye_content(cls, url: str, title: str, cookies: str) -> Union[tuple, None]:
+    def get_vip_91chuangye_content(cls,
+                                   url: str,
+                                   title: str,
+                                   cookies: str,
+                                   open_proxy: bool = True,
+                                   use_local: bool = False,
+                                   https: bool = False,
+                                   region: str = None
+                                   ) -> Union[tuple, None]:
         """
         获取 vip.91chuangye.cn/bbs.abab9.com 文章内容
         :param url: 文章 url
         :param title: 文章标题
         :param cookies: cookies
+        :param open_proxy: 是否开启代理
+        :param use_local: 是否使用本地代理
+        :param https: 是否优先使用支持 https 的代理
+        :param region: 是否优先选择指定国家代理
         :return: url, pwd, article_content
         """
         # 自定义请求头
         if 'vip.91chuangye' in url:
             headers = {
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-                'Accept-Encoding': 'gzip, deflate, br, zstd',
-                'Accept-Language': 'zh-CN,zh;q=0.9',
-                'Cache-Control': 'max-age=0',
-                'Connection': 'keep-alive',
-                'Cookie': cookies,
-                'Host': 'vip.91chuangye.cn',
-                'Referer': 'https://vip.91chuangye.cn/',
-                'Sec-Fetch-Dest': 'document',
-                'Sec-Fetch-Mode': 'navigate',
-                'Sec-Fetch-Site': 'same-origin',
-                'Sec-Fetch-User': '?1',
-                'Upgrade-Insecure-Requests': '1',
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
-                'sec-ch-ua': '"Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"',
-                'sec-ch-ua-mobile': '?0',
-                'sec-ch-ua-platform': '"Windows"'
+                "GET": "/scxm/page/2/ HTTP/1.1",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "Accept-Encoding": "gzip, deflate, br, zstd",
+                "Accept-Language": "zh-CN,zh;q=0.9",
+                "Connection": "keep-alive",
+                "Cookie": cookies,
+                "Host": "vip.91chuangye.cn",
+                "Referer": "https://vip.91chuangye.cn/scxm/",
+                "Sec-Fetch-Dest": "document",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "same-origin",
+                "Sec-Fetch-User": "?1",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+                "sec-ch-ua": "\"Chromium\";v=\"130\", \"Google Chrome\";v=\"130\", \"Not?A_Brand\";v=\"99\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Windows\""
             }
         elif 'bbs.abab9' in url:
             # 定义请求头
@@ -160,7 +180,7 @@ class Vip91ChuangYeUtils:
                 'Sec-Fetch-Site': 'none',
                 'Sec-Fetch-User': '?1',
                 'Upgrade-Insecure-Requests': '1',
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36'
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
             }
         else:
             headers = {
@@ -179,7 +199,7 @@ class Vip91ChuangYeUtils:
                 'Sec-Ch-Ua-Platform': '"Windows"'
             }
 
-        html_content = RequestUtils.get(url, headers).text
+        html_content = RequestUtils.get(url, headers, open_proxy=open_proxy, use_local=use_local, https=https, region=region).text
         soup = BeautifulSoup(html_content, 'html.parser')
         try:
             content = soup.find('div', class_='entry-content u-text-format u-clearfix').decode_contents()

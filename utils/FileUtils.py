@@ -139,7 +139,7 @@ class FileUtils:
                     LogUtils.info(f"Renamed: {old_image_path} -> {new_image_path}")
 
     @staticmethod
-    def read_file(path: str, is_strip: bool = False, mode: str = 'r', encoding: str = 'u8') -> Union[List[str], None]:
+    def read_lines(path: str, is_strip: bool = False, mode: str = 'r', encoding: str = 'u8') -> Union[List[str], None]:
         """
         读取文件，返回文件内容列表。
         :param path: 文件路径。
@@ -156,13 +156,32 @@ class FileUtils:
                     data_list = [data.strip() for data in data_list]
                 return data_list
             except BaseException as e:
-                print(f"FileUtils.read_file(): {e}")
+                LogUtils.error(f"FileUtils.read_file(): {e}")
                 return None
         else:
             return None
 
     @staticmethod
-    def write_file(path: str, data_list: List[str], mode: str = 'w', encoding: str = 'u8') -> None:
+    def read(path: str, mode: str = 'r', encoding: str = 'u8') -> Union[str, None]:
+        """
+        读取文件，返回文件内容。
+        :param path: 文件路径。
+        :param mode: 文件打开模式。
+        :param encoding: 文件编码。
+        :return: 文件内容。
+        """
+
+        if path is not None and len(path.strip()) != 0 and os.path.exists(path):
+            try:
+                with open(path, mode=mode, encoding=encoding) as rf:
+                    data = rf.read()
+                return data
+            except BaseException as e:
+                LogUtils.error(f"FileUtils.read_file(): {e}")
+                return None
+
+    @staticmethod
+    def write_lines(path: str, data_list: List[str], mode: str = 'w', encoding: str = 'u8') -> None:
         """
         将数据列表写入文件。
         :param path: 文件路径。
@@ -239,11 +258,3 @@ class FileUtils:
         elif isinstance(data, tuple) or isinstance(data, Tuple):
             ws.append(data)
         wb.save(file_path)
-
-
-if __name__ == '__main__':
-    # test_list_files_in_directory()
-    vip_links = []
-    for i in range(1, 2423):
-        vip_links.append(f"https://t.me/zh_vip/{i}")
-    FileUtils.write_file(r"C:\Users\Administrator\Desktop\vip_links.txt", vip_links)

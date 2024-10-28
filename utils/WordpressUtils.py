@@ -110,7 +110,7 @@ class ArticleMeta:
 
     def get_cao_pwd(self):
         if self.pwd:
-            return self.pwd
+            return str(self.pwd)
         return ''
 
 
@@ -302,9 +302,16 @@ class WordpressUtils:
             tags.update(article_meta.get_tags())
             terms_names = {'post_tag': list(tags), 'category': article_meta.get_category()}
             article.terms_names = terms_names
-            cao_downurl_new = [
-                {'name': article_meta.source_name, 'url': article_meta.source_url, 'pwd': article_meta.get_cao_pwd()}
-            ]
+            cao_downurl_new = []
+            for idx, value in enumerate(article_meta.source_url.replace("，", ",").split(',')):
+                cao_downurl_new.append({
+                    'name': article_meta.source_name,
+                    'url': value,
+                    'pwd': ""
+                })
+            if article_meta.get_cao_pwd():
+                for idx, value in enumerate(article_meta.get_cao_pwd().replace("，", ",").split(",")):
+                    cao_downurl_new[idx]['pwd'] = value
             keywords = []
             keywords.extend(article_meta.get_tags())
             keywords.extend(article_meta.get_category())
@@ -425,18 +432,3 @@ class WordpressUtils:
                         password = name_url_password['pwd']
                         xlsx_file = os.path.join(os.getcwd(), 'file', 'wordpress_articles_output.xlsx')
                         FileUtils.append_to_excel(xlsx_file, (title, ','.join(categories), url), ('title', 'categories', 'url'))
-
-
-
-
-# 主程序
-def enable_proxy():
-    os.environ['http_proxy'] = 'http://localhost:10809'
-    os.environ['https_proxy'] = 'http://localhost:10809'
-    LogUtils.info("全局代理已开启")
-
-
-if __name__ == "__main__":
-    enable_proxy()
-    WordpressUtils.import_article()
-    # WordpressUtils.publish_vip_91_article()

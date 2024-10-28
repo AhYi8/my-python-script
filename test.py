@@ -5,7 +5,7 @@ from utils.ImageUtils import ImageUtils
 from utils.TgArticleOutput import TgArticleUtils
 from utils.WordpressUtils import WordpressUtils
 from utils.Rss21zysComUtils import Rss21zysComUtils
-from utils.Vipc9ArticleUtils import Vipc9ArticleUtils
+from utils.ZhanKeArticleUtils import ZhanKeArticleUtils
 
 def enable_proxy():
     os.environ['http_proxy'] = 'http://localhost:10809'
@@ -41,10 +41,14 @@ def test_telegram_source_link_output():
 
 
 def test_vipc9_article_collect(open_proxy: bool = True, use_local: bool = False):
-    Vipc9ArticleUtils.vipc9_article_collect(open_proxy=open_proxy, use_local=use_local)
+    ZhanKeArticleUtils.vipc9_article_collect(open_proxy=open_proxy, use_local=use_local)
+
+def test_666php_article_collect(open_proxy: bool = True, use_local: bool = False):
+    ZhanKeArticleUtils.php666_article_collect(open_proxy=open_proxy, use_local=use_local)
 
 if __name__ == "__main__":
     # test_telegram_source_link_output()
     # test_tg_article_output()
-    test_wordpress_import_article(has_cover=False)
+    test_wordpress_import_article(has_cover=True)
     # test_vipc9_article_collect(use_local=True)
+    # test_666php_article_collect(use_local=True)

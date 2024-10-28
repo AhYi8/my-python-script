@@ -288,3 +288,332 @@
 2024-10-28 09:39:10,963 - INFO - 08/10-->正在发布：数据分析与机器学习实战人脸检测， 36套系统课
 2024-10-28 09:39:16,718 - INFO - 09/10-->正在发布：算法和数据结构新手班，入门算法视频课程，价值3980
 2024-10-28 09:39:19,113 - INFO - 10/10-->正在发布：和君上市公司案例分析课--亚洲大型咨询公司教你做商业案例分析
+2024-10-28 15:23:55,332 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 15:23:57,955 - INFO - 正在处理01/59-->URL: https://www.666php.com/6125.html-->Title: 黑马-2024新版web前端+后端开发课程
+2024-10-28 15:24:07,846 - INFO - 正在处理02/59-->URL: https://www.666php.com/5817.html-->Title: 科大财经Quant量化金融【基础班】
+2024-10-28 15:24:16,908 - INFO - 正在处理03/59-->URL: https://www.666php.com/5804.html-->Title: 科大财经Quant量化金融【进阶班】
+2024-10-28 15:24:26,366 - INFO - 正在处理04/59-->URL: https://www.666php.com/5669.html-->Title: 咕泡人工智能深度学习系统班第八期
+2024-10-28 15:24:35,578 - INFO - 正在处理05/59-->URL: https://www.666php.com/5516.html-->Title: 2024年网络工程师（中级）
+2024-10-28 15:24:45,254 - INFO - 正在处理06/59-->URL: https://www.666php.com/5191.html-->Title: 电子工程师必备技能工具篇-姜军老师
+2024-10-28 15:24:55,835 - INFO - 正在处理07/59-->URL: https://www.666php.com/5084.html-->Title: Sora-AI视频全网最全收集
+2024-10-28 15:25:05,185 - INFO - 正在处理08/59-->URL: https://www.666php.com/5076.html-->Title: 柠檬班车载测试课程2.0
+2024-10-28 15:25:15,309 - INFO - 正在处理09/59-->URL: https://www.666php.com/5071.html-->Title: 知识星球JavaGuide面试大全
+2024-10-28 15:25:25,906 - INFO - 正在处理10/59-->URL: https://www.666php.com/5062.html-->Title: 2024年软考高级系统架构设计师
+2024-10-28 15:25:36,823 - INFO - 正在处理11/59-->URL: https://www.666php.com/5056.html-->Title: Trent-FPGA硬件设计那些事儿
+2024-10-28 15:25:46,942 - INFO - 正在处理12/59-->URL: https://www.666php.com/4832.html-->Title: C#上位机开发串口通信编程（22讲）
+2024-10-28 15:26:00,480 - INFO - 正在处理13/59-->URL: https://www.666php.com/4798.html-->Title: C#和Unity游戏开发教程
+2024-10-28 15:26:11,384 - INFO - 正在处理14/59-->URL: https://www.666php.com/4723.html-->Title: LangChain 实战课 | 更新至9讲
+2024-10-28 15:26:21,409 - INFO - 正在处理15/59-->URL: https://www.666php.com/4712.html-->Title: 最新202311-软考高级信息系统项目管理师
+2024-10-28 15:26:32,412 - INFO - 正在处理16/59-->URL: https://www.666php.com/4675.html-->Title: AE-C4D影视包装全能设计师班
+2024-10-28 15:26:43,337 - INFO - 正在处理17/59-->URL: https://www.666php.com/4575.html-->Title: AI大模型系统实战 | 更新至13讲
+2024-10-28 15:26:53,076 - INFO - 正在处理18/59-->URL: https://www.666php.com/4500.html-->Title: Trent硬件工程师培训 2023年-完整135讲
+2024-10-28 15:27:05,707 - INFO - 正在处理19/59-->URL: https://www.666php.com/4360.html-->Title: C4D+AE动态设计第8期
+2024-10-28 15:27:15,905 - INFO - 正在处理20/59-->URL: https://www.666php.com/4067.html-->Title: 路F-新版 Python全栈开发（中级）140GB
+2024-10-28 15:27:26,153 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 1, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:27:31,519 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 2, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:27:36,821 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 3, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:27:37,209 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:27:42,549 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 4, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:27:47,887 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 5, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:27:53,217 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 6, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:27:53,659 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:27:58,993 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 7, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:04,304 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 8, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:09,633 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 9, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:09,997 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:28:15,350 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 10, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:20,630 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 11, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:26,043 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 12, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:26,497 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:28:31,890 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 13, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:37,206 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 14, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:42,557 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 15, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:42,953 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:28:48,251 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 16, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:53,546 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 17, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:58,912 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 18, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:28:59,308 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:29:04,635 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 19, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:10,035 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 20, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:15,371 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 21, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:15,757 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:29:21,103 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 22, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:26,449 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 23, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:31,767 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 24, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:32,140 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:29:37,473 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 25, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:42,821 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 26, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:48,210 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 27, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:48,624 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:29:53,951 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 28, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:29:59,277 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 29, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:30:04,624 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 30, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:30:05,030 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:30:10,370 - ERROR - Error fetching URL: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg, attempt 31, Error: 404 Client Error: Not Found for url: https://666pphp-1258079655.cos.ap-beijing.myqcloud.com/20230816/66.jpg
+2024-10-28 15:34:23,344 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 15:34:25,947 - INFO - 正在处理01/39 --> URL: https://www.666php.com/4035.html --> Title: Python爬虫高级开发工程师5期 | 完结价值8280
+2024-10-28 15:35:15,505 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 15:35:18,189 - INFO - 正在处理01/39 --> URL: https://www.666php.com/4035.html --> Title: Python爬虫高级开发工程师5期 | 完结价值8280
+2024-10-28 15:35:28,378 - INFO - 正在处理02/39 --> URL: https://www.666php.com/4020.html --> Title: 易J-WEB渗透hacker攻防（第3期）
+2024-10-28 15:35:40,815 - INFO - 正在处理03/39 --> URL: https://www.666php.com/3976.html --> Title: 运维安全管理必修课
+2024-10-28 15:35:50,382 - INFO - 正在处理04/39 --> URL: https://www.666php.com/3973.html --> Title: 快速掌握Charles抓包工具
+2024-10-28 15:36:00,731 - INFO - 正在处理05/39 --> URL: https://www.666php.com/3967.html --> Title: 全新升级，基于Vue3新标准，打造后台综合解决方案 | 完结
+2024-10-28 15:36:13,730 - INFO - 正在处理06/39 --> URL: https://www.666php.com/3870.html --> Title: P9亲授技术人员的产品普及课
+2024-10-28 15:36:24,142 - INFO - 正在处理07/39 --> URL: https://www.666php.com/3852.html --> Title: 高效做科研 python零基础
+2024-10-28 15:36:36,605 - INFO - 正在处理08/39 --> URL: https://www.666php.com/3827.html --> Title: 安Q牛至尊会员课程（合集） 450+门技术课 包含以往的课程
+2024-10-28 15:36:46,899 - INFO - 正在处理09/39 --> URL: https://www.666php.com/3818.html --> Title: Linux云计算工程师就业班第77期完整版
+2024-10-28 15:36:57,851 - INFO - 正在处理10/39 --> URL: https://www.666php.com/3707.html --> Title: go语言从零基础到web实战
+2024-10-28 15:37:11,574 - INFO - 正在处理11/39 --> URL: https://www.666php.com/3652.html --> Title: 202305.软考高级信息系统项目管理师
+2024-10-28 15:37:22,260 - INFO - 正在处理12/39 --> URL: https://www.666php.com/3628.html --> Title: 嵌入式开发工程师（网盘无密）
+2024-10-28 15:37:31,922 - INFO - 正在处理13/39 --> URL: https://www.666php.com/3614.html --> Title: 马S兵 互联网微服务分布式三高架构落地项目
+2024-10-28 15:37:43,083 - INFO - 正在处理14/39 --> URL: https://www.666php.com/3542.html --> Title: 黑客之路 WEB安全体系课网站攻防漏洞实战学习
+2024-10-28 15:37:53,736 - INFO - 正在处理15/39 --> URL: https://www.666php.com/3097.html --> Title: 互联网项目经理PM课程
+2024-10-28 15:38:06,862 - INFO - 正在处理16/39 --> URL: https://www.666php.com/3030.html --> Title: Python Pandas数据分析
+2024-10-28 15:38:20,006 - INFO - 正在处理17/39 --> URL: https://www.666php.com/3013.html --> Title: 撩K-Python-爬虫系列-网络剖析
+2024-10-28 15:38:31,781 - INFO - 正在处理18/39 --> URL: https://www.666php.com/2967.html --> Title: 松Q-Python测试开发班（网盘无密）
+2024-10-28 15:38:41,278 - INFO - 正在处理19/39 --> URL: https://www.666php.com/2903.html --> Title: Java架构班第六期（高清MP4包更新）|7月31更新
+2024-10-28 15:39:12,245 - INFO - 正在处理20/39 --> URL: https://www.666php.com/2877.html --> Title: 车载测试项目实战课 | 最新完结
+2024-10-28 15:39:22,733 - INFO - 正在处理21/39 --> URL: https://www.666php.com/2834.html --> Title: 轻松掌握Python+主流测试框架，快速转型自动化测试（网盘完结无密）
+2024-10-28 15:39:32,074 - INFO - 正在处理22/39 --> URL: https://www.666php.com/2799.html --> Title: 尚G谷-2023年java就业班|价值12800|阶段10完结无秘
+2024-10-28 15:39:44,476 - INFO - 正在处理23/39 --> URL: https://www.666php.com/2631.html --> Title: （新版）Python 分布式爬虫与 JS 逆向进阶实战 | 网盘无密
+2024-10-28 15:39:54,169 - INFO - 正在处理24/39 --> URL: https://www.666php.com/2588.html --> Title: 2023 Python 量化交易工程师养成实战-金融高薪领域（已完结）
+2024-10-28 15:40:03,822 - INFO - 正在处理25/39 --> URL: https://www.666php.com/2522.html --> Title: 机器学习训练营（已完结）
+2024-10-28 15:40:57,535 - INFO - 正在处理26/39 --> URL: https://www.666php.com/2509.html --> Title: ES8搜索引擎从基础入门到深度原理，实现综合运用实战（网盘无密）
+2024-10-28 15:41:06,922 - INFO - 正在处理27/39 --> URL: https://www.666php.com/2111.html --> Title: 某课吧-百万架构师P8-Java大神班|价值15800元|重磅首发|完结无秘
+2024-10-28 15:41:10,127 - INFO - 正在处理28/39 --> URL: https://www.666php.com/1731.html --> Title: 博WF-Python全栈测试开发班V5.1|2022年|价值11800元|重磅首发|完结无密
+2024-10-28 15:41:59,345 - INFO - 正在处理29/39 --> URL: https://www.666php.com/1633.html --> Title: 七月在线-机器学习集训营15期|2022年|价值12000元|重磅首发|无秘阶段五
+2024-10-28 15:42:04,191 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png, attempt 1, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:42:11,653 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png, attempt 2, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:42:19,117 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png, attempt 3, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:42:19,498 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:42:26,958 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png, attempt 4, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:42:34,427 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png, attempt 5, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:42:41,863 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png, attempt 6, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:42:42,249 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:42:49,738 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png, attempt 7, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:42:57,244 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png, attempt 8, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:43:04,798 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png, attempt 9, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/10/1665578019-c4ca4238a0b9238.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:43:05,170 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:47:09,682 - INFO - 当前使用代理：proxy: 111.59.4.88:9002，https: False, region: 中国 广西 南宁 移动
+2024-10-28 15:47:09,752 - ERROR - Error fetching URL: https://www.666php.com/1633.html, attempt 1, Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-28 15:47:12,815 - ERROR - Error fetching URL: https://www.666php.com/1633.html, attempt 2, Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-28 15:47:15,883 - ERROR - Error fetching URL: https://www.666php.com/1633.html, attempt 3, Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-28 15:47:16,270 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 111.59.4.88:9002-->219.79.87.158:8080，https: False, region: 中国 香港  pccw.com
+2024-10-28 15:47:19,356 - ERROR - Error fetching URL: https://www.666php.com/1633.html, attempt 4, Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-28 15:47:22,436 - ERROR - Error fetching URL: https://www.666php.com/1633.html, attempt 5, Error: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2024-10-28 15:47:25,530 - ERROR - Error fetching URL: https://www.666php.com/1633.html, attempt 6, Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-28 15:47:25,925 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: 219.79.87.158:8080-->101.37.22.207:3128，https: False, region: 中国 浙江 杭州 阿里云/电信/联通/移动/铁通/教育网
+2024-10-28 15:47:38,940 - ERROR - Error fetching URL: https://www.666php.com/1633.html, attempt 7, Error: HTTPSConnectionPool(host='www.666php.com', port=443): Max retries exceeded with url: /1633.html (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023C2D9AC4A0>, 'Connection to 101.37.22.207 timed out. (connect timeout=10)')))
+2024-10-28 15:47:51,955 - ERROR - Error fetching URL: https://www.666php.com/1633.html, attempt 8, Error: HTTPSConnectionPool(host='www.666php.com', port=443): Max retries exceeded with url: /1633.html (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023C2D9AD370>, 'Connection to 101.37.22.207 timed out. (connect timeout=10)')))
+2024-10-28 15:57:00,395 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 15:57:03,144 - INFO - 正在处理01/10 --> URL: https://www.666php.com/1431.html --> Title: 尚G谷大数据2022年4月开班||价值25000元|重磅首发|无秘包更新
+2024-10-28 15:57:07,926 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png, attempt 1, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:57:15,433 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png, attempt 2, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:57:22,881 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png, attempt 3, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:57:24,281 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:57:31,718 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png, attempt 4, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:57:39,161 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png, attempt 5, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:57:46,596 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png, attempt 6, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:57:46,977 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:57:54,408 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png, attempt 7, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/09/1663037393-2fbec5af3c35242.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:58:40,758 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 15:58:43,561 - INFO - 正在处理1/9 --> URL: https://www.666php.com/1351.html --> Title: WEB前端线上系统课(20k+标准)|2023年|重磅首发|无秘更新数据结构与算法
+2024-10-28 15:59:03,908 - INFO - 正在处理2/9 --> URL: https://www.666php.com/1259.html --> Title: 网易-微专业3个月成为网络爬虫工程师|价值1999元|重磅首发|完结无秘
+2024-10-28 15:59:06,775 - INFO - 正在处理3/9 --> URL: https://www.666php.com/1142.html --> Title: 码牛学院–移动互联网高级开发正式课第二期|价值7880|完结无密
+2024-10-28 15:59:09,796 - INFO - 正在处理4/9 --> URL: https://www.666php.com/1038.html --> Title: Java工程师2022版|价值4399元|2022年|重磅首发|35周完结无秘
+2024-10-28 15:59:14,517 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png, attempt 1, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:59:21,954 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png, attempt 2, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:59:29,401 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png, attempt 3, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:59:30,104 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 15:59:37,557 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png, attempt 4, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 15:59:45,011 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png, attempt 5, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658888943-a73e0c9619077b2.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:00:48,983 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 16:00:51,780 - INFO - 正在处理1/5 --> URL: https://www.666php.com/994.html --> Title: 极客专栏SVIP会员|2024年10月已更新|持续更新
+2024-10-28 16:02:07,412 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 16:02:10,232 - INFO - 正在处理1/5 --> URL: https://www.666php.com/994.html --> Title: 极客专栏SVIP会员|2024年10月已更新|持续更新
+2024-10-28 16:03:16,977 - INFO - 正在处理2/5 --> URL: https://www.666php.com/937.html --> Title: 柠檬班-Python高级软件测试开发7期|价值12800元|课件齐全|重磅首发|完结无秘
+2024-10-28 16:03:21,624 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png, attempt 1, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:03:29,127 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png, attempt 2, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:03:36,609 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png, attempt 3, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:03:36,999 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 16:03:44,484 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png, attempt 4, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:03:51,938 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png, attempt 5, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:03:59,405 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png, attempt 6, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:03:59,784 - INFO - 当前代理重试 3 次失败，切换代理继续尝试: localhost:10809-->localhost:10809，https: None, region: None
+2024-10-28 16:04:07,238 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png, attempt 7, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:04:14,719 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png, attempt 8, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658464984-cfcd208495d565e.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:05:00,178 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 16:05:02,811 - INFO - 正在处理1/3 --> URL: https://www.666php.com/914.html --> Title: 码尚教育-Python全栈自动化VIP课程对标大厂标准|挑战年薪40万|价值7080元|完结无秘
+2024-10-28 16:05:07,477 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1658159088-d2efd5266c2333f.png, attempt 1, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1658159088-d2efd5266c2333f.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:05:22,645 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 16:05:25,263 - INFO - 正在处理1/2 --> URL: https://www.666php.com/756.html --> Title: Python工程师2022|2022年|价值4788元|重磅首发|完结无秘
+2024-10-28 16:05:29,959 - ERROR - Error fetching URL: http://www.666java.cn/wp-content/uploads/2022/07/1657553154-58499c9e0d7f846.png, attempt 1, Error: HTTPSConnectionPool(host='www.666java.cn', port=443): Max retries exceeded with url: /wp-content/uploads/2022/07/1657553154-58499c9e0d7f846.png (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.666java.cn'. (_ssl.c:1000)")))
+2024-10-28 16:16:53,806 - INFO - 01/46-->某课吧-百万架构师P8-Java大神班|价值15800元|重磅首发|完结无秘, 
+2024-10-28 16:19:31,027 - INFO - 01/46-->某课吧-百万架构师P8-Java大神班|价值15800元|重磅首发|完结无秘, 
+2024-10-28 16:20:27,011 - INFO - 01/46-->撩K-Python-爬虫系列-网络剖析, 
+2024-10-28 16:20:31,463 - INFO - 01/46-->Sora-AI视频全网最全收集, 
+2024-10-28 16:20:31,475 - INFO - 01/46-->车载测试项目实战课 | 最新完结, 
+2024-10-28 16:20:31,484 - INFO - 01/46-->go语言从零基础到web实战, 
+2024-10-28 16:20:31,497 - INFO - 01/46-->Trent-FPGA硬件设计那些事儿, 
+2024-10-28 16:20:31,502 - INFO - 01/46-->2023 Python 量化交易工程师养成实战-金融高薪领域（已完结）, 
+2024-10-28 16:20:31,507 - INFO - 01/46-->咕泡人工智能深度学习系统班第八期, 
+2024-10-28 16:20:31,553 - INFO - 01/46-->ES8搜索引擎从基础入门到深度原理，实现综合运用实战（网盘无密）, 
+2024-10-28 16:20:31,559 - INFO - 01/46-->2024年软考高级系统架构设计师, 
+2024-10-28 16:20:31,579 - INFO - 01/46-->轻松掌握Python+主流测试框架，快速转型自动化测试（网盘完结无密）, 
+2024-10-28 16:20:31,587 - INFO - 01/46-->博WF-Python全栈测试开发班V5.1|2022年|价值11800元|重磅首发|完结无密, 
+2024-10-28 16:20:31,636 - INFO - 01/46-->（新版）Python 分布式爬虫与 JS 逆向进阶实战 | 网盘无密, 
+2024-10-28 16:20:31,646 - INFO - 01/46-->Trent硬件工程师培训 2023年-完整135讲, 
+2024-10-28 16:20:31,655 - INFO - 01/46-->C4D+AE动态设计第8期, 
+2024-10-28 16:20:31,660 - INFO - 01/46-->网易-微专业3个月成为网络爬虫工程师|价值1999元|重磅首发|完结无秘, 
+2024-10-28 16:20:31,666 - INFO - 01/46-->最新202311-软考高级信息系统项目管理师, 
+2024-10-28 16:20:31,687 - INFO - 01/46-->WEB前端线上系统课(20k+标准)|2023年|重磅首发|无秘更新数据结构与算法, 
+2024-10-28 16:20:31,690 - INFO - 01/46-->易J-WEB渗透hacker攻防（第3期）, 
+2024-10-28 16:20:31,696 - INFO - 01/46-->路F-新版 Python全栈开发（中级）140GB, 
+2024-10-28 16:20:31,711 - INFO - 01/46-->黑客之路 WEB安全体系课网站攻防漏洞实战学习, 
+2024-10-28 16:20:31,724 - INFO - 01/46-->Python爬虫高级开发工程师5期 | 完结价值8280, 
+2024-10-28 16:20:31,729 - INFO - 01/46-->AI大模型系统实战 | 更新至13讲, 
+2024-10-28 16:20:31,734 - INFO - 01/46-->尚G谷-2023年java就业班|价值12800|阶段10完结无秘, 
+2024-10-28 16:20:31,764 - INFO - 01/46-->松Q-Python测试开发班（网盘无密）, 
+2024-10-28 16:20:31,776 - INFO - 01/46-->快速掌握Charles抓包工具, 
+2024-10-28 16:20:31,779 - INFO - 01/46-->202305.软考高级信息系统项目管理师, 
+2024-10-28 16:20:31,792 - INFO - 01/46-->黑马-2024新版web前端+后端开发课程, 
+2024-10-28 16:20:31,825 - INFO - 01/46-->码牛学院–移动互联网高级开发正式课第二期|价值7880|完结无密, 
+2024-10-28 16:21:21,676 - INFO - 01/46-->某课吧-百万架构师P8-Java大神班|价值15800元|重磅首发|完结无秘, 
+2024-10-28 16:21:21,684 - INFO - 01/46-->撩K-Python-爬虫系列-网络剖析, 
+2024-10-28 16:21:21,691 - INFO - 01/46-->Sora-AI视频全网最全收集, 
+2024-10-28 16:21:21,709 - INFO - 01/46-->车载测试项目实战课 | 最新完结, 
+2024-10-28 16:21:21,722 - INFO - 01/46-->go语言从零基础到web实战, 
+2024-10-28 16:21:21,746 - INFO - 01/46-->Trent-FPGA硬件设计那些事儿, 
+2024-10-28 16:21:21,757 - INFO - 01/46-->2023 Python 量化交易工程师养成实战-金融高薪领域（已完结）, 
+2024-10-28 16:21:21,766 - INFO - 01/46-->咕泡人工智能深度学习系统班第八期, 
+2024-10-28 16:21:21,832 - INFO - 01/46-->ES8搜索引擎从基础入门到深度原理，实现综合运用实战（网盘无密）, 
+2024-10-28 16:21:21,840 - INFO - 01/46-->2024年软考高级系统架构设计师, 
+2024-10-28 16:21:21,863 - INFO - 01/46-->轻松掌握Python+主流测试框架，快速转型自动化测试（网盘完结无密）, 
+2024-10-28 16:21:21,874 - INFO - 01/46-->博WF-Python全栈测试开发班V5.1|2022年|价值11800元|重磅首发|完结无密, 
+2024-10-28 16:21:21,925 - INFO - 01/46-->（新版）Python 分布式爬虫与 JS 逆向进阶实战 | 网盘无密, 
+2024-10-28 16:21:21,936 - INFO - 01/46-->Trent硬件工程师培训 2023年-完整135讲, 
+2024-10-28 16:21:21,948 - INFO - 01/46-->C4D+AE动态设计第8期, 
+2024-10-28 16:21:21,956 - INFO - 01/46-->网易-微专业3个月成为网络爬虫工程师|价值1999元|重磅首发|完结无秘, 
+2024-10-28 16:21:21,966 - INFO - 01/46-->最新202311-软考高级信息系统项目管理师, 
+2024-10-28 16:21:22,000 - INFO - 01/46-->WEB前端线上系统课(20k+标准)|2023年|重磅首发|无秘更新数据结构与算法, 
+2024-10-28 16:21:22,006 - INFO - 01/46-->易J-WEB渗透hacker攻防（第3期）, 
+2024-10-28 16:21:22,016 - INFO - 01/46-->路F-新版 Python全栈开发（中级）140GB, 
+2024-10-28 16:21:22,037 - INFO - 01/46-->黑客之路 WEB安全体系课网站攻防漏洞实战学习, 
+2024-10-28 16:21:22,052 - INFO - 01/46-->Python爬虫高级开发工程师5期 | 完结价值8280, 
+2024-10-28 16:21:22,057 - INFO - 01/46-->AI大模型系统实战 | 更新至13讲, 
+2024-10-28 16:21:22,063 - INFO - 01/46-->尚G谷-2023年java就业班|价值12800|阶段10完结无秘, 
+2024-10-28 16:21:22,098 - INFO - 01/46-->松Q-Python测试开发班（网盘无密）, 
+2024-10-28 16:21:22,111 - INFO - 01/46-->快速掌握Charles抓包工具, 
+2024-10-28 16:21:22,115 - INFO - 01/46-->202305.软考高级信息系统项目管理师, 
+2024-10-28 16:21:22,131 - INFO - 01/46-->黑马-2024新版web前端+后端开发课程, 
+2024-10-28 16:21:22,169 - INFO - 01/46-->码牛学院–移动互联网高级开发正式课第二期|价值7880|完结无密, 
+2024-10-28 16:21:22,217 - INFO - 01/46-->马S兵 互联网微服务分布式三高架构落地项目, 
+2024-10-28 16:21:22,223 - INFO - 01/46-->七月在线-机器学习集训营15期|2022年|价值12000元|重磅首发|无秘阶段五, 
+2024-10-28 16:21:22,234 - INFO - 01/46-->Linux云计算工程师就业班第77期完整版, 
+2024-10-28 16:21:22,315 - INFO - 01/46-->电子工程师必备技能工具篇-姜军老师, 
+2024-10-28 16:21:22,334 - INFO - 01/46-->全新升级，基于Vue3新标准，打造后台综合解决方案 | 完结, 
+2024-10-28 16:21:22,362 - INFO - 01/46-->运维安全管理必修课, 
+2024-10-28 16:21:22,370 - INFO - 01/46-->科大财经Quant量化金融【基础班】, 
+2024-10-28 16:21:22,378 - INFO - 01/46-->知识星球JavaGuide面试大全, 
+2024-10-28 16:21:22,385 - INFO - 01/46-->科大财经Quant量化金融【进阶班】, 
+2024-10-28 16:21:22,393 - INFO - 01/46-->机器学习训练营（已完结）, 
+2024-10-28 16:21:22,397 - INFO - 01/46-->高效做科研 python零基础, 
+2024-10-28 16:21:22,410 - INFO - 01/46-->柠檬班车载测试课程2.0, 
+2024-10-28 16:21:22,432 - INFO - 01/46-->LangChain 实战课 | 更新至9讲, 
+2024-10-28 16:21:22,438 - INFO - 01/46-->C#上位机开发串口通信编程（22讲）, 
+2024-10-28 16:21:22,443 - INFO - 01/46-->Python Pandas数据分析, 
+2024-10-28 16:21:22,449 - INFO - 01/46-->P9亲授技术人员的产品普及课, 
+2024-10-28 16:21:22,452 - INFO - 01/46-->AE-C4D影视包装全能设计师班, 
+2024-10-28 16:25:50,028 - INFO - 当前使用代理：proxy: localhost:10809，https: None, region: None
+2024-10-28 16:26:00,506 - INFO - 01/46-->某课吧-百万架构师P8-Java大神班|价值15800元|重磅首发|完结无秘, https://cdn.sa.net/2024/10/28/W48lmCXrKq7ZJTz.png
+2024-10-28 16:26:08,254 - INFO - 01/46-->撩K-Python-爬虫系列-网络剖析, https://cdn.sa.net/2024/10/28/DNnvup5UywgCHz4.jpg
+2024-10-28 16:26:15,747 - INFO - 01/46-->Sora-AI视频全网最全收集, https://cdn.sa.net/2024/10/28/xewE1ZYlRi2Oys5.png
+2024-10-28 16:26:22,465 - INFO - 01/46-->车载测试项目实战课 | 最新完结, https://cdn.sa.net/2024/10/28/3aSlVWwxKUis7OA.jpg
+2024-10-28 16:26:30,975 - INFO - 01/46-->go语言从零基础到web实战, https://cdn.sa.net/2024/10/28/TuprFdVvb85mw2E.png
+2024-10-28 16:26:37,628 - INFO - 01/46-->Trent-FPGA硬件设计那些事儿, https://cdn.sa.net/2024/10/28/dv8fsGUuZFh5O7e.png
+2024-10-28 16:26:43,991 - INFO - 01/46-->2023 Python 量化交易工程师养成实战-金融高薪领域（已完结）, https://cdn.sa.net/2024/10/28/a6gLOphKCibdmzJ.jpg
+2024-10-28 16:26:50,434 - INFO - 01/46-->咕泡人工智能深度学习系统班第八期, https://cdn.sa.net/2024/10/28/B8GmYLlK4SDUCfO.jpg
+2024-10-28 16:26:56,827 - INFO - 01/46-->ES8搜索引擎从基础入门到深度原理，实现综合运用实战（网盘无密）, https://cdn.sa.net/2024/10/28/nUJ1I2t4WuT67lw.jpg
+2024-10-28 16:27:05,919 - INFO - 01/46-->2024年软考高级系统架构设计师, https://cdn.sa.net/2024/10/28/uXT7M9wVkQ1n8zc.png
+2024-10-28 16:27:12,320 - INFO - 01/46-->轻松掌握Python+主流测试框架，快速转型自动化测试（网盘完结无密）, https://cdn.sa.net/2024/10/28/foR6821dm4civBA.jpg
+2024-10-28 16:27:19,670 - INFO - 01/46-->博WF-Python全栈测试开发班V5.1|2022年|价值11800元|重磅首发|完结无密, https://cdn.sa.net/2024/10/28/8Zord2QvhVaUL6z.png
+2024-10-28 16:27:25,922 - INFO - 01/46-->（新版）Python 分布式爬虫与 JS 逆向进阶实战 | 网盘无密, https://cdn.sa.net/2024/10/28/yLsIEBu78pQ1aPY.jpg
+2024-10-28 16:27:35,139 - INFO - 01/46-->Trent硬件工程师培训 2023年-完整135讲, https://cdn.sa.net/2024/10/28/fmuMdUiGPQRAEO5.png
+2024-10-28 16:27:41,705 - INFO - 01/46-->C4D+AE动态设计第8期, https://cdn.sa.net/2024/10/28/TPsmcQ6NwDvkteA.jpg
+2024-10-28 16:27:49,602 - INFO - 01/46-->网易-微专业3个月成为网络爬虫工程师|价值1999元|重磅首发|完结无秘, https://cdn.sa.net/2024/10/28/XtnMRhB8x34mDfp.png
+2024-10-28 16:28:00,034 - INFO - 01/46-->最新202311-软考高级信息系统项目管理师, https://cdn.sa.net/2024/10/28/nXxf5jcCBMNHIVZ.png
+2024-10-28 16:28:10,308 - INFO - 01/46-->WEB前端线上系统课(20k+标准)|2023年|重磅首发|无秘更新数据结构与算法, https://cdn.sa.net/2024/10/28/LMGs49RjlN5ztco.png
+2024-10-28 16:28:17,893 - INFO - 01/46-->易J-WEB渗透hacker攻防（第3期）, https://cdn.sa.net/2024/10/28/CRuOjke6GI2x4fb.jpg
+2024-10-28 16:28:24,636 - INFO - 01/46-->路F-新版 Python全栈开发（中级）140GB, https://cdn.sa.net/2024/10/28/dlWQmwD8LhUkiz3.jpg
+2024-10-28 16:28:33,447 - INFO - 01/46-->黑客之路 WEB安全体系课网站攻防漏洞实战学习, https://cdn.sa.net/2024/10/28/AhSYnUeFVTPZakb.png
+2024-10-28 16:28:40,190 - INFO - 01/46-->Python爬虫高级开发工程师5期 | 完结价值8280, https://cdn.sa.net/2024/10/28/mRIKUvXPqYrHpOf.jpg
+2024-10-28 16:28:47,531 - INFO - 01/46-->AI大模型系统实战 | 更新至13讲, https://cdn.sa.net/2024/10/28/hfWOeoytIdvk7CU.png
+2024-10-28 16:28:57,114 - INFO - 01/46-->尚G谷-2023年java就业班|价值12800|阶段10完结无秘, https://cdn.sa.net/2024/10/28/xvlNSPgQLHEbc49.png
+2024-10-28 16:29:03,506 - INFO - 01/46-->松Q-Python测试开发班（网盘无密）, https://cdn.sa.net/2024/10/28/OzQfgAw3UsVvdcT.jpg
+2024-10-28 16:29:10,613 - INFO - 01/46-->快速掌握Charles抓包工具, https://cdn.sa.net/2024/10/28/B24ArzVc56bZSil.jpg
+2024-10-28 16:29:17,985 - INFO - 01/46-->202305.软考高级信息系统项目管理师, https://cdn.sa.net/2024/10/28/KL7C9HaIGcP2wUE.png
+2024-10-28 16:29:24,062 - INFO - 01/46-->黑马-2024新版web前端+后端开发课程, https://cdn.sa.net/2024/10/28/vCXeGBhwT5YIUz4.jpg
+2024-10-28 16:29:30,372 - INFO - 01/46-->码牛学院–移动互联网高级开发正式课第二期|价值7880|完结无密, https://cdn.sa.net/2024/10/28/g3CNtR7QnkJuAxW.jpg
+2024-10-28 16:29:38,718 - INFO - 01/46-->马S兵 互联网微服务分布式三高架构落地项目, https://cdn.sa.net/2024/10/28/823EmiQ54p9ZvCJ.png
+2024-10-28 16:29:46,246 - INFO - 01/46-->七月在线-机器学习集训营15期|2022年|价值12000元|重磅首发|无秘阶段五, https://cdn.sa.net/2024/10/28/jm9dfJLFUrh1egi.jpg
+2024-10-28 16:29:53,721 - INFO - 01/46-->Linux云计算工程师就业班第77期完整版, https://cdn.sa.net/2024/10/28/fCREwUI5nQBx3TM.png
+2024-10-28 16:30:02,207 - INFO - 01/46-->电子工程师必备技能工具篇-姜军老师, https://cdn.sa.net/2024/10/28/w1TAoFJDYSaVXqf.png
+2024-10-28 16:30:08,452 - INFO - 01/46-->全新升级，基于Vue3新标准，打造后台综合解决方案 | 完结, https://cdn.sa.net/2024/10/28/jl1g68RXuxQFiMa.jpg
+2024-10-28 16:30:15,727 - INFO - 01/46-->运维安全管理必修课, https://cdn.sa.net/2024/10/28/dMoOiIbxkWhYTQH.jpg
+2024-10-28 16:30:21,719 - INFO - 01/46-->科大财经Quant量化金融【基础班】, https://cdn.sa.net/2024/10/28/ZqYiCmeEkdHcTor.jpg
+2024-10-28 16:30:29,038 - INFO - 01/46-->知识星球JavaGuide面试大全, https://cdn.sa.net/2024/10/28/EzF7Vo19lpUtGNA.png
+2024-10-28 16:30:35,333 - INFO - 01/46-->科大财经Quant量化金融【进阶班】, https://cdn.sa.net/2024/10/28/OJCzQ56K1qrlmyU.jpg
+2024-10-28 16:30:43,657 - INFO - 01/46-->机器学习训练营（已完结）, https://cdn.sa.net/2024/10/28/wpxAbqLlF4sS2d7.png
+2024-10-28 16:30:52,853 - INFO - 01/46-->高效做科研 python零基础, https://cdn.sa.net/2024/10/28/M5JFjdAQfRacXrS.png
+2024-10-28 16:31:00,241 - INFO - 01/46-->柠檬班车载测试课程2.0, https://cdn.sa.net/2024/10/28/Vv6FfNE7lKMsmJH.png
+2024-10-28 16:31:06,621 - INFO - 01/46-->LangChain 实战课 | 更新至9讲, https://cdn.sa.net/2024/10/28/bgHD6l3iqMJOKoR.png
+2024-10-28 16:31:15,591 - INFO - 01/46-->C#上位机开发串口通信编程（22讲）, https://cdn.sa.net/2024/10/28/BRAcQuPbgNYvw8d.png
+2024-10-28 16:31:23,733 - INFO - 01/46-->Python Pandas数据分析, https://cdn.sa.net/2024/10/28/i8XCNOhlZ9S3r5s.png
+2024-10-28 16:31:31,211 - INFO - 01/46-->P9亲授技术人员的产品普及课, https://cdn.sa.net/2024/10/28/geFjNPmzpIYdkHt.png
+2024-10-28 16:31:41,544 - INFO - 01/46-->AE-C4D影视包装全能设计师班, https://cdn.sa.net/2024/10/28/g8Q4DxjfGsvOdyN.png
+2024-10-28 16:31:41,546 - INFO - 01/46-->正在发布：某课吧-百万架构师P8-Java大神班|价值15800元|重磅首发|完结无秘
+2024-10-28 16:31:45,158 - INFO - 02/46-->正在发布：撩K-Python-爬虫系列-网络剖析
+2024-10-28 16:31:47,764 - INFO - 03/46-->正在发布：Sora-AI视频全网最全收集
+2024-10-28 16:31:50,645 - INFO - 04/46-->正在发布：车载测试项目实战课 | 最新完结
+2024-10-28 16:31:53,932 - INFO - 05/46-->正在发布：go语言从零基础到web实战
+2024-10-28 16:31:57,890 - INFO - 06/46-->正在发布：Trent-FPGA硬件设计那些事儿
+2024-10-28 16:32:00,480 - INFO - 07/46-->正在发布：2023 Python 量化交易工程师养成实战-金融高薪领域（已完结）
+2024-10-28 16:32:03,249 - INFO - 08/46-->正在发布：咕泡人工智能深度学习系统班第八期
+2024-10-28 16:32:07,254 - INFO - 09/46-->正在发布：ES8搜索引擎从基础入门到深度原理，实现综合运用实战（网盘无密）
+2024-10-28 16:32:10,158 - INFO - 10/46-->正在发布：2024年软考高级系统架构设计师
+2024-10-28 16:32:14,513 - INFO - 11/46-->正在发布：轻松掌握Python+主流测试框架，快速转型自动化测试（网盘完结无密）
+2024-10-28 16:32:17,785 - INFO - 12/46-->正在发布：博WF-Python全栈测试开发班V5.1|2022年|价值11800元|重磅首发|完结无密
+2024-10-28 16:32:21,813 - INFO - 13/46-->正在发布：（新版）Python 分布式爬虫与 JS 逆向进阶实战 | 网盘无密
+2024-10-28 16:32:25,026 - INFO - 14/46-->正在发布：Trent硬件工程师培训 2023年-完整135讲
+2024-10-28 16:32:27,874 - INFO - 15/46-->正在发布：C4D+AE动态设计第8期
+2024-10-28 16:32:31,484 - INFO - 16/46-->正在发布：网易-微专业3个月成为网络爬虫工程师|价值1999元|重磅首发|完结无秘
+2024-10-28 16:32:35,392 - INFO - 17/46-->正在发布：最新202311-软考高级信息系统项目管理师
+2024-10-28 16:32:38,796 - INFO - 18/46-->正在发布：WEB前端线上系统课(20k+标准)|2023年|重磅首发|无秘更新数据结构与算法
+2024-10-28 16:32:40,879 - INFO - 19/46-->正在发布：易J-WEB渗透hacker攻防（第3期）
+2024-10-28 16:32:44,636 - INFO - 20/46-->正在发布：路F-新版 Python全栈开发（中级）140GB
+2024-10-28 16:32:48,275 - INFO - 21/46-->正在发布：黑客之路 WEB安全体系课网站攻防漏洞实战学习
+2024-10-28 16:32:51,758 - INFO - 22/46-->正在发布：Python爬虫高级开发工程师5期 | 完结价值8280
+2024-10-28 16:32:54,400 - INFO - 23/46-->正在发布：AI大模型系统实战 | 更新至13讲
+2024-10-28 16:32:57,716 - INFO - 24/46-->正在发布：尚G谷-2023年java就业班|价值12800|阶段10完结无秘
+2024-10-28 16:33:01,268 - INFO - 25/46-->正在发布：松Q-Python测试开发班（网盘无密）
+2024-10-28 16:33:04,785 - INFO - 26/46-->正在发布：快速掌握Charles抓包工具
+2024-10-28 16:33:06,954 - INFO - 27/46-->正在发布：202305.软考高级信息系统项目管理师
+2024-10-28 16:33:09,752 - INFO - 28/46-->正在发布：黑马-2024新版web前端+后端开发课程
+2024-10-28 16:33:13,504 - INFO - 29/46-->正在发布：码牛学院–移动互联网高级开发正式课第二期|价值7880|完结无密
+2024-10-28 16:33:17,346 - INFO - 30/46-->正在发布：马S兵 互联网微服务分布式三高架构落地项目
+2024-10-28 16:33:19,541 - INFO - 31/46-->正在发布：七月在线-机器学习集训营15期|2022年|价值12000元|重磅首发|无秘阶段五
+2024-10-28 16:33:22,593 - INFO - 32/46-->正在发布：Linux云计算工程师就业班第77期完整版
+2024-10-28 16:33:26,890 - INFO - 33/46-->正在发布：电子工程师必备技能工具篇-姜军老师
+2024-10-28 16:33:30,560 - INFO - 34/46-->正在发布：全新升级，基于Vue3新标准，打造后台综合解决方案 | 完结
+2024-10-28 16:33:33,704 - INFO - 35/46-->正在发布：运维安全管理必修课
+2024-10-28 16:33:36,448 - INFO - 36/46-->正在发布：科大财经Quant量化金融【基础班】
+2024-10-28 16:33:39,158 - INFO - 37/46-->正在发布：知识星球JavaGuide面试大全
+2024-10-28 16:33:41,664 - INFO - 38/46-->正在发布：科大财经Quant量化金融【进阶班】
+2024-10-28 16:33:44,516 - INFO - 39/46-->正在发布：机器学习训练营（已完结）
+2024-10-28 16:33:46,524 - INFO - 40/46-->正在发布：高效做科研 python零基础
+2024-10-28 16:33:49,081 - INFO - 41/46-->正在发布：柠檬班车载测试课程2.0
+2024-10-28 16:33:52,128 - INFO - 42/46-->正在发布：LangChain 实战课 | 更新至9讲
+2024-10-28 16:33:54,754 - INFO - 43/46-->正在发布：C#上位机开发串口通信编程（22讲）
+2024-10-28 16:33:56,957 - INFO - 44/46-->正在发布：Python Pandas数据分析
+2024-10-28 16:33:59,273 - INFO - 45/46-->正在发布：P9亲授技术人员的产品普及课
+2024-10-28 16:34:02,300 - INFO - 46/46-->正在发布：AE-C4D影视包装全能设计师班

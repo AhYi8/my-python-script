@@ -8,6 +8,7 @@ class RequestUtils:
     __local_proxy = {
         "proxy": r'localhost:10809'
     }
+    __proxy_log = True # 判断是否以及输出（新）代理日志
 
     @classmethod
     def convert_cookie_to_dict(cls, cookie_str: str):
@@ -51,7 +52,7 @@ class RequestUtils:
         requests.get("http://152.32.175.149:5010/delete/?proxy={}".format(proxy))
 
     @classmethod
-    def post(cls, url: str, headers: dict = None, retries: int = 30, timeout: int = 10, delay: int = 3, open_proxy: bool = True, use_local: bool = False, **kwargs):
+    def post(cls, url: str, headers: dict = None, retries: int = 30, timeout: int = 10, delay: int = 3, open_proxy: bool = True, use_local: bool = False, https: bool = False, region: str = None, **kwargs):
         """
         发送 POST 请求，默认重试1次，设置超时为5秒，重试间隔默认1秒。
         **默认开启代理池访问**
@@ -63,18 +64,24 @@ class RequestUtils:
         :param delay: 重试之间的延迟时间（秒）
         :param open_proxy: 是否开启代理访问
         :param use_local: 是否使用本地代理
+        :param https: 是否优先选择支持 https 代理
+        :param region: 使用代理池时，指定哪些地域的代理 IP
         :return:
         """
-        proxy = cls.get_proxy(use_local).get("proxy")
+        proxy_dict = cls.get_proxy(use_local, https=https, region=region)
+
         proxies = {
-            "http": f"http://{proxy}",
-            "https": f"http://{proxy}"
+            "http": f"http://{proxy_dict.get('proxy')}",
+            "https": f"http://{proxy_dict.get('proxy')}"
         }
 
-        if open_proxy:
-            kwargs["proxies"] = proxies
         if headers:
             kwargs["headers"] = headers
+        if open_proxy:
+            kwargs["proxies"] = proxies
+            if cls.__proxy_log:
+                LogUtils.info(f"当前使用代理：proxy: {proxy_dict.get('proxy')}，https: {proxy_dict.get('https')}, region: {proxy_dict.get('region')}")
+                cls.__proxy_log = False
         kwargs["timeout"] = timeout
 
         attempt = 0
@@ -94,16 +101,19 @@ class RequestUtils:
 
             # 如果重试次数已用完，返回None
             if attempt == retries:
-                cls.delete_proxy(proxy)
+                if open_proxy:
+                    cls.delete_proxy(proxy_dict.get('proxy'))
                 return None
 
             attempt += 1
-            if attempt % 3 == 0:
-                old_proxy = proxy
-                cls.delete_proxy(proxy)
-                proxy = cls.get_proxy().get("proxy")
-                LogUtils.info(f"当前代理重试 3 次失败，切换代理继续尝试: {old_proxy}-->{proxy}")
-                proxies['http'] = f"http://{proxy}"
+            if open_proxy and attempt % 3 == 0:
+                old_proxy = proxy_dict.get('proxy')
+                cls.delete_proxy(proxy_dict.get('proxy'))
+                proxy_dict = cls.get_proxy(use_local, https=https, region=region)
+                LogUtils.info(f"当前代理重试 3 次失败，切换代理继续尝试: {old_proxy}-->{proxy_dict.get('proxy')}，https: {proxy_dict.get('https')}, region: {proxy_dict.get('region')}")
+                cls.__proxy_log = True
+                kwargs['proxies']['http'] = f"http://{proxy_dict.get('proxy')}"
+                kwargs['proxies']['https'] = f"http://{proxy_dict.get('proxy')}"
             # 每次重试之间等待一段时间
             time.sleep(delay)
 
@@ -126,18 +136,19 @@ class RequestUtils:
         :return: 请求成功返回响应内容，否则返回None
         """
         proxy_dict = cls.get_proxy(use_local, https=https, region=region)
-        proxy = proxy_dict.get("proxy")
 
         proxies = {
-            "http": f"http://{proxy}",
-            "https": f"http://{proxy}"
+            "http": f"http://{proxy_dict.get('proxy')}",
+            "https": f"http://{proxy_dict.get('proxy')}"
         }
 
         if headers:
             kwargs["headers"] = headers
         if open_proxy:
             kwargs["proxies"] = proxies
-            LogUtils.info(f"当前使用代理：proxy: {proxy}，https: {proxy_dict.get('https')}, region: {proxy_dict.get('region')}")
+            if cls.__proxy_log:
+                LogUtils.info(f"当前使用代理：proxy: {proxy_dict.get('proxy')}，https: {proxy_dict.get('https')}, region: {proxy_dict.get('region')}")
+                cls.__proxy_log = False
         kwargs["timeout"] = timeout
 
         attempt = 0
@@ -156,21 +167,19 @@ class RequestUtils:
                 LogUtils.error(f"Error fetching URL: {url}, attempt {attempt + 1}, Error: {e}")
 
             # 如果重试次数已用完，返回None
-
             if attempt == retries:
                 if open_proxy:
-                    cls.delete_proxy(proxy)
+                    cls.delete_proxy(proxy_dict.get('proxy'))
                 return None
 
             attempt += 1
             if open_proxy and attempt % 3 == 0:
-                old_proxy = proxy
-                cls.delete_proxy(proxy)
+                old_proxy = proxy_dict.get('proxy')
+                cls.delete_proxy(proxy_dict.get('proxy'))
                 proxy_dict = cls.get_proxy(use_local, https=https, region=region)
-                LogUtils.info(f"当前代理重试 3 次失败，切换代理继续尝试: {old_proxy}-->{proxy_dict.get("proxy")}，https: {proxy_dict.get('https')}, region: {proxy_dict.get('region')}")
-                proxies = {
-                    "http": f"http://{proxy}",
-                    "https": f"http://{proxy}"
-                }
+                LogUtils.info(f"当前代理重试 3 次失败，切换代理继续尝试: {old_proxy}-->{proxy_dict.get('proxy')}，https: {proxy_dict.get('https')}, region: {proxy_dict.get('region')}")
+                cls.__proxy_log = True
+                kwargs['proxies']['http'] = f"http://{proxy_dict.get('proxy')}"
+                kwargs['proxies']['https'] = f"http://{proxy_dict.get('proxy')}"
             # 每次重试之间等待一段时间
             time.sleep(delay)

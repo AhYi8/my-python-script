@@ -33,6 +33,7 @@ class ArticleMeta:
     status: str = ''
     tags: str = ''
     category: str = ''
+    series: str = ''
     cao_price: str = '0'
     cao_vip_rate: str = '0.6'
     cao_is_boosvip: str = '1'
@@ -87,6 +88,10 @@ class ArticleMeta:
             return self.category.replace('，', ',').replace(',,', ',').strip(',').split(',')
         return []
 
+    def get_series(self):
+        if self.series != '':
+            return str(self.series).replace('，', ',').replace(',,', ',').strip(',').split(',')
+
     def get_cao_is_bossvip(self):
         if self.cao_is_boosvip == '是':
             return '1'
@@ -112,6 +117,11 @@ class ArticleMeta:
         if self.pwd:
             return str(self.pwd)
         return ''
+
+    def get_cao_paynum(self):
+        if self.cao_paynum:
+            return str(self.cao_paynum)
+        return str(random.randint(100, 300))
 
 
 class WordpressUtils:
@@ -265,12 +275,14 @@ class WordpressUtils:
         zfill_size = len(str(total))
         index = 1
         for article_meta in article_metas:
+            # 判断文章是否需要发布
             if article_meta.title in post_titles or article_meta.get_status() == 'undo':
                 LogUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->已存在同名文章或未发布文章，跳过发布，请手动处理：{article_meta.title}')
                 index += 1
                 continue
             article = Article()
             imgurl = ''
+            # 处理封面上传到 sm.ms 图床，调用本地代理 http://localhost:10809
             while not imgurl and article_meta.get_status() == 'publish' and has_cover:
                 try:
                     if article_meta.image and article_meta.image != '无':
@@ -289,19 +301,24 @@ class WordpressUtils:
                 except Exception as e:
                     LogUtils.info(f'上传图片失败：{e}')
             LogUtils.info(f'{str(index).zfill(zfill_size)}/{total}-->{article_meta.title}, {imgurl}')
+            # 文章标题
             article.title = article_meta.title
             post_titles.add(article.title)
+            # 文章内容
             if has_cover:
                 article.content = f"<img class='aligncenter' src='{imgurl}'>\n\n{article_meta.content}"
             else:
                 article.content = article_meta.content
+            # 文章发布状态
             article.post_status = article_meta.get_status()
             # 自动添加标签
             tag_names.update(article_meta.get_tags())
             tags = {tag_name for tag_name in tag_names if tag_name in article_meta.content or tag_name in article_meta.title}
             tags.update(article_meta.get_tags())
-            terms_names = {'post_tag': list(tags), 'category': article_meta.get_category()}
+            # 文章 terms:{post_tag,category,series}
+            terms_names = {'post_tag': list(tags), 'category': article_meta.get_category(), 'series': article_meta.get_series()}
             article.terms_names = terms_names
+            # 资源下载地址拼接
             cao_downurl_new = []
             for idx, value in enumerate(article_meta.source_url.replace("，", ",").split(',')):
                 cao_downurl_new.append({
@@ -312,27 +329,28 @@ class WordpressUtils:
             if article_meta.get_cao_pwd():
                 for idx, value in enumerate(article_meta.get_cao_pwd().replace("，", ",").split(",")):
                     cao_downurl_new[idx]['pwd'] = value
+            # Ripro-v5 自定义 SEO 关键字
             keywords = []
             keywords.extend(article_meta.get_tags())
             keywords.extend(article_meta.get_category())
             custom_fields = [
-                {'key': 'cao_price', 'value': article_meta.cao_price},
-                {'key': 'cao_vip_rate', 'value': article_meta.cao_vip_rate},
-                {'key': 'cao_is_boosvip', 'value': article_meta.get_cao_is_bossvip()},
-                {'key': 'cao_close_novip_pay', 'value': article_meta.get_cao_close_novip_pay()},
-                {'key': 'cao_paynum', 'value': article_meta.cao_paynum},
-                {'key': 'cao_status', 'value': article_meta.get_cao_status()},
-                {'key': 'cao_downurl_new', 'value': cao_downurl_new},
-                {'key': 'cao_info', 'value': article_meta.cao_info},
-                {'key': 'cao_demourl', 'value': article_meta.cao_demourl},
-                {'key': 'cao_diy_btn', 'value': article_meta.cao_diy_btn},
-                {'key': 'cao_video', 'value': article_meta.cao_video},
-                {'key': 'cao_is_video_free', 'value': article_meta.cao_is_video_free},
-                {'key': 'video_url_new', 'value': article_meta.video_url_new},
-                {'key': 'post_titie', 'value': article_meta.title},
-                {'key': 'keywords', 'value': ','.join(keywords)},
-                {'key': 'description', 'value': article_meta.content},
-                {'key': 'views', 'value': str(random.randint(300, 500))}
+                {'key': 'cao_price', 'value': article_meta.cao_price},                              # Ripro-v5 文章价格
+                {'key': 'cao_vip_rate', 'value': article_meta.cao_vip_rate},                        # Ripro-v5 会员折扣
+                {'key': 'cao_is_boosvip', 'value': article_meta.get_cao_is_bossvip()},              # Ripro-v5 永久会员是否免费
+                {'key': 'cao_close_novip_pay', 'value': article_meta.get_cao_close_novip_pay()},    # Ripro-v5 普通用户禁止购买
+                {'key': 'cao_paynum', 'value': article_meta.get_cao_paynum()},                      # Ripro-v5 已售数量
+                {'key': 'cao_status', 'value': article_meta.get_cao_status()},                      # Ripro-v5 是否启用付费下载模块
+                {'key': 'cao_downurl_new', 'value': cao_downurl_new},                               # Ripro-v5 资源下载地址
+                {'key': 'cao_info', 'value': article_meta.cao_info},                                # Ripro-v5 资源其他信息
+                {'key': 'cao_demourl', 'value': article_meta.cao_demourl},                          # Ripro-v5 资源预览地址
+                {'key': 'cao_diy_btn', 'value': article_meta.cao_diy_btn},                          # Ripro-v5 自定义按钮
+                {'key': 'cao_video', 'value': article_meta.cao_video},                              # Ripro-v5 是否启用付费音频模块
+                {'key': 'cao_is_video_free', 'value': article_meta.cao_is_video_free},              # Ripro-v5 是否免费播放
+                {'key': 'video_url_new', 'value': article_meta.video_url_new},                      # Ripro-v5 媒体播放地址
+                {'key': 'post_titie', 'value': article_meta.title},                                 # Ripro-v5 自定义 SEO 标题
+                {'key': 'keywords', 'value': ','.join(keywords)},                                   # Ripro-v5 自定义 SEO 关键字
+                {'key': 'description', 'value': article_meta.content},                              # Ripro-v5 自定义 SEO 描述
+                {'key': 'views', 'value': str(random.randint(300, 500))}                      # Ripro-v5 自定义文章浏览数
             ]
             article.custom_fields = custom_fields
             articles.append(article)
@@ -355,6 +373,7 @@ class WordpressUtils:
             '发布状态': 'status',
             '标签': 'tags',
             '分类': 'category',
+            '专题': 'series',
             '价格': 'cao_price',
             '资源链接': 'source_url',
             '提取码': 'pwd'

@@ -1,6 +1,6 @@
 import requests, time
-from PIL.ImageChops import offset
-
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from .LogUtils import LogUtils
 
 
@@ -52,70 +52,80 @@ class RequestUtils:
         requests.get("http://152.32.175.149:5010/delete/?proxy={}".format(proxy))
 
     @classmethod
-    def post(cls, url: str, headers: dict = None, retries: int = 30, timeout: int = 10, delay: int = 3, open_proxy: bool = True, use_local: bool = False, https: bool = False, region: str = None, **kwargs):
+    def post(cls, url: str, headers: dict = None, data: dict = None, json: dict = None, retries: int = 30,
+             timeout: int = 10, delay: int = 3, open_proxy: bool = True, use_local: bool = False,
+             https: bool = False, region: str = None, **kwargs):
         """
-        发送 POST 请求，默认重试1次，设置超时为5秒，重试间隔默认1秒。
-        **默认开启代理池访问**
+        发送 POST 请求，支持代理和重试机制。
 
         :param url: 要请求的URL
         :param headers: 请求头信息
+        :param data: 请求体数据
+        :param json: JSON请求体
         :param retries: 最大重试次数
-        :param timeout: 每次请求的超时时间（秒）
-        :param delay: 重试之间的延迟时间（秒）
-        :param open_proxy: 是否开启代理访问
+        :param timeout: 请求超时时间
+        :param delay: 重试间隔时间
+        :param open_proxy: 是否使用代理
         :param use_local: 是否使用本地代理
-        :param https: 是否优先选择支持 https 代理
-        :param region: 使用代理池时，指定哪些地域的代理 IP
-        :return:
+        :param https: 是否选择 https 代理
+        :param region: 指定代理地域
+        :return: 请求响应或 None
         """
-        proxy_dict = cls.get_proxy(use_local, https=https, region=region)
 
-        proxies = {
-            "http": f"http://{proxy_dict.get('proxy')}",
-            "https": f"http://{proxy_dict.get('proxy')}"
-        }
+        def get_new_proxy():
+            """获取新代理并返回更新的代理配置字典"""
+            proxy_info = cls.get_proxy(use_local, https=https, region=region)
+            if cls.__proxy_log:
+                LogUtils.info(
+                    f"当前使用代理: {proxy_info.get('proxy')}, https: {proxy_info.get('https')}, region: {proxy_info.get('region')}")
+                cls.__proxy_log = False
+            return {
+                "http": f"http://{proxy_info.get('proxy')}",
+                "https": f"http://{proxy_info.get('proxy')}"
+            }, proxy_info
+
+        proxies, proxy_info = (get_new_proxy() if open_proxy else (None, None))
 
         if headers:
             kwargs["headers"] = headers
-        if open_proxy:
+        if proxies:
             kwargs["proxies"] = proxies
-            if cls.__proxy_log:
-                LogUtils.info(f"当前使用代理：proxy: {proxy_dict.get('proxy')}，https: {proxy_dict.get('https')}, region: {proxy_dict.get('region')}")
-                cls.__proxy_log = False
         kwargs["timeout"] = timeout
 
-        attempt = 0
-        while attempt <= retries:
-            try:
-                # 发送 POST 请求，带有超时处理
-                response = requests.post(url, **kwargs)
+        # 配置 requests 重试策略
+        session = requests.Session()
+        retries_strategy = Retry(
+            total=retries, backoff_factor=delay, status_forcelist=[500, 502, 503, 504]
+        )
+        adapter = HTTPAdapter(max_retries=retries_strategy)
+        session.mount("http://", adapter)
+        session.mount("https://", adapter)
 
-                # 检查响应状态码是否为2xx，抛出异常则重试
+        for attempt in range(retries + 1):
+            try:
+                response = session.post(url, data=data, json=json, **kwargs)
                 response.raise_for_status()
-                return response
+                return response  # 请求成功返回响应
 
             except requests.Timeout:
                 LogUtils.error(f"Timeout fetching URL: {url}, attempt {attempt + 1}")
             except requests.RequestException as e:
                 LogUtils.error(f"Error fetching URL: {url}, attempt {attempt + 1}, Error: {e}")
 
-            # 如果重试次数已用完，返回None
-            if attempt == retries:
+            if attempt == retries:  # 如果达到最大重试次数
                 if open_proxy:
-                    cls.delete_proxy(proxy_dict.get('proxy'))
-                return None
+                    cls.delete_proxy(proxy_info.get('proxy'))
+                return None  # 重试完毕返回 None
 
-            attempt += 1
-            if open_proxy and attempt % 3 == 0:
-                old_proxy = proxy_dict.get('proxy')
-                cls.delete_proxy(proxy_dict.get('proxy'))
-                proxy_dict = cls.get_proxy(use_local, https=https, region=region)
-                LogUtils.info(f"当前代理重试 3 次失败，切换代理继续尝试: {old_proxy}-->{proxy_dict.get('proxy')}，https: {proxy_dict.get('https')}, region: {proxy_dict.get('region')}")
-                cls.__proxy_log = True
-                kwargs['proxies']['http'] = f"http://{proxy_dict.get('proxy')}"
-                kwargs['proxies']['https'] = f"http://{proxy_dict.get('proxy')}"
-            # 每次重试之间等待一段时间
-            time.sleep(delay)
+            # 每 3 次重试切换一次代理
+            if open_proxy and (attempt + 1) % 3 == 0:
+                old_proxy = proxy_info.get('proxy')
+                cls.delete_proxy(old_proxy)
+                proxies, proxy_info = get_new_proxy()
+                kwargs['proxies'] = proxies
+                LogUtils.info(f"代理重试 3 次失败，切换代理: {old_proxy} --> {proxy_info.get('proxy')}")
+
+            time.sleep(delay)  # 重试延迟
 
 
     @classmethod

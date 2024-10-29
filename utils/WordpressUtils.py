@@ -1,4 +1,5 @@
 import json
+import re
 
 from wordpress_xmlrpc import Client, WordPressPost, ServerConnectionError
 from wordpress_xmlrpc.methods.posts import GetPosts, NewPost
@@ -13,7 +14,7 @@ from .FileUtils import FileUtils
 from .DataUtils import DataUtils
 from .LogUtils import LogUtils
 from datetime import datetime
-from .OpenAIUtils import OpenAIUtils, Prompt
+from .OpenAIUtils import OpenAIUtils, ApiKey, Prompt
 
 # 添加 Iterable 到 collections 模块
 collections.Iterable = collections.abc.Iterable
@@ -56,8 +57,9 @@ class ArticleMeta:
     post_titie: str = ''
     keywords: str = ''
     description: str = ''
+    openai_seo: str = '是'
 
-    def __init__(self, title=None, image=None, content=None, status=None, tags=None, category=None, cao_price=None, source_url=None, pwd=None):
+    def __init__(self, title=None, image=None, content=None, status=None, tags=None, category=None, cao_price=None, source_url=None, pwd=None, openai_seo='是'):
         self.title = title
         self.image = image
         self.content = content
@@ -68,6 +70,7 @@ class ArticleMeta:
         self.source_name = title
         self.source_url = source_url
         self.pwd = pwd
+        self.openai_seo = openai_seo
 
     def __repr__(self):
         return f"ArticleMeta(title={self.title}, image={self.image}, content={self.content}, status={self.status}, tags={self.tags}, category={self.category}, cao_price={self.cao_price}, source_name={self.source_name}, source_url={self.source_url}, pwd={self.pwd})"
@@ -126,6 +129,9 @@ class ArticleMeta:
         if self.cao_paynum:
             return str(self.cao_paynum)
         return str(random.randint(100, 300))
+
+    def get_openai_seo(self):
+        return self.openai_seo == '是'
 
 
 class WordpressUtils:
@@ -340,11 +346,12 @@ class WordpressUtils:
             keyword = ','.join(keywords)
             description = f"{BeautifulSoup(article_meta.content, 'html.parser').get_text(strip=True)} \n 自定义关键词：{keyword}"
             # 使用 openai 做文章 seo（description，keyword）
-            if description:
-                ai_content = OpenAIUtils.client().chat_with_prompt('gpt-4o-mini', description, Prompt.SEO)['content']
-                content = json.loads(ai_content)
-                description = content['description']
-                keyword = content['keyword']
+            if description and article_meta.get_openai_seo():
+                ai_content = OpenAIUtils.chat_with_2233ai_with_prompt('gpt-4o-mini', ApiKey.API_2233, description, Prompt.SEO, open_proxy=True, use_local=True)['content']
+                description_tag = re.search(r"description[:：]\s?(.*)", ai_content)
+                description = description_tag.group(1) if description_tag else description
+                keyword_tag = re.search(r"keywords[:：]\s?(.*)", ai_content)
+                keyword = ','.join([item.strip() for item in keyword_tag.group(1).split(',')]) if keyword_tag else keyword
             custom_fields = [
                 {'key': 'cao_price', 'value': article_meta.cao_price},                              # Ripro-v5 文章价格
                 {'key': 'cao_vip_rate', 'value': article_meta.cao_vip_rate},                        # Ripro-v5 会员折扣
@@ -362,7 +369,7 @@ class WordpressUtils:
                 {'key': 'post_titie', 'value': article_meta.title},                                 # Ripro-v5 自定义 SEO 标题
                 {'key': 'keywords', 'value': keyword},                                              # Ripro-v5 自定义 SEO 关键字
                 {'key': 'description', 'value': description},                                       # Ripro-v5 自定义 SEO 描述
-                {'key': 'views', 'value': str(random.randint(300, 500))}                            # Ripro-v5 自定义文章浏览数
+                {'key': 'views', 'value': str(random.randint(300, 500))}                      # Ripro-v5 自定义文章浏览数
             ]
             article.custom_fields = custom_fields
             articles.append(article)
@@ -388,7 +395,8 @@ class WordpressUtils:
             '专题': 'series',
             '价格': 'cao_price',
             '资源链接': 'source_url',
-            '提取码': 'pwd'
+            '提取码': 'pwd',
+            '开启GPT SEO': 'openai_seo',
         }
         # 读取 xlsx 文件，映射到 article_meta
         article_metas: List[ArticleMeta] = cls.__read_xlsx_to_article_metas(file_path, field_mapping)

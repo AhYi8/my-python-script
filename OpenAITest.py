@@ -1,27 +1,22 @@
+from openai import OpenAI
 from utils.OpenAIUtils import OpenAIUtils
 
-api_key = "sk-jZsOhotwvcWSjmYklOyNuxsBd4incHIdrdpqVDzJHl1JQkNr"
-prompt = r"""You are a professional article SEO optimization master. Your task is to extract a description of about 150 words and 5-7 keywords from the article I provide. Finally, reply to my question in JSON format, structured as follows: {'description': #this is the description, 'keywords': #these are the keywords, separated by commas}. Both the description and keywords must be in Chinese."""
+api_key = "sk-PqKd88dce401bc243411d33ae8a8d7a0b85c2ee78b674Ks1"
+prompt = r"""
+#01 You are a professional article SEO optimization master. 
+#02 Your task is to extract a description of about 150 words and 5-7 keywords from the article I provide. 
+#03 Follow the user’s requirements carefully & to the letter.
+#04 You must respond to my request in the following format, structured as follows: description: #{1}#{2}keyword: #{3}.Among them, #{1} is filled with a description, #{2} is filled with two line breaks, and #{3} is filled with a keyword.
+#05 Ensure that the description and keywords are primarily in Chinese.
+#06 Your description and keywords for the summary must be completely dependent on the article provided by the user.
+#07 If the article provided by the user has too few words, the #02 may not be followed.
+#08 Your responses should be informative and logical.
+#09 You can only give one reply for each conversation turn.
+"""
 article = r"""
-├──01.【目录】【必看】
-| ├──课程截图1.jpg 971.30kb
-| ├──课程截图2.jpg 407.68kb
-| ├──课程截图3.jpg 526.30kb
-| ├──课程截图4.jpg 431.11kb
-| ├──课程截图5.jpg 545.53kb
-| ├──课程截图6.jpg 422.99kb
-| └──总目录 火星时代AE-C4D影视包装全能设计师班.jpg 7.07M
-├──火星时代AE-C4D影视包装全能设计师班
-| ├──火星时代AE-C4D影视包装全能设计师班.z01 19.00G
-| ├──火星时代AE-C4D影视包装全能设计师班.zip 18.85G
-| ├──解压缩说明.jpg 193.87kb
-| └──注意！注意文件是分卷压缩此文件夹全部下载.jpg 171.24kb
-├──注意！用winrar解压缩
-| └──注意！用winrar解压缩
-| | └──注意！用winrar解压缩
-└──总目录 火星时代AE-C4D影视包装全能设计师班.jpg 7.07M
+一门专为解决家庭问题而设计的实用课程。课程内容涵盖冲突管理、预期管理、建立信任和感情修复等多个方面，帮助学员全面提升婚姻质量。通过学习脑神经科学和亲密关系的知识，学员将学会解决问题、表达情绪和共情他人，改善婚姻中的沟通方式。课程由资深情感导师授课，提供一对一指导和丰富的实战经验分享，确保学员在学习过程中获得全面支持和帮助
 """
 
-result = OpenAIUtils.client(api_key, "https://api.chatanywhere.tech/v1").chat(model="gpt-4o-mini", messages=article, prompt=prompt)
+result = OpenAIUtils.chat_with_2233ai_with_prompt(api_key=api_key, message=article, prompt=prompt, use_local=True)
 
 print(result)

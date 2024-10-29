@@ -277,22 +277,3 @@ class TgArticleUtils:
                     print(f"{str(index).zfill(zfill_size)}/{total}-->处理完成: {url}")
                 index += 1
         input('\n\n回车结束程序（enter）')
-
-
-def enable_proxy():
-    os.environ['http_proxy'] = 'http://localhost:10809'
-    os.environ['https_proxy'] = 'http://localhost:10809'
-    print("全局代理已开启")
-
-
-if __name__ == "__main__":
-    cwd = os.getcwd()
-    ignore_tags = ('剧集', '国产剧', '端游', '真人秀', '剧情', '动画', '动漫', '国漫', '短剧', '蓝光原盘')
-    urls_file = os.path.join(cwd, 'file', 'un_publish_articles.txt')
-    excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
-    image_save_path = os.path.join(cwd, 'image')
-    concurrency = None
-    # 开启全局代理
-    enable_proxy()
-    # 如果不传递并发度，会自动检测CPU并设置并发数
-    TgArticleUtils.tg_article_output(ignore_tags, urls_file, excel_file, image_save_path, concurrency)

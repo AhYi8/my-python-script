@@ -2,20 +2,34 @@ from openai import OpenAI
 from .RequestUtils import RequestUtils
 from .LogUtils import LogUtils
 
-private_api_key = {
-    'jyz': [
-        {
-            "api_key": "sk-038BMFFUtSx7mSsVaWr5PQHkh0EnYOkfElZB3X1vECYiASNF",
-            "base_url": "https://api.chatanywhere.tech/v1"
-        }
-    ],
-    'mh': [
-        {
-            "api_key": "sk-jZsOhotwvcWSjmYklOyNuxsBd4incHIdrdpqVDzJHl1JQkNr",
-            "base_url": "https://api.chatanywhere.tech/v1"
-        }
-    ]
-}
+class ApiKey:
+    __api_key: dict[str, list] = {
+        'jyz': [
+            {
+                "api_key": "sk-038BMFFUtSx7mSsVaWr5PQHkh0EnYOkfElZB3X1vECYiASNF",
+                "base_url": "https://api.chatanywhere.tech/v1"
+            }
+        ],
+        'mh': [
+            {
+                "api_key": "sk-jZsOhotwvcWSjmYklOyNuxsBd4incHIdrdpqVDzJHl1JQkNr",
+                "base_url": "https://api.chatanywhere.tech/v1"
+            }
+        ]
+    }
+
+    @classmethod
+    def get_api_key(cls,usr: str = 'mh') -> dict:
+        if len(cls.__api_key[usr]) > 0:
+            return cls.__api_key[usr][0]
+
+    @classmethod
+    def delete_api_key(cls, usr: str = 'mh', idx: int = 0):
+        if len(cls.__api_key[usr]) > 0:
+            del cls.__api_key[usr][idx]
+
+class Prompt:
+    SEO = r"""You are a professional article SEO optimization master. Your task is to extract a description of about 150 words and 5-7 keywords from the article I provide. Finally, reply to my question in JSON format, structured as follows: {'description': #this is the description, 'keyword': #these are the keywords, separated by commas}. Both the description and keywords must be in Chinese."""
 
 
 class OpenAIUtils:
@@ -30,7 +44,10 @@ class OpenAIUtils:
         self.__client = OpenAI(api_key=api_key, base_url=base_url)
 
     @classmethod
-    def client(cls, api_key: str, base_url: str):
+    def client(cls, api_key: str = None, base_url: str = None):
+        if not api_key:
+            api_key = ApiKey.get_api_key('mh')['api_key']
+            base_url = ApiKey.get_api_key('mh')['base_url']
         return cls(api_key, base_url)
 
     def __chat(self, model: str = "gpt-3.5-turbo", messages: str = "Hello!") -> dict:

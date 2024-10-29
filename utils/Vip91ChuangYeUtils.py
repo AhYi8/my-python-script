@@ -1,4 +1,4 @@
-import os, re, random, time, schedule
+import os, re, random, json
 from bs4 import BeautifulSoup
 from .RequestUtils import RequestUtils
 from .LogUtils import LogUtils
@@ -8,6 +8,7 @@ from .FileUtils import FileUtils
 from .RedisUtils import RedisUtils
 from typing import Union
 from datetime import datetime
+from .OpenAIUtils import OpenAIUtils, Prompt
 
 # 配置日志
 class Vip91ChuangYeUtils:
@@ -263,6 +264,14 @@ class Vip91ChuangYeUtils:
         keywords = []
         keywords.extend(list(tags))
         keywords.extend(category)
+        keyword = ','.join(keywords)
+        description = f"{BeautifulSoup(content, 'html.parser').get_text(strip=True)} \n 自定义关键词：{keyword}"
+        # 使用 openai 做文章 seo（description，keyword）
+        if description:
+            ai_content = OpenAIUtils.client().chat_with_prompt('gpt-4o-mini', description, Prompt.SEO)['content']
+            content = json.loads(ai_content)
+            description = content['description']
+            keyword = content['keyword']
         custom_fields = [
             {'key': 'cao_price', 'value': "99.9"},
             {'key': 'cao_vip_rate', 'value': "0.6"},
@@ -278,8 +287,8 @@ class Vip91ChuangYeUtils:
             {'key': 'cao_is_video_free', 'value': ""},
             {'key': 'video_url_new', 'value': ""},
             {'key': 'post_titie', 'value': ""},
-            {'key': 'keywords', 'value': ','.join(keywords)},
-            {'key': 'description', 'value': BeautifulSoup(content, "html.parser").get_text(strip=True)},
+            {'key': 'keywords', 'value': keyword},
+            {'key': 'description', 'value': description},
             {'key': 'views', 'value': str(random.randint(300, 500))}
         ]
         article.custom_fields = custom_fields

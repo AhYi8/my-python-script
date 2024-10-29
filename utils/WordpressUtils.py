@@ -1,7 +1,10 @@
+import json
+
 from wordpress_xmlrpc import Client, WordPressPost, ServerConnectionError
 from wordpress_xmlrpc.methods.posts import GetPosts, NewPost
 from wordpress_xmlrpc.methods import taxonomies
 import pandas as pd
+from bs4 import BeautifulSoup
 from typing import List, Union, Set, Dict
 import phpserialize, random, os, collections
 from .RedisUtils import RedisUtils
@@ -10,6 +13,7 @@ from .FileUtils import FileUtils
 from .DataUtils import DataUtils
 from .LogUtils import LogUtils
 from datetime import datetime
+from .OpenAIUtils import OpenAIUtils, Prompt
 
 # 添加 Iterable 到 collections 模块
 collections.Iterable = collections.abc.Iterable
@@ -333,6 +337,14 @@ class WordpressUtils:
             keywords = []
             keywords.extend(article_meta.get_tags())
             keywords.extend(article_meta.get_category())
+            keyword = ','.join(keywords)
+            description = f"{BeautifulSoup(article_meta.content, 'html.parser').get_text(strip=True)} \n 自定义关键词：{keyword}"
+            # 使用 openai 做文章 seo（description，keyword）
+            if description:
+                ai_content = OpenAIUtils.client().chat_with_prompt('gpt-4o-mini', description, Prompt.SEO)['content']
+                content = json.loads(ai_content)
+                description = content['description']
+                keyword = content['keyword']
             custom_fields = [
                 {'key': 'cao_price', 'value': article_meta.cao_price},                              # Ripro-v5 文章价格
                 {'key': 'cao_vip_rate', 'value': article_meta.cao_vip_rate},                        # Ripro-v5 会员折扣
@@ -348,9 +360,9 @@ class WordpressUtils:
                 {'key': 'cao_is_video_free', 'value': article_meta.cao_is_video_free},              # Ripro-v5 是否免费播放
                 {'key': 'video_url_new', 'value': article_meta.video_url_new},                      # Ripro-v5 媒体播放地址
                 {'key': 'post_titie', 'value': article_meta.title},                                 # Ripro-v5 自定义 SEO 标题
-                {'key': 'keywords', 'value': ','.join(keywords)},                                   # Ripro-v5 自定义 SEO 关键字
-                {'key': 'description', 'value': article_meta.content},                              # Ripro-v5 自定义 SEO 描述
-                {'key': 'views', 'value': str(random.randint(300, 500))}                      # Ripro-v5 自定义文章浏览数
+                {'key': 'keywords', 'value': keyword},                                              # Ripro-v5 自定义 SEO 关键字
+                {'key': 'description', 'value': description},                                       # Ripro-v5 自定义 SEO 描述
+                {'key': 'views', 'value': str(random.randint(300, 500))}                            # Ripro-v5 自定义文章浏览数
             ]
             article.custom_fields = custom_fields
             articles.append(article)

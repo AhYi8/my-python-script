@@ -44,12 +44,12 @@ class Prompt:
 
 
 class OpenAIUtils:
-    __api_key: str = None
-    __model: str = 'gpt-3.5-turbo'
-    __base_url: str = None
-    __client: OpenAI = None
+    MODEL = {
+        "gpt-3.5-turbo": "gpt-3.5-turbo",
+        "gpt-4o-mini": "gpt-4o-mini",
+    }
 
-    def __init__(self, api_key_manager: ApiKey, username: str, model: str = "gpt-3.5-turbo", prompt: str = Prompt.CHAT_SYSTEM_CONTENT, open_history: bool = True):
+    def __init__(self, username: str, model: str = MODEL['gpt-4o-mini'], prompt: str = Prompt.CHAT_SYSTEM_CONTENT, open_history: bool = True, api_key_manager: ApiKey = ApiKey()):
         """
         初始化 OpenAiUtils
         :param api_key_manager: api_key 管理器，主要用户轮询 api_key 和 base_url

@@ -139,6 +139,7 @@ class WordpressUtils:
     __username: str = '21zys'
     __password: str = 'Mh359687..'
     __client = None
+    __openai_utils: OpenAIUtils = OpenAIUtils('mh', OpenAIUtils.MODEL['gpt-4o-mini'], prompt=Prompt.ARTICLE_SEO, open_history=False)
 
     @classmethod
     def client(cls,
@@ -347,10 +348,10 @@ class WordpressUtils:
             description = f"{BeautifulSoup(article_meta.content, 'html.parser').get_text(strip=True)} \n 自定义关键词：{keyword}"
             # 使用 openai 做文章 seo（description，keyword）
             if description and article_meta.get_openai_seo():
-                ai_content = OpenAIUtils.chat_with_2233ai_with_prompt('gpt-4o-mini', ApiKey.API_2233, description, Prompt.SEO, open_proxy=True, use_local=True)['content']
-                description_tag = re.search(r"description[:：]\s?(.*)", ai_content)
+                assistant_message = cls.__openai_utils.chat(description)
+                description_tag = re.search(r"description[:：]\s?(.*)", assistant_message)
                 description = description_tag.group(1) if description_tag else description
-                keyword_tag = re.search(r"keywords[:：]\s?(.*)", ai_content)
+                keyword_tag = re.search(r"keywords[:：]\s?(.*)", assistant_message)
                 keyword = ','.join([item.strip() for item in keyword_tag.group(1).split(',')]) if keyword_tag else keyword
             custom_fields = [
                 {'key': 'cao_price', 'value': article_meta.cao_price},                              # Ripro-v5 文章价格

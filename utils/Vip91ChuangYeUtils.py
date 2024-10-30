@@ -13,6 +13,7 @@ from .OpenAIUtils import OpenAIUtils, Prompt
 # 配置日志
 class Vip91ChuangYeUtils:
     tag_names = WordpressUtils.get_all_tag_name()
+    __openai_utils: OpenAIUtils = OpenAIUtils('mh', OpenAIUtils.MODEL['gpt-4o-mini'], prompt=Prompt.ARTICLE_SEO,open_history=False)
 
     @classmethod
     def publish_vip_91_chuangye_article(cls,
@@ -23,7 +24,8 @@ class Vip91ChuangYeUtils:
                                         open_proxy: bool = True,
                                         use_local: bool = False,
                                         https: bool = False,
-                                        region: str = None) -> None:
+                                        region: str = None,
+                                        openai_seo: bool = False) -> None:
         """
         采集并发布 vip.91chuangye.cn 资源
 
@@ -35,6 +37,7 @@ class Vip91ChuangYeUtils:
         :param use_local: 是否使用本地代理
         :param https: 是否优先使用支持 https 的代理
         :param region: 是否优先选择指定国家代理
+        :param openai_seo: 是否调用 OpenAI 进行 SEO 优化
         :return: None
         """
         if base_url.endswith("/"):
@@ -115,8 +118,7 @@ class Vip91ChuangYeUtils:
                     if content is None:
                         LogUtils.error(f"{link}-->{title} 内容异常，跳过发布，请手动处理。")
                         continue
-                    article: Article = cls.article_meta_article(title, content, category, source_url,
-                                                                               source_pwd, publish_date)
+                    article: Article = cls.article_meta_article(title, content, category, source_url, source_pwd, publish_date, openai_seo=openai_seo)
                     LogUtils.info(f"正在采集发布：{link}-->{title}")
                     post_id = WordpressUtils.post_article(article, is_duplicate=True)
                     if post_id:
@@ -239,7 +241,7 @@ class Vip91ChuangYeUtils:
         return url, pwd, article_content
 
     @classmethod
-    def article_meta_article(cls, title, content: str, category: str, source_url: str, source_pwd: str, publish_date: datetime) -> Article:
+    def article_meta_article(cls, title, content: str, category: str, source_url: str, source_pwd: str, publish_date: datetime, openai_seo: bool = False) -> Article:
         """
         将 ArticleMeta 转为 Article
 
@@ -267,11 +269,12 @@ class Vip91ChuangYeUtils:
         keyword = ','.join(keywords)
         description = f"{BeautifulSoup(content, 'html.parser').get_text(strip=True)} \n 自定义关键词：{keyword}"
         # 使用 openai 做文章 seo（description，keyword）
-        if description:
-            ai_content = OpenAIUtils.client().chat_with_prompt('gpt-4o-mini', description, Prompt.SEO)['content']
-            content = json.loads(ai_content)
-            description = content['description']
-            keyword = content['keyword']
+        if description and openai_seo:
+            assistant_message = cls.__openai_utils.chat(description)
+            description_tag = re.search(r"description[:：]\s?(.*)", assistant_message)
+            description = description_tag.group(1) if description_tag else description
+            keyword_tag = re.search(r"keywords[:：]\s?(.*)", assistant_message)
+            keyword = ','.join([item.strip() for item in keyword_tag.group(1).split(',')]) if keyword_tag else keyword
         custom_fields = [
             {'key': 'cao_price', 'value': "99.9"},
             {'key': 'cao_vip_rate', 'value': "0.6"},

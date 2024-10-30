@@ -1,54 +1,45 @@
-import requests, os, logging
-from bs4 import BeautifulSoup
-from utils.FileUtils import FileUtils
-from utils.ImageUtils import ImageUtils
-from utils.TgArticleOutput import TgArticleUtils
-from utils.WordpressUtils import WordpressUtils
-from utils.Rss21zysComUtils import Rss21zysComUtils
-from utils.ZhanKeArticleUtils import ZhanKeArticleUtils
 
-def enable_proxy():
-    os.environ['http_proxy'] = 'http://localhost:10809'
-    os.environ['https_proxy'] = 'http://localhost:10809'
-    print("全局代理已开启")
-
-def test_tg_article_output():
-    cwd = os.getcwd()
-    ignore_tags = ('剧集', '国产剧', '端游', '真人秀', '剧情', '动画', '动漫', '国漫', '短剧', '蓝光原盘')
-    urls_file = os.path.join(cwd, 'file', 'un_publish_articles.txt')
-    excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
-    image_save_path = os.path.join(cwd, 'image')
-    concurrency = None
-    # 如果不传递并发度，会自动检测CPU并设置并发数
-    TgArticleUtils.tg_article_output(ignore_tags, urls_file, excel_file, image_save_path, concurrency)
+def test_g4f_create():
+    from g4f.client import Client
 
 
-def test_tg_article_output():
-    cwd = os.getcwd()
-    ignore_tags = ('剧集', '国产剧', '端游', '真人秀', '剧情', '动画', '动漫', '国漫', '短剧', '蓝光原盘')
-    urls_file = os.path.join(cwd, 'file', 'un_publish_articles.txt')
-    excel_file = os.path.join(cwd, 'file', 'tg_articles.xlsx')
-    image_save_path = os.path.join(cwd, 'image')
-    concurrency = None
-    # 如果不传递并发度，会自动检测CPU并设置并发数，**tg默认需要开启代理**
-    TgArticleUtils.tg_article_output(ignore_tags, urls_file, excel_file, image_save_path, concurrency)
+    prompt = r"""
+    #01 You are a professional article SEO optimization master. 
+    #02 Your task is to extract a description of about 150 words and 5-7 keywords from the article I provide. 
+    #03 Follow the user’s requirements carefully & to the letter.
+    #04 You must respond to my request in the following format, structured as follows: description: #{1}#{2}keyword: #{3}.Among them, #{1} is filled with a description, #{2} is filled with two line breaks, and #{3} is filled with a keyword.
+    #05 Ensure that the description and keywords are primarily in Chinese.
+    #06 Your description and keywords for the summary must be completely dependent on the article provided by the user.
+    #07 If the article provided by the user has too few words, the #02 may not be followed.
+    #08 Your responses should be informative and logical.
+    #09 You can only give one reply for each conversation turn.
+    """
+    article = r"""
+    一门专为解决家庭问题而设计的实用课程。课程内容涵盖冲突管理、预期管理、建立信任和感情修复等多个方面，帮助学员全面提升婚姻质量。通过学习脑神经科学和亲密关系的知识，学员将学会解决问题、表达情绪和共情他人，改善婚姻中的沟通方式。课程由资深情感导师授课，提供一对一指导和丰富的实战经验分享，确保学员在学习过程中获得全面支持和帮助
+    """
 
-def test_wordpress_import_article(has_cover: bool = True):
-    WordpressUtils.import_article(has_cover=has_cover)
+    client = Client()
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": prompt},
+            {"role": "user", "content": article},
+        ],
+    )
+    print(response.choices[0].message.content)
 
-def test_telegram_source_link_output():
-    Rss21zysComUtils.telegram_source_link_output()
+def test_g4f_generate():
+    from g4f.client import Client
+
+    client = Client()
+    response = client.images.generate(
+        model="dall-e-3",
+        prompt="a white siamese cat",
+        # Add any other necessary parameters
+    )
+
+    image_url = response.data[0].url
+    print(f"Generated image URL: {image_url}")
 
 
-def test_vipc9_article_collect(open_proxy: bool = True, use_local: bool = False):
-    ZhanKeArticleUtils.vipc9_article_collect(open_proxy=open_proxy, use_local=use_local)
-
-def test_666php_article_collect(open_proxy: bool = True, use_local: bool = False):
-    ZhanKeArticleUtils.php666_article_collect(open_proxy=open_proxy, use_local=use_local)
-
-if __name__ == "__main__":
-    # test_telegram_source_link_output()
-    # test_tg_article_output()
-    test_wordpress_import_article(has_cover=True)
-    # test_vipc9_article_collect(use_local=True)
-    # test_666php_article_collect(use_local=True)
+test_g4f_create()

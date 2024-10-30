@@ -15,7 +15,11 @@ class ApiKey:
             {
                 "api_key": "sk-jZsOhotwvcWSjmYklOyNuxsBd4incHIdrdpqVDzJHl1JQkNr",
                 "base_url": "https://api.chatanywhere.tech/v1"
-            }
+            },
+            {
+                "api_key": "sk-PqKd88dce401bc243411d33ae8a8d7a0b85c2ee78b674Ks1",
+                "base_url": "https://api.gptsapi.net/v1"
+            },
         ]
     }
     API_2233: str = "sk-PqKd88dce401bc243411d33ae8a8d7a0b85c2ee78b674Ks1"

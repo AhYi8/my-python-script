@@ -16,10 +16,10 @@ def schedule_publish_task(open_proxy: bool = True, use_local: bool = False, http
 
 if __name__ == "__main__":
     # 调用静态方法执行操作
-    schedule_publish_task(open_proxy=False, use_local=False, https=False, region=None, openai_seo=True)
+    schedule_publish_task(open_proxy=False, use_local=False, https=False, region=None, openai_seo=False)
     
     # 定义每天定时执行的任务
-    scheduled_job = partial(schedule_publish_task, open_proxy=False, use_local=False, https=False, region=None, openai_seo=True)
+    scheduled_job = partial(schedule_publish_task, open_proxy=False, use_local=False, https=False, region=None, openai_seo=False)
     schedule.every().hour.do(scheduled_job)  # 设置为每小时执行一次
     while True:
         detect_interval = 60 * 60

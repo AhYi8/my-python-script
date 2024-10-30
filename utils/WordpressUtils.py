@@ -167,9 +167,9 @@ class WordpressUtils:
         """
         获取 wordpress 中所有的文章
 
-        :param number: 需要获取多少篇文章，超过则停止
+        :param number: 页面大小
         :param offset: 跳过多少篇文章
-        :param limit: 页面大小
+        :param limit: 需要获取多少篇文章，超过则停止
         :return: WordPressPost 文章列表
         """
         all_posts = []
@@ -190,6 +190,16 @@ class WordpressUtils:
                 LogUtils.error(f"An error occurred: {e}")
                 break
         return all_posts
+
+    @classmethod
+    def get_posts(cls, number=100, offset=0):
+        """
+        获取 wordpress 文章
+        :param number: 页面大小
+        :param offset: 跳过多少篇文章
+        :return: WordPressPost 文章列表
+        """
+        return cls.client().call(GetPosts({'number': number, 'offset': offset, 'orderby': 'post_date', 'order': 'DESC'}))
 
     @classmethod
     def post_article(cls, article: Article, is_duplicate: bool = False) -> Union[int, None]:
@@ -410,65 +420,72 @@ class WordpressUtils:
         input('\n\n回车结束程序（enter）')
 
     @classmethod
-    def outport_article(cls, number=100, offset=0, limit=0):
+    def outport_article(cls, number=100, offset=0, file_path: str = os.path.join(os.getcwd(), 'file', 'wordpress_output_article.xlsx')):
         """
         导出 wordpress 文章到 xlsx 文件中
-        :param number:
-        :param offset:
-        :param limit:
+        :param number: 页面大小
+        :param offset: 跳过多少条文章
+        :param file_path: 多出 Excel 保存文件路径
         :return:
         """
-        posts: List[WordPressPost] = cls.get_all_post(number, offset, limit)
-        taxonomies = set()
-        for post in posts:
-            id = post.id  # 文章 id
-            user = post.user  # 文章用户 id
-            date = str(post.date)  # 创建日期
-            date_modified = str(post.date_modified)  # 最后一次修改日期
-            slug = post.slug  # 类似 title, url 编码
-            post_status = post.post_status  # publish, private, draft
-            title = post.title  # 标题
-            content = post.content  # 内容
-            excerpt = post.excerpt  # 空值
-            link = post.link  # 文章链接
-            comment_status = post.comment_status  # open, close
-            ping_status = post.ping_status  # open, close
-            terms = post.terms  # 分类目录和标签
-            custom_fileds = post.custom_fields  # 自定义字段
-            password = post.password  # 密码保护
-            post_format = post.post_format  # 形式：标准: standard，图片: image，视频: video，音频: audio
-            thumbnail = post.thumbnail  # 缩率图
-            sticky = post.sticky
-            post_type = post.post_type
+        while True:
+            articles = []
+            LogUtils.info(f"正在导出文章：{offset}-{offset + number};")
+            posts: List[WordPressPost] = cls.get_posts(number, offset)
+            if not posts:
+                break
+            for post in posts:
+                id = post.id  # 文章 id
+                user = post.user  # 文章用户 id
+                date = str(post.date)  # 创建日期
+                date_modified = str(post.date_modified)  # 最后一次修改日期
+                slug = post.slug  # 类似 title, url 编码
+                post_status = post.post_status  # publish, private, draft
+                title = post.title  # 标题
+                content = post.content  # 内容
+                excerpt = post.excerpt  # 空值
+                link = post.link  # 文章链接
+                comment_status = post.comment_status  # open, close
+                ping_status = post.ping_status  # open, close
+                terms = post.terms  # 分类目录和标签
+                custom_fileds = post.custom_fields  # 自定义字段
+                password = post.password  # 密码保护
+                post_format = post.post_format  # 形式：标准: standard，图片: image，视频: video，音频: audio
+                thumbnail = post.thumbnail  # 缩率图
+                sticky = post.sticky
+                post_type = post.post_type
 
-            categories = []
-            tags = []
-            series = []
-            for term in terms:
-                if term.taxonomy == 'category':
-                    categories.append(term.name)
-                elif term.taxonomy == 'post_tag':
-                    tags.append(term.name)
-                elif term.taxonomy == 'series':
-                    series.append(term.name)
+                categories = []
+                tags = []
+                series = []
+                for term in terms:
+                    if term.taxonomy == 'category':
+                        categories.append(term.name)
+                    elif term.taxonomy == 'post_tag':
+                        tags.append(term.name)
+                    elif term.taxonomy == 'series':
+                        series.append(term.name)
 
-            temp_post = []
-            cao_downurl_new = None
-            for field in custom_fileds:
-                key = field['key']
-                value = field['value']
-                if key == 'cao_downurl_new':
-                    cao_downurl_new = value
-            for field in custom_fileds:
-                key = field['key']
-                value = field['value']
-                if key == 'cao_price':
-                    if cao_downurl_new:
-                        name_url_password_bytes = phpserialize.loads(bytes(cao_downurl_new, encoding='utf-8'))
-                        name_url_password = \
-                        [value for value in DataUtils.decode_bytes(name_url_password_bytes).values()][0]
-                        name = name_url_password['name']
-                        url = name_url_password['url']
-                        password = name_url_password['pwd']
-                        xlsx_file = os.path.join(os.getcwd(), 'file', 'wordpress_articles_output.xlsx')
-                        FileUtils.append_to_excel(xlsx_file, (title, ','.join(categories), url), ('title', 'categories', 'url'))
+                categories = ','.join(categories)
+                tags = ','.join(tags)
+                series = ','.join(series)
+
+                custom_fileds = {item['key']: item['value'] for item in custom_fileds}
+                price = custom_fileds['cao_price']
+
+                url = ''
+                pwd = ''
+                try:
+                    custom_fileds['cao_downurl_new'] = DataUtils.decode_bytes(phpserialize.loads(bytes(custom_fileds['cao_downurl_new'], 'utf-8')))
+                    if 'url' in custom_fileds['cao_downurl_new'][0]:
+                        url = custom_fileds['cao_downurl_new'][0]['url']
+                    if 'pwd' in custom_fileds['cao_downurl_new'][0]:
+                        pwd = custom_fileds['cao_downurl_new'][0]['pwd']
+                except Exception as e:
+                    LogUtils.error(f"文章导出失败：文章id:{id}，cao_downurl_new 解析失败: {custom_fileds['cao_downurl_new']}\n，原因:{e}")
+
+
+                articles.append((id, title, '', content, '公开', tags, categories, series, price, url, pwd))
+            FileUtils.append_to_excel(file_path, articles, ('文章ID', '标题', '封面', '内容', '发布状态', '标签', '分类', '专题', '价格', '资源链接', '提取码'))
+
+            offset += number

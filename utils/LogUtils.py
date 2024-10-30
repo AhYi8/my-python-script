@@ -34,3 +34,7 @@ class LogUtils:
     @classmethod
     def error(cls, msg, *args, **kwargs):
         logging.error(msg, *args, **kwargs)
+
+    @classmethod
+    def warning(cls, msg, *args, **kwargs):
+        logging.warning(msg, *args, **kwargs)

@@ -46,9 +46,14 @@ def test_vipc9_article_collect(open_proxy: bool = True, use_local: bool = False)
 def test_666php_article_collect(open_proxy: bool = True, use_local: bool = False):
     ZhanKeArticleUtils.php666_article_collect(open_proxy=open_proxy, use_local=use_local)
 
+
+def test_wordpress_outport_article():
+    WordpressUtils.outport_article(offset=0)
+
 if __name__ == "__main__":
     # test_telegram_source_link_output()
     # test_tg_article_output()
-    test_wordpress_import_article(has_cover=True)
+    # test_wordpress_import_article(has_cover=True)
     # test_vipc9_article_collect(use_local=True)
     # test_666php_article_collect(use_local=True)
+    test_wordpress_outport_article()

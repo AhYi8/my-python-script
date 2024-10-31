@@ -1,8 +1,16 @@
 jyz:
-  - api_key: sk-038BMFFUtSx7mSsVaWr5PQHkh0EnYOkfElZB3X1vECYiASNF
+  - api_key: sk-038BMFFUtSx7mSsVaWr5PQHkh0EnYOkfElZB3X1vECYiASNF  # https://github.com/chatanywhere/GPT_API_free 申请的免费 key
     base_url: https://api.chatanywhere.tech/v1
 mh:
-  - api_key: sk-jZsOhotwvcWSjmYklOyNuxsBd4incHIdrdpqVDzJHl1JQkNr
+  - api_key: sk-jZsOhotwvcWSjmYklOyNuxsBd4incHIdrdpqVDzJHl1JQkNr  # https://github.com/chatanywhere/GPT_API_free 申请的免费 key
     base_url: https://api.chatanywhere.tech/v1
-  - api_key: sk-PqKd88dce401bc243411d33ae8a8d7a0b85c2ee78b674Ks1
+  - api_key: sk-wi5rSoGxKGamL8PGDa938eE8147b4329A9Bb90F59946B144  # https://github.com/popjane/free_chatgpt_api 申请的免费 key
+    base_url: https://free.gpt.ge/v1
+  - api_key: pk-JqZKfJcGLHRLLTcxpFfHLANihkHJeJIypGPTiPmvXZdfbUkO # https://github.com/PawanOsman/ChatGPT  key
+    base_url: https://api.pawan.krd/v1
+  - api_key: sk-OsMMq65tXdfOIlTUYtocSL7NCsmA7CerN77OkEv29dODg1EA  # https://github.com/xiangsx/gpt4free-ts 公开 key
+    base_url: https://api.gptgod.online/v1
+  - api_key: sk-F0wPGqlBwx0UMC6qz9DzDSxPQfxg27B1BltowGyUU2YdtnUG  # https://gptgod.online 个人免费 1w 积分 key，每日签到送 2k 积分，gpt-4o-mini 20积分/次
+    base_url: https://api.gptgod.online/v1
+  - api_key: sk-PqKd88dce401bc243411d33ae8a8d7a0b85c2ee78b674Ks1  # 2233.ai 个人 5$ 额度 key
     base_url: https://api.gptsapi.net/v1
